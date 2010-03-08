@@ -1,9 +1,9 @@
-EnigmaCurry's Emacs Config
+Adolfo Benedetti's Emacs Config
 --------------------------
 
-This is Ryan McGuire's (EnigmaCurry) Emacs Configuration.
+This is the Adolfo Benedetti's Emacs Configuration. based on Ryan McGuire's (EnigmaCurry) configuration
 
-You can find more about this environment at `Ryan's Blog <http://www.enigmacurry.com/category/emacs>`_.
+You can find more about Ryan' environment at `Ryan's Blog <http://www.enigmacurry.com/category/emacs>`_.
 
 
 
