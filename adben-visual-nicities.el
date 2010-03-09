@@ -52,5 +52,5 @@
                       :height
                       (floor (* 0.9
                                   (face-attribute 'default :height)))))
-(global-set-key (kbd "C-+") 'ryan/increase-font-size)
-(global-set-key (kbd "C--") 'ryan/decrease-font-size)
+(global-set-key (kbd "C-+") 'adben/increase-font-size)
+(global-set-key (kbd "C--") 'adben/decrease-font-size)
