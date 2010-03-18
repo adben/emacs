@@ -274,4 +274,8 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
-'(default ((t (:inherit nil :stipple nil :background "#191717" :foreground "#D2DEC4" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width normal :foundry "apple" :family "Lucida Console")))))
+'(default ((t (:inherit nil :stipple nil :background "#191717" :foreground "#D2DEC4" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "apple" :family "Lucida Console")))))
+
+(global-font-lock-mode t)               ; Turn on font-lock-mode, generally.
+(setq font-lock-verbose 500000)          ; "Fontifying...done" only if big buffer.
+(setq font-lock-maximum-size 5120000)    ; Double the default size.
