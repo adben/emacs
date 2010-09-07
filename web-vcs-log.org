@@ -1,0 +1,41 @@
+
+* 2010-08-03
+** Downloading file 08:50:58 GMT
+   file [[file:/home/adolfo/.emacs.d/vendor/nxhtml/autostart.el][/home/adolfo/.emacs.d/vendor/nxhtml/autostart.el]]
+   from http://bazaar.launchpad.net/%7Enxhtml/nxhtml/main/download/lennart.borgman%40gmail.com-20100630161341-hf0o1qy7zmd6th4c/autostart.el-20080724174035-zgon4j679232cch3-2/autostart.el
+   Done.
+
+
+* 2010-08-04
+** Downloading file 09:05:19 GMT
+   file [[file:/home/adolfo/.emacs.d/vendor/nxhtml/nxhtml-base.el][/home/adolfo/.emacs.d/vendor/nxhtml/nxhtml-base.el]]
+   from http://bazaar.launchpad.net/%7Enxhtml/nxhtml/main/download/lennart.borgman%40gmail.com-20100513151223-7taf30dujqidv1ee/nxhtmlbase.el-20100113172514-fyszxn1ypx4ml96h-1/nxhtml-base.el
+   Done.
+
+** Downloading file 09:05:38 GMT
+   file [[file:/home/adolfo/.emacs.d/vendor/nxhtml/nxhtml-loaddefs.el][/home/adolfo/.emacs.d/vendor/nxhtml/nxhtml-loaddefs.el]]
+   from http://bazaar.launchpad.net/%7Enxhtml/nxhtml/main/download/lennart.borgman%40gmail.com-20100703014551-bpisoydh334qo8xk/nxhtmlloaddefs.el-20080927190633-bvdatx6qc6m3ze5h-1/nxhtml-loaddefs.el
+   *Failed:* Server did not respond
+
+
+* 2010-08-13
+** Downloading file 10:17:39 GMT
+   file [[file:/home/adolfo/.emacs.d/vendor/nxhtml/nxhtml-loaddefs.el][/home/adolfo/.emacs.d/vendor/nxhtml/nxhtml-loaddefs.el]]
+   from http://bazaar.launchpad.net/%7Enxhtml/nxhtml/main/download/lennart.borgman%40gmail.com-20100703014551-bpisoydh334qo8xk/nxhtmlloaddefs.el-20080927190633-bvdatx6qc6m3ze5h-1/nxhtml-loaddefs.el
+   Done.
+
+** Downloading file 10:17:54 GMT
+   file [[file:/home/adolfo/.emacs.d/vendor/nxhtml/nxhtml-web-vcs.el][/home/adolfo/.emacs.d/vendor/nxhtml/nxhtml-web-vcs.el]]
+   from http://bazaar.launchpad.net/%7Enxhtml/nxhtml/main/download/lennart.borgman%40gmail.com-20100628020105-j90jqucsia9fqc6e/nxhtmlwebvcs.el-20100113172514-fyszxn1ypx4ml96h-2/nxhtml-web-vcs.el
+   Done.
+
+** Downloading file 10:18:03 GMT
+   file [[file:/home/adolfo/.emacs.d/vendor/nxhtml/nxhtmlmaint.el][/home/adolfo/.emacs.d/vendor/nxhtml/nxhtmlmaint.el]]
+   from http://bazaar.launchpad.net/%7Enxhtml/nxhtml/main/download/lennart.borgman%40gmail.com-20100627022309-6em45v2czlwyjrgk/nxhtmlmaint.el-20090101213540-jlah6xe0n65g93pw-3/nxhtmlmaint.el
+   Done.
+
+** Downloading file 10:18:12 GMT
+   file [[file:/home/adolfo/.emacs.d/vendor/nxhtml/web-vcs.el][/home/adolfo/.emacs.d/vendor/nxhtml/web-vcs.el]]
+   from http://bazaar.launchpad.net/%7Enxhtml/nxhtml/main/download/lennart.borgman%40gmail.com-20100628020105-j90jqucsia9fqc6e/webvcs.el-20091227180846-favloh4bvxp3i0mh-4/web-vcs.el
+   Done.
+
