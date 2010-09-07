@@ -279,6 +279,41 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(bbdb-file "~/.emacs.private/dot-bbdb")
+ '(column-number-mode t)
+ '(display-time-mode nil)
+ '(ecb-layout-name "left9")
+ '(ecb-maximize-ecb-window-after-selection t)
+ '(ecb-options-version "2.32")
+ '(ecb-source-path (quote (("/" "/"))))
+ '(ecb-tip-of-the-day nil)
+ '(ecb-windows-width 0.2)
+ '(erc-beep-match-types (quote (current-nick keyword)))
+ '(erc-default-sound "~/.emacs.d/sounds/combeep4a.wav")
+ '(erc-echo-timestamps t)
+ '(erc-hide-timestamps t)
+ '(erc-match-mode t)
+ '(erc-modules (quote (button completion fill irccontrols log netsplit noncommands readonly ring scrolltobottom services smiley track)))
+ '(erc-services-mode t)
+ '(erc-sound-mode t)
+ '(erc-sound-path (quote ("/home/adolfo/.emacs.d/sounds")))
+ '(erc-stamp-mode t)
+ '(erc-user-full-name "Adolfo Benedetti")
+ '(fill-column 81)
+ '(gnus-article-sort-functions (quote ((not gnus-article-sort-by-date))))
+ '(gnus-thread-sort-functions (quote ((not gnus-thread-sort-by-date))))
+ '(mew-rc-file "~/.emacs.d/dot-mew.el" t)
+ '(mouse-wheel-mode t)
+ '(nxhtml-skip-welcome t)
+ '(paren-match-face (quote paren-face-match-light))
+ '(paren-sexp-mode t)
+ '(show-paren-mode t)
+ ;;'(speedbar-frame-parameters (quote ((minibuffer) (width . 20) (border-width . 0) (menu-bar-lines . 0) (tool-bar-lines . 0) (unsplittable . t) (set-background-color "black"))))
+ '(svn-status-hide-unmodified t)
+ '(svn-status-verbose nil)
+ '(twit-mode t)
+ '(user-mail-address "adolfo.benedetti@gmail.com")
+ '(w3m-default-display-inline-images t)
  '(column-number-mode t)
  '(confluence-default-space-alist (list (cons confluence-url "https://dev.sourcesense.com/confluence/display/~a.benedetti")))
  '(confluence-url "https://dev.sourcesense.com/confluence/rpc/xmlrpc")
@@ -287,7 +322,10 @@
  '(max-lisp-eval-depth 50000)
  '(max-specpdl-size 100000)
  '(show-paren-mode t)
- '(global-visual-line-mode 1)) ;; line-mode number-mode
+ '(global-linum-mode 1)
+ '(global-font-lock-mode t)               ; Turn on font-lock-mode, generally.
+ '(setq font-lock-verbose 500000)          ; "Fontifying...done" only if big buffer.
+ '(setq font-lock-maximum-size 5120000))    ; Double the default size. big logs log4j
 ;;Fonting
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
