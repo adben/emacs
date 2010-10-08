@@ -580,7 +580,7 @@ first line of the declaration."
 
 (defun log4j-match-record-error (bound)
   "Search forward from point to BOUND for ERROR log record."
-  (log4j-record-search-forward "\\<\\(ERROR\\|SEVERE\\|at \\)\\>" bound))
+  (log4j-record-search-forward "\\<\\(ERROR\\|SEVERE\\|	at \\)\\>" bound))
 
 (defun log4j-match-record-warn (bound)
   "Search forward from point to BOUND for WARN log record."

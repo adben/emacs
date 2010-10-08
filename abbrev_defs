@@ -3,7 +3,13 @@
 
 (define-abbrev-table 'Custom-mode-abbrev-table '())
 
+(define-abbrev-table 'apropos-mode-abbrev-table '())
+
+(define-abbrev-table 'calendar-mode-abbrev-table '())
+
 (define-abbrev-table 'change-log-mode-abbrev-table '())
+
+(define-abbrev-table 'clojure-mode-abbrev-table '())
 
 (define-abbrev-table 'comint-mode-abbrev-table '())
 
@@ -24,6 +30,8 @@
 (define-abbrev-table 'global-abbrev-table '())
 
 (define-abbrev-table 'grep-mode-abbrev-table '())
+
+(define-abbrev-table 'html-mode-abbrev-table '())
 
 (define-abbrev-table 'inferior-moz-mode-abbrev-table '())
 
@@ -52,9 +60,13 @@
 
 (define-abbrev-table 'nxhtml-mode-abbrev-table '())
 
+(define-abbrev-table 'org-mode-abbrev-table '())
+
 (define-abbrev-table 'outline-mode-abbrev-table '())
 
 (define-abbrev-table 'prog-mode-abbrev-table '())
+
+(define-abbrev-table 'sgml-mode-abbrev-table '())
 
 (define-abbrev-table 'shell-mode-abbrev-table '())
 
@@ -65,6 +77,10 @@
 (define-abbrev-table 'test-case-result-mode-abbrev-table '())
 
 (define-abbrev-table 'text-mode-abbrev-table '())
+
+(define-abbrev-table 'udev-control-mode-abbrev-table '())
+
+(define-abbrev-table 'vc-git-log-view-mode-abbrev-table '())
 
 (define-abbrev-table 'wab-compilation-mode-abbrev-table '())
 

@@ -2,19 +2,18 @@
 ;; Visual Nicities
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'color-theme)
-(load-library "adben-color-theme")
+;;(load-library "adben-color-theme")
 ;;(load-library "adben-color-theme-textmate")
 ;;(global-font-lock-mode 1)
 (color-theme-initialize)
 ;;(color-theme-adben)
 ;;(color-theme-tango)
 ;;(color-theme-standard)
-(color-theme-montz)
-;;Show column numbers
+(color-theme-bharadwaj)
 ;;(color-theme-textmate)
 ;;(color-theme-robin-hood)
 (column-number-mode 1)
-(setq-default fill-column 72)
+(setq-default fill-column 80)
 (setq auto-fill-mode 1)
 ;;Show what's being selected
 (transient-mark-mode 1)
@@ -24,10 +23,11 @@
 (setq scroll-step 1)
 (setq inhibit-startup-message t)
 ;;Disable the menubar (promotes good emacs memory :)
-;;(menu-bar-mode 1)
+(menu-bar-mode 0)
 (tool-bar-mode -1)
-;;(scroll-bar-mode 1)
-;;(speed-bar-mode 1)
+(scroll-bar-mode 1)
+;;activate by default the speedbar into thw workspace
+(speedbar 1)
 ;;Make page up and page down a whole lot nicer
 (global-set-key "\C-v"	   'pager-page-down)
 (global-set-key [next] 	   'pager-page-down)
@@ -62,4 +62,4 @@
 (global-set-key (kbd "C-+") 'adben/increase-font-size)
 (global-set-key (kbd "C--") 'adben/decrease-font-size)
 ;;column line-numbers 1 for on, 0 for off.
-(global-visual-line-mode 1)
+;;(global-visual-line-mode 1)

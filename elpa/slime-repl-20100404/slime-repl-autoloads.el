@@ -4,25 +4,27 @@
 
 
 ;;;### (autoloads (slime-repl-init) "slime-repl" "slime-repl.el"
-;;;;;;  (19483 30631))
+;;;;;;  (19607 40681))
 ;;; Generated autoloads from slime-repl.el
 
-(autoload (quote slime-repl-init) "slime-repl" "\
+(autoload 'slime-repl-init "slime-repl" "\
 Not documented
 
 \(fn)" nil nil)
 
-(add-hook (quote slime-load-hook) (quote slime-repl-init))
+(add-hook 'slime-load-hook 'slime-repl-init)
 
 ;;;***
 
-;;;### (autoloads nil nil ("slime-repl-pkg.el") (19483 30631 545253))
+;;;### (autoloads nil nil ("slime-repl-pkg.el") (19607 40681 248769))
 
 ;;;***
 
+(provide 'slime-repl-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
+;; coding: utf-8
 ;; End:
 ;;; slime-repl-autoloads.el ends here

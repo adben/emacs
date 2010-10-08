@@ -4,10 +4,10 @@
 
 
 ;;;### (autoloads (slime-hyperspec-lookup slime-connect slime slime-mode
-;;;;;;  slime-lisp-mode-hook) "slime" "slime.el" (19483 30582))
+;;;;;;  slime-lisp-mode-hook) "slime" "slime.el" (19607 40623))
 ;;; Generated autoloads from slime.el
 
-(defvar slime-lisp-modes (quote (lisp-mode)))
+(defvar slime-lisp-modes '(lisp-mode))
 
 (defvar slime-setup-contribs nil)
 
@@ -15,12 +15,12 @@
 Setup Emacs so that lisp-mode buffers always use SLIME.
 CONTRIBS is a list of contrib packages to load." (when (member (quote lisp-mode) slime-lisp-modes) (add-hook (quote lisp-mode-hook) (quote slime-lisp-mode-hook))) (setq slime-setup-contribs contribs) (slime-setup-contribs))
 
-(autoload (quote slime-lisp-mode-hook) "slime" "\
+(autoload 'slime-lisp-mode-hook "slime" "\
 Not documented
 
 \(fn)" nil nil)
 
-(autoload (quote slime-mode) "slime" "\
+(autoload 'slime-mode "slime" "\
 \\<slime-mode-map>SLIME: The Superior Lisp Interaction Mode for Emacs (minor-mode).
 
 Commands to compile the current buffer's source file and visually
@@ -53,30 +53,32 @@ Full set of commands:
 
 \(fn &optional ARG)" t nil)
 
-(autoload (quote slime) "slime" "\
+(autoload 'slime "slime" "\
 Start an inferior^_superior Lisp and connect to its Swank server.
 
 \(fn &optional COMMAND CODING-SYSTEM)" t nil)
 
-(autoload (quote slime-connect) "slime" "\
+(autoload 'slime-connect "slime" "\
 Connect to a running Swank server. Return the connection.
 
 \(fn HOST PORT &optional CODING-SYSTEM)" t nil)
 
-(autoload (quote slime-hyperspec-lookup) "slime" "\
+(autoload 'slime-hyperspec-lookup "slime" "\
 A wrapper for `hyperspec-lookup'
 
 \(fn SYMBOL-NAME)" t nil)
 
 ;;;***
 
-;;;### (autoloads nil nil ("slime-pkg.el") (19483 30582 529203))
+;;;### (autoloads nil nil ("slime-pkg.el") (19607 40623 178601))
 
 ;;;***
 
+(provide 'slime-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
+;; coding: utf-8
 ;; End:
 ;;; slime-autoloads.el ends here
