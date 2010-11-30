@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*-
+;; -*- emacs-lisp -*- <10/10/29 15:42:30 /Users/adolfo/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -175,4 +175,8 @@
   ("remote-encoding" tramp-perl-encode-with-module)
   ("remote-decoding" tramp-perl-decode-with-module)
   ("inline-compress" "gzip")
-  ("inline-decompress" "gzip -d")))
+  ("inline-decompress" "gzip -d"))
+ (["ssh" nil "ssh" nil]
+  nil)
+ (["ssh" nil "ec2-46-51-154-50.eu-west-1.compute.amazonaws.com" nil]
+  nil))

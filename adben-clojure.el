@@ -1,3 +1,6 @@
+;;adding swank-clojure slime-connect for version
+(add-to-list 'package-archives
+             '("technomancy" . "http://repo.technomancy.us/emacs/") t)
 ;; clojure-mode
 (add-to-list 'load-path "~/git/clojure-mode")
 (require 'clojure-mode)
@@ -6,22 +9,22 @@
 ;;(add-to-list 'load-path "~/.emacs.d/elpa/swank-clojure-1.1.0/")
 (add-to-list 'load-path "~/git/swank-clojure")
 
-(setq swank-clojure-jar-path "~/.clojure/clojure.jar"
+(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.2.0/clojure-1.2.0.jar"
       swank-clojure-extra-classpaths (list
                                       ;;				      "~/.emacs.d/elpa/swank-clojure-1.1.0/"
-				      "~/git/swank-clojure/src/swank"
-				      "~/.clojure/clojure-contrib.jar"))
+				      "~/git/swank-clojure"
+				      "~/.m2/repository/org/clojure/clojure-contrib/1.2.0/clojure-contrib-1.2.0.jar"))
 
 (require 'swank-clojure)
 
-;; ;; slime
-;; (eval-after-load "slime"
-;; '(setq slime-protocol-version 'ignore)
-;; '(progn (slime-setup '(slime-repl))))
+;; slime
+(eval-after-load "slime"
+;'(setq slime-protocol-version 'ignore)
+'(progn (slime-setup '(slime-repl))))
 
-;; (add-to-list 'load-path "~/git/slime")
-;; (require 'slime)
-;; ;;(slime-setup) 
+(add-to-list 'load-path "~/git/slime")
+(require 'slime)
+(slime-setup) 
 
 ;; Autoloads and basic wiring
 (autoload 'clojure-mode "clojure-mode" "Major mode for editing Clojure code." t nil)
@@ -39,12 +42,15 @@
   (aput 'slime-lisp-implementations 'clojure (list (swank-clojure-cmd) :init 'swank-clojure-init)))
 (autoload 'swank-clojure-project "swank-clojure" "" t nil)
 (add-hook 'clojure-mode-hook 'clojure-test-maybe-enable)
+(add-hook 'slime-repl-mode-hook 'clojure-mode-font-lock-setup)
+
 
 ;; Use technomancy's bag of fancy clojure/slime tricks
+(add-to-list 'load-path "~/git/durendal")
 (require 'durendal)
 (durendal-enable t)
 
-(add-hook 'clojure-mode-hook 'enable-paredit-mode) ;; ToDo check hubert's paredit config
+;;(add-hook 'clojure-mode-hook 'enable-paredit-mode) ;; ToDo check hubert's paredit config
 (add-hook 'clojure-mode-hook 'font-lock-mode) ;; because it doesn't turn on in Emacs 24
 
 (defun slime-clojure-repl-setup ()
