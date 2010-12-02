@@ -1,8 +1,8 @@
-;;adding swank-clojure slime-connect for version
-(add-to-list 'package-archives
-             '("technomancy" . "http://repo.technomancy.us/emacs/") t)
+;;
+(load-library "elein")
+
 ;; clojure-mode
-(add-to-list 'load-path "~/git/clojure-mode")
+(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-1.8.0/")
 (require 'clojure-mode)
 
 ;; swank-clojure
@@ -22,7 +22,8 @@
 ;'(setq slime-protocol-version 'ignore)
 '(progn (slime-setup '(slime-repl))))
 
-(add-to-list 'load-path "~/git/slime")
+;;(add-to-list 'load-path "~/git/slime")
+(add-to-list 'load-path "~/.emacs.d/elpa/slime-20100404.1/")
 (require 'slime)
 (slime-setup) 
 
