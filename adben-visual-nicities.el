@@ -11,8 +11,9 @@
 ;;(color-theme-standard)
 ;;(color-theme-bharadwaj)
 ;;(color-theme-textmate)
-(color-theme-robin-hood)
-(column-number-mode 1)
+;;(color-theme-robin-hood)
+(color-theme-emacs-nw)
+;(column-number-mode 1)
 (setq-default fill-column 80)
 (setq auto-fill-mode 1)
 ;;Show what's being selected

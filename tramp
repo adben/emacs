@@ -1,4 +1,4 @@
-;; -*- emacs-lisp -*- <10/10/29 15:42:30 /Users/adolfo/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <11/01/18 14:04:22 /Users/adolfo/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -155,7 +155,7 @@
   ("remote-decoding" tramp-perl-decode-with-module)
   ("uid-integer" 0))
  (["sudo" "root" "localhost" nil]
-  ("uname" "Darwin 10.4.0")
+  ("uname" "Darwin 10.6.0")
   ("test" "test")
   ("remote-path"
    ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin"))
@@ -166,7 +166,6 @@
   ("perl" "\\perl")
   ("id" "/usr/bin/id")
   ("gid-integer" 0)
-  ("~root" "/var/root")
   ("readlink" nil)
   ("file-exists" "test -e")
   ("uid-integer" 0)
@@ -175,8 +174,4 @@
   ("remote-encoding" tramp-perl-encode-with-module)
   ("remote-decoding" tramp-perl-decode-with-module)
   ("inline-compress" "gzip")
-  ("inline-decompress" "gzip -d"))
- (["ssh" nil "ssh" nil]
-  nil)
- (["ssh" nil "ec2-46-51-154-50.eu-west-1.compute.amazonaws.com" nil]
-  nil))
+  ("inline-decompress" "gzip -d")))
