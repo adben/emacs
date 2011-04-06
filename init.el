@@ -21,7 +21,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;ELPA package manager
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;(load-library "adben-elpa")
+(load-library "adben-elpa")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;lorem-ipsum
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -163,7 +163,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Mac OSX stuff
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-OSX")
+;;(load-library "adben-OSX")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;EasyPG stuff
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -212,6 +212,11 @@
 (load-library "adben-magit")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Egg mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-library "adben-egg")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;log4j mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-log4j")
@@ -243,12 +248,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;clojure mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-clojure")
+;;(load-library "adben-clojure")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;clojura mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;(load-library "adben-clojure")
+(load-library "adben-clojure")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;eshell  modex
@@ -284,7 +289,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(bbdb-file "~/.emacs.private/dot-bbdb")
- ;;'(column-number-mode t)
+ '(column-number-mode t)
+ '(confluence-default-space-alist (list (cons confluence-url "https://dev.sourcesense.com/confluence/display/~a.benedetti")))
+ '(confluence-url "https://dev.sourcesense.com/confluence/rpc/xmlrpc")
+ '(cua-mode t nil (cua-base))
+ '(custom-enabled-themes (quote (zenburn)))
+ '(custom-safe-themes (quote ("324c41970f27ceb68e7579d722bc3b69b6390e13" "649ccffdb140fcd021013f6297dedeb313b74fa5" default)))
  '(display-time-mode nil)
  '(ecb-layout-name "left9")
  '(ecb-maximize-ecb-window-after-selection t)
@@ -304,36 +314,31 @@
  '(erc-stamp-mode t)
  '(erc-user-full-name "Adolfo Benedetti")
  '(fill-column 81)
+ '(global-font-lock-mode t)
+ '(global-linum-mode 1)
  '(gnus-article-sort-functions (quote ((not gnus-article-sort-by-date))))
  '(gnus-thread-sort-functions (quote ((not gnus-thread-sort-by-date))))
+ '(jira-url "https://dev.sourcesense.com/jira/rpc/xmlrpc")
+ '(max-lisp-eval-depth 50000)
+ '(max-specpdl-size 100000)
  '(mew-rc-file "~/.emacs.d/dot-mew.el" t)
  '(mouse-wheel-mode t)
  '(nxhtml-skip-welcome t)
  '(paren-match-face (quote paren-face-match-light))
  '(paren-sexp-mode t)
+ '(setq font-lock-maximum-size t)
  '(show-paren-mode t)
  '(speedbar-frame-parameters (quote ((minibuffer) (width . 20) (border-width . 0) (menu-bar-lines . 0) (tool-bar-lines . 0) (unsplittable . t) (set-background-color "black"))))
  '(svn-status-hide-unmodified t)
  '(svn-status-verbose nil)
  '(twit-mode t)
  '(user-mail-address "adolfo.benedetti@gmail.com")
- '(w3m-default-display-inline-images t)
- '(column-number-mode t)
- '(confluence-default-space-alist (list (cons confluence-url "https://dev.sourcesense.com/confluence/display/~a.benedetti")))
- '(confluence-url "https://dev.sourcesense.com/confluence/rpc/xmlrpc")
- '(cua-mode t nil (cua-base))
- '(jira-url "https://dev.sourcesense.com/jira/rpc/xmlrpc")
- '(max-lisp-eval-depth 50000)
- '(max-specpdl-size 100000)
- '(show-paren-mode t)
- '(global-linum-mode 1)
- '(global-font-lock-mode t)               ; Turn on font-lock-mode, generally.
- '(setq font-lock-verbose 500000)          ; "Fontifying...done" only if big buffer.
- '(setq font-lock-maximum-size 5120000))    ; Double the default size. big logs log4j
+ '(w3m-default-display-inline-images t))
+    ; Double the default size. big logs log4j
 ;;Fonting
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "Pragmata")))))
+ '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "Courier")))))
