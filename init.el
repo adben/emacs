@@ -16,6 +16,7 @@
        (normal-top-level-add-subdirs-to-load-path))
                                         ;I like to keep third party libraries seperate in ~/.emacs.d/vendor
 (add-to-list 'load-path "~/.emacs.d/vendor")
+(add-to-list 'exec-path "/usr/local/bin")
 (progn (cd "~/.emacs.d/vendor")
        (normal-top-level-add-subdirs-to-load-path))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -338,21 +339,34 @@
  '(w3m-default-display-inline-images t))
     ; Double the default size. big logs log4j
 ;;ispell configs for Mac OSX.
-(autoload 'ispell-word "ispell"
-         "Check the spelling of word in buffer." t)
-      (global-set-key "\e$" 'ispell-word)
-      (autoload 'ispell-region "ispell"
-         "Check the spelling of region." t)
-      (autoload 'ispell-buffer "ispell"
-         "Check the spelling of buffer." t)
-      (autoload 'ispell-complete-word "ispell"
-         "Look up current word in dictionary and try to complete it." t)
-      (autoload 'ispell-change-dictionary "ispell"
-         "Change ispell dictionary." t)
-      (autoload 'ispell-message "ispell"
-         "Check spelling of mail message or news post.")
-      (autoload 'ispell-minor-mode "ispell"
-         "Toggle mode to automatically spell check words as they are typed in.")
+(setq ispell-program-name "aspell"
+      ispell-dictionary-alist
+      '((nil
+	 "[A-Za-z]" "[^A-Za-z]" "[']" nil
+	 ("-B" "-d" "english" "--dict-dir"
+	  "/Library/Application Support/cocoAspell/aspell6-en-6.0-0")
+	 nil iso-8859-1)
+	("dutch" "[a-zA-Z\304\326\334\344\366\337\374]"
+	 "[^a-zA-Z\304\326\334\344\366\337\374]" "[']" t
+	 ("-C" "-d" "nederlands" "--dict-dir"
+	  "/Library/Application Support/cocoAspell/aspell-nl-0.50-2")
+	 "~latin1" iso-8859-1)))
+;;The default value is “ispell” which is not what you want. Your aspell has been installed in /usr/local/bin – this directory should be in your ExecPath. If it isn’t, you might have to add it:
+;; (autoload 'ispell-word "ispell"
+;;          "Check the spelling of word in buffer." t)
+;;       (global-set-key "\e$" 'ispell-word)
+;;       (autoload 'ispell-region "ispell"
+;;          "Check the spelling of region." t)
+;;       (autoload 'ispell-buffer "ispell"
+;;          "Check the spelling of buffer." t)
+;;       (autoload 'ispell-complete-word "ispell"
+;;          "Look up current word in dictionary and try to complete it." t)
+;;       (autoload 'ispell-change-dictionary "ispell"
+;;          "Change ispell dictionary." t)
+;;       (autoload 'ispell-message "ispell"
+;;          "Check spelling of mail message or news post.")
+;;       (autoload 'ispell-minor-mode "ispell"
+;;          "Toggle mode to automatically spell check words as they are typed in.")
 ;;Fonting
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
