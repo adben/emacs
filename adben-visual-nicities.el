@@ -28,11 +28,11 @@
 (setq scroll-step 1)
 (setq inhibit-startup-message t)
 ;;Disable the menubar (promotes good emacs memory :)
-(menu-bar-mode 0)
+;;(menu-bar-mode 0)
 (tool-bar-mode -1)
-(scroll-bar-mode 1)
+(scroll-bar-mode -1)
 ;;activate by default the speedbar into thw workspace
-(speedbar 0)
+;;(speedbar 0)
 ;;Make page up and page down a whole lot nicer
 (global-set-key "\C-v"	   'pager-page-down)
 (global-set-key [next] 	   'pager-page-down)

@@ -290,8 +290,11 @@
  ;; If there is more than one, they won't work right.
  '(bbdb-file "~/.emacs.private/dot-bbdb")
  '(column-number-mode t)
- '(confluence-default-space-alist (list (cons confluence-url "https://dev.sourcesense.com/confluence/display/~a.benedetti")))
- '(confluence-url "https://dev.sourcesense.com/confluence/rpc/xmlrpc")
+ ;;confluence
+ '(confluence-default-space-alist (list (cons confluence-url "https://wiki.rijksoverheid.nl/display/PONS")))
+ '(confluence-url "https://wiki.rijksoverheid.nl/rpc/xmlrpc")
+ ;; '(confluence-default-space-alist (list (cons confluence-url "https://dev.sourcesense.com/confluence/display/~a.benedetti")))
+ ;; '(confluence-url "https://dev.sourcesense.com/confluence/rpc/xmlrpc")
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (zenburn)))
  '(custom-safe-themes (quote ("324c41970f27ceb68e7579d722bc3b69b6390e13" "649ccffdb140fcd021013f6297dedeb313b74fa5" default)))
@@ -328,7 +331,7 @@
  '(paren-sexp-mode t)
  '(setq font-lock-maximum-size t)
  '(show-paren-mode t)
- '(speedbar-frame-parameters (quote ((minibuffer) (width . 20) (border-width . 0) (menu-bar-lines . 0) (tool-bar-lines . 0) (unsplittable . t) (set-background-color "black"))))
+ ;;'(speedbar-frame-parameters (quote ((minibuffer) (width . 20) (border-width . 0) (menu-bar-lines . 0) (tool-bar-lines . 0) (unsplittable . t) (set-background-color "black"))))
  '(svn-status-hide-unmodified t)
  '(svn-status-verbose nil)
  '(twit-mode t)
