@@ -2,6 +2,7 @@
 ;; Why this isn't the default baffles me.
 (defadvice flyspell-mode (after advice-flyspell-check-buffer-on-start activate)
   (flyspell-buffer))
+(setq flyspell-issue-welcome-flag nil)
 (autoload 'ispell-word "ispell"
          "Check the spelling of word in buffer." t)
       (global-set-key "\e$" 'ispell-word)
