@@ -338,19 +338,20 @@
  '(user-mail-address "adolfo.benedetti@gmail.com")
  '(w3m-default-display-inline-images t))
     ; Double the default size. big logs log4j
-;;ispell configs for Mac OSX.
+;;ispell configs for Mac OSX. dutch as default, english configured
 (setq ispell-program-name "aspell"
       ispell-dictionary-alist
-      '((nil
+      '(("dutch" "[a-zA-Z\304\326\334\344\366\337\374]"
+	 "[^a-zA-Z\304\326\334\344\366\337\374]" "[']" t
+	 ("-C" "-d" "nederlands" "--dict-dir"
+	  "/Library/Application Support/cocoAspell/aspell-nl-0.50-2")
+	 "~latin1" iso-8859-1)
+        (nil
 	 "[A-Za-z]" "[^A-Za-z]" "[']" nil
 	 ("-B" "-d" "english" "--dict-dir"
 	  "/Library/Application Support/cocoAspell/aspell6-en-6.0-0")
 	 nil iso-8859-1)
-	("dutch" "[a-zA-Z\304\326\334\344\366\337\374]"
-	 "[^a-zA-Z\304\326\334\344\366\337\374]" "[']" t
-	 ("-C" "-d" "nederlands" "--dict-dir"
-	  "/Library/Application Support/cocoAspell/aspell-nl-0.50-2")
-	 "~latin1" iso-8859-1)))
+	))
 ;;The default value is “ispell” which is not what you want. Your aspell has been installed in /usr/local/bin – this directory should be in your ExecPath. If it isn’t, you might have to add it:
 ;; (autoload 'ispell-word "ispell"
 ;;          "Check the spelling of word in buffer." t)
