@@ -17,6 +17,7 @@
                                         ;I like to keep third party libraries seperate in ~/.emacs.d/vendor
 (add-to-list 'load-path "~/.emacs.d/vendor")
 (add-to-list 'exec-path "/usr/local/bin")
+(add-to-list 'exec-path "/opt/local/bin")
 (progn (cd "~/.emacs.d/vendor")
        (normal-top-level-add-subdirs-to-load-path))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -339,19 +340,26 @@
  '(w3m-default-display-inline-images t))
     ; Double the default size. big logs log4j
 ;;ispell configs for Mac OSX. dutch as default, english configured
-(setq ispell-program-name "aspell"
-      ispell-dictionary-alist
-      '(("dutch" "[a-zA-Z\304\326\334\344\366\337\374]"
-	 "[^a-zA-Z\304\326\334\344\366\337\374]" "[']" t
-	 ("-C" "-d" "nederlands" "--dict-dir"
-	  "/Library/Application Support/cocoAspell/aspell-nl-0.50-2")
-	 "~latin1" iso-8859-1)
-        (nil
-	 "[A-Za-z]" "[^A-Za-z]" "[']" nil
-	 ("-B" "-d" "english" "--dict-dir"
-	  "/Library/Application Support/cocoAspell/aspell6-en-6.0-0")
-	 nil iso-8859-1)
-	))
+;;hunspell
+(setq ispell-program-name "hunspell")
+(setq ispell-dictionary-alist
+  '((nil "[A-Za-z]" "[^A-Za-z]" "[']" t ("-d" "en_US") nil utf-8)))
+(eval-after-load "ispell"
+  '(progn (defun ispell-get-coding-system () 'utf-8)))
+;; ;;aspell 
+;; (setq ispell-program-name "aspell"
+;;       ispell-dictionary-alist
+;;       '(("dutch" "[a-zA-Z\304\326\334\344\366\337\374]"
+;; 	 "[^a-zA-Z\304\326\334\344\366\337\374]" "[']" t
+;; 	 ("-C" "-d" "nederlands" "--dict-dir"
+;; 	  "/Library/Application Support/cocoAspell/aspell-nl-0.50-2")
+;; 	 "~latin1" iso-8859-1)
+;;         (nil
+;; 	 "[A-Za-z]" "[^A-Za-z]" "[']" nil
+;; 	 ("-B" "-d" "english" "--dict-dir"
+;; 	  "/Library/Application Support/cocoAspell/aspell6-en-6.0-0")
+;; 	 nil iso-8859-1)
+;; 	))
 ;;The default value is “ispell” which is not what you want. Your aspell has been installed in /usr/local/bin – this directory should be in your ExecPath. If it isn’t, you might have to add it:
 ;; (autoload 'ispell-word "ispell"
 ;;          "Check the spelling of word in buffer." t)
@@ -374,4 +382,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "Courier")))))
+ '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :family "Courier")))))
