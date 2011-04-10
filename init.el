@@ -282,6 +282,30 @@
 			 ("gnu" . "http://elpa.gnu.org/packages/")
 			 ("technomancy" . "http://repo.technomancy.us/emacs/")))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Hunspell for ispell
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Use hunspell instead of ispell 
+;; (if (file-exists-p "/opt/local/bin/hunspell")
+(setq ispell-dictionary-alist
+       '((nil				
+          "[A-Za-z]" "[^A-Za-z]" "[\"]"
+          nil ("-d" "/opt/local/share/hunspell/en_US") nil utf-8)
+         ("es_ES_hunspell"
+          "[A-Za-z]" "[^A-Za-z]" "[\"]"
+          nil ("-d" "/opt/local/share/hunspell/es_ES") nil utf-8)
+         ("nl_NL_hunspell"
+          "[A-Za-z]" "[^A-Za-z]" "[\"]"
+          nil ("-d" "/opt/local/share/hunspell/nl_NL") nil utf-8)))
+(eval-after-load "ispell"
+  (progn
+    (setq ispell-dictionary "nl_NL_hunspell"
+          ispell-extra-args '("-a" "-i" "utf-8")
+          ispell-silently-savep t )))
+(setq-default ispell-program-name "hunspell")
+(require 'rw-language-and-country-codes)
+(require 'rw-ispell)
+(require 'rw-hunspell)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Custmoized Settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
@@ -346,28 +370,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "Courier")))))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Hunspell for ispell
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Use hunspell instead of ispell 
-;; (if (file-exists-p "/opt/local/bin/hunspell")
-(setq ispell-dictionary-alist
-       '((nil				
-          "[A-Za-z]" "[^A-Za-z]" "[\"]"
-          nil ("-d" "/opt/local/share/hunspell/en_US") nil utf-8)
-         ("es_ES_hunspell"
-          "[A-Za-z]" "[^A-Za-z]" "[\"]"
-          nil ("-d" "/opt/local/share/hunspell/es_ES") nil utf-8)
-         ("nl_NL_hunspell"
-          "[A-Za-z]" "[^A-Za-z]" "[\"]"
-          nil ("-d" "/opt/local/share/hunspell/nl_NL") nil utf-8)))
-(eval-after-load "ispell"
-  (progn
-    (setq ispell-dictionary "nl_NL_hunspell"
-          ispell-extra-args '("-a" "-i" "utf-8")
-          ispell-silently-savep t )))
-(setq-default ispell-program-name "hunspell")
-(require 'rw-language-and-country-codes)
-(require 'rw-ispell)
-(require 'rw-hunspell)
 
