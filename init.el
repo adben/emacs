@@ -18,7 +18,6 @@
 (add-to-list 'load-path "~/.emacs.d/vendor")
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'exec-path "/opt/local/bin")
-(add-to-list 'load-path "/opt/local/share/hunspell")
 (progn (cd "~/.emacs.d/vendor")
        (normal-top-level-add-subdirs-to-load-path))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -282,23 +281,6 @@
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/") 
 			 ("gnu" . "http://elpa.gnu.org/packages/")
 			 ("technomancy" . "http://repo.technomancy.us/emacs/")))
-;; Use hunspell instead of ispell 
-(setq ispell-program-name "hunspell") 
-(require 'rw-language-and-country-codes) 
-(require 'rw-ispell) 
-(require 'rw-hunspell) 
-(setq ispell-dictionary "nl_NL_hunspell")
-(setq
- ispell-dictionary-alist
- '((nil				; default 
-    "[A-Za-z]" "[^A-Za-z]" "[']"
-    t ("-d" "/opt/local/share/hunspell/en_US") nil utf-8)
-   ("es_ES"
-    "[A-Za-z]" "[^A-Za-z]" "[']"
-    t ("-d" "/opt/local/share/hunspell/es_ES") nil utf-8)
-   ("nl_NL_hunspell"
-    "[a-zA-Z\304\326\334\344\366\337\374]" "[^a-zA-Z\304\326\334\344\366\337\374]" "[']"
-    t ("-d" "/opt/local/share/hunspell/nl_NL") nil utf-8)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Custmoized Settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -312,7 +294,7 @@
  '(confluence-default-space-alist (list (cons confluence-url "https://wiki.rijksoverheid.nl/display/PONS")))
  '(confluence-url "https://wiki.rijksoverheid.nl/rpc/xmlrpc")
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (tsdh-light)))
+ '(custom-enabled-themes (quote (tango)))
  '(custom-safe-themes (quote ("81f92df1f435dc251bc3816e882688b5a19039af" "324c41970f27ceb68e7579d722bc3b69b6390e13" "649ccffdb140fcd021013f6297dedeb313b74fa5" default)))
  '(ecb-layout-name "left9")
  '(ecb-maximize-ecb-window-after-selection t)
@@ -364,3 +346,28 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "Courier")))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Hunspell for ispell
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Use hunspell instead of ispell 
+;; (if (file-exists-p "/opt/local/bin/hunspell")
+(setq ispell-dictionary-alist
+       '((nil				
+          "[A-Za-z]" "[^A-Za-z]" "[\"]"
+          nil ("-d" "/opt/local/share/hunspell/en_US") nil utf-8)
+         ("es_ES_hunspell"
+          "[A-Za-z]" "[^A-Za-z]" "[\"]"
+          nil ("-d" "/opt/local/share/hunspell/es_ES") nil utf-8)
+         ("nl_NL_hunspell"
+          "[A-Za-z]" "[^A-Za-z]" "[\"]"
+          nil ("-d" "/opt/local/share/hunspell/nl_NL") nil utf-8)))
+(eval-after-load "ispell"
+  (progn
+    (setq ispell-dictionary "nl_NL_hunspell"
+          ispell-extra-args '("-a" "-i" "utf-8")
+          ispell-silently-savep t )))
+(setq-default ispell-program-name "hunspell")
+(require 'rw-language-and-country-codes)
+(require 'rw-ispell)
+(require 'rw-hunspell)
+
