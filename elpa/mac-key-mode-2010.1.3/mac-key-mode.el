@@ -3,7 +3,7 @@
 ;; Copyright (C) 2004-2010  Seiji Zenitani
 
 ;; Author: Seiji Zenitani <zenitani@mac.com>
-;; $Id$
+;; Version: 2010.01.03
 ;; Keywords: tools, mac
 ;; Created: 2004-12-27
 ;; Compatibility: Mac OS X 10.5 (Carbon Emacs)
