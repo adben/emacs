@@ -1,3 +1,4 @@
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Adolfo Benedetti's Emacs Environment
 ;; adolfo.benedetti@gmail.com
@@ -45,7 +46,7 @@
 (require 'dired)
 (require 'pair-mode)
 (require 'pager)
-(require 'twit)
+;;(require 'twit)
 (require 'ledger)
 (require 'auto-complete)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -359,7 +360,7 @@
  '(svn-status-hide-unmodified t)
  '(svn-status-verbose nil)
  '(tool-bar-mode nil)
- '(twit-mode t)
+ ;;'(twit-mode t)
  '(user-mail-address "adolfo.benedetti@gmail.com")
  '(w3m-default-display-inline-images t))
     ; Double the default size. big logs log4j
