@@ -1,12 +1,12 @@
-;;; redo+.el -- Redo/undo system for Emacs
+;;; redo+.el --- Redo/undo system for Emacs
 
 ;; Copyright (C) 1985, 1986, 1987, 1993-1995 Free Software Foundation, Inc.
 ;; Copyright (C) 1995 Tinker Systems and INS Engineering Corp.
 ;; Copyright (C) 1997 Kyle E. Jones
 ;; Copyright (C) 2008, 2009 S. Irie
 
-;; Author: Kyle E. Jones, February 1997
-;;         S. Irie, March 2008
+;; Version: 1.15
+;; Author: Kyle E. Jones, S. Irie
 ;; Keywords: lisp, extensions
 
 ;; This program is free software; you can redistribute it and/or
@@ -130,7 +130,7 @@ then you cannot redo any undos before then."
       (let ((p buffer-undo-list))
 	(and (null (car-safe p)) (setq p (cdr-safe p)))
 	(while (and p (integerp (car-safe p)))
-	  (setq p (cdr-safe p)))
+      (setq p (cdr-safe p)))
 	(eq last-buffer-undo-list p))
       (error "Buffer modified since last undo/redo, cannot redo"))
   (and (eq (cdr buffer-undo-list) pending-undo-list)
@@ -159,25 +159,25 @@ then you cannot redo any undos before then."
     (while p
       (setq next (cdr p))
       (cond ((eq next q)
-	     ;; insert the unmodified status entry into undo records
-	     ;; if buffer is not modified.  The undo command inserts
-	     ;; this information only in redo entries.
-	     (when (and (not modified) (buffer-file-name))
-	       (let* ((time (nth 5 (file-attributes (buffer-file-name))))
-		      (elt (cons (car time) (cadr time))))
-		 (if (eq (car-safe (car prev)) t)
-		     (setcdr (car prev) elt)
-		   (setcdr prev (cons (cons t elt) p)))))
-	     (setq next nil))
-	    ((null (car next))
-	     (setq records-between (1+ records-between))))
+         ;; insert the unmodified status entry into undo records
+         ;; if buffer is not modified.  The undo command inserts
+         ;; this information only in redo entries.
+         (when (and (not modified) (buffer-file-name))
+           (let* ((time (nth 5 (file-attributes (buffer-file-name))))
+              (elt (cons (car time) (cadr time))))
+         (if (eq (car-safe (car prev)) t)
+             (setcdr (car prev) elt)
+           (setcdr prev (cons (cons t elt) p)))))
+         (setq next nil))
+        ((null (car next))
+         (setq records-between (1+ records-between))))
       (setq prev p
-	    p next))
+        p next))
     ;; don't allow the user to redo more undos than exist.
     ;; only half the records between the list head and the pending
     ;; pointer are undos that are a part of this command chain.
     (setq count (min (/ records-between 2) count)
-	  p (primitive-undo (1+ count) buffer-undo-list))
+      p (primitive-undo (1+ count) buffer-undo-list))
     (if (eq p old-undo-list)
 	nil ;; nothing happened
       ;; set buffer-undo-list to the new undo list.  if has been
@@ -193,11 +193,11 @@ then you cannot redo any undos before then."
       (let ((n (- records-between count)))
 	(setq p (cdr old-undo-list))
 	(while (and p (> n 0))
-	  (setq p (cdr (memq nil p))
+      (setq p (cdr (memq nil p))
 		n (1- n)))
 	(setq pending-undo-list p)))
     (and modified (not (buffer-modified-p))
-	 (delete-auto-save-file-if-necessary recent-save))
+     (delete-auto-save-file-if-necessary recent-save))
     (or (eq (selected-window) (minibuffer-window))
 	(message "Redo!"))
     (setq last-buffer-undo-list buffer-undo-list)))
@@ -214,26 +214,26 @@ A numeric argument serves as a repeat count."
     ;;(or (eq (selected-window) (minibuffer-window))
     ;;    (message "Undo..."))
     (let ((p buffer-undo-list)
-	  (old-pending-undo-list pending-undo-list))
+      (old-pending-undo-list pending-undo-list))
       (or (eq last-buffer-undo-list buffer-undo-list)
-	  ;; skip one undo boundary and all point setting commands up
-	  ;; until the next undo boundary and try again.
-	  (progn (and (null (car-safe p)) (setq p (cdr-safe p)))
-		 (while (and p (integerp (car-safe p)))
-		   (setq p (cdr-safe p)))
-		 (eq last-buffer-undo-list p))
-	  (progn (undo-start)
-		 ;; get rid of initial undo boundary
-		 (undo-more 1)
-		 (not undo-no-redo))
-	  ;; discard old redo information if undo-no-redo is non-nil
-	  (progn (if (car-safe last-buffer-undo-list)
-		     (while (and p (not (eq last-buffer-undo-list
-					    (cdr-safe p))))
-		       (setq p (cdr-safe p)))
-		   (setq p last-buffer-undo-list))
-		 (if p (setcdr p old-pending-undo-list)))
-	  ))
+      ;; skip one undo boundary and all point setting commands up
+      ;; until the next undo boundary and try again.
+      (progn (and (null (car-safe p)) (setq p (cdr-safe p)))
+         (while (and p (integerp (car-safe p)))
+           (setq p (cdr-safe p)))
+         (eq last-buffer-undo-list p))
+      (progn (undo-start)
+         ;; get rid of initial undo boundary
+         (undo-more 1)
+         (not undo-no-redo))
+      ;; discard old redo information if undo-no-redo is non-nil
+      (progn (if (car-safe last-buffer-undo-list)
+             (while (and p (not (eq last-buffer-undo-list
+                        (cdr-safe p))))
+               (setq p (cdr-safe p)))
+           (setq p last-buffer-undo-list))
+         (if p (setcdr p old-pending-undo-list)))
+      ))
     (undo-more (or arg 1))
     ;; Don't specify a position in the undo record for the undo command.
     ;; Instead, undoing this should move point to where the change is.
@@ -244,16 +244,16 @@ A numeric argument serves as a repeat count."
     ;;;; undo boundary.  This does what I think the other code
     ;;;; meant to do.
     (let* ((p buffer-undo-list)
-	   (list (cons nil p))
-	   (prev list))
+       (list (cons nil p))
+       (prev list))
       (while (car p)
 	(if (integerp (car p))
-	    (setcdr prev (cdr p))
-	  (setq prev p))
+        (setcdr prev (cdr p))
+      (setq prev p))
 	(setq p (cdr p)))
       (setq buffer-undo-list (cdr list)))
     (and modified (not (buffer-modified-p))
-	 (delete-auto-save-file-if-necessary recent-save)))
+     (delete-auto-save-file-if-necessary recent-save)))
   (or (eq (selected-window) (minibuffer-window))
       (message "Undo!"))
   (setq last-buffer-undo-list buffer-undo-list))
@@ -262,14 +262,14 @@ A numeric argument serves as a repeat count."
 (unless (featurep 'xemacs)
   ;; condition to undo
   (mapc (lambda (map)
-	  (setcar (cdr (memq :enable (assq 'undo (cdr map))))
-		  '(and (not buffer-read-only)
+      (setcar (cdr (memq :enable (assq 'undo (cdr map))))
+          '(and (not buffer-read-only)
 			(consp buffer-undo-list)
 			(or (not (or (eq last-buffer-undo-list
-					 buffer-undo-list)
-				     (eq last-buffer-undo-list
-					 (cdr buffer-undo-list))))
-			    (listp pending-undo-list)))))
+                     buffer-undo-list)
+                     (eq last-buffer-undo-list
+                     (cdr buffer-undo-list))))
+                (listp pending-undo-list)))))
 	(append (list menu-bar-edit-menu)
 		(if window-system (list tool-bar-map))))
   ;; redo's menu-bar entry
@@ -277,16 +277,16 @@ A numeric argument serves as a repeat count."
     '(menu-item "Redo" redo
 		:enable
 		(and
-		 (not buffer-read-only)
-		 (not (eq buffer-undo-list t))
-		 (not (eq last-buffer-undo-list nil))
-		 (or (eq last-buffer-undo-list buffer-undo-list)
-		     (let ((p buffer-undo-list))
-		       (and (null (car-safe p)) (setq p (cdr-safe p)))
-		       (while (and p (integerp (car-safe p)))
-			 (setq p (cdr-safe p)))
-		       (eq last-buffer-undo-list p)))
-		 (not (eq (cdr buffer-undo-list) pending-undo-list)))
+         (not buffer-read-only)
+         (not (eq buffer-undo-list t))
+         (not (eq last-buffer-undo-list nil))
+         (or (eq last-buffer-undo-list buffer-undo-list)
+             (let ((p buffer-undo-list))
+               (and (null (car-safe p)) (setq p (cdr-safe p)))
+               (while (and p (integerp (car-safe p)))
+             (setq p (cdr-safe p)))
+               (eq last-buffer-undo-list p)))
+         (not (eq (cdr buffer-undo-list) pending-undo-list)))
 		:help "Redo the most recent undo")
     'undo)
   ;; redo's tool-bar icon
@@ -299,7 +299,7 @@ A numeric argument serves as a repeat count."
     ;; use gtk+ icon if Emacs23
     (if (boundp 'x-gtk-stock-map)
 	(setq x-gtk-stock-map
-	      (cons '("etc/images/redo" . "gtk-redo") x-gtk-stock-map)))
+          (cons '("etc/images/redo" . "gtk-redo") x-gtk-stock-map)))
     ;; update tool-bar icon immediately
     (defun redo-toolbar-update (&optional bgn end lng)
       (interactive)
