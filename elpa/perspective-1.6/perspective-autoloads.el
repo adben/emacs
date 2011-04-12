@@ -3,8 +3,8 @@
 ;;; Code:
 
 
-;;;### (autoloads (persp-mode) "perspective" "perspective.el" (19658
-;;;;;;  53265))
+;;;### (autoloads (persp-mode) "perspective" "perspective.el" (19876
+;;;;;;  13169))
 ;;; Generated autoloads from perspective.el
 
 (defvar persp-mode nil "\
@@ -25,7 +25,7 @@ named collections of buffers and window configurations.
 
 ;;;***
 
-;;;### (autoloads nil nil ("perspective-pkg.el") (19658 53266 40962))
+;;;### (autoloads nil nil ("perspective-pkg.el") (19876 13169 558191))
 
 ;;;***
 
