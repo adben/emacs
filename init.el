@@ -282,7 +282,6 @@
 			 ("gnu" . "http://elpa.gnu.org/packages/")
 			 ("technomancy" . "http://repo.technomancy.us/emacs/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Hunspell for ispell
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Use hunspell instead of ispell 
