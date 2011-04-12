@@ -1,4 +1,3 @@
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Adolfo Benedetti's Emacs Environment
 ;; adolfo.benedetti@gmail.com
@@ -281,7 +280,8 @@
 ;;adding swank-clojure slime-connect for version
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/") 
 			 ("gnu" . "http://elpa.gnu.org/packages/")
-			 ("technomancy" . "http://repo.technomancy.us/emacs/")))
+			 ("technomancy" . "http://repo.technomancy.us/emacs/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Hunspell for ispell
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
