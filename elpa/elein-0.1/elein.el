@@ -1,10 +1,12 @@
-;;; elein.el -- running leiningen commands from emacs
+;;; elein.el --- running leiningen commands from emacs
 
-;; Copyright (C) 2010 R.W van 't Veer
+;; Copyright (C) 2010, 2011 R.W van 't Veer
 
 ;; Author: R.W. van 't Veer
 ;; Created: 2 Aug 2010
 ;; Keywords: tools processes
+;; Version: 0.1
+;; URL: https://github.com/remvee/elein
 
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License
@@ -26,7 +28,7 @@
 
 ;;; Code:
 
-(require 'cl)
+(eval-when-compile (require 'cl))
 
 (defgroup elein nil
   "running leiningen commands from emacs"
@@ -35,6 +37,11 @@
 
 (defcustom elein-lein "lein"
   "Leiningen 'lein' command."
+  :type 'string
+  :group 'elein)
+
+(defcustom elein-standalone-swank-command "~/.lein/bin/swank-clojure"
+  "Leiningen 'swank-clojure' command for standalone execution."
   :type 'string
   :group 'elein)
 
@@ -60,14 +67,7 @@
 
 (defun elein-project-root ()
   "Look for project.clj file to find project root."
-  (let ((cwd default-directory)
-        (found nil)
-        (max 10))
-    (while (and (not found) (> max 0))
-      (if (file-exists-p (concat cwd "project.clj"))
-        (setq found cwd)
-        (setq cwd (concat cwd "../") max (- max 1))))
-    (and found (expand-file-name found))))
+  (locate-dominating-file default-directory "project.clj"))
 
 (defmacro elein-in-project-root (body)
   "Wrap BODY to make `default-directory' the project root."
@@ -114,24 +114,47 @@
           elein-swank-host
           elein-swank-options))
 
+(defun elein-standalone-swank-command ()
+  "Build projectless lein swank command."
+  (unless (file-exists-p (expand-file-name elein-standalone-swank-command))
+    (error "can not find %s; use 'lein install swank-clojure VERSION' to install it"
+           elein-standalone-swank-command))
+  (format "%s %d :host %s %s"
+          (expand-file-name elein-standalone-swank-command)
+          elein-swank-port
+          elein-swank-host
+          elein-swank-options))
+
+(defun elein-burried-shell-command (command buffer)
+  "Same as `shell-command' but run process asynchronously, do not
+show output and burry the given BUFFER."
+  (flet ((display-buffer (buffer-or-name &optional not-this-window frame) nil))
+    (bury-buffer buffer)
+    (shell-command (concat command "&") buffer)))
+
+(defun elein-swank-process-filter (process output)
+  "Swank process filter to launch `slime-connect' when process is ready."
+  (with-current-buffer elein-swank-buffer-name (insert output))
+
+  (when (string-match "Connection opened on local port +\\([0-9]+\\)" output)
+    (slime-set-inferior-process
+     (slime-connect "localhost" (match-string 1 output))
+     process)
+    (set-process-filter process nil)))
+
 ;;;###autoload
-(defun elein-swank ()
-  "Launch lein swank and connect slime to it."
-  (interactive)
+(defun elein-swank (&optional prefix)
+  "Launch lein swank and connect slime to it.  Interactively, a
+PREFIX means launch a standalone swank session without a
+project."
+  (interactive "P")
   (let ((buffer (get-buffer-create elein-swank-buffer-name)))
-    (flet ((display-buffer (buffer-or-name &optional not-this-window frame) nil))
-      (bury-buffer buffer)
-      (elein-in-project-root (shell-command (concat (elein-swank-command) "&") buffer)))
+    (if prefix
+      (elein-burried-shell-command (elein-standalone-swank-command) buffer)
+      (elein-in-project-root
+       (elein-burried-shell-command (elein-swank-command) buffer)))
 
-    (set-process-filter (get-buffer-process buffer)
-                        (lambda (process output)
-                          (with-current-buffer elein-swank-buffer-name (insert output))
-
-                          (when (string-match "Connection opened on local port +\\([0-9]+\\)" output)
-                            (slime-set-inferior-process
-                             (slime-connect "localhost" (match-string 1 output))
-                             process)
-                            (set-process-filter process nil))))
+    (set-process-filter (get-buffer-process buffer) #'elein-swank-process-filter)
 
     (message "Starting swank..")))
 
