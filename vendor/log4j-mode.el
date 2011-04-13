@@ -138,36 +138,61 @@
   :group 'faces
   :group 'files)
 
+<<<<<<< HEAD
 (defface log4j-font-lock-debug-face '((t (:foreground "Gray45")))
   "*Font Lock face used to highlight DEBUG log records."
+=======
+(defface log4j-font-lock-debug-face '((t (:foreground "#c8c1a7")))
+  "*Font Lock face used to highlight DEBUG log records. banano"
+>>>>>>> emacs24
   :group 'font-lock-highlighting-faces
   :group 'log4j-mode)
 (defvar log4j-font-lock-debug-face
   (make-face 'log4j-font-lock-debug-face))
 
+<<<<<<< HEAD
 (defface log4j-font-lock-info-face '((t (:foreground "ForestGreen")))
   "*Font Lock face used to highlight INFO log records."
+=======
+(defface log4j-font-lock-info-face '((t (:foreground "#608075")))
+  "*Font Lock face used to highlight INFO log records. verde oscuro"
+>>>>>>> emacs24
   :group 'font-lock-highlighting-faces
   :group 'log4j-mode)
 (defvar log4j-font-lock-info-face
   (make-face 'log4j-font-lock-info-face))
 
+<<<<<<< HEAD
 (defface log4j-font-lock-warn-face '((t (:foreground "DodgerBlue")))
   "*Font Lock face used to highlight WARN log records."
+=======
+(defface log4j-font-lock-warn-face '((t (:foreground "#c68d22")))
+  "*Font Lock face used to highlight WARN log records. sapote"
+>>>>>>> emacs24
   :group 'font-lock-highlighting-faces
   :group 'log4j-mode)
 (defvar log4j-font-lock-warn-face
   (make-face 'log4j-font-lock-warn-face))
 
+<<<<<<< HEAD
 (defface log4j-font-lock-error-face '((t (:foreground "Red")))
   "*Font Lock face used to highlight ERROR log records."
+=======
+(defface log4j-font-lock-error-face '((t (:foreground "#560023")))
+  "*Font Lock face used to highlight ERROR log records. Rojo"
+>>>>>>> emacs24
   :group 'font-lock-highlighting-faces
   :group 'log4j-mode)
 (defvar log4j-font-lock-error-face
   (make-face 'log4j-font-lock-error-face))
 
+<<<<<<< HEAD
 (defface log4j-font-lock-fatal-face '((t (:foreground "Red" :bold t)))
   "*Font Lock face used to highlight FATAL log records."
+=======
+(defface log4j-font-lock-fatal-face '((t (:foreground "#560023" :bold t)))
+  "*Font Lock face used to highlight FATAL log records. Rojo bold"
+>>>>>>> emacs24
   :group 'font-lock-highlighting-faces
   :group 'log4j-mode)
 (defvar log4j-font-lock-fatal-face
@@ -580,7 +605,11 @@ first line of the declaration."
 
 (defun log4j-match-record-error (bound)
   "Search forward from point to BOUND for ERROR log record."
+<<<<<<< HEAD
   (log4j-record-search-forward "\\<\\(ERROR\\|SEVERE\\)\\>" bound))
+=======
+  (log4j-record-search-forward "\\<\\(ERROR\\|SEVERE\\|	at \\)\\>" bound))
+>>>>>>> emacs24
 
 (defun log4j-match-record-warn (bound)
   "Search forward from point to BOUND for WARN log record."

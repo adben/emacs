@@ -1,5 +1,10 @@
 ;; Fix colors (like ls --color, etc)
 ;;; Shell mode
+<<<<<<< HEAD
+=======
+;; (require 'shell-command)
+;; (shell-command-completion-mode)
+>>>>>>> emacs24
 (setq ansi-color-names-vector ; better contrast colors
      ["black" "red4" "green4" "yellow4"
        "blue3" "magenta4" "cyan4" "white"])
