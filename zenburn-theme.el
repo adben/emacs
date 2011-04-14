@@ -45,10 +45,10 @@
  '(button ((t (:underline t))))
  '(header-line ((t (:background "#2e3330" :foreground "#88b090")))))
 
-(provide-theme 'zenburn)
+(provide-theme 'zenburn-theme)
 
 ;; Local Variables:
-;; no-byte-compile: t
+;; No-byte-compile: t
 ;; End:
 
 ;;; zenburn-theme.el  ends here
