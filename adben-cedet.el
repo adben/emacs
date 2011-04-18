@@ -2,6 +2,7 @@
 ;; CEDET
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <<<<<<< HEAD
+<<<<<<< HEAD
 (load-file "~/.emacs.d/vendor/cedet/common/cedet.el")
 ;;make all the 'semantic.cache' files go somewhere sane
 (setq semanticdb-default-save-directory "~/emacs-meta/semantic.cache/")
@@ -13,6 +14,8 @@
 ;; Enable this if you develop in semantic, or develop grammars
 ;; (semantic-load-enable-semantic-debugging-helpers)
 =======
+=======
+>>>>>>> emacs24
 ;;(load-file "~/.emacs.d/vendor/cedet/common/cedet.el")
 ;;(add-to-list 'load-path "/Applications/Emacs.app/Contents/Resources/lisp/cedet/")
 (load-file "/Applications/Emacs.app/Contents/Resources/lisp/cedet/cedet.elc");;
@@ -32,4 +35,7 @@
 (require 'speedbar)
 (require 'srecode)
 (require 'ede)
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24

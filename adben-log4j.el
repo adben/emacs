@@ -2,6 +2,10 @@
 (autoload 'log4j-mode "log4j-mode" "logs editing mode." t)
 (add-to-list 'auto-mode-alist '("\.log$" . log4j-mode))
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+(add-to-list 'auto-mode-alist '("\.out$" . log4j-mode))
+>>>>>>> emacs24
 =======
 (add-to-list 'auto-mode-alist '("\.out$" . log4j-mode))
 >>>>>>> emacs24

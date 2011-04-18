@@ -47,10 +47,13 @@
 (defun color-theme-adben ()
   "based on the Irfn's zen with a bit of art. http://github.com/irfn/zen-and-art"
 <<<<<<< HEAD
+<<<<<<< HEAD
   (interactive)
   (color-theme-install
    '(color-theme-adben
 =======
+=======
+>>>>>>> emacs24
   ;; (interactive)
   ;; (color-theme-install
   ;;  '(color-theme-adben
@@ -105,6 +108,9 @@
   (interactive)
   (color-theme-install
    '(color-theme-zen-and-art
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
      ((background-color . "#191717")
       (background-mode . dark)
@@ -115,16 +121,22 @@
       (view-highlight-face . highlight))
      (default ((t (nil))))
 <<<<<<< HEAD
+<<<<<<< HEAD
      (bold ((t (nil))))
      ;; (bold ((t (:bold t))))
      (bold-italic ((t (:italic t :bold t))))
      (fringe ((t (:background "#252323"))))
 		 (highlight-current-line-face ((t (:background "#252323"))))
 =======
+=======
+>>>>>>> emacs24
      (bold ((t (:bold t))))
      (bold-italic ((t (:italic t :bold t))))
      (fringe ((t (:background "#252323"))))
 (highlight-current-line-face ((t (:background "#252323"))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
      (font-lock-builtin-face ((t (:foreground "#86453A"))))
      (font-lock-comment-face ((t (:italic t :foreground "#333B40"))))
@@ -161,7 +173,10 @@
      (underline ((t (:underline t))))
      (minibuffer-prompt ((t (:bold t :foreground "#ff6600")))))))
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> emacs24
 =======
 >>>>>>> emacs24
 (provide 'color-theme-tango)

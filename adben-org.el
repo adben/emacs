@@ -2,9 +2,12 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (add-to-list 'auto-mode-alist '("\\.org.txt$" . org-mode))
 <<<<<<< HEAD
+<<<<<<< HEAD
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-ca" 'org-agenda)
 =======
+=======
+>>>>>>> emacs24
 ;; (global-set-key "\C-cl" 'org-store-link)
 ;; (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cl" 'org-store-link)
@@ -24,4 +27,7 @@
       (when (org-at-timestamp-p t)
         (org-timestamp-change n 'hour)
         ))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24

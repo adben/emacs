@@ -2,8 +2,11 @@
 ;; Mac OSX customizations
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <<<<<<< HEAD
+<<<<<<< HEAD
 (normal-erase-is-backspace-mode t)
 =======
+=======
+>>>>>>> emacs24
 (normal-erase-is-backspace-mode t)
 (require 'mac-key-mode)
 ;; The default keymaps are as follows:
@@ -67,4 +70,7 @@
 (require 'redo+)
 (global-set-key [(hyper z)] 'undo)
 (global-set-key [(hyper shift z)] 'redo)
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24

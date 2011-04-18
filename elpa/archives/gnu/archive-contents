@@ -12,7 +12,11 @@
        [(3 20)
 	nil "Authoring and publishing tool" tar])
  (org .
+<<<<<<< HEAD
       [(20110412)
+=======
+      [(20110418)
+>>>>>>> emacs24
        nil "Outline-based notes management and organizer" tar])
  (js2-mode .
 	   [(20090814)

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Adolfo Benedetti's Emacs Environment
@@ -6,11 +7,16 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 =======
+=======
+>>>>>>> emacs24
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Adolfo Benedetti's Emacs Environment
 ;; adolfo.benedetti@gmail.com
 ;; a.benedetti@sourcesense.com
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Library Paths
@@ -26,6 +32,11 @@
                                         ;I like to keep third party libraries seperate in ~/.emacs.d/vendor
 (add-to-list 'load-path "~/.emacs.d/vendor")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+(add-to-list 'exec-path "/usr/local/bin")
+(add-to-list 'exec-path "/opt/local/bin")
+>>>>>>> emacs24
 =======
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'exec-path "/opt/local/bin")
@@ -38,7 +49,10 @@
 (load-library "adben-elpa")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> emacs24
 ;;lorem-ipsum
 (load-library "adben-lorem")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -46,6 +60,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-column-marker")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 ;;Passwords
 ;; Needs to be loaded sooner rather than later
@@ -58,15 +75,21 @@
 (require 'lorem-ipsum)
 (require 'column-marker)
 <<<<<<< HEAD
+<<<<<<< HEAD
 (require 'dired-single)
 (require 'pair-mode)
 (require 'pager)
 (require 'twit)
 =======
+=======
+>>>>>>> emacs24
 (require 'dired)
 (require 'pair-mode)
 (require 'pager)
 ;;(require 'twit)
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 (require 'ledger)
 (require 'auto-complete)
@@ -126,7 +149,11 @@
 ;;Python mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <<<<<<< HEAD
+<<<<<<< HEAD
 (load-library "adben-python")
+=======
+;;(load-library "adben-python")
+>>>>>>> emacs24
 =======
 ;;(load-library "adben-python")
 >>>>>>> emacs24
@@ -147,7 +174,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                         ;disabled till I get JDE to compile from the submodule correctly
 <<<<<<< HEAD
+<<<<<<< HEAD
 (load-library "adben-java")
+=======
+;;(load-library "adben-java")
+>>>>>>> emacs24
 =======
 ;;(load-library "adben-java")
 >>>>>>> emacs24
@@ -157,11 +188,17 @@
 (load-library "adben-groovy")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> emacs24
 ;;jsp
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-jsp")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 ;;CSharp
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -198,7 +235,11 @@
 ;;Mac OSX stuff
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         ;(load-library "adben-OSX")
+=======
+(load-library "adben-OSX")
+>>>>>>> emacs24
 =======
 (load-library "adben-OSX")
 >>>>>>> emacs24
@@ -218,7 +259,11 @@
 ;;NXHTML mode - HTML, PHP etc
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <<<<<<< HEAD
+<<<<<<< HEAD
                                         ;(load-library "adben-nxhtml")
+=======
+(load-library "adben-nxhtml")
+>>>>>>> emacs24
 =======
 (load-library "adben-nxhtml")
 >>>>>>> emacs24
@@ -228,7 +273,11 @@
 ;;Adben's Pymacs extensions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <<<<<<< HEAD
+<<<<<<< HEAD
 (load-library "adben-pymacs-extensions")
+=======
+;;(load-library "adben-pymacs-extensions")
+>>>>>>> emacs24
 =======
 ;;(load-library "adben-pymacs-extensions")
 >>>>>>> emacs24
@@ -259,9 +308,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;;Magit mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-magit")
+=======
+;;Egg mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-library "adben-egg")
+>>>>>>> emacs24
 =======
 ;;Egg mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -275,12 +330,18 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> emacs24
 ;;Confluence mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-confluence")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 ;;ido mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -291,7 +352,10 @@
 (load-library "adben-autocomplete")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> emacs24
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;velocity  mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -317,16 +381,22 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;N(load-library "adben-eshell")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 ;;Emms
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;(load-library "adben-emms")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;;Startup gnus after loading other things
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                                         ;(gnus)
 =======
+=======
+>>>>>>> emacs24
 ;;Undo Tree - vim
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-undo")
@@ -368,11 +438,15 @@
 (require 'rw-language-and-country-codes)
 (require 'rw-ispell)
 (require 'rw-hunspell)
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Custmoized Settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
+<<<<<<< HEAD
 <<<<<<< HEAD
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -382,6 +456,8 @@
  '(column-number-mode t)
  '(display-time-mode nil)
 =======
+=======
+>>>>>>> emacs24
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -393,6 +469,9 @@
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (tango)))
  '(custom-safe-themes (quote ("81f92df1f435dc251bc3816e882688b5a19039af" "324c41970f27ceb68e7579d722bc3b69b6390e13" "649ccffdb140fcd021013f6297dedeb313b74fa5" default)))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
  '(ecb-layout-name "left9")
  '(ecb-maximize-ecb-window-after-selection t)
@@ -409,6 +488,7 @@
  '(erc-services-mode t)
  '(erc-sound-mode t)
 <<<<<<< HEAD
+<<<<<<< HEAD
  '(erc-sound-path (quote ("/home/adolfo/.emacs.d/sounds")))
  '(erc-stamp-mode t)
  '(erc-user-full-name "Adolfo Benedetti")
@@ -416,6 +496,8 @@
  '(gnus-article-sort-functions (quote ((not gnus-article-sort-by-date))))
  '(gnus-thread-sort-functions (quote ((not gnus-thread-sort-by-date))))
 =======
+=======
+>>>>>>> emacs24
  '(erc-sound-path (quote ("~/.emacs.d/sounds")))
  '(erc-stamp-mode t)
  '(erc-user-full-name "Adolfo Benedetti")
@@ -427,12 +509,16 @@
  '(jira-url "https://dev.sourcesense.com/jira/rpc/xmlrpc")
  '(max-lisp-eval-depth 50000)
  '(max-specpdl-size 100000)
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
  '(mew-rc-file "~/.emacs.d/dot-mew.el" t)
  '(mouse-wheel-mode t)
  '(nxhtml-skip-welcome t)
  '(paren-match-face (quote paren-face-match-light))
  '(paren-sexp-mode t)
+<<<<<<< HEAD
 <<<<<<< HEAD
  '(show-paren-mode t)
  '(speedbar-frame-parameters (quote ((minibuffer) (width . 20) (border-width . 0) (menu-bar-lines . 0) (tool-bar-lines . 0) (unsplittable . t) (set-background-color "black"))))
@@ -452,6 +538,8 @@
 (setq font-lock-verbose 500000)          ; "Fontifying...done" only if big buffer.
 (setq font-lock-maximum-size 5120000)    ; Double the default size.
 =======
+=======
+>>>>>>> emacs24
  '(rw-hunspell-default-dictionary "nl_NL_hunspell")
  '(rw-hunspell-dicpath-list (quote ("/opt/local/share/hunspell")))
  '(rw-hunspell-make-dictionary-menu t)
@@ -473,4 +561,7 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "Courier")))))
 
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24

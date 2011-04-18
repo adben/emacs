@@ -2,6 +2,7 @@
 ;; Visual Nicities
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 <<<<<<< HEAD
+<<<<<<< HEAD
 (require 'color-theme)
 (load-library "adben-color-theme")
 (global-font-lock-mode 1)
@@ -24,6 +25,8 @@
 (scroll-bar-mode 1)
 ;Make page up and page down a whole lot nicer
 =======
+=======
+>>>>>>> emacs24
 ;;(require 'color-theme)
 ;;(require 'zenburn)
 ;;(zenburn)
@@ -57,6 +60,9 @@
 ;;activate by default the speedbar into thw workspace
 ;;(speedbar 0)
 ;;Make page up and page down a whole lot nicer
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 (global-set-key "\C-v"	   'pager-page-down)
 (global-set-key [next] 	   'pager-page-down)
@@ -67,7 +73,11 @@
 (global-set-key '[M-down]  'pager-row-down)
 (global-set-key '[M-kp-2]  'pager-row-down)
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;Show newlines at end of file
+=======
+;;Show newlines at end of file
+>>>>>>> emacs24
 =======
 ;;Show newlines at end of file
 >>>>>>> emacs24
@@ -95,6 +105,11 @@
 (global-set-key (kbd "C-+") 'adben/increase-font-size)
 (global-set-key (kbd "C--") 'adben/decrease-font-size)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;;column line-numbers 1 for on, 0 for off.
+;;(global-visual-line-mode 1)
+>>>>>>> emacs24
 =======
 ;;column line-numbers 1 for on, 0 for off.
 ;;(global-visual-line-mode 1)

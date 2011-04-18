@@ -1,6 +1,11 @@
 ;; Fix colors (like ls --color, etc)
 ;;; Shell mode
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;; (require 'shell-command)
+;; (shell-command-completion-mode)
+>>>>>>> emacs24
 =======
 ;; (require 'shell-command)
 ;; (shell-command-completion-mode)

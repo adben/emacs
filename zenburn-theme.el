@@ -45,10 +45,17 @@
  '(button ((t (:underline t))))
  '(header-line ((t (:background "#2e3330" :foreground "#88b090")))))
 
+<<<<<<< HEAD
 (provide-theme 'zenburn)
 
 ;; Local Variables:
 ;; no-byte-compile: t
+=======
+(provide-theme 'zenburn-theme)
+
+;; Local Variables:
+;; No-byte-compile: t
+>>>>>>> emacs24
 ;; End:
 
 ;;; zenburn-theme.el  ends here

@@ -1,17 +1,23 @@
 ;;; package.el --- Simple package system for Emacs
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;; Copyright (C) 2007, 2008 Tom Tromey <tromey@redhat.com>
 
 ;; Author: Tom Tromey <tromey@redhat.com>
 ;; Created: 10 Mar 2007
 ;; Version: 0.8
 =======
+=======
+>>>>>>> emacs24
 ;; Copyright (C) 2007, 2008, 2009 Tom Tromey <tromey@redhat.com>
 
 ;; Author: Tom Tromey <tromey@redhat.com>
 ;; Created: 10 Mar 2007
 ;; Version: 0.9.4
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 ;; Keywords: tools
 
@@ -21,7 +27,11 @@
 ;; GNU Emacs is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;; the Free Software Foundation; either version 2, or (at your option)
+=======
+;; the Free Software Foundation; either version 3, or (at your option)
+>>>>>>> emacs24
 =======
 ;; the Free Software Foundation; either version 3, or (at your option)
 >>>>>>> emacs24
@@ -38,6 +48,7 @@
 ;; Boston, MA 02110-1301, USA.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;;; Change Log:
 
 ;;  2 Apr 2007 - now using ChangeLog file
@@ -46,6 +57,8 @@
 ;; 13 Mar 2007 - Wrote package-install-from-buffer
 ;; 12 Mar 2007 - Wrote package-menu mode
 
+=======
+>>>>>>> emacs24
 =======
 >>>>>>> emacs24
 ;;; Commentary:
@@ -111,13 +124,19 @@
 ;; work.)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;; This code supports a single package repository, ELPA.  All packages
 ;; must be registered there.
 =======
+=======
+>>>>>>> emacs24
 ;; This code supports a single package repository out of the box,
 ;; ELPA.  Additional repositories may be added by appending to the
 ;; package-archives alist.  To run your own package archive, see the
 ;; package-maint.el library included.
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 
 ;; A package is described by its name and version.  The distribution
@@ -134,7 +153,11 @@
 
 ;; The downloader will download all dependent packages.  It will also
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;; byte-compile the package's lisp at install time.
+=======
+;; byte-compile the package's Lisp at install time.
+>>>>>>> emacs24
 =======
 ;; byte-compile the package's Lisp at install time.
 >>>>>>> emacs24
@@ -146,7 +169,11 @@
 ;; Conceptually a package has multiple state transitions:
 ;;
 <<<<<<< HEAD
+<<<<<<< HEAD
 ;; * Download.  Fetching the package from ELPA.
+=======
+;; * Download.  Fetching the package from its source.
+>>>>>>> emacs24
 =======
 ;; * Download.  Fetching the package from its source.
 >>>>>>> emacs24
@@ -169,6 +196,7 @@
 ;; Sebastian Tennant <sebyte@smolny.plus.com>
 ;; Stefan Monnier <monnier@iro.umontreal.ca>
 ;; Vinicius Jose Latorre <viniciusjl@ig.com.br>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;;; ToDo:
@@ -235,6 +263,8 @@ Ordinarily you should not need to edit this.
 The default points to ELPA, the Emacs Lisp Package Archive.
 Note that some code in package.el assumes that this is an http: URL.")
 =======
+=======
+>>>>>>> emacs24
 ;; Phil Hagelberg <phil@hagelb.org>
 ;; Samuel Bronson <naesten@gmail.com>
 
@@ -253,12 +283,16 @@ Note that some code in package.el assumes that this is an http: URL."
                 :value-type (string :tag "Archive URL"))
   :group 'package
   :package-version '("package.el" . "0.9.3"))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 
 (defconst package-archive-version 1
   "Version number of the package archive understood by this file.
 Lower version numbers than this will probably be understood as well.")
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;; Note that this only works if you have the password, which you
 ;; probably don't :-).  Also if you are using Emacs 21 then you will
@@ -273,6 +307,9 @@ Lower version numbers than this will probably be understood as well.")
 =======
 (defconst package-el-version "0.9.4"
 >>>>>>> emacs24
+=======
+(defconst package-el-version "0.9.4"
+>>>>>>> emacs24
   "Version of package.el.")
 
 ;; We don't prime the cache since it tends to get out of date.
@@ -282,8 +319,14 @@ Lower version numbers than this will probably be understood as well.")
 This is an alist mapping package names (symbols) to package
 descriptor vectors.  These are like the vectors for `package-alist'
 <<<<<<< HEAD
+<<<<<<< HEAD
 but have an extra entry which is 'tar for tar packages and
 'single for single-file packages.")
+=======
+but have extra entries: one which is 'tar for tar packages and
+'single for single-file packages, and one which is the name of
+the archive from which it came.")
+>>>>>>> emacs24
 =======
 but have extra entries: one which is 'tar for tar packages and
 'single for single-file packages, and one which is the name of
@@ -297,17 +340,23 @@ the archive from which it came.")
 (defvar package-directory-list
   (list (file-name-as-directory package-user-dir)
 <<<<<<< HEAD
+<<<<<<< HEAD
 	"/usr/share/emacs/site-lisp/elpa/")
   "List of directories to search for packages.")
 
 (defun package-version-split (string)
   "Split a package string into a version list."
 =======
+=======
+>>>>>>> emacs24
         "/usr/share/emacs/site-lisp/elpa/")
   "List of directories to search for packages.")
 
 (defun package-version-split (string)
   "Split a package STRING into a version list."
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
   (mapcar 'string-to-int (split-string string "[.]")))
 
@@ -315,6 +364,7 @@ the archive from which it came.")
   ;; We use package-version split here to make sure to pick up the
   ;; minor version.
   `((emacs . [,(package-version-split emacs-version) nil
+<<<<<<< HEAD
 <<<<<<< HEAD
 	      "GNU Emacs"])
     (package . [,(package-version-split package-el-version)
@@ -324,10 +374,16 @@ the archive from which it came.")
     (package . [,(package-version-split package-el-version)
                 nil "Simple package system for GNU Emacs"]))
 >>>>>>> emacs24
+=======
+              "GNU Emacs"])
+    (package . [,(package-version-split package-el-version)
+                nil "Simple package system for GNU Emacs"]))
+>>>>>>> emacs24
   "Packages which are always built-in.")
 
 (defvar package--builtins
   (delq nil
+<<<<<<< HEAD
 <<<<<<< HEAD
 	(append
 	 package--builtins-base
@@ -344,6 +400,8 @@ the archive from which it came.")
 	       (nxml . [(20071123) nil "Major mode for editing XML documents."])
 	       (bubbles . [(0 5) nil "Puzzle game for Emacs."])))))
 =======
+=======
+>>>>>>> emacs24
         (append
          package--builtins-base
          (if (>= emacs-major-version 22)
@@ -358,6 +416,9 @@ the archive from which it came.")
                ;; We pick the merge date as the version.
                (nxml . [(20071123) nil "Major mode for editing XML documents."])
                (bubbles . [(0 5) nil "Puzzle game for Emacs."])))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
   "Alist of all built-in packages.
 Maps the package name to a vector [VERSION REQS DOCSTRING].")
@@ -377,11 +438,14 @@ The inner alist is keyed by version.")
 
 (defun package-version-join (l)
 <<<<<<< HEAD
+<<<<<<< HEAD
   "Turn a list of version numbers into a version string."
   (mapconcat 'int-to-string l "."))
 
 (defun package--version-first-nonzero (l)
 =======
+=======
+>>>>>>> emacs24
   "Turn a list L of version numbers into a version string."
   (mapconcat 'int-to-string l "."))
 
@@ -390,12 +454,16 @@ The inner alist is keyed by version.")
 
 Returns the value of the first non-zero integer in L, or 0 if
 none is found."
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
   (while (and l (= (car l) 0))
     (setq l (cdr l)))
   (if l (car l) 0))
 
 (defun package-version-compare (v1 v2 fun)
+<<<<<<< HEAD
 <<<<<<< HEAD
   "Compare two version lists according to FUN.
 FUN can be <, <=, =, >, >=, or /=."
@@ -412,6 +480,8 @@ FUN can be <, <=, =, >, >=, or /=."
 	;; V1 null, V2 not null.
 	(funcall fun 0 (package--version-first-nonzero v2))
 =======
+=======
+>>>>>>> emacs24
   "Compare two version V1 and V2 lists according to FUN.
 
 FUN can be <, <=, =, >, >=, or /=."
@@ -427,6 +497,9 @@ FUN can be <, <=, =, >, >=, or /=."
     (if v2
         ;; V1 null, V2 not null.
         (funcall fun 0 (package--version-first-nonzero v2))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
       ;; Both null.
       (funcall fun 0 0))))
@@ -435,15 +508,21 @@ FUN can be <, <=, =, >, >=, or /=."
   "Test suite for `package-version-compare'."
   (unless (and (package-version-compare '(0) '(0) '=)
 <<<<<<< HEAD
+<<<<<<< HEAD
 	       (not (package-version-compare '(1) '(0) '=))
 	       (package-version-compare '(1 0 1) '(1) '>=)
 	       (package-version-compare '(1 0 1) '(1) '>)
 	       (not (package-version-compare '(0 9 1) '(1 0 2) '>=)))
 =======
+=======
+>>>>>>> emacs24
                (not (package-version-compare '(1) '(0) '=))
                (package-version-compare '(1 0 1) '(1) '>=)
                (package-version-compare '(1 0 1) '(1) '>)
                (not (package-version-compare '(0 9 1) '(1 0 2) '>=)))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     (error "Failed"))
   t)
@@ -451,7 +530,11 @@ FUN can be <, <=, =, >, >=, or /=."
 (defun package-strip-version (dirname)
   "Strip the version from a combined package name and version.
 <<<<<<< HEAD
+<<<<<<< HEAD
 E.g., if given \"quux-23.0\", will return \"quux\""
+=======
+E.g., if DIRNAME is \"quux-23.0\", will return \"quux\""
+>>>>>>> emacs24
 =======
 E.g., if DIRNAME is \"quux-23.0\", will return \"quux\""
 >>>>>>> emacs24
@@ -460,12 +543,15 @@ E.g., if DIRNAME is \"quux-23.0\", will return \"quux\""
 
 (defun package-load-descriptor (dir package)
 <<<<<<< HEAD
+<<<<<<< HEAD
   "Load the description file for a package.
 Return nil if the package could not be found."
   (let ((pkg-dir (concat (file-name-as-directory dir) package "/")))
     (if (file-directory-p pkg-dir)
 	(load (concat pkg-dir (package-strip-version package) "-pkg") nil t))))
 =======
+=======
+>>>>>>> emacs24
   "Load the description file in directory DIR for a PACKAGE.
 Return nil if the package could not be found."
   (let* ((pkg-dir (expand-file-name package dir))
@@ -474,12 +560,16 @@ Return nil if the package could not be found."
     (when (and (file-directory-p pkg-dir)
                (file-exists-p (concat pkg-file ".el")))
         (load pkg-file nil t))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 
 (defun package-load-all-descriptors ()
   "Load descriptors of all packages.
 Uses `package-directory-list' to find packages."
   (mapc (lambda (dir)
+<<<<<<< HEAD
 <<<<<<< HEAD
 	  (if (file-directory-p dir)
 	      (mapc (lambda (name)
@@ -529,6 +619,8 @@ Uses `package-directory-list' to find packages."
     (load (concat pkg-dir (symbol-name package) "-autoloads")
 	  nil t)
 =======
+=======
+>>>>>>> emacs24
           (if (file-directory-p dir)
               (mapc (lambda (name)
                       (package-load-descriptor dir name))
@@ -581,12 +673,16 @@ as retrieved from the package mirror."
     ;; Load the autoloads and activate the package.
     (load (concat pkg-dir (symbol-name package) "-autoloads")
           nil t)
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     (setq package-activated-list (cons package package-activated-list))
     ;; Don't return nil.
     t))
 
 (defun package--built-in (package version)
+<<<<<<< HEAD
 <<<<<<< HEAD
   "Return true if the package is built-in to Emacs."
   (let ((elt (assq package package--builtins)))
@@ -597,6 +693,8 @@ as retrieved from the package mirror."
 (defun package-activate (package version)
   "Try to activate a package.
 =======
+=======
+>>>>>>> emacs24
   "Return true if PACKAGE at VERSION is built-in to Emacs."
   (let ((elt (assq package package--builtins)))
     (and elt
@@ -605,6 +703,9 @@ as retrieved from the package mirror."
 ;; FIXME: return a reason instead?
 (defun package-activate (package version)
   "Try to activate PACKAGE at version VERSION.
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 Return nil if the package could not be activated.
 Recursively activates all dependencies of the named package."
@@ -616,6 +717,7 @@ Recursively activates all dependencies of the named package."
   ;; no sense.
   (unless (eq package 'emacs)
     (let* ((pkg-desc (assq package package-alist))
+<<<<<<< HEAD
 <<<<<<< HEAD
 	   (this-version (package-desc-vers (cdr pkg-desc)))
 	   (req-list (package-desc-reqs (cdr pkg-desc)))
@@ -646,6 +748,8 @@ Recursively activates all dependencies of the named package."
 					    pkg-vec)))
 		  package-obsolete-alist)))))
 =======
+=======
+>>>>>>> emacs24
            (this-version (package-desc-vers (cdr pkg-desc)))
            (req-list (package-desc-reqs (cdr pkg-desc)))
            ;; If the package was never activated, we want to do it
@@ -681,15 +785,24 @@ PKG-VEC describes the version of PACKAGE to mark obsolete."
             (cons (cons package (list (cons (package-desc-vers pkg-vec)
                                             pkg-vec)))
                   package-obsolete-alist)))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 
 ;; (define-package "emacs" "21.4.1" "GNU Emacs core package.")
 ;; (define-package "erc" "5.1" "ERC - irc client" '((emacs "21.0")))
 (defun define-package (name-str version-string
 <<<<<<< HEAD
+<<<<<<< HEAD
 				&optional docstring requirements)
   "Define a new package.
 NAME is the name of the package, a string.
+=======
+                                &optional docstring requirements)
+  "Define a new package.
+NAME-STR is the name of the package, a string.
+>>>>>>> emacs24
 =======
                                 &optional docstring requirements)
   "Define a new package.
@@ -701,6 +814,7 @@ DOCSTRING is the optional description.
 REQUIREMENTS is a list of requirements on other packages.
 Each requirement is of the form (OTHER-PACKAGE \"VERSION\")."
   (let* ((name (intern name-str))
+<<<<<<< HEAD
 <<<<<<< HEAD
 	 (pkg-desc (assq name package-alist))
 	 (new-version (package-version-split version-string))
@@ -726,6 +840,8 @@ Each requirement is of the form (OTHER-PACKAGE \"VERSION\")."
 	  ;; Add package to the alist.
 	  (setq package-alist (cons new-pkg-desc package-alist)))
 =======
+=======
+>>>>>>> emacs24
          (pkg-desc (assq name package-alist))
          (new-version (package-version-split version-string))
          (new-pkg-desc
@@ -749,21 +865,30 @@ Each requirement is of the form (OTHER-PACKAGE \"VERSION\")."
             (package-mark-obsolete (car pkg-desc) (cdr pkg-desc)))
           ;; Add package to the alist.
           (setq package-alist (cons new-pkg-desc package-alist)))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
       ;; You can have two packages with the same version, for instance
       ;; one in the system package directory and one in your private
       ;; directory.  We just let the first one win.
       (unless (package-version-compare new-version
 <<<<<<< HEAD
+<<<<<<< HEAD
 				       (package-desc-vers (cdr pkg-desc))
 				       '=)
 	;; The package is born obsolete.
 	(package-mark-obsolete (car new-pkg-desc) (cdr new-pkg-desc))))))
 =======
+=======
+>>>>>>> emacs24
                                        (package-desc-vers (cdr pkg-desc))
                                        '=)
         ;; The package is born obsolete.
         (package-mark-obsolete (car new-pkg-desc) (cdr new-pkg-desc))))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 
 ;; From Emacs 22.
@@ -772,6 +897,7 @@ Each requirement is of the form (OTHER-PACKAGE \"VERSION\")."
   (unless (file-exists-p file)
     (write-region
      (concat ";;; " (file-name-nondirectory file)
+<<<<<<< HEAD
 <<<<<<< HEAD
 	     " --- automatically extracted autoloads\n"
 	     ";;\n"
@@ -784,6 +910,8 @@ Each requirement is of the form (OTHER-PACKAGE \"VERSION\")."
 	     ";;; " (file-name-nondirectory file)
 	     " ends here\n")
 =======
+=======
+>>>>>>> emacs24
              " --- automatically extracted autoloads\n"
              ";;\n"
              ";;; Code:\n\n"
@@ -794,11 +922,15 @@ Each requirement is of the form (OTHER-PACKAGE \"VERSION\")."
              ";; End:\n"
              ";;; " (file-name-nondirectory file)
              " ends here\n")
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
      nil file))
   file)
 
 (defun package-generate-autoloads (name pkg-dir)
+<<<<<<< HEAD
 <<<<<<< HEAD
   (let* ((auto-name (concat name "-autoloads.el"))
 	 (ignore-name (concat name "-pkg.el"))
@@ -806,19 +938,28 @@ Each requirement is of the form (OTHER-PACKAGE \"VERSION\")."
 	 (version-control 'never))
     ;; In Emacs 22 'update-autoloads-from-directories' does not seem
 =======
+=======
+>>>>>>> emacs24
   "Generate autoload definitions for package NAME in PKG-DIR."
   (let* ((auto-name (concat name "-autoloads.el"))
          (ignore-name (concat name "-pkg.el"))
          (generated-autoload-file (concat pkg-dir auto-name))
          (version-control 'never))
     ;; In Emacs 22 `update-directory-autoloads' does not seem
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     ;; to be autoloaded...
     (require 'autoload)
     (unless (fboundp 'autoload-ensure-default-file)
       (package-autoload-ensure-default-file generated-autoload-file))
 <<<<<<< HEAD
+<<<<<<< HEAD
     (update-autoloads-from-directories pkg-dir)))
+=======
+    (update-directory-autoloads pkg-dir)))
+>>>>>>> emacs24
 =======
     (update-directory-autoloads pkg-dir)))
 >>>>>>> emacs24
@@ -831,6 +972,7 @@ Otherwise it uses an external `tar' program.
   (require 'tar-mode)
   (if (fboundp 'tar-untar-buffer)
       (progn
+<<<<<<< HEAD
 <<<<<<< HEAD
 	;; tar-mode messes with narrowing, so we just let it have the
 	;; whole buffer to play with.
@@ -851,6 +993,8 @@ Otherwise it uses an external `tar' program.
 				  ; more confident
 	      (directory-files pkg-dir t "^[^.]")))
 =======
+=======
+>>>>>>> emacs24
         ;; tar-mode messes with narrowing, so we just let it have the
         ;; whole buffer to play with.
         (delete-region (point-min) (point))
@@ -874,11 +1018,15 @@ package archive."
         (mapc (lambda (file) nil) ; 'delete-file -- FIXME: when we're
                                         ; more confident
               (directory-files pkg-dir t "^[^.]")))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     (let* ((default-directory (file-name-as-directory package-user-dir)))
       (package-untar-buffer)
       (package-generate-autoloads (symbol-name name) pkg-dir)
       (let ((load-path (cons pkg-dir load-path)))
+<<<<<<< HEAD
 <<<<<<< HEAD
 	(byte-recompile-directory pkg-dir 0 t)))))
 
@@ -919,6 +1067,8 @@ package archive."
 	(let ((load-path (cons pkg-dir load-path)))
 	  (byte-recompile-directory pkg-dir 0 t))))))
 =======
+=======
+>>>>>>> emacs24
         (byte-recompile-directory pkg-dir 0 t)))))
 
 (defun package-write-file-no-coding (file-name excl)
@@ -968,6 +1118,9 @@ REQUIRES is a list of symbols which this package needs to run."
         (package-generate-autoloads file-name pkg-dir)
         (let ((load-path (cons pkg-dir load-path)))
           (byte-recompile-directory pkg-dir 0 t))))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 
 (defun package-handle-response ()
@@ -976,6 +1129,7 @@ Parse the HTTP response and throw if an error occurred.
 The url package seems to require extra processing for this.
 This should be called in a `save-excursion', in the download buffer.
 It will move point to somewhere in the headers."
+<<<<<<< HEAD
 <<<<<<< HEAD
   ;; We assume HTTP here.
   (let ((response (url-http-parse-response)))
@@ -992,6 +1146,8 @@ It will move point to somewhere in the headers."
 		 (concat package-archive-base
 			 (symbol-name name) "-" version ".el"))))
 =======
+=======
+>>>>>>> emacs24
   (let ((type (url-type url-current-object)))
     (cond
      ((equal type "http")
@@ -1013,6 +1169,9 @@ info."
   (let ((buffer (url-retrieve-synchronously
                  (concat (package-archive-for name)
                          (symbol-name name) "-" version ".el"))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     (save-excursion
       (set-buffer buffer)
@@ -1024,6 +1183,7 @@ info."
       (kill-buffer buffer))))
 
 (defun package-download-tar (name version)
+<<<<<<< HEAD
 <<<<<<< HEAD
   "Download and install a tar package."
   (let ((tar-buffer (url-retrieve-synchronously
@@ -1069,6 +1229,8 @@ info."
 					     (package-desc-reqs
 					      (cdr pkg-desc)))))))
 =======
+=======
+>>>>>>> emacs24
   "Download and install a tar package NAME at VERSION."
   (let ((tar-buffer (url-retrieve-synchronously
                      (concat (package-archive-for name)
@@ -1126,6 +1288,9 @@ processed to resolve all dependencies (if possible)."
                 (package-compute-transaction result
                                              (package-desc-reqs
                                               (cdr pkg-desc)))))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     (setq requirements (cdr requirements)))
   result)
@@ -1135,6 +1300,7 @@ processed to resolve all dependencies (if possible)."
 Signal an error if the entire string was not used."
   (let* ((read-data (read-from-string str))
 <<<<<<< HEAD
+<<<<<<< HEAD
           (more-left
              (condition-case nil
                        ;; The call to `ignore' suppresses a compiler warning.
@@ -1143,6 +1309,8 @@ Signal an error if the entire string was not used."
                                    t)
                    (end-of-file nil))))
 =======
+=======
+>>>>>>> emacs24
          (more-left
           (condition-case nil
               ;; The call to `ignore' suppresses a compiler warning.
@@ -1150,6 +1318,9 @@ Signal an error if the entire string was not used."
                               (substring str (cdr read-data))))
                      t)
             (end-of-file nil))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     (if more-left
         (error "Can't read whole string")
@@ -1160,6 +1331,7 @@ Signal an error if the entire string was not used."
 Will return the data from the file, or nil if the file does not exist.
 Will throw an error if the archive version is too new."
   (let ((filename (concat (file-name-as-directory package-user-dir)
+<<<<<<< HEAD
 <<<<<<< HEAD
 			  file)))
     (if (file-exists-p filename)
@@ -1234,6 +1406,8 @@ The package is found on the archive site, see `package-archive-base'."
 	   (package-compute-transaction (list name)
 					(package-desc-reqs (cdr pkg-desc)))))
 =======
+=======
+>>>>>>> emacs24
                           file)))
     (if (file-exists-p filename)
         (with-temp-buffer
@@ -1329,12 +1503,16 @@ Interactively, prompts for the package name."
     (let ((transaction
            (package-compute-transaction (list name)
                                         (package-desc-reqs (cdr pkg-desc)))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
       (package-download-transaction transaction)))
   ;; Try to activate it.
   (package-initialize))
 
 (defun package-strip-rcs-id (v-str)
+<<<<<<< HEAD
 <<<<<<< HEAD
   "Strip RCS version ID from the version string.
 If the result looks like a dotted numeric version, return it.
@@ -1345,6 +1523,8 @@ Otherwise return nil."
 	(if (string-match "^[0-9.]*$" v-str)
 	    v-str))))
 =======
+=======
+>>>>>>> emacs24
   "Strip RCS version ID from the version string V-STR.
 
 If the result looks like a dotted numeric version, return it.
@@ -1354,6 +1534,9 @@ Otherwise return nil."
           (match-string 1 v-str)
         (if (string-match "^[0-9.]*$" v-str)
             v-str))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 
 (defun package-buffer-info ()
@@ -1370,6 +1553,7 @@ May narrow buffer or move point even on failure."
   (goto-char (point-min))
   (if (re-search-forward "^;;; \\([^ ]*\\)\\.el --- \\(.*\\)$" nil t)
       (let ((file-name (match-string 1))
+<<<<<<< HEAD
 <<<<<<< HEAD
 	    (desc (match-string 2))
 	    (start (progn (beginning-of-line) (point))))
@@ -1406,6 +1590,8 @@ May narrow buffer or move point even on failure."
 		(vector file-name requires desc pkg-version commentary)))
 	  (error "Package missing a terminating comment")))
 =======
+=======
+>>>>>>> emacs24
             (desc (match-string 2))
             (start (progn (beginning-of-line) (point))))
         (if (search-forward (concat ";;; " file-name ".el ends here"))
@@ -1440,6 +1626,9 @@ May narrow buffer or move point even on failure."
                 (set-text-properties 0 (length desc) nil desc)
                 (vector file-name requires desc pkg-version commentary)))
           (error "Package missing a terminating comment")))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     (error "No starting comment for package")))
 
@@ -1447,6 +1636,7 @@ May narrow buffer or move point even on failure."
   "Find package information for a tar file.
 FILE is the name of the tar file to examine.
 The return result is a vector like `package-buffer-info'."
+<<<<<<< HEAD
 <<<<<<< HEAD
   (unless (string-match "^\\(.+\\)-\\([0-9.]+\\)\\.tar$" file)
     (error "`%s' doesn't have a package-ish name" file))
@@ -1511,6 +1701,8 @@ The return result is a vector like `package-buffer-info'."
 	;; Try to activate it.
 	(package-initialize)))))
 =======
+=======
+>>>>>>> emacs24
   (setq file (expand-file-name file))
   (unless (string-match "^\\(.+\\)-\\([0-9.]+\\)\\.tar$" file)
     (error "`%s' doesn't have a package-ish name" file))
@@ -1579,6 +1771,9 @@ TYPE is either `single' or `tar'."
           (error "Unknown type: %s" (symbol-name type))))
         ;; Try to activate it.
         (package-initialize)))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 
 (defun package-install-from-buffer ()
@@ -1591,7 +1786,11 @@ info node `(elisp)Library Headers'."
 
 (defun package-install-file (file)
 <<<<<<< HEAD
+<<<<<<< HEAD
   "Install a package from a file.
+=======
+  "Install a package from a FILE.
+>>>>>>> emacs24
 =======
   "Install a package from a FILE.
 >>>>>>> emacs24
@@ -1607,6 +1806,7 @@ The file can either be a tar file or an Emacs Lisp file."
 
 (defun package-delete (name version)
 <<<<<<< HEAD
+<<<<<<< HEAD
   (require 'dired)			; for dired-delete-file
   (dired-delete-file (concat (file-name-as-directory package-user-dir)
 			     name "-" version)
@@ -1616,6 +1816,8 @@ The file can either be a tar file or an Emacs Lisp file."
 (defun package--encode (string)
   "Encode a string by replacing some characters with XML entities."
 =======
+=======
+>>>>>>> emacs24
   "Delete package NAME at VERSION."
   (require 'dired)          ; for dired-delete-file
   (dired-delete-file (concat (file-name-as-directory package-user-dir)
@@ -1625,6 +1827,9 @@ The file can either be a tar file or an Emacs Lisp file."
 
 (defun package--encode (string)
   "Encode a STRING by replacing some characters with XML entities."
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
   ;; We need a special case for translating "&" to "&amp;".
   (let ((index))
@@ -1641,6 +1846,7 @@ The file can either be a tar file or an Emacs Lisp file."
     (setq string (replace-match "&quot;" t nil string)))
   string)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 (defun package--make-rss-entry (title text)
   (let ((date-string (format-time-string "%a, %d %B %Y %T %z")))
@@ -1807,6 +2013,8 @@ This should be invoked from the gnus *Summary* buffer."
   (let ((buffer (url-retrieve-synchronously
 		 (concat package-archive-base file))))
 =======
+=======
+>>>>>>> emacs24
 (defun package--update-file (file location text)
   "Update FILE by finding LOCATION and inserting TEXT."
   (save-excursion
@@ -1834,6 +2042,9 @@ Downloads the archive index from ARCHIVE and stores it in FILE."
   (let* ((archive-name (car archive))
          (archive-url (cdr archive))
          (buffer (url-retrieve-synchronously (concat archive-url file))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     (save-excursion
       (set-buffer buffer)
@@ -1842,17 +2053,23 @@ Downloads the archive index from ARCHIVE and stores it in FILE."
       (forward-char)
       (delete-region (point-min) (point))
 <<<<<<< HEAD
+<<<<<<< HEAD
       (setq buffer-file-name (concat (file-name-as-directory package-user-dir)
 				     file))
       (let ((version-control 'never))
 	(save-buffer))
 =======
+=======
+>>>>>>> emacs24
       (make-directory (concat (file-name-as-directory package-user-dir)
                               "archives/" archive-name) t)
       (setq buffer-file-name (concat (file-name-as-directory package-user-dir)
                                      "archives/" archive-name "/" file))
       (let ((version-control 'never))
         (save-buffer))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
       (kill-buffer buffer))))
 
@@ -1863,9 +2080,15 @@ of all packages.  This will let Emacs make them available for
 download."
   (interactive)
 <<<<<<< HEAD
+<<<<<<< HEAD
   (package--download-one-archive "archive-contents")
   (package--download-one-archive "builtin-packages")
   (package-read-archive-contents))
+=======
+  (dolist (archive package-archives)
+    (package--download-one-archive archive "archive-contents"))
+  (package-read-all-archive-contents))
+>>>>>>> emacs24
 =======
   (dolist (archive package-archives)
     (package--download-one-archive archive "archive-contents"))
@@ -1876,6 +2099,7 @@ download."
   "Load all packages and activate as many as possible."
   (setq package-obsolete-alist nil)
   (package-load-all-descriptors)
+<<<<<<< HEAD
 <<<<<<< HEAD
   (package-read-archive-contents)
   ;; Try to activate all our packages.
@@ -1909,6 +2133,8 @@ download."
   (define-key package-menu-mode-map "?" 'package-menu-view-commentary)
   )
 =======
+=======
+>>>>>>> emacs24
   (package-read-all-archive-contents)
   ;; Try to activate all our packages.
   (mapc (lambda (elt)
@@ -1983,6 +2209,9 @@ download."
 		  :help "Display information about this package"))
     map)
    "Local keymap for `package-menu-mode' buffers.")
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 
 (defvar package-menu-sort-button-map
@@ -2027,6 +2256,12 @@ available for download."
 
 (defun package-menu-mark-internal (what)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  "Internal function to mark a package.
+
+WHAT is the character used to mark the line."
+>>>>>>> emacs24
 =======
   "Internal function to mark a package.
 
@@ -2039,6 +2274,7 @@ WHAT is the character used to mark the line."
       (insert what)
       (forward-line))))
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 ;; fixme numeric argument
 (defun package-menu-mark-delete (num)
@@ -2054,6 +2290,8 @@ WHAT is the character used to mark the line."
 (defun package-menu-mark-unmark (num)
   "Clear any marks on a package and move to the next line."
 =======
+=======
+>>>>>>> emacs24
 (defun package-menu-mark-delete (&optional arg)
   "Mark a package for deletion and move to the next line.
 
@@ -2072,6 +2310,9 @@ ARG is a (currently unused) numeric argument."
   "Clear any marks on a package and move to the next line.
 
 ARG is a (currently unused) numeric argument."
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
   (interactive "p")
   (package-menu-mark-internal " "))
@@ -2092,6 +2333,7 @@ ARG is a (currently unused) numeric argument."
     (while (not (eobp))
       (if (looking-at ".*\\s obsolete\\s ")
 <<<<<<< HEAD
+<<<<<<< HEAD
 	  (package-menu-mark-internal "D")
 	(forward-line 1)))))
 
@@ -2100,6 +2342,8 @@ ARG is a (currently unused) numeric argument."
   (interactive)
   (message "n-ext, i-nstall, d-elete, u-nmark, x-ecute, r-efresh, h-elp"))
 =======
+=======
+>>>>>>> emacs24
           (package-menu-mark-internal "D")
         (forward-line 1)))))
 
@@ -2107,6 +2351,9 @@ ARG is a (currently unused) numeric argument."
   "Show short key binding help for `package-menu-mode'."
   (interactive)
   (message "n-ext, i-nstall, d-elete, u-nmark, x-ecute, r-efresh, h-elp ?-view commentary"))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 
 (defun package-menu-view-commentary ()
@@ -2116,15 +2363,21 @@ For larger packages, shows the README file."
   (interactive)
   (let* (start-point ok
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 (pkg-name (package-menu-get-package))
 	 (buffer (url-retrieve-synchronously (concat package-archive-base
 						     pkg-name
 						     "-readme.txt"))))
 =======
+=======
+>>>>>>> emacs24
                      (pkg-name (package-menu-get-package))
                      (buffer (url-retrieve-synchronously
                               (concat (package-archive-for pkg-name)
                                       pkg-name "-readme.txt"))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     (with-current-buffer buffer
       ;; FIXME: it would be nice to work with any URL type.
@@ -2132,6 +2385,7 @@ For larger packages, shows the README file."
       (setq ok (eq (url-http-parse-response) 200)))
     (let ((new-buffer (get-buffer-create "*Package Info*")))
       (with-current-buffer new-buffer
+<<<<<<< HEAD
 <<<<<<< HEAD
 	(let ((buffer-read-only nil))
 	  (erase-buffer)
@@ -2162,6 +2416,8 @@ For larger packages, shows the README file."
     (if (looking-at ". [^ \t]*[ \t]*[^ \t]*[ \t]*\\([^ \t]*\\)")
 	(match-string 1)
 =======
+=======
+>>>>>>> emacs24
         (let ((buffer-read-only nil))
           (erase-buffer)
           (insert "Package information for " pkg-name "\n\n")
@@ -2191,6 +2447,9 @@ For larger packages, shows the README file."
   (save-excursion
     (if (looking-at ". [^ \t]*[ \t]*[^ \t]*[ \t]*\\([^ \t]*\\)")
         (match-string 1)
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
       "")))
 
@@ -2205,6 +2464,7 @@ Emacs."
   (forward-line 2)
   (while (not (eobp))
     (let ((cmd (char-after))
+<<<<<<< HEAD
 <<<<<<< HEAD
 	  (pkg-name (package-menu-get-package))
 	  (pkg-vers (package-menu-get-version))
@@ -2224,6 +2484,8 @@ Emacs."
        ((eq cmd ?I)
 	(package-install (intern pkg-name)))))
 =======
+=======
+>>>>>>> emacs24
           (pkg-name (package-menu-get-package))
           (pkg-vers (package-menu-get-version))
           (pkg-status (package-menu-get-status)))
@@ -2241,11 +2503,15 @@ Emacs."
         (message "Deleting %s-%s... done" pkg-name pkg-vers))
        ((eq cmd ?I)
         (package-install (intern pkg-name)))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     (forward-line))
   (package-menu-revert))
 
 (defun package-print-package (package version key desc)
+<<<<<<< HEAD
 <<<<<<< HEAD
   (let ((face
 	 (cond ((eq package 'emacs) 'font-lock-builtin-face)
@@ -2255,6 +2521,8 @@ Emacs."
 		  ; is warning ok?
 		'font-lock-warning-face))))
 =======
+=======
+>>>>>>> emacs24
   "Print out a single PACKAGE line for the menu buffer.
 
 PACKAGE is the package name as a symbol.
@@ -2272,6 +2540,9 @@ DESC is the short description of the package."
                (t ; obsolete, but also the default.
                                         ; is warning ok?
                 'font-lock-warning-face))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     (insert (propertize "  " 'font-lock-face face))
     (insert (propertize (symbol-name package) 'font-lock-face face))
@@ -2287,11 +2558,14 @@ DESC is the short description of the package."
 
 (defun package-list-maybe-add (package version status description result)
 <<<<<<< HEAD
+<<<<<<< HEAD
   (let ((elt (assoc (cons package version) result)))
     (unless elt
       (setq result (cons (list (cons package version) status description)
 			 result))))
 =======
+=======
+>>>>>>> emacs24
   "Add PACKAGE to the list if it is not already there.
 
 PACKAGE is the package name as a symbol.
@@ -2308,6 +2582,9 @@ RESULT is the list to which to add the package."
     (unless elt
       (setq result (cons (list (cons package version) status description)
                          result))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
   result)
 
@@ -2316,7 +2593,12 @@ RESULT is the list to which to add the package."
 
 (defun package-list-packages-internal ()
 <<<<<<< HEAD
+<<<<<<< HEAD
   (package-initialize)			; FIXME: do this here?
+=======
+  "List the available and installed packages."
+  (package-initialize)          ; FIXME: do this here?
+>>>>>>> emacs24
 =======
   "List the available and installed packages."
   (package-initialize)          ; FIXME: do this here?
@@ -2326,6 +2608,7 @@ RESULT is the list to which to add the package."
     (erase-buffer)
     (let ((info-list))
       (mapc (lambda (elt)
+<<<<<<< HEAD
 <<<<<<< HEAD
 	      (setq info-list
 		    (package-list-maybe-add (car elt)
@@ -2382,6 +2665,8 @@ RESULT is the list to which to add the package."
 				     (car (cdr (cdr elt)))))
 	    info-list))
 =======
+=======
+>>>>>>> emacs24
               (setq info-list
                     (package-list-maybe-add (car elt)
                                             (package-desc-vers (cdr elt))
@@ -2436,11 +2721,15 @@ RESULT is the list to which to add the package."
                                      (car (cdr elt))
                                      (car (cdr (cdr elt)))))
             info-list))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     (goto-char (point-min))
     (current-buffer)))
 
 (defun package-menu-sort-by-column (&optional e)
+<<<<<<< HEAD
 <<<<<<< HEAD
   "Sort the package menu by the last column clicked on."
   (interactive (list last-input-event))
@@ -2451,6 +2740,8 @@ RESULT is the list to which to add the package."
 		  (get-text-property (cdr obj) 'column-name (car obj))
 		(get-text-property (posn-point pos) 'column-name))))
 =======
+=======
+>>>>>>> emacs24
   "Sort the package menu by the last column clicked, E."
   (interactive (list last-input-event))
   (if e (mouse-select-window e))
@@ -2459,6 +2750,9 @@ RESULT is the list to which to add the package."
          (col (if obj
                   (get-text-property (cdr obj) 'column-name (car obj))
                 (get-text-property (posn-point pos) 'column-name))))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
     (setq package-menu-sort-key col))
   (package-list-packages-internal))
@@ -2470,6 +2764,7 @@ Helper function that does all the work for the user-facing functions."
     (package-menu-mode)
     ;; Set up the header line.
     (setq header-line-format
+<<<<<<< HEAD
 <<<<<<< HEAD
 	  (mapconcat
 	   (lambda (pair)
@@ -2498,6 +2793,8 @@ Helper function that does all the work for the user-facing functions."
 	     (41 . "Description"))
 	   ""))
 =======
+=======
+>>>>>>> emacs24
           (mapconcat
            (lambda (pair)
              (let ((column (car pair))
@@ -2524,6 +2821,9 @@ Helper function that does all the work for the user-facing functions."
              (30 . "Status")
              (41 . "Description"))
            ""))
+<<<<<<< HEAD
+>>>>>>> emacs24
+=======
 >>>>>>> emacs24
 
     ;; It's okay to use pop-to-buffer here.  The package menu buffer
@@ -2551,6 +2851,7 @@ The list is displayed in a buffer named `*Packages*'."
 (define-key-after menu-bar-options-menu [package]
   '(menu-item "Manage Packages" package-list-packages
 <<<<<<< HEAD
+<<<<<<< HEAD
 	      :help "Install or uninstall additional Emacs packages"))
 
 
@@ -2577,6 +2878,12 @@ The list is displayed in a buffer named `*Packages*'."
 (provide 'package)
 
 ;;; package.el ends here
+=======
+              :help "Install or uninstall additional Emacs packages"))
+
+(provide 'package)
+;;; package.el ends here
+>>>>>>> emacs24
 =======
               :help "Install or uninstall additional Emacs packages"))
 
