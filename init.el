@@ -288,7 +288,7 @@
 ;; Use hunspell instead of ispell 
 ;; (if (file-exists-p "/opt/local/bin/hunspell")
 (setq ispell-dictionary-alist
-       '((nil				
+       '(("en_US_hunspell"				
           "[A-Za-z]" "[^A-Za-z]" "[\"]"
           nil ("-d" "/opt/local/share/hunspell/en_US") nil utf-8)
          ("es_ES_hunspell"
