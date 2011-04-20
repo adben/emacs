@@ -1,3 +1,4 @@
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Mac OSX customizations
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -39,12 +40,12 @@
 ;;     ⇧ (Shift) + Click — Select region
 ;;; MacOS X specific stuff
 ; setting Hyper and Super keys for the Mac keyboard, for emacs running in OS X
-(setq mac-option-modifier 'hyper) ; sets the Option key as Hyper
-(setq mac-option-modifier 'super) ; sets the Option key as Super
+;;(setq mac-option-modifier 'hyper) ; sets the Option key as Hyper
+;;(setq mac-option-modifier 'super) ; sets the Option key as Super
 ;;(setq mac-command-modifier 'meta) ; sets the Command key as Meta
-(setq mac-control-modifier 'meta) ; sets the Control key as Meta
+;;(setq mac-control-modifier 'meta) ; sets the Control key as Meta
 ;;(setq mac-option-modifier 'meta)
-(setq mac-command-modifier 'ctrl) ;sets command key as ctrl
+;;(setq mac-command-modifier 'ctrl) ;sets command key as ctrl
 ;;(setq mac-command-modifier 'crtl mac-option-modifier 'meta)
 (define-key mac-key-mode-map [(alt l)] 'goto-line)
 ;; (global-set-key [(hyper a)] 'mark-whole-buffer)
