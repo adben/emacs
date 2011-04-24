@@ -310,13 +310,13 @@
 ;; I want my open files to be read only.
 ;; Use: C-x C-q to toggle the read-only state of a file.
 ;;(global-set-key "\C-x\C-f" 'find-file-read-only)
-(add-hook 'find-file-hook
-	  '(lambda ()
-	     (when (and (buffer-file-name)
-			(file-exists-p (buffer-file-name))
-			(file-writable-p (buffer-file-name)))
-	       (message "Toggle to read-only for existing file")
-	       (toggle-read-only 1))))
+;; (add-hook 'find-file-hook
+;; 	  '(lambda ()
+;; 	     (when (and (buffer-file-name)
+;; 			(file-exists-p (buffer-file-name))
+;; 			(file-writable-p (buffer-file-name)))
+;; 	       (message "Toggle to read-only for existing file")
+;; 	       (toggle-read-only 1))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Custmoized Settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
