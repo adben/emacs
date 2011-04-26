@@ -1,19 +1,21 @@
+
 ;;
 (load-library "elein")
 
 ;; clojure-mode
-(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-1.8.0/")
+(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-1.8.1/")
 (require 'clojure-mode)
 
 ;; swank-clojure
 ;;(add-to-list 'load-path "~/.emacs.d/elpa/swank-clojure-1.1.0/")
 (add-to-list 'load-path "~/git/swank-clojure")
 
-(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.2.0/clojure-1.2.0.jar"
+;;(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.2.0/clojure-1.2.0.jar"
+(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.3.0-master-SNAPSHOT/clojure-1.3.0-master-SNAPSHOT.jar"
       swank-clojure-extra-classpaths (list
                                       ;;				      "~/.emacs.d/elpa/swank-clojure-1.1.0/"
 				      "~/git/swank-clojure"
-				      "~/.m2/repository/org/clojure/clojure-contrib/1.2.0/clojure-contrib-1.2.0.jar"))
+				      "~/.m2/org/clojure/clojure-contrib/1.2.0/clojure-contrib-1.2.0.jar"))
 
 (require 'swank-clojure)
 
@@ -51,7 +53,7 @@
 (require 'durendal)
 (durendal-enable t)
 
-;;(add-hook 'clojure-mode-hook 'enable-paredit-mode) ;; ToDo check hubert's paredit config
+(add-hook 'clojure-mode-hook 'enable-paredit-mode)
 (add-hook 'clojure-mode-hook 'font-lock-mode) ;; because it doesn't turn on in Emacs 24
 
 (defun slime-clojure-repl-setup ()
@@ -77,7 +79,7 @@
       (when proc
 	(process-put proc :output nil)
 	(set-process-sentinel proc (lambda (proc event)
-				     (message "%s%s: `%S'" 
+r				     (message "%s%s: `%S'" 
 					      (process-get proc :output)
 					      proc (replace-regexp-in-string "\n" "" event))))
 	(set-process-filter proc
