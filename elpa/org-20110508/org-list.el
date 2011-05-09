@@ -369,7 +369,7 @@ It depends on `org-empty-line-terminates-plain-lists'.")
   (concat "^[ \t]*\\(\\(?:[-+*]\\|\\(?:[0-9]+\\|[A-Za-z]\\)[.)]\\)[ \t]*\\)"
 	  "\\(?:\\[@\\(?:start:\\)?\\([0-9]+\\|[A-Za-z]\\)\\]\\)?"
 	  "\\(?:\\(\\[[ X-]\\]\\)[ \t]+\\)?"
-	  "\\(?:\\(.*\\)[ \t]+::[ \t]+\\)?")
+	  "\\(?:\\(.*\\)[ \t]+::\\(?:[ \t]+\\|$\\)\\)?")
   "Matches a list item and puts everything into groups:
 group 1: bullet
 group 2: counter
@@ -2586,7 +2586,8 @@ compare entries."
 		    (string-to-number (buffer-substring (match-end 0)
 							(point-at-eol))))
 		   ((= dcst ?a)
-		    (buffer-substring (match-end 0) (point-at-eol)))
+		    (funcall case-func
+			     (buffer-substring (match-end 0) (point-at-eol))))
 		   ((= dcst ?t)
 		    (cond
 		     ;; If it is a timer list, convert timer to seconds

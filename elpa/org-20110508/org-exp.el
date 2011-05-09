@@ -858,12 +858,13 @@ security risks."
       (let ((op org-export-plist-vars))
 	(while (setq o (pop op))
 	  (if (and (nth 1 o)
-		   (string-match (concat "\\<" (regexp-quote (nth 1 o))
+		   (string-match (concat "\\(\\`\\|[ \t]\\)"
+					 (regexp-quote (nth 1 o))
 					 ":\\(([^)\n]+)\\|[^ \t\n\r;,.]*\\)")
 				 options))
 	      (setq p (plist-put p (car o)
 				 (car (read-from-string
-				       (match-string 1 options))))))))))
+				       (match-string 2 options))))))))))
   p)
 
 (defun org-export-add-subtree-options (p pos)
