@@ -325,8 +325,8 @@
  '(confluence-default-space-alist (list (cons confluence-url "https://wiki.rijksoverheid.nl/display/PONS")))
  '(confluence-url "https://wiki.rijksoverheid.nl/rpc/xmlrpc")
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (tango)))
- '(custom-safe-themes (quote ("5ce4c4aaa58c4c70d6cb910b477628922ae569a2" "ff2912294a7fbb3e85baba01d6545105ba68f9d9" "3641dffc1586be638c0da465bb23e89b0a89e19e" "835bfbbdbaae344d72b4e4104c2dbb42a356bf64" "2b943ab313ecd6eaf9107663ead0122d24470604" "81f92df1f435dc251bc3816e882688b5a19039af" "324c41970f27ceb68e7579d722bc3b69b6390e13" "649ccffdb140fcd021013f6297dedeb313b74fa5" default)))
+ '(custom-enabled-themes (quote (zenburn)))
+ '(custom-safe-themes (quote ("ed696b579c87703bcce9f386188f8d528074cef1" "5ce4c4aaa58c4c70d6cb910b477628922ae569a2" "ff2912294a7fbb3e85baba01d6545105ba68f9d9" "3641dffc1586be638c0da465bb23e89b0a89e19e" "835bfbbdbaae344d72b4e4104c2dbb42a356bf64" "2b943ab313ecd6eaf9107663ead0122d24470604" "81f92df1f435dc251bc3816e882688b5a19039af" "324c41970f27ceb68e7579d722bc3b69b6390e13" "649ccffdb140fcd021013f6297dedeb313b74fa5" default)))
  '(ecb-layout-name "left9")
  '(ecb-maximize-ecb-window-after-selection t)
  '(ecb-options-version "2.32")
@@ -375,5 +375,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "Courier")))))
+ '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :family "Consolas")))))
 
