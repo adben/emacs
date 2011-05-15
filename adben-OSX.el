@@ -38,7 +38,7 @@
 ;;     ⌃ (Control) + Click — Show contextual menu
 ;;     ⇧ (Shift) + Click — Select region
 ;;; MacOS X specific stuff
-; setting Hyper and Super keys for the Mac keyboard, for emacs running in OS X
+                                        ; setting Hyper and Super keys for the Mac keyboard, for emacs running in OS X
 ;;(setq mac-option-modifier 'hyper) ; sets the Option key as Hyper
 ;;(setq mac-option-modifier 'super) ; sets the Option key as Super
 ;;(setq mac-command-modifier 'meta) ; sets the Command key as Meta
@@ -46,6 +46,7 @@
 ;;(setq mac-option-modifier 'meta)
 ;;(setq mac-command-modifier 'ctrl) ;sets command key as ctrl
 ;;(setq mac-command-modifier 'crtl mac-option-modifier 'meta)
+(setq mac-control-modifier 'ctrl mac-command-modifier 'super mac-option-modifier 'meta)
 (define-key mac-key-mode-map [(alt l)] 'goto-line)
 ;; (global-set-key [(hyper a)] 'mark-whole-buffer)
 ;; (global-set-key [(hyper v)] 'yank)
@@ -64,3 +65,47 @@
 (require 'redo+)
 (global-set-key [(hyper z)] 'undo)
 (global-set-key [(hyper shift z)] 'redo)
+
+;; File open dialog, using Applescript
+;; To open a file using the system’s open dialog;
+(defun mac-open-file ()
+  (interactive)
+  (let ((file (do-applescript "try
+ POSIX path of (choose file)
+ end try")))
+    (if (> (length file) 3)
+        (setq file
+              (substring file 1 (- (length file) 1))
+              ))
+    (if (and (not (equal file ""))(file-readable-p file))
+        (find-file file)
+      (beep))
+    ))
+;; command + O
+;;(setq mac-command-key-is-meta nil)
+(global-set-key [(alt o)] 'mac-open-file)
+;; menu item
+(define-key menu-bar-file-menu [open-file] '("Open File..." . mac-open-file))
+
+;; File Save Dialog using Applescript
+;; Similar to the above, you can get a Cocoa “Save As…” dialog.
+(defun mac-save-file-as ()
+  (interactive)
+  (let ((file (do-applescript "try
+ POSIX path of (choose file name with prompt \"Save As...\")
+ end try")))
+    (if (> (length file) 3)
+        (setq file
+              (substring file 1 (- (length file) 1))
+              ))
+    (if (not (equal file ""))
+        (write-file file)
+      (beep))
+    ))
+;; command + S
+(setq mac-command-key-is-meta nil)
+(global-set-key (kbd "M-s") 'mac-save-file-as)
+
+;; Mighty Mouse Scrolling
+;; By default the scrolling with the Mighty Mouse is very jerky. The following setting feel more reasonable:
+(setq mouse-wheel-scroll-amount '(0.01))

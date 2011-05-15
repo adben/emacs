@@ -350,6 +350,7 @@
  '(gnus-article-sort-functions (quote ((not gnus-article-sort-by-date))))
  '(gnus-thread-sort-functions (quote ((not gnus-thread-sort-by-date))))
  '(jira-url "https://dev.sourcesense.com/jira/rpc/xmlrpc")
+ '(locate-command "mdfind")
  '(max-lisp-eval-depth 50000)
  '(max-specpdl-size 100000)
  '(mew-rc-file "~/.emacs.d/dot-mew.el" t)
