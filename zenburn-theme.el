@@ -97,31 +97,31 @@
     '(italic ((t (:slant italic))))
     '(underline ((t (:underline t))))
 
-    
-    `(border ((t (:background ,zenburn-bg))))
+      
     '(fringe ((t (:inherit 'default))))
     '(header-line ((t (:inherit 'zenburn-highlight-damp
 			:box (:color "#2e3330" :line-width 2)))))
-    `(mode-line ((t (:foreground ,zenburn-yellow :background "#1e2320"
-		      :box (:color "#1e2320" :line-width 2)))))
+    '(highlight ((t (:weight bold :underline t))))
+    '(hover-highlight ((t (:underline t :foreground "#f8f893"))))
+    '(match ((t (:weight bold))))  
+    '(menu ((t nil)))
     '(mode-line-inactive ((t (:background "#2e3330" :foreground "#88b090"
 			       :box (:color "#2e3330" :line-width 2)))))
-    `(minibuffer-prompt ((t (:foreground ,zenburn-yellow))))
-    `(Buffer-menu-buffer ((t (:inherit 'zenburn-primary-1))))
-    `(region ((t (:foreground nil :background ,zenburn-bg+2))))
-    `(secondary-selection ((t (:foreground nil :background "#506070"))))
-    '(trailing-whitespace ((t (:inherit font-lock-warning))))
-    '(highlight ((t (:underline nil))))
+    '(mouse ((t (:inherit 'zenburn-foreground))))
     '(paren ((t (:inherit 'zenburn-lowlight-1))))
-    '(match ((t (:weight bold))))  
+    '(trailing-whitespace ((t (:inherit font-lock-warning))))
+    `(Buffer-menu-buffer ((t (:inherit 'zenburn-primary-1))))
+    `(border ((t (:background ,zenburn-bg))))
     `(button ((t (:foreground ,zenburn-yellow :background "#506070"
 		   :weight bold :underline t))))
-    
     `(cursor ((t (:background "#aaaaaa" :foreground nil))))
-    '(hover-highlight ((t (:underline t :foreground "#f8f893"))))
-    '(menu ((t nil)))
-    '(mouse ((t (:inherit 'zenburn-foreground))))
+    `(escape-glyph-face ((t (:foreground ,zenburn-red))))
+    `(minibuffer-prompt ((t (:foreground ,zenburn-yellow))))
+    `(mode-line ((t (:foreground ,zenburn-yellow :background "#1e2320"
+		      :box (:color "#1e2320" :line-width 2)))))
+    `(region ((t (:foreground nil :background ,zenburn-bg+2))))
     `(scroll-bar ((t (:background ,zenburn-bg+2))))
+    `(secondary-selection ((t (:foreground nil :background ,zenburn-bg+2))))
     `(tool-bar ((t (:background ,zenburn-bg+2))))
     
     ;; apt-utils
@@ -227,7 +227,7 @@
     
     ;; eshell
     '(eshell-prompt ((t (:inherit 'zenburn-primary-1))))
-    '(eshell-ls-archive ((t (:foreground "#c3bf9f" :weight bold))))
+    `(eshell-ls-archive ((t (:foreground ,zenburn-red-1 :weight bold))))
     '(eshell-ls-backup ((t (:inherit font-lock-comment))))
     '(eshell-ls-clutter ((t (:inherit font-lock-comment))))
     `(eshell-ls-directory ((t (:foreground ,zenburn-blue+1 :weight bold))))
@@ -245,9 +245,9 @@
     '(font-latex-title-4 ((t (:inherit 'zenburn-title))))
     
     ;; font-locking
-    '(font-lock-builtin-face ((t (:inherit 'zenburn-blue)))) 
-    '(font-lock-comment-face  ((t (:inherit italic :foreground "#999999"))))
-    '(font-lock-comment-delimiter-face ((t (:foreground "#777777"))))
+    '(font-lock-builtin-face ((t (:inherit 'zenburn-blue))))
+    `(font-lock-comment-face ((t (:foreground ,zenburn-green))))
+    `(font-lock-comment-delimiter-face ((t (:foreground ,zenburn-green))))
     '(font-lock-constant-face ((t (:inherit 'zenburn-primary-4))))
     '(font-lock-doc-face ((t (:inherit 'zenburn-green+1))))
     `(font-lock-doc-string-face ((t (:foreground ,zenburn-blue+1))))
@@ -330,8 +330,8 @@
     ;; highlight
     '(highlight-current-line ((t (:inherit 'zenburn-highlight-subtle))))
 
-    ;; 
-    '(hl-line ((t (:background "#444444"))))
+    ;; hightlight the current line
+    `(hl-line ((t (:background ,zenburn-bg-1))))
     
     ;; holiday
     '(holiday ((t (:underline t :inherit 'zenburn-primary-4))))
@@ -343,10 +343,10 @@
     '(ibuffer-help-buffer ((t (:inherit font-lock-comment))))
 
     ;; icomplete
-    '(icompletep-choices ((t (:foreground "#dcdccc")))) ; zenburn-fg
-    '(icompletep-determined ((t (:foreground "#8FB28F")))) ; zenburn-green+1
-    '(icompletep-nb-candidates ((t (:foreground "#AFD8AF")))) ; zenburn-green+3
-    '(icompletep-keys ((t (:foreground "#CC9393")))) ; zenburn-red
+    `(icompletep-choices ((t (:foreground ,zenburn-fg)))) 
+    `(icompletep-determined ((t (:foreground ,zenburn-green+1)))) 
+    `(icompletep-nb-candidates ((t (:foreground ,zenburn-green+3)))) 
+    `(icompletep-keys ((t (:foreground ,zenburn-red))))
     
     ;; ido
     '(ido-first-match ((t (:inherit 'zenburn-primary-1))))
@@ -366,9 +366,9 @@
     '(info-header-node ((t (:weight normal))))
     
     ;; isearch
-    `(isearch ((t (:foreground ,zenburn-fg :background "#506070"))))
-    `(isearch-lazy-highlight
-       ((t (:foreground ,zenburn-fg :background "#1e2320" :weight normal))))
+    `(isearch ((t (:foreground ,zenburn-yellow :background ,zenburn-bg-1))))
+    `(isearch-fail ((t (:foreground ,zenburn-fg :background ,zenburn-red-4))))
+    `(lazy-highlight ((t (:foreground ,zenburn-yellow :background ,zenburn-bg+2))))
 
     ;; jabber-mode
     '(jabber-roster-user-chatty ((t (:inherit 'zenburn-primary-1))))
@@ -419,71 +419,39 @@
     ;; minimap
     '(minimap-active-region-background ((t (:foreground nil :background "#233323"))))
     
-    ;; nxml
-    '(nxml-attribute-colon ((t (:inherit default))))
-    '(nxml-attribute-local-name ((t (:inherit 'zenburn-primary-3))))
-    '(nxml-attribute-prefix ((t (:inherit default))))
-    '(nxml-attribute-value ((t (:inherit font-lock-string))))
-    '(nxml-attribute-value-delimiter ((t (:inherit nxml-attribute-value))))
-    '(nxml-cdata-section-CDATA ((t (:inherit 'zenburn-primary-4))))
-    '(nxml-cdata-section-content ((t (:inherit nxml-text))))
-    '(nxml-cdata-section-delimiter ((t (:inherit nxml-cdata-section-CDATA))))
-    '(nxml-char-ref-delimiter ((t (:inherit nxml-entity-ref-delimiter))))
-    '(nxml-char-ref-number ((t (:inherit nxml-entity-ref-name))))
-    '(nxml-comment-content ((t (:inherit font-lock-comment)))) 
-    '(nxml-comment-delimiter ((t (:inherit nxml-comment-content))))
-    '(nxml-delimited-data ((t (:inherit font-lock-string))))
-    '(nxml-delimiter ((t (:inherit default))))
-    '(nxml-element-colon ((t (:inherit default))))  
-    '(nxml-element-local-name ((t (:inherit 'zenburn-primary-1))))
-    '(nxml-element-prefix ((t (:inherit default))))
-    '(nxml-entity-ref-delimiter ((t (:inherit nxml-entity-ref-name))))
-    '(nxml-entity-ref-name ((t (:inherit 'zenburn-primary-5))))
-    '(nxml-name ((t (:inherit 'zenburn-primary-1))))
-    '(nxml-namespace-attribute-colon ((t (:inherit nxml-attribute-colon))))
-    '(nxml-namespace-attribute-prefix ((t (:inherit nxml-attribute-local-name))))
-    '(nxml-namespace-attribute-xmlns ((t (:inherit nxml-attribute-prefix))))
-    '(nxml-processing-instruction-content ((t (:inherit nxml-processing-instruction-target))))
-    '(nxml-processing-instruction-delimiter ((t (:inherit nxml-processing-instruction-target))))
-    '(nxml-processing-instruction-target ((t (:inherit 'zenburn-primary-2))))
-    '(nxml-ref ((t (:inherit 'zenburn-primary-5))))
-    '(nxml-tag-delimiter ((t (:inherit default))))
-    '(nxml-tag-slash ((t (:inherit default))))
-    '(nxml-text ((t (:inherit default)))) 
-    
     ;; org-mode
-    '(org-agenda-date-today ((t (:foreground "white"
-    				  :slant italic :weight bold))) t)       
-    '(org-agenda-structure ((t (:inherit font-lock-comment-face))))  
-    '(org-archived ((t (:foreground "#8f8f8f"))))                    
-    '(org-checkbox ((t (:background "#5f5f5f" :foreground "white"    
-    			 :box (:line-width 1 :style released-button))))) 
-    '(org-date ((t (:foreground "#8cd0d3" :underline t))))           
-    '(org-deadline-announce ((t (:foreground "#bc8383"))))           
-    '(org-done ((t (:bold t :weight bold :foreground "#afd8af"))))   
-    '(org-formula ((t (:foreground "#d0bf8f"))))                     
-    '(org-headline-done ((t (:foreground "#afd8af"))))
-    '(org-agenda-date-today ((t (:inherit 'zenburn-blue))))
-    '(org-hide ((t (:foreground "#282828"))))                        
-    '(org-level-1 ((t (:foreground "#dfaf8f"))))                     
-    '(org-level-2 ((t (:foreground "#f0dfaf"))))                     
-    '(org-level-3 ((t (:foreground "#8cd0d3"))))                     
-    '(org-level-4 ((t (:foreground "#93e0e3"))))                     
-    '(org-level-5 ((t (:foreground "#7cb8bb"))))                     
-    '(org-level-6 ((t (:foreground "#6ca0a3"))))                     
-    '(org-level-7 ((t (:foreground "#5c888b"))))                     
-    '(org-level-8 ((t (:foreground "#4c7073"))))                     
-    '(org-link ((t (:foreground "#d0bf8f" :underline t))))
-    '(org-scheduled ((t (:inherit 'zenburn-green+2))))        
-    '(org-scheduled-previously ((t (:foreground "#8c5353"))))        
-    '(org-scheduled-today ((t (:foreground "#94bff3"))))             
-    '(org-special-keyword ((t (:foreground "#e0cf9f"))))             
-    '(org-table ((t (:foreground "#9fc59f"))))                       
-    '(org-tag ((t (:bold t :weight bold))))                          
-    '(org-time-grid ((t (:foreground "#ffc9a4"))))                   
-    '(org-todo ((t (:bold t :foreground "#cc9393" :weight bold))))   
-    '(org-upcoming-deadline ((t (:inherit font-lock-keyword-face)))) 
-    '(org-warning ((t (:bold t :foreground "#cc9393" :weight bold))))
+    '(org-agenda-date-today-face
+       ((t (:foreground "white" :slant italic :weight bold))) t)
+    '(org-agenda-structure-face
+       ((t (:inherit font-lock-comment-face))))
+    `(org-archived-face ((t (:foreground ,zenburn-fg :weight bold))))
+    `(org-checkbox-face ((t (:background ,zenburn-bg+2 :foreground "white"
+			      :box (:line-width 1 :style released-button)))))
+    `(org-date-face ((t (:foreground ,zenburn-blue :underline t))))
+    `(org-deadline-announce-face ((t (:foreground ,zenburn-red-1))))
+    `(org-done-face ((t (:bold t :weight bold :foreground ,zenburn-green+3))))
+    `(org-formula-face ((t (:foreground ,zenburn-yellow-2))))
+    `(org-headline-done-face ((t (:foreground ,zenburn-green+3))))
+    `(org-hide-face ((t (:foreground ,zenburn-bg-1))))
+    `(org-level-1-face ((t (:foreground ,zenburn-orange))))
+    `(org-level-2-face ((t (:foreground ,zenburn-yellow))))
+    `(org-level-3-face ((t (:foreground ,zenburn-blue))))
+    `(org-level-4-face ((t (:foreground ,zenburn-cyan))))
+    `(org-level-5-face ((t (:foreground ,zenburn-blue-1))))
+    `(org-level-6-face ((t (:foreground ,zenburn-blue-2))))
+    `(org-level-7-face ((t (:foreground ,zenburn-blue-3))))
+    `(org-level-8-face ((t (:foreground ,zenburn-blue-4))))
+    `(org-link-face ((t (:foreground ,zenburn-yellow-2 :underline t))))
+    `(org-scheduled-face ((t (:foreground ,zenburn-green+4))))
+    `(org-scheduled-previously-face ((t (:foreground ,zenburn-red-4))))
+    `(org-scheduled-today-face ((t (:foreground ,zenburn-blue+1))))
+    `(org-special-keyword-face ((t (:foreground ,zenburn-yellow-1))))
+    `(org-table-face ((t (:foreground ,zenburn-green+2))))
+    `(org-tag-face ((t (:bold t :weight bold))))
+    `(org-time-grid-face ((t (:foreground ,zenburn-orange))))
+    `(org-todo-face ((t (:bold t :foreground ,zenburn-red :weight bold))))
+    '(org-upcoming-deadline-face ((t (:inherit font-lock-keyword-face))))
+     `(org-warning-face ((t (:bold t :foreground ,zenburn-red :weight bold))))
 
     ;; outline
     '(outline-8 ((t (:inherit default))))
@@ -530,6 +498,7 @@
     '(todoo-item-assigned-header-face ((t (:inherit 'zenburn-primary-2))))
     `(todoo-sub-item-header-face ((t (:foreground ,zenburn-yellow))))
 
+    
     ;; tuareg
     '(tuareg-font-lock-governing-face ((t (:inherit 'zenburn-primary-2))))
     '(tuareg-font-lock-interactive-error-face ((t (:inherit font-lock-warning))))
@@ -582,8 +551,8 @@
 					       :slant italic))))
     '(wl-highlight-summary-new-face ((t (:inherit 'zenburn-blue))))
     '(wl-highlight-summary-normal-face ((t (:inherit 'zenburn-fg))))
-    '(wl-highlight-summary-thread-top-face ((t (:foreground "#efdcbc"))))
-    '(wl-highlight-thread-indent-face ((t (:foreground "#ecbcec"))))
+    `(wl-highlight-summary-thread-top-face ((t (:foreground ,zenburn-yellow))))
+    `(wl-highlight-thread-indent-face ((t (:foreground ,zenburn-magenta))))
     '(wl-highlight-summary-refiled-face ((t (:inherit 'zenburn-lowlight-2))))
     '(wl-highlight-summary-displaying-face ((t (:underline t :weight bold))))
     ))
