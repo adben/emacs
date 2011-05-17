@@ -1,13 +1,11 @@
-;;-*-coding: emacs-mule;-*-
+;;-*-coding: utf-8;-*-
 (define-abbrev-table 'Buffer-menu-mode-abbrev-table '())
 
 (define-abbrev-table 'Custom-mode-abbrev-table '())
 
 (define-abbrev-table 'apropos-mode-abbrev-table '())
 
-(define-abbrev-table 'calendar-mode-abbrev-table '())
-
-(define-abbrev-table 'change-log-mode-abbrev-table '())
+(define-abbrev-table 'clojure-mode-abbrev-table '())
 
 (define-abbrev-table 'comint-mode-abbrev-table '())
 
@@ -17,7 +15,9 @@
 
 (define-abbrev-table 'confluence-search-mode-abbrev-table '())
 
-(define-abbrev-table 'diff-mode-abbrev-table '())
+(define-abbrev-table 'egg-grep-mode-abbrev-table '())
+
+(define-abbrev-table 'egg-log-msg-mode-abbrev-table '())
 
 (define-abbrev-table 'emacs-lisp-mode-abbrev-table '())
 
@@ -29,10 +29,6 @@
 
 (define-abbrev-table 'grep-mode-abbrev-table '())
 
-(define-abbrev-table 'html-mode-abbrev-table '())
-
-(define-abbrev-table 'inferior-moz-mode-abbrev-table '())
-
 (define-abbrev-table 'ledger-mode-abbrev-table '())
 
 (define-abbrev-table 'ledger-reconcile-mode-abbrev-table '())
@@ -41,8 +37,6 @@
 
 (define-abbrev-table 'lisp-mode-abbrev-table '())
 
-(define-abbrev-table 'log-edit-mode-abbrev-table '())
-
 (define-abbrev-table 'lua-mode-abbrev-table
   '(
     ("else" "else" lua-indent-line 0)
@@ -50,31 +44,33 @@
     ("end" "end" lua-indent-line 0)
    ))
 
-(define-abbrev-table 'magit-log-edit-mode-abbrev-table '())
+(define-abbrev-table 'occur-mode-abbrev-table '())
 
-(define-abbrev-table 'magit-show-branches-mode-abbrev-table '())
-
-(define-abbrev-table 'noshell-process-mode-abbrev-table '())
-
-(define-abbrev-table 'nxhtml-mode-abbrev-table '())
-
-(define-abbrev-table 'org-mode-abbrev-table '())
-
-(define-abbrev-table 'outline-mode-abbrev-table '())
+(define-abbrev-table 'process-menu-mode-abbrev-table '())
 
 (define-abbrev-table 'prog-mode-abbrev-table '())
 
-(define-abbrev-table 'sgml-mode-abbrev-table '())
+(define-abbrev-table 'ruby-mode-abbrev-table '())
+
+(define-abbrev-table 'sldb-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-connection-list-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-inspector-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-thread-control-mode-abbrev-table '())
+
+(define-abbrev-table 'slime-xref-mode-abbrev-table '())
 
 (define-abbrev-table 'snippet-mode-abbrev-table '())
 
 (define-abbrev-table 'special-mode-abbrev-table '())
 
+(define-abbrev-table 'speedbar-mode-abbrev-table '())
+
+(define-abbrev-table 'test-case-result-mode-abbrev-table '())
+
 (define-abbrev-table 'text-mode-abbrev-table '())
 
-(define-abbrev-table 'udev-control-mode-abbrev-table '())
-
 (define-abbrev-table 'vc-git-log-view-mode-abbrev-table '())
-
-(define-abbrev-table 'wab-compilation-mode-abbrev-table '())
 
