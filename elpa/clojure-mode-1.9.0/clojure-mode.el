@@ -6,7 +6,7 @@
 ;;          Lennart Staflin <lenst@lysator.liu.se>
 ;;          Phil Hagelberg <technomancy@gmail.com>
 ;; URL: http://www.emacswiki.org/cgi-bin/wiki/ClojureMode
-;; Version: 1.8.1
+;; Version: 1.9.0
 ;; Keywords: languages, lisp
 
 ;; This file is not part of GNU Emacs.
@@ -19,6 +19,8 @@
 ;; Users of older Emacs (pre-22) should get version 1.4:
 ;; http://github.com/technomancy/clojure-mode/tree/1.4
 
+;;; Installation:
+
 ;; Use package.el. You'll need to add Marmalade to your archives:
 
 ;; (require 'package)
@@ -30,6 +32,10 @@
 ;; an older package.el installed from tromey.com, you should upgrade
 ;; in order to support installation from multiple sources.
 
+;; Of course, it's possible to just place it on your load-path and
+;; require it as well if you don't mind missing out on
+;; byte-compilation and autoloads.
+
 ;; Using clojure-mode with paredit is highly recommended. It is also
 ;; available using package.el from the above archive.
 
@@ -39,7 +45,7 @@
 ;;   (defun turn-on-paredit () (paredit-mode 1))
 ;;   (add-hook 'clojure-mode-hook 'turn-on-paredit)
 
-;; See slime-repl (also available from the same package archive) for
+;; See Swank Clojure (http://github.com/technomancy/swank-clojure) for
 ;; better interaction with subprocesses.
 
 ;;; License:
@@ -118,7 +124,6 @@ Clojure to load that file."
     (modify-syntax-entry ?\[ "(]" table)
     (modify-syntax-entry ?\] ")[" table)
     (modify-syntax-entry ?^ "'" table)
-    (modify-syntax-entry ?= "'" table)
     table))
 
 (defvar clojure-mode-abbrev-table nil
@@ -145,11 +150,11 @@ numbers count from the end:
 
 (defun clojure-mode-version ()
   "Currently package.el doesn't support prerelease version numbers."
-  "1.8.1-SNAPSHOT")
+  "1.9.0")
 
 ;;;###autoload
 (defun clojure-mode ()
-  "Major mode for editing Clojure code - similar to Lisp mode..
+  "Major mode for editing Clojure code - similar to Lisp mode.
 Commands:
 Delete converts tabs to spaces as it moves back.
 Blank lines separate paragraphs.  Semicolons start comments.
@@ -175,6 +180,8 @@ if that value is non-nil."
        "\\(\\(^\\|[^\\\\\n]\\)\\(\\\\\\\\\\)*\\)\\(;+\\|#|\\) *")
   (set (make-local-variable 'lisp-indent-function)
        'clojure-indent-function)
+  (set (make-local-variable 'forward-sexp-function)
+       'clojure-forward-sexp)
   (set (make-local-variable 'lisp-doc-string-elt-property)
        'clojure-doc-string-elt)
 
@@ -543,6 +550,24 @@ elements of a def* forms."
 
 
 
+(defun clojure-forward-sexp (n)
+  "Treat record literals like #user.Foo[1] and #user.Foo{:size 1}
+as a single sexp so that slime will send them properly. Arguably
+this behavior is unintuitive for the user pressing (eg) C-M-f
+himself, but since these are single objects I think it's right."
+  (let ((dir (if (> n 0) 1 -1))
+        (forward-sexp-function nil)) ; force the built-in version
+    (while (not (zerop n))
+      (forward-sexp dir)
+      (when (save-excursion ; move back to see if we're in a record literal
+              (and
+               (condition-case nil
+                   (progn (backward-sexp) 't)
+                 ('scan-error nil))
+               (looking-at "#\\w")))
+        (forward-sexp dir)) ; if so, jump over it
+      (setq n (- n dir)))))
+
 (defun clojure-indent-function (indent-point state)
   "This function is the normal value of the variable `lisp-indent-function'.
 It is used when indenting a line within a function call, to see if the
@@ -797,17 +822,51 @@ use (put-clojure-indent 'some-symbol 'defun)."
 ;;  foo)"
 ;;     "foo"))
 
-(defun clojure-find-package ()
+
+;;; Slime help
+
+(defvar clojure-project-root-file "project.clj")
+
+(defvar clojure-swank-command "cd %s && lein jack-in %s &")
+
+(defvar clojure-swank-port nil)
+
+;;;###autoload
+(defun clojure-jack-in ()
+  (interactive)
+  (let ((clojure-root (locate-dominating-file default-directory
+                                              clojure-project-root-file)))
+    ;; graaaahhhh--no closures in elisp (23)
+    (setq clojure-swank-port (+ 1024 (* (random 64512))))
+    (when (not clojure-root)
+      ;; TODO: prompt for project root.
+      (error "Not in a project; couldn't find %s." clojure-project-root-file))
+    (shell-command (format clojure-swank-command clojure-root clojure-swank-port)
+                   "*swank*")
+    (set-process-filter (get-buffer-process "*swank*")
+                        (lambda (process output)
+                          (with-current-buffer "*swank*"
+                            (insert output))
+                          (when (string-match "proceed to jack in" output)
+                            (setq ooo output)
+                            (eval-buffer "*swank*")
+                            (slime-connect "localhost" clojure-swank-port)
+                            (set-process-filter process nil))))
+    (message "Starting swank server...")))
+
+(defun clojure-find-ns ()
   (let ((regexp *namespace-name-regex*))
     (save-excursion
       (when (or (re-search-backward regexp nil t)
                 (re-search-forward regexp nil t))
         (match-string-no-properties 4)))))
 
+(defalias 'clojure-find-package 'clojure-find-ns)
+
 (defun clojure-enable-slime ()
   (slime-mode t)
   (set (make-local-variable 'slime-find-buffer-package-function)
-       'clojure-find-package))
+       'clojure-find-ns))
 
 ;;;###autoload
 (defun clojure-enable-slime-on-existing-buffers ()
@@ -837,7 +896,7 @@ use (put-clojure-indent 'some-symbol 'defun)."
   (interactive)
   (find-file (format "%s/test/%s.clj"
                      (locate-dominating-file buffer-file-name "src/")
-                     (clojure-test-for (clojure-find-package)))))
+                     (clojure-test-for (clojure-find-ns)))))
 
 ;;;###autoload
 (add-hook 'slime-connected-hook 'clojure-enable-slime-on-existing-buffers)

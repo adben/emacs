@@ -420,38 +420,38 @@
     '(minimap-active-region-background ((t (:foreground nil :background "#233323"))))
     
     ;; org-mode
-    '(org-agenda-date-today-face
+    '(org-agenda-date-today
        ((t (:foreground "white" :slant italic :weight bold))) t)
-    '(org-agenda-structure-face
-       ((t (:inherit font-lock-comment-face))))
-    `(org-archived-face ((t (:foreground ,zenburn-fg :weight bold))))
-    `(org-checkbox-face ((t (:background ,zenburn-bg+2 :foreground "white"
+    '(org-agenda-structure
+       ((t (:inherit font-lock-comment))))
+    `(org-archived ((t (:foreground ,zenburn-fg :weight bold))))
+    `(org-checkbox ((t (:background ,zenburn-bg+2 :foreground "white"
 			      :box (:line-width 1 :style released-button)))))
-    `(org-date-face ((t (:foreground ,zenburn-blue :underline t))))
-    `(org-deadline-announce-face ((t (:foreground ,zenburn-red-1))))
-    `(org-done-face ((t (:bold t :weight bold :foreground ,zenburn-green+3))))
-    `(org-formula-face ((t (:foreground ,zenburn-yellow-2))))
-    `(org-headline-done-face ((t (:foreground ,zenburn-green+3))))
-    `(org-hide-face ((t (:foreground ,zenburn-bg-1))))
-    `(org-level-1-face ((t (:foreground ,zenburn-orange))))
-    `(org-level-2-face ((t (:foreground ,zenburn-yellow))))
-    `(org-level-3-face ((t (:foreground ,zenburn-blue))))
-    `(org-level-4-face ((t (:foreground ,zenburn-cyan))))
-    `(org-level-5-face ((t (:foreground ,zenburn-blue-1))))
-    `(org-level-6-face ((t (:foreground ,zenburn-blue-2))))
-    `(org-level-7-face ((t (:foreground ,zenburn-blue-3))))
-    `(org-level-8-face ((t (:foreground ,zenburn-blue-4))))
-    `(org-link-face ((t (:foreground ,zenburn-yellow-2 :underline t))))
-    `(org-scheduled-face ((t (:foreground ,zenburn-green+4))))
-    `(org-scheduled-previously-face ((t (:foreground ,zenburn-red-4))))
-    `(org-scheduled-today-face ((t (:foreground ,zenburn-blue+1))))
-    `(org-special-keyword-face ((t (:foreground ,zenburn-yellow-1))))
-    `(org-table-face ((t (:foreground ,zenburn-green+2))))
-    `(org-tag-face ((t (:bold t :weight bold))))
-    `(org-time-grid-face ((t (:foreground ,zenburn-orange))))
-    `(org-todo-face ((t (:bold t :foreground ,zenburn-red :weight bold))))
-    '(org-upcoming-deadline-face ((t (:inherit font-lock-keyword-face))))
-     `(org-warning-face ((t (:bold t :foreground ,zenburn-red :weight bold))))
+    `(org-date ((t (:foreground ,zenburn-blue :underline t))))
+    `(org-deadline-announce ((t (:foreground ,zenburn-red-1))))
+    `(org-done ((t (:bold t :weight bold :foreground ,zenburn-green+3))))
+    `(org-formula ((t (:foreground ,zenburn-yellow-2))))
+    `(org-headline-done ((t (:foreground ,zenburn-green+3))))
+    `(org-hide ((t (:foreground ,zenburn-bg-1))))
+    `(org-level-1 ((t (:foreground ,zenburn-orange))))
+    `(org-level-2 ((t (:foreground ,zenburn-yellow))))
+    `(org-level-3 ((t (:foreground ,zenburn-blue))))
+    `(org-level-4 ((t (:foreground ,zenburn-cyan))))
+    `(org-level-5 ((t (:foreground ,zenburn-blue-1))))
+    `(org-level-6 ((t (:foreground ,zenburn-blue-2))))
+    `(org-level-7 ((t (:foreground ,zenburn-blue-3))))
+    `(org-level-8 ((t (:foreground ,zenburn-blue-4))))
+    `(org-link ((t (:foreground ,zenburn-yellow-2 :underline t))))
+    `(org-scheduled ((t (:foreground ,zenburn-green+4))))
+    `(org-scheduled-previously ((t (:foreground ,zenburn-red-4))))
+    `(org-scheduled-today ((t (:foreground ,zenburn-blue+1))))
+    `(org-special-keyword ((t (:foreground ,zenburn-yellow-1))))
+    `(org-table ((t (:foreground ,zenburn-green+2))))
+    `(org-tag ((t (:bold t :weight bold))))
+    `(org-time-grid ((t (:foreground ,zenburn-orange))))
+    `(org-todo ((t (:bold t :foreground ,zenburn-red :weight bold))))
+    '(org-upcoming-deadline ((t (:inherit font-lock-keyword-face))))
+    `(org-warning ((t (:bold t :foreground ,zenburn-red :weight bold))))
 
     ;; outline
     '(outline-8 ((t (:inherit default))))
@@ -463,7 +463,22 @@
     '(outline-2 ((t (:inherit outline-3 :height 1.0))))
     '(outline-1 ((t (:inherit outline-2  :height 1.0))))
 
-    
+
+    ;; rainbow-delimiters
+    `(rainbow-delimiters-depth-1-face ((t (:foreground ,zenburn-cyan))))
+    `(rainbow-delimiters-depth-2-face ((t (:foreground ,zenburn-yellow))))
+    `(rainbow-delimiters-depth-3-face ((t (:foreground ,zenburn-red))))
+    `(rainbow-delimiters-depth-4-face ((t (:foreground ,zenburn-green))))
+    `(rainbow-delimiters-depth-5-face ((t (:foreground ,zenburn-orange))))
+    `(rainbow-delimiters-depth-6-face ((t (:foreground ,zenburn-blue-1))))
+    `(rainbow-delimiters-depth-7-face ((t (:foreground ,zenburn-green+4))))
+    `(rainbow-delimiters-depth-8-face ((t (:foreground ,zenburn-red-3))))
+    `(rainbow-delimiters-depth-9-face ((t (:foreground ,zenburn-yellow-2))))
+    `(rainbow-delimiters-depth-10-face ((t (:foreground ,zenburn-green+2))))
+    `(rainbow-delimiters-depth-11-face ((t (:foreground ,zenburn-blue+1))))
+    `(rainbow-delimiters-depth-12-face ((t (:foreground ,zenburn-red-4))))
+  
+       
     ;; rcirc
     '(rcirc-my-nick ((t (:inherit 'zenburn-primary-1))))
     '(rcirc-other-nick ((t (:inherit bold))))
