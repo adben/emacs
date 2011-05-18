@@ -467,8 +467,8 @@
     ;; rainbow-delimiters
     `(rainbow-delimiters-depth-1-face ((t (:foreground ,zenburn-cyan))))
     `(rainbow-delimiters-depth-2-face ((t (:foreground ,zenburn-yellow))))
-    `(rainbow-delimiters-depth-3-face ((t (:foreground ,zenburn-red))))
-    `(rainbow-delimiters-depth-4-face ((t (:foreground ,zenburn-green))))
+    `(rainbow-delimiters-depth-3-face ((t (:foreground ,zenburn-blue+1))))
+    `(rainbow-delimiters-depth-4-face ((t (:foreground ,zenburn-red+1))))
     `(rainbow-delimiters-depth-5-face ((t (:foreground ,zenburn-orange))))
     `(rainbow-delimiters-depth-6-face ((t (:foreground ,zenburn-blue-1))))
     `(rainbow-delimiters-depth-7-face ((t (:foreground ,zenburn-green+4))))
