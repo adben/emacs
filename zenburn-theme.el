@@ -238,6 +238,10 @@
     '(eshell-ls-special ((t (:inherit 'zenburn-primary-1))))
     `(eshell-ls-symlink ((t (:foreground ,zenburn-cyan :weight bold))))
 
+    ;; flyspell
+    `(flyspell-duplicate ((t (:foreground ,zenburn-yellow, :weight bold))))
+    `(flyspell-incorrect ((t (:foreground ,zenburn-red :weight bold))))
+    
     ;; font-latex
     '(font-latex-bold ((t (:inherit bold))))
     '(font-latex-warning ((t (:inherit font-lock-warning))))
@@ -246,7 +250,7 @@
     
     ;; font-locking
     '(font-lock-builtin-face ((t (:inherit 'zenburn-blue))))
-    `(font-lock-comment-face ((t (:foreground ,zenburn-green))))
+    `(font-lock-comment-face ((t (:foreground ,zenburn-green :slant italic))))
     `(font-lock-comment-delimiter-face ((t (:foreground ,zenburn-green))))
     '(font-lock-constant-face ((t (:inherit 'zenburn-primary-4))))
     '(font-lock-doc-face ((t (:inherit 'zenburn-green+1))))
@@ -326,7 +330,14 @@
 
     ;; help-argument
     '(help-argument-name ((t (:weight bold))))
-    
+					 
+    ;; hi-lock-mode
+    `(hi-yellow  ((t (:foreground ,zenburn-yellow))))
+    `(hi-pink  ((t (:foreground ,zenburn-red-4))))
+    `(hi-green  ((t (:foreground ,zenburn-green-1))))
+    `(hi-blue  ((t (:foreground ,zenburn-blue-5))))
+  
+
     ;; highlight
     '(highlight-current-line ((t (:inherit 'zenburn-highlight-subtle))))
 
@@ -399,6 +410,11 @@
     '(keywiz-wrong-face ((t (:inherit font-lock-warning))))
     '(keywiz-command-face ((t (:inherit 'zenburn-primary-2))))
 
+    ;; magit
+    '(magit-section-title ((t (:inherit 'zenburn-red))))
+    '(magit-item-highlight ((t (:inherit 'zenburn-blue))))
+    '(magit-branch ((t (:inherit 'zenburn-blue))))
+    
     ;; makefile
     '(makefile-space ((t (:inherit font-lock-warning))))
     '(makefile-shell ((t (nil))))
@@ -492,8 +508,8 @@
     '(rcirc-mode-line-nick ((t (:inherit 'zenburn-primary-1))))
     
     ;; show-paren
-    '(show-paren-mismatch ((t (:inherit font-lock-warning))))
-    `(show-paren-match ((t (:foreground ,zenburn-blue-1 :underline nil))))
+    '(show-paren-mismatch ((t (:inherit font-lock-warning :weight bold))))
+    `(show-paren-match ((t (:background ,zenburn-blue-5 :underline t))))
 
     ;; setnu
     '(setnu-line-number ((t (:inherit 'zenburn-lowlight-2))))

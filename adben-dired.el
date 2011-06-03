@@ -16,3 +16,7 @@
   (add-hook 'dired-load-hook 'my-dired-init))
 ;;enable recursive deletion of dirs, but doubly ask if it's not empty.
 (setq dired-recursive-deletes 'top)
+;;By default Emacs will pass -exec to find and that makes it very slow.
+;;It is better to collate the matches and then use xargs to run the command.
+(require 'find-dired)
+(setq find-ls-option '("-print0 | xargs -0 ls -ld" . "-ld"))

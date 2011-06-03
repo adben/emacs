@@ -2,8 +2,9 @@
 ;; Automatically generated file!!! DO NOT EDIT!!!
 
 (setq url-cookie-storage
- '(("www.hosted-projects.com"
-  [cookie "trac_session" "e04adfae6daa51cbfecb4f95" "28-Nov-2007 20:19:45.00 GMT" "/trac/TracDemo/Demo" "www.hosted-projects.com" nil]))
+ '(("marmalade-repo.org"
+  [url-cookie "connect.sid" "b41e6ed486180ba564fdc3ed870f.fd5b91dbd3549c7aafcaa9ea0696d52b" "Thu, 02 Jun 2011 00:56:16 GMT" "/" "marmalade-repo.org" nil]
+  [url-cookie "httpOnly" nil "Thu, 02 Jun 2011 00:56:16 GMT" "/" "marmalade-repo.org" nil]))
 )
 (setq url-cookie-secure-storage
  'nil)
