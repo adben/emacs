@@ -1,4 +1,4 @@
 (when
     (load
-     (expand-file-name "~/.emacs.d/vendor/elpa/package.el"))
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
   (package-initialize))

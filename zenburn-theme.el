@@ -36,6 +36,8 @@
        (zenburn-yellow		"#f0dfaf")
        (zenburn-yellow-1	"#e0cf9f")
        (zenburn-yellow-2	"#d0bf8f")
+
+       (zenburn-green-4         "#2e3330")
        (zenburn-green-1		"#5f7f5f")
        (zenburn-green		"#7f9f7f")
        (zenburn-green+1		"#8fb28f")
@@ -105,7 +107,7 @@
     '(hover-highlight ((t (:underline t :foreground "#f8f893"))))
     '(match ((t (:weight bold))))  
     '(menu ((t nil)))
-    '(mode-line-inactive ((t (:background "#2e3330" :foreground "#88b090"
+    `(mode-line-inactive ((t (:background ,zenburn-green-4 :foreground "#88b090"
 			       :box (:color "#2e3330" :line-width 2)))))
     '(mouse ((t (:inherit 'zenburn-foreground))))
     '(paren ((t (:inherit 'zenburn-lowlight-1))))
@@ -205,18 +207,17 @@
     '(emms-pbi-current ((t (:inherit 'zenburn-primary-1))))
     '(emms-pbi-mark-marked ((t (:inherit 'zenburn-primary-2))))
     
-    ;; erc
+    ;; erc 
     '(erc-action-face ((t (:inherit erc-default))))
     '(erc-bold-face ((t (:weight bold))))
     '(erc-current-nick-face ((t (:inherit 'zenburn-primary-1))))
     '(erc-dangerous-host-face ((t (:inherit font-lock-warning))))
-    `(erc-default-face ((t (:foreground ,zenburn-fg))))
     '(erc-direct-msg-face ((t (:inherit erc-default))))
     '(erc-error-face ((t (:inherit font-lock-warning))))
     '(erc-fool-face ((t (:inherit 'zenburn-lowlight-1))))
     '(erc-highlight-face ((t (:inherit hover-highlight))))
-    `(erc-input-face ((t (:foreground ,zenburn-yellow))))
     '(erc-keyword-face ((t (:inherit 'zenburn-primary-1))))
+    '(erc-my-nick-face ((t (:inherit 'zenburn-red))))
     '(erc-nick-default-face ((t (:inherit bold))))
     '(erc-nick-msg-face ((t (:inherit erc-default))))
     '(erc-notice-face ((t (:inherit 'zenburn-green))))
@@ -224,6 +225,9 @@
     '(erc-prompt-face ((t (:inherit 'zenburn-primary-2))))
     '(erc-timestamp-face ((t (:inherit 'zenburn-green+1))))
     '(erc-underline-face ((t (:inherit underline))))
+    `(erc-default-face ((t (:foreground ,zenburn-fg))))
+    `(erc-input-face ((t (:foreground ,zenburn-yellow))))
+    
     
     ;; eshell
     '(eshell-prompt ((t (:inherit 'zenburn-primary-1))))
@@ -436,8 +440,15 @@
     '(minimap-active-region-background ((t (:foreground nil :background "#233323"))))
     
     ;; org-mode
-    '(org-agenda-date-today
-       ((t (:foreground "white" :slant italic :weight bold))) t)
+    `(org-agenda-clocking
+       ((t (:background ,zenburn-green-4 :weight bold))) t)
+    `(org-agenda-date-today
+       ((t (:foreground ,zenburn-cyan :slant italic :weight bold))) t)
+    `(org-agenda-date
+       ((t (:foreground ,zenburn-blue))) t)
+    `(org-agenda-date-weekend
+       ((t (:foreground ,zenburn-blue+1))) t)
+    
     '(org-agenda-structure
        ((t (:inherit font-lock-comment))))
     `(org-archived ((t (:foreground ,zenburn-fg :weight bold))))
@@ -485,10 +496,10 @@
     `(rainbow-delimiters-depth-2-face ((t (:foreground ,zenburn-yellow))))
     `(rainbow-delimiters-depth-3-face ((t (:foreground ,zenburn-blue+1))))
     `(rainbow-delimiters-depth-4-face ((t (:foreground ,zenburn-red+1))))
-    `(rainbow-delimiters-depth-5-face ((t (:foreground ,zenburn-orange))))
+    `(rainbow-delimiters-depth-5-face ((t (:foreground ,zenburn-green+1))))
     `(rainbow-delimiters-depth-6-face ((t (:foreground ,zenburn-blue-1))))
-    `(rainbow-delimiters-depth-7-face ((t (:foreground ,zenburn-green+4))))
-    `(rainbow-delimiters-depth-8-face ((t (:foreground ,zenburn-red-3))))
+    `(rainbow-delimiters-depth-7-face ((t (:foreground ,zenburn-orange))))
+    `(rainbow-delimiters-depth-8-face ((t (:foreground ,zenburn-magenta))))
     `(rainbow-delimiters-depth-9-face ((t (:foreground ,zenburn-yellow-2))))
     `(rainbow-delimiters-depth-10-face ((t (:foreground ,zenburn-green+2))))
     `(rainbow-delimiters-depth-11-face ((t (:foreground ,zenburn-blue+1))))
@@ -546,8 +557,10 @@
     '(w3m-form-button-mouse-face ((t (:inherit widget-button-pressed))))
     '(w3m-tab-unselected-face ((t (:box (:line-width 1 :style released-button)))))
     '(w3m-tab-selected-face ((t (:box (:line-width 1 :style pressed-button)))))
-    '(w3m-tab-unselected-retrieving-face ((t (:inherit w3m-tab-unselected widget-inactive))))
-    '(w3m-tab-selected-retrieving-face ((t (:inherit w3m-tab-selected widget-inactive))))
+    '(w3m-tab-unselected-retrieving-face
+       ((t (:inherit w3m-tab-unselected widget-inactive))))
+    '(w3m-tab-selected-retrieving-face
+       ((t (:inherit w3m-tab-selected widget-inactive))))
     '(w3m-tab-background-face ((t (:inherit 'zenburn-highlight-subtle))))
     '(w3m-anchor-face ((t (:inherit 'zenburn-primary-1))))
     '(w3m-arrived-anchor-face ((t (:inherit 'zenburn-primary-2))))
@@ -589,7 +602,6 @@
     ))
 
 (provide-theme 'zenburn)
-
 
 ;; Local Variables:
 ;; no-byte-compile: t
