@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; lorem-ipsum.el load-file
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-file "~/.emacs.d/vendor/lorem-ipsum.el")
+(load-file "~/.emacs.d/vendor/lorem-ipsum.elc")
 ;;make all the 'semantic.cache' files go somewhere sane
 ;;(setq semanticdb-default-save-directory "~/emacs-meta/semantic.cache/")
 ;; Enabling various SEMANTIC minor modes.  See semantic/INSTALL for more ideas.
