@@ -1,4 +1,4 @@
-(set 'nxml-path "/home/adolfo/soft/emacs/share/emacs/24.0.50/lisp/nxml/")
+(set 'nxml-path "/Applications/Emacs.app/Contents/Resources/lisp/nxml/")
 ;;(set 'nxml-path "/usr/share/emacs-snapshot/site-lisp/nxml-mode/")
 ;;/home/adolfo/soft/emacs/share/emacs/24.0.50/lisp/nxml/
 ;;(Load ("/usr/share/emacs-snapshot/site-lisp/nxml-mode/rng-auto.elc"))
