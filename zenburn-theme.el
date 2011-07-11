@@ -106,7 +106,7 @@
     '(highlight ((t (:weight bold :underline t))))
     '(hover-highlight ((t (:underline t :foreground "#f8f893"))))
     '(match ((t (:weight bold))))  
-    '(menu ((t nil)))
+    `(menu ((t (:background "#1e2320"))))
     `(mode-line-inactive ((t (:background ,zenburn-green-4 :foreground "#88b090"
 			       :box (:color "#2e3330" :line-width 2)))))
     '(mouse ((t (:inherit 'zenburn-foreground))))
@@ -243,7 +243,7 @@
     `(eshell-ls-symlink ((t (:foreground ,zenburn-cyan :weight bold))))
 
     ;; flyspell
-    `(flyspell-duplicate ((t (:foreground ,zenburn-yellow, :weight bold))))
+    `(flyspell-duplicate ((t (:foreground ,zenburn-yellow :weight bold))))
     `(flyspell-incorrect ((t (:foreground ,zenburn-red :weight bold))))
     
     ;; font-latex

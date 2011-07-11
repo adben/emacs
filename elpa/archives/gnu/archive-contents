@@ -11,19 +11,37 @@
  (debbugs .
 	  [(0 1)
 	   nil "SOAP library to access debbugs servers" tar])
+ (epoch-view .
+	     [(0 0 1)
+	      nil "Minor mode to visualize epoch timestamps" single])
  (js2-mode .
 	   [(20090814)
 	    nil "Improved JavaScript editing mode" single])
  (load-dir .
 	   [(0 0 2)
-	    nil "load all Emacs Lisp files in given directories" single])
+	    nil "Load all Emacs Lisp files in a given directory" single])
+ (markchars .
+	    [(0 2 0)
+	     nil "Mark chars fitting certain characteristics" single])
  (muse .
        [(3 20)
 	nil "Authoring and publishing tool" tar])
  (org .
-      [(20110613)
+      [(20110710)
        nil "Outline-based notes management and organizer" tar])
  (rainbow-mode .
 	       [(0 1)
-		nil "Colorize color names in buffers" single]))
+		nil "Colorize color names in buffers" single])
+ (register-list .
+		[(0 0)
+		 nil "Interactively list/edit registers" single])
+ (sisu-mode .
+	    [(0 0)
+	     nil "Major mode for SiSU markup text" single])
+ (uni-confusables .
+		  [(0 1)
+		   nil "Unicode confusables table" tar])
+ (windresize .
+	     [(0 0)
+	      nil "Resize windows interactively" single]))
 

@@ -1,8 +1,6 @@
 ;;-*-coding: utf-8;-*-
 (define-abbrev-table 'Buffer-menu-mode-abbrev-table '())
 
-(define-abbrev-table 'Custom-mode-abbrev-table '())
-
 (define-abbrev-table 'apropos-mode-abbrev-table '())
 
 (define-abbrev-table 'clojure-mode-abbrev-table '())
@@ -14,6 +12,8 @@
 (define-abbrev-table 'confluence-mode-abbrev-table '())
 
 (define-abbrev-table 'confluence-search-mode-abbrev-table '())
+
+(define-abbrev-table 'diff-mode-abbrev-table '())
 
 (define-abbrev-table 'egg-grep-mode-abbrev-table '())
 
@@ -43,6 +43,8 @@
     ("elseif" "elseif" lua-indent-line 0)
     ("end" "end" lua-indent-line 0)
    ))
+
+(define-abbrev-table 'occur-edit-mode-abbrev-table '())
 
 (define-abbrev-table 'occur-mode-abbrev-table '())
 
