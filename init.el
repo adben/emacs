@@ -318,7 +318,7 @@
   "Toggle line spacing between no extra space to extra half line height."
   (interactive)
   (if (eq line-spacing nil)
-      (setq-default line-spacing 0.3) ; add 0.3 height between lines
+      (setq-default line-spacing 0.2) ; add 0.2 height between lines
     (setq-default line-spacing nil)   ; no extra heigh between lines
     ))
 (global-set-key (kbd "<f7>") 'toggle-line-spacing)
