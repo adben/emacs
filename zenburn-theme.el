@@ -262,7 +262,7 @@
     `(font-lock-function-name-face ((t (:foreground ,zenburn-blue))))
     '(font-lock-keyword-face ((t (:inherit 'zenburn-primary-1))))
     '(font-lock-negation-char-face ((t (:inherit 'zenburn-primary-1))))
-    '(font-lock-preprocessor-face ((t (:inherit 'zenburn-blue))))
+    '(font-lock-preprocessor-face ((t (:inherit 'zenburn-red))))
     '(font-lock-string-face ((t (:inherit 'zenburn-red))))
     '(font-lock-type-face ((t (:inherit 'zenburn-primary-3))))
     `(font-lock-variable-name-face ((t (:foreground ,zenburn-yellow))))
@@ -346,7 +346,7 @@
     '(highlight-current-line ((t (:inherit 'zenburn-highlight-subtle))))
 
     ;; hightlight the current line
-    `(hl-line ((t (:background ,zenburn-bg-1))))
+    `(hl-line ((t (:inherit nil :background ,zenburn-bg-1))))
     
     ;; holiday
     '(holiday ((t (:underline t :inherit 'zenburn-primary-4))))
@@ -520,7 +520,7 @@
     
     ;; show-paren
     '(show-paren-mismatch ((t (:inherit font-lock-warning :weight bold))))
-    `(show-paren-match ((t (:background ,zenburn-blue-5 :underline t))))
+    `(show-paren-match ((t (:background ,zenburn-blue-5 :underline nil))))
 
     ;; setnu
     '(setnu-line-number ((t (:inherit 'zenburn-lowlight-2))))
