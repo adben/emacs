@@ -35,6 +35,8 @@
 
 (define-abbrev-table 'ledger-report-mode-abbrev-table '())
 
+(define-abbrev-table 'lisp-interaction-mode-abbrev-table '())
+
 (define-abbrev-table 'lisp-mode-abbrev-table '())
 
 (define-abbrev-table 'lua-mode-abbrev-table

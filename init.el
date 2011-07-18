@@ -24,9 +24,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-elpa")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;lorem-ipsum
-(load-library "adben-lorem")
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;column-marker
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-column-marker")
@@ -35,8 +32,7 @@
 ;; Needs to be loaded sooner rather than later
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-passwords")
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Libraries to autoload that don't (yet) have any of my
 ;;customizations
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -114,7 +110,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Java/Javascript
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-                                        ;disabled till I get JDE to compile from the submodule correctly
+;;disabled till I get JDE to compile from the submodule correctly
 ;;(load-library "adben-java")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Groovy
@@ -255,12 +251,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Startup gnus after loading other things
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;Another repositories for elpa and... (gnus)
-;;adding swank-clojure slime-connect for version
-(setq package-archives '(("ELPA" . "http://tromey.com/elpa/") 
-			 ("gnu" . "http://elpa.gnu.org/packages/")
-			 ("technomancy" . "http://repo.technomancy.us/emacs/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Hunspell for ispell
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -323,6 +313,12 @@
     ))
 (global-set-key (kbd "<f7>") 'toggle-line-spacing)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; make buffer names easily identifiable
+;;see http://xahlee.blogspot.com/2011/07/emacs-unique-buffer-names-auto-compile.html
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'uniquify) ; bundled with GNU Emacs 23.2.1 or earlier
+(setq uniquify-buffer-name-style 'forward)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Custmoized Settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
@@ -336,7 +332,7 @@
  '(confluence-url "https://wiki.rijksoverheid.nl/rpc/xmlrpc")
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (zenburn)))
- '(custom-safe-themes (quote ("b1ff9bdbf5adc046623e2338607fa5d48f9b5da1" "5f5644eaf825f7ef4a7f8137540821a3a2ca009e" "ba6be1211ff16b7a40ef871baca930cb3600f801" "ed696b579c87703bcce9f386188f8d528074cef1" "5ce4c4aaa58c4c70d6cb910b477628922ae569a2" "ff2912294a7fbb3e85baba01d6545105ba68f9d9" "3641dffc1586be638c0da465bb23e89b0a89e19e" "835bfbbdbaae344d72b4e4104c2dbb42a356bf64" "2b943ab313ecd6eaf9107663ead0122d24470604" "81f92df1f435dc251bc3816e882688b5a19039af" "324c41970f27ceb68e7579d722bc3b69b6390e13" "649ccffdb140fcd021013f6297dedeb313b74fa5" default)))
+ '(custom-safe-themes (quote ("9cdf9fb94f560902b567b73f65c2ed4e5cfbaafe" "b1ff9bdbf5adc046623e2338607fa5d48f9b5da1" "5f5644eaf825f7ef4a7f8137540821a3a2ca009e" "ba6be1211ff16b7a40ef871baca930cb3600f801" "ed696b579c87703bcce9f386188f8d528074cef1" "5ce4c4aaa58c4c70d6cb910b477628922ae569a2" "ff2912294a7fbb3e85baba01d6545105ba68f9d9" "3641dffc1586be638c0da465bb23e89b0a89e19e" "835bfbbdbaae344d72b4e4104c2dbb42a356bf64" "2b943ab313ecd6eaf9107663ead0122d24470604" "81f92df1f435dc251bc3816e882688b5a19039af" "324c41970f27ceb68e7579d722bc3b69b6390e13" "649ccffdb140fcd021013f6297dedeb313b74fa5" default)))
  '(ecb-layout-name "left9")
  '(ecb-maximize-ecb-window-after-selection t)
  '(ecb-options-version "2.32")
@@ -379,11 +375,11 @@
  '(tool-bar-mode nil)
  '(user-mail-address "adolfo.benedetti@gmail.com")
  '(w3m-default-display-inline-images t))
-;;Fonting
+;;Fonting;;
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 125 :width normal :family "Pragmata")))))
+ '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight bold :height 135 :width normal :family "Pragmata")))))
 
