@@ -11,12 +11,10 @@
 ;;   multiple systems.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/.emacs.d")
-                                        ;Add all top-level subdirectories of .emacs.d to the load path
+;;Add all top-level subdirectories of .emacs.d to the load path
 (progn (cd "~/.emacs.d")
        (normal-top-level-add-subdirs-to-load-path))
 (add-to-list 'load-path "~/.emacs.d/vendor/themes")
-(progn (cd "~/.emacs.d/vendor/themes")
-       (normal-top-level-add-subdirs-to-load-path))
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'exec-path "/opt/local/bin")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -41,7 +39,6 @@
 (require 'dired)
 (require 'pair-mode)
 (require 'pager)
-;;(require 'twit)
 (require 'ledger)
 (require 'auto-complete)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -352,7 +349,7 @@
  '(erc-user-full-name "Adolfo Benedetti")
  '(fill-column 81)
  '(global-font-lock-mode t)
- '(global-linum-mode 1)
+ '(global-linum-mode t)
  '(gnus-article-sort-functions (quote ((not gnus-article-sort-by-date))))
  '(gnus-thread-sort-functions (quote ((not gnus-thread-sort-by-date))))
  '(jira-url "https://dev.sourcesense.com/jira/rpc/xmlrpc")
@@ -381,5 +378,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight bold :height 135 :width normal :family "Pragmata")))))
+ '(default ((t (:inherit nil :stipple nil :background "#3f3f3f" :foreground "#dcdccc" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 125 :width normal :foundry "apple" :family "Menlo")))))
 

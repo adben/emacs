@@ -3,8 +3,8 @@
 
 (setq url-cookie-storage
  '(("marmalade-repo.org"
-  [url-cookie "connect.sid" "bce53a056835db96493ace4be77c.73285fe2ae30c38c71d1720e2bf3d564" "Mon, 18 Jul 2011 11:08:05 GMT" "/" "marmalade-repo.org" nil]
-  [url-cookie "httpOnly" nil "Mon, 18 Jul 2011 11:08:05 GMT" "/" "marmalade-repo.org" nil]))
+  [url-cookie "httpOnly" nil "Tue, 02 Aug 2011 18:54:32 GMT" "/" "marmalade-repo.org" nil]
+  [url-cookie "connect.sid" "edfda7a11be9f7ad2e71ff1e0cfa.f3ab411fb08ed4db7cc2a4f9091fc3ad" "Tue, 02 Aug 2011 18:54:32 GMT" "/" "marmalade-repo.org" nil]))
 )
 (setq url-cookie-secure-storage
  'nil)
