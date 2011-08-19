@@ -1,18 +1,12 @@
 ;; assuming confluence.el and xml-rpc.el are in your load path
 (require 'confluence)
-
-;; note, all customization must be in *one* custom-set-variables block
-(custom-set-variables
- ;; ... other custimization
-
- ;; confluence customization
- '(confluence-url "https://dev.sourcesense.com/confluence/rpc/xmlrpc")
- '(confluence-default-space-alist (list (cons confluence-url "https://dev.sourcesense.com/confluence/display/~a.benedetti"))))
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; confluence editing support (with longlines mode)
-
+;; ;; note, all customization must be in *one* custom-set-variables block
+;;(custom-set-variables
+;; ... other custimization
+;;  ;; confluence customization
+;;  '(confluence-url "https://dev.sourcesense.com/confluence/rpc/xmlrpc")
+;;  '(confluence-default-space-alist (list (cons confluence-url "https://dev.sourcesense.com/confluence/display/~a.benedetti"))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;confluence editing support (with longlines mode)
 (autoload 'confluence-get-page "confluence" nil t)
 
 (eval-after-load "confluence"
@@ -51,7 +45,7 @@
        (with-current-buffer (ad-get-arg 0)
          (longlines-suspend)))
 
-    
+     
      (add-hook 'ediff-cleanup-hook 
                '(lambda ()
                   (dolist (tmp-buf (list ediff-buffer-A
