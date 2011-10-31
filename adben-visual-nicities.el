@@ -1,6 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Visual Nicities
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'sr-speedbar)
 ;;(require 'color-theme)
 ;;(require 'zenburn)
 ;;(zenburn)
@@ -9,15 +10,6 @@
 ;;(global-font-lock-mode 1)
 ;;mac
 ;;(require 'redo)
-;;(color-theme-initialize)
-;;(color-theme-adben)
-;;(color-theme-tango)
-;;(color-theme-standard)
-;;(color-theme-bharadwaj)
-;;(color-theme-textmate)
-;;(color-theme-robin-hood)
-;;(color-theme-emacs-nw)
-;;(column-number-mode 1)
 (setq-default fill-column 100)
 (setq auto-fill-mode 1)
 ;;Show what's being selected
@@ -29,9 +21,9 @@
 (setq inhibit-startup-message t)
 ;;Disable the menubar (promotes good emacs memory :)
 (menu-bar-mode 1)
-(tool-bar-mode 1)
+(tool-bar-mode 0)
 (scroll-bar-mode -1)
-;;activate by default the speedbar into thw workspace
+;;activate by default the speedbar into the workspace
 ;;(speedbar 0)
 ;;Make page up and page down a whole lot nicer
 (global-set-key "\C-v"	   'pager-page-down)
