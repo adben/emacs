@@ -65,4 +65,5 @@
 (global-font-lock-mode 1) ; turn on syntax coloring, default in emacs 22, 23, 24
 (show-paren-mode 1) ; turn on paren match highlighting
 (global-hl-line-mode 1) ;; turn on highlighting current line
+(setq redisplay-dont-pause t)
 ;;(set-face-attribute hl-line-face nil :underline nil) ; avoid the underline in the highlighted line
