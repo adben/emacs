@@ -1,0 +1,24 @@
+		  Happy Haskell programming on Emacs
+
+Features:
+
+1) Completions of keyword, module, class, function, types,
+   language extensions, etc.
+2) Flymake with GHC and hlint
+3) Inserting code template
+
+The "ghc-mod" program written in Haskell is a backend to gather
+information from GHC and hlint.
+
+Elisp libraries including ghc-mod is an extension to haskell-mode.
+You should put the followings in your "~/.emacs.el":
+
+    (autoload 'ghc-init "ghc" nil t)
+    (add-hook 'haskell-mode-hook (lambda () (ghc-init)))
+
+or
+
+    (add-hook 'haskell-mode-hook (lambda () (ghc-init) (flymake-mode)))
+
+For more information, see:
+	http://www.mew.org/~kazu/proj/ghc-mod/

@@ -326,7 +326,7 @@
  '(confluence-url "https://dev.sourcesense.com/confluence/rpc/xmlrpc")
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (zenburn)))
- '(custom-safe-themes (quote ("e9704e8b957e4151cd570c5f25ec81c297aa2b6a" "a755f8b8e31332a15ad89849a4a0a5322045de43" "87a988351ba9d1e5c372d6a7805d3a8930564cb3" "8080f31a2115965185d12864f5aa167f724da805" "5f50b2d3ec685020e9f26720f710065205574d90" "fb465a4befec3776d9ed8ef26632f5462e6ee0bb" "ea28c8231a00704093c89409c4fe769de1b154ca" "ee8678544a7086a120d2bf7dae127e3255fbb745" "0fb0567233d5aad5932df32d24d061d0e071d499" "d52a8f3a6438dde8c622b44fe711905e7f39db01" "af1a98373e756cd6caf602521076a8fd64b6e639" "4bd3323e687d2105659acf827100726516e41f4e" "534103b52b139048b05aea309800fcb0fa52e752" "8ded141148c5fed675463400505f9366260c903d" "bdd76df0011793edfbf04589bd51f1913289e784" "3d3a4db93161337bdef446abcc59b3c9eb729405" "e6c0463740f2b8d14f7153d53b642f289718dc46" "30bb28ed92ea9daf56fd3f1115462be98a281fd6" "5a470b51056f5f06227018bda8fec96a4cd125c2" "61a36a3082035436a5922ffc4f9811b8f0a6f22a" "aab245134455fc7212d692e88925ea9559690faa" "cfd8e690737d5e6fec364b7ca4c32d4dc2ea9dbe" "0fc6c0551cfd0e1cd8f2bacbc866f5a99c2e0de2" "9cdf9fb94f560902b567b73f65c2ed4e5cfbaafe" "b1ff9bdbf5adc046623e2338607fa5d48f9b5da1" "5f5644eaf825f7ef4a7f8137540821a3a2ca009e" "ba6be1211ff16b7a40ef871baca930cb3600f801" "ed696b579c87703bcce9f386188f8d528074cef1" "5ce4c4aaa58c4c70d6cb910b477628922ae569a2" "ff2912294a7fbb3e85baba01d6545105ba68f9d9" "3641dffc1586be638c0da465bb23e89b0a89e19e" "835bfbbdbaae344d72b4e4104c2dbb42a356bf64" "2b943ab313ecd6eaf9107663ead0122d24470604" "81f92df1f435dc251bc3816e882688b5a19039af" "324c41970f27ceb68e7579d722bc3b69b6390e13" "649ccffdb140fcd021013f6297dedeb313b74fa5" default)))
+ '(custom-safe-themes (quote ("81695082c60ffdec4cb1c1e1050c95581861b0fb" default)))
  '(ecb-layout-name "left9")
  '(ecb-maximize-ecb-window-after-selection t)
  '(ecb-options-version "2.32")
@@ -375,5 +375,5 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "PragmataPro")))))
+ '(default ((t (:inherit nil :stipple nil :background "#3f3f3f" :foreground "#dcdccc" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 130 :width normal :family "PragmataPro")))))
 
