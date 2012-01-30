@@ -138,36 +138,37 @@
   :group 'faces
   :group 'files)
 
-(defface log4j-font-lock-debug-face '((t (:foreground "#c8c1a7")))
-  "*Font Lock face used to highlight DEBUG log records. banano"
+(defface log4j-font-lock-debug-face '((t (:foreground "#dfaf8f")))
+  "*Font Lock face used to highlight DEBUG log records. zenburn-orange"
   :group 'font-lock-highlighting-faces
   :group 'log4j-mode)
 (defvar log4j-font-lock-debug-face
   (make-face 'log4j-font-lock-debug-face))
 
-(defface log4j-font-lock-info-face '((t (:foreground "#608075")))
-  "*Font Lock face used to highlight INFO log records. verde oscuro"
+(defface log4j-font-lock-info-face '((t (:foreground "#c8c1a7")))
+  "*Font Lock face used to highlight INFO log records. adben-banano"
   :group 'font-lock-highlighting-faces
   :group 'log4j-mode)
 (defvar log4j-font-lock-info-face
   (make-face 'log4j-font-lock-info-face))
 
-(defface log4j-font-lock-warn-face '((t (:foreground "#c68d22")))
-  "*Font Lock face used to highlight WARN log records. sapote"
+(defface log4j-font-lock-warn-face '((t (:foreground "#8cd0d3")))
+  "*Font Lock face used to highlight WARN log records. zenburn-blue"
   :group 'font-lock-highlighting-faces
   :group 'log4j-mode)
 (defvar log4j-font-lock-warn-face
   (make-face 'log4j-font-lock-warn-face))
 
-(defface log4j-font-lock-error-face '((t (:foreground "#560023")))
-  "*Font Lock face used to highlight ERROR log records. Rojo"
+(defface log4j-font-lock-error-face '((t (:foreground "#cc9393")))
+  "*Font Lock face used to highlight ERROR log records. zenburn-red"
   :group 'font-lock-highlighting-faces
   :group 'log4j-mode)
 (defvar log4j-font-lock-error-face
   (make-face 'log4j-font-lock-error-face))
 
-(defface log4j-font-lock-fatal-face '((t (:foreground "#560023" :bold t)))
-  "*Font Lock face used to highlight FATAL log records. Rojo bold"
+(defface log4j-font-lock-fatal-face '((t (:foreground "#dca3a3" :bold t)))
+  "*Font Lock face used to highlight FATAL log records. zenburn-red+1"
+  ;;check with magenta as well:: zenburn-magenta : #dc8cc3"
   :group 'font-lock-highlighting-faces
   :group 'log4j-mode)
 (defvar log4j-font-lock-fatal-face
