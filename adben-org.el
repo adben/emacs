@@ -1,3 +1,6 @@
+(setq load-path (cons "~/.emacs.d/elpa/org-20120211/" load-path))
+;; Load my org mode, over-riding the one bundled with emacs
+(require 'org-install)
 ;; Org-mode settings
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (add-to-list 'auto-mode-alist '("\\.org.txt$" . org-mode))
