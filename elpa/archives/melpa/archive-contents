@@ -1,215 +1,251 @@
 (1
  (yasnippet .
-            [(20120106)
-             nil "Yet another snippet extension for Emacs." tar])
+	    [(20120313)
+	     nil "Yet another snippet extension for Emacs." tar])
+ (vimgolf .
+	  [(20120228)
+	   nil "No description available." tar])
  (undo-tree .
-            [(20120105)
-             nil "Treat undo history as a tree" single])
+	    [(20120105)
+	     nil "Treat undo history as a tree" single])
  (todochiku .
-            [(20120202)
-             nil "A mode for interfacing with Growl, Snarl, and the like." single])
+	    [(20120202)
+	     nil "A mode for interfacing with Growl, Snarl, and the like." single])
  (textile-mode .
-               [(20100416)
-                nil "Textile markup editing major mode" tar])
+	       [(20100416)
+		nil "Textile markup editing major mode" tar])
  (starter-kit-ruby .
-                   [(20120202)
-                    ((inf-ruby
-                      (2 2 3))
-                     (starter-kit
-                      (2 0 1)))
-                    "Saner defaults and goodies for Ruby" single])
+		   [(20120314)
+		    ((inf-ruby
+		      (2 2 3))
+		     (starter-kit
+		      (2 0 1)))
+		    "Saner defaults and goodies for Ruby" single])
  (starter-kit-perl .
-                   [(20120202)
-                    nil "Some helpful Perl code" single])
+		   [(20120314)
+		    nil "Some helpful Perl code" single])
  (starter-kit-lisp .
-                   [(20120202)
-                    ((starter-kit
-                      (2 0 2))
-                     (elisp-slime-nav
-                      (0 1)))
-                    "Saner defaults and goodies for lisp languages" single])
+		   [(20120314)
+		    ((starter-kit
+		      (2 0 2))
+		     (elisp-slime-nav
+		      (0 1)))
+		    "Saner defaults and goodies for lisp languages" single])
  (starter-kit-js .
-                 [(20120202)
-                  ((starter-kit
-                    (2 0 1)))
-                  "Saner defaults and goodies for Javascript" single])
+		 [(20120314)
+		  ((starter-kit
+		    (2 0 1)))
+		  "Saner defaults and goodies for Javascript" single])
  (starter-kit-eshell .
-                     [(20120202)
-                      nil "Saner defaults and goodies: eshell tweaks" single])
+		     [(20120314)
+		      nil "Saner defaults and goodies: eshell tweaks" single])
  (starter-kit-bindings .
-                       [(20120202)
-                        ((starter-kit
-                          (2 0 2)))
-                        "Saner defaults and goodies: bindings" single])
+		       [(20120314)
+			((starter-kit
+			  (2 0 2)))
+			"Saner defaults and goodies: bindings" single])
  (starter-kit .
-              [(20120202)
-               ((paredit
-                 (22))
-                (idle-highlight-mode
-                 (1 1 1))
-                (find-file-in-project
-                 (3 0))
-                (smex
-                 (1 1 2))
-                (ido-ubiquitous
-                 (0 3))
-                (magit
-                 (0 8 1)))
-               "Saner defaults and goodies." tar])
+	      [(20120314)
+	       ((paredit
+		 (22))
+		(idle-highlight-mode
+		 (1 1 1))
+		(find-file-in-project
+		 (3 0))
+		(smex
+		 (1 1 2))
+		(ido-ubiquitous
+		 (0 3))
+		(magit
+		 (0 8 1)))
+	       "Saner defaults and goodies." tar])
  (smex .
-       [(20120127)
-        nil "M-x interface with Ido-style fuzzy matching." single])
+       [(20120301)
+	nil "M-x interface with Ido-style fuzzy matching." single])
+ (slime-ritz .
+	     [(20120305)
+	      nil "slime extensions for ritz" single])
  (slime .
-        [(20120207)
-         nil "Superior Lisp Interaction Mode for Emacs" single])
+	[(20120314)
+	 nil "Superior Lisp Interaction Mode for Emacs" single])
  (rvm .
       [(20120201)
        nil "Emacs integration for rvm" single])
  (ruby-mode .
-            [(20120122)
-             nil "Major mode for editing Ruby files" single])
+	    [(20120122)
+	     nil "Major mode for editing Ruby files" single])
  (ruby-compilation .
-                   [(20111026)
-                    ((ruby-mode
-                      (1 1))
-                     (inf-ruby
-                      (2 2 1)))
-                    "run a ruby process in a compilation buffer" single])
+		   [(20120210)
+		    ((ruby-mode
+		      (1 1))
+		     (inf-ruby
+		      (2 2 1)))
+		    "run a ruby process in a compilation buffer" single])
  (rinari .
-         [(20111026)
-          ((ruby-mode
-            (1 1))
-           (inf-ruby
-            (2 2 1))
-           (ruby-compilation
-            (0 8))
-           (jump
-            (2 0)))
-          "Rinari Is Not A Rails IDE" single])
+	 [(20120210)
+	  ((ruby-mode
+	    (1 1))
+	   (inf-ruby
+	    (2 2 1))
+	   (ruby-compilation
+	    (0 8))
+	   (jump
+	    (2 0)))
+	  "Rinari Is Not A Rails IDE" single])
  (rainbow-delimiters .
-                     [(20111125)
-                      nil "Highlight nested parens, brackets, braces a different color at each depth." single])
+		     [(20111125)
+		      nil "Highlight nested parens, brackets, braces a different color at each depth." single])
  (pretty-mode .
-              [(20100804)
-               nil "redisplay parts of the buffer as pretty symbols" tar])
+	      [(20100804)
+	       nil "redisplay parts of the buffer as pretty symbols" tar])
+ (pastels-on-dark-theme .
+			[(20120304)
+			 nil "Pastels on Dark theme for Emacs 24" single])
  (paredit .
-          [(20110508)
-           nil "minor mode for editing parentheses  -*- Mode: Emacs-Lisp -*-" single])
+	  [(20110508)
+	   nil "minor mode for editing parentheses  -*- Mode: Emacs-Lisp -*-" single])
  (org-fstree .
-             [(20090904)
-              nil "include a filesystem subtree into an org file" single])
+	     [(20090904)
+	      nil "include a filesystem subtree into an org file" single])
+ (multi-web-mode .
+		 [(20110821)
+		  nil "multiple major mode support for web editing" single])
+ (multi-term .
+	     [(20110326)
+	      nil "Managing multiple terminal buffers in Emacs." single])
+ (molokai-theme .
+		[(20120313)
+		 nil "No description available." single])
  (mmm-mode .
-           [(20120114)
-            nil "Allow Multiple Major Modes in a buffer" tar])
+	   [(20120114)
+	    nil "Allow Multiple Major Modes in a buffer" tar])
  (melpa .
-        [(20120203)
-         nil "special handling for the MELPA repository" tar])
+	[(20120313)
+	 nil "special handling for the MELPA repository" single])
  (markdown-mode+ .
-                 [(20120131)
-                  ((markdown-mode
-                    (20111229)))
-                  "extra functions for markdown-mode" tar])
+		 [(20120219)
+		  ((markdown-mode
+		    (20111229)))
+		  "extra functions for markdown-mode" tar])
  (markdown-mode .
-                [(20120206)
-                 nil "Emacs Major mode for Markdown-formatted text files" single])
+		[(20120225)
+		 nil "Emacs Major mode for Markdown-formatted text files" single])
  (magithub .
-           [(20120209)
-            ((magit
-              (0 8))
-             (json
-              (1 2)))
-            "Magit extensions for using GitHub" single])
+	   [(20120209)
+	    ((magit
+	      (0 8))
+	     (json
+	      (1 2)))
+	    "Magit extensions for using GitHub" single])
  (magit .
-        [(20120206)
-         nil "Control Git from Emacs." tar])
+	[(20120306)
+	 nil "Control Git from Emacs." tar])
  (jump .
        [(20120130)
-        ((findr
-          (0 7))
-         (inflections
-          (1 0)))
-        "build functions which contextually jump between files" single])
+	((findr
+	  (0 7))
+	 (inflections
+	  (1 0)))
+	"build functions which contextually jump between files" single])
  (js3 .
-      [(20120120)
+      [(20120315)
        nil "JavaScript scanner" single])
+ (ir_black-theme .
+		 [(20120313)
+		  nil "No description available." single])
  (inflections .
-              [(20120130)
-               nil "convert english words between singular and plural" single])
+	      [(20120130)
+	       nil "convert english words between singular and plural" single])
  (inf-ruby .
-           [(20111212)
-            nil "Run a ruby process in a buffer" single])
+	   [(20120226)
+	    nil "Run a ruby process in a buffer" single])
  (ido-ubiquitous .
-                 [(20111016)
-                  nil "Use ido (nearly) everywhere." single])
+		 [(20120124)
+		  nil "Use ido (nearly) everywhere." single])
  (idle-highlight-mode .
-                      [(20110817)
-                       nil "highlight the word the point is on" single])
+		      [(20110817)
+		       nil "highlight the word the point is on" single])
  (hl-sentence .
-              [(20111203)
-               nil "highlight a sentence based on customizable face" single])
+	      [(20111203)
+	       nil "highlight a sentence based on customizable face" single])
  (haskell-mode .
-               [(20100702)
-                nil "A Haskell editing mode    -*-coding: iso-8859-1;-*-" tar])
+	       [(20100702)
+		nil "A Haskell editing mode    -*-coding: iso-8859-1;-*-" tar])
  (git-blame .
-            [(20120129)
-             nil "Minor mode for incremental blame for Git  -*- coding: utf-8 -*-" single])
+	    [(20120129)
+	     nil "Minor mode for incremental blame for Git  -*- coding: utf-8 -*-" single])
  (gist .
-       [(20101104)
-        nil "No description available." single])
+       [(20120225)
+	nil "Emacs integration for gist.github.com" single])
  (full-ack .
-           [(20111216)
-            nil "a front-end for ack" single])
+	   [(20111216)
+	    nil "a front-end for ack" single])
  (flymake-cursor .
-                 [(20110905)
-                  nil "displays flymake error msg in minibuffer after delay" single])
+		 [(20120307)
+		  nil "displays flymake error msg in minibuffer after delay" single])
  (findr .
-        [(20120130)
-         nil "Breadth-first file-finding facility for (X)Emacs" single])
+	[(20120130)
+	 nil "Breadth-first file-finding facility for (X)Emacs" single])
  (find-file-in-project .
-                       [(20110904)
-                        nil "Find files in a project quickly." single])
+		       [(20110904)
+			nil "Find files in a project quickly." single])
+ (evil-surround .
+		[(20120227)
+		 nil "emulate surround.vim from Vim" single])
  (evil .
-       [(20120209)
-        ((undo-tree
-          (0 3 0)))
-        "Extensible Vi layer for Emacs." tar])
+       [(20120314)
+	((undo-tree
+	  (0 3 0)))
+	"Extensible Vi layer for Emacs." tar])
  (expand-region .
-                [(20120206)
-                 nil "Increase selected region by semantic units." tar])
+		[(20120314)
+		 nil "Increase selected region by semantic units." tar])
+ (ess .
+      [(20120312)
+       nil "No description available." tar])
  (elisp-slime-nav .
-                  [(20111111)
-                   nil "Make M-. and M-, work in elisp like they do in slime" single])
+		  [(20111111)
+		   nil "Make M-. and M-, work in elisp like they do in slime" single])
  (dired+ .
-         [(20120110)
-          nil "Extensions to Dired." single])
+	 [(20120313)
+	  nil "Extensions to Dired." single])
  (deft .
-   [(20111211)
+   [(20120307)
     nil "quickly browse, filter, and edit plain text notes" single])
  (darcsum .
-          [(20120115)
-           nil "a pcl-cvs like interface for managing darcs patches" single])
+	  [(20120115)
+	   nil "a pcl-cvs like interface for managing darcs patches" single])
  (csv-mode .
-           [(20091203)
-            nil "major mode for editing comma-separated value files" tar])
+	   [(20091203)
+	    nil "major mode for editing comma-separated value files" tar])
+ (color-theme-sanityinc-tomorrow .
+				 [(20120217)
+				  nil "A version of Chris Kempson's various Tomorrow themes" tar])
+ (color-theme-sanityinc-solarized .
+				  [(20120216)
+				   nil "A version of Ethan Schoonover's Solarized themes" tar])
  (clojurescript-mode .
-                     [(20120202)
-                      ((clojure-mode
-                        (1 7)))
-                      "Major mode for ClojureScript code" single])
+		     [(20120307)
+		      ((clojure-mode
+			(1 7)))
+		      "Major mode for ClojureScript code" single])
  (clojure-test-mode .
-                    [(20120202)
-                     ((slime
-                       (20091016))
-                      (clojure-mode
-                       (1 7)))
-                     "Minor mode for Clojure tests" single])
+		    [(20120307)
+		     ((slime
+		       (20091016))
+		      (clojure-mode
+		       (1 7)))
+		     "Minor mode for Clojure tests" single])
  (clojure-mode .
-               [(20120202)
-                nil "Major mode for Clojure code" single])
+	       [(20120307)
+		nil "Major mode for Clojure code" single])
  (browse-kill-ring .
-                   [(20110304)
-                    nil "interactively insert items from kill-ring -*- coding: utf-8 -*-" single])
+		   [(20110304)
+		    nil "interactively insert items from kill-ring -*- coding: utf-8 -*-" single])
+ (auto-complete .
+		[(20120304)
+		 nil "Auto Completion for GNU Emacs" tar])
  (ac-dabbrev .
-             [(20091116)
-              nil "auto-complete.el source for dabbrev" single]))
+	     [(20091116)
+	      nil "auto-complete.el source for dabbrev" single]))
 

@@ -1,13 +1,11 @@
 ;;-*-coding: utf-8;-*-
 (define-abbrev-table 'Buffer-menu-mode-abbrev-table '())
 
-(define-abbrev-table 'apropos-mode-abbrev-table '())
-
-(define-abbrev-table 'clojure-mode-abbrev-table '())
-
 (define-abbrev-table 'comint-mode-abbrev-table '())
 
 (define-abbrev-table 'completion-list-mode-abbrev-table '())
+
+(define-abbrev-table 'confluence-base-mode-abbrev-table '())
 
 (define-abbrev-table 'confluence-edit-mode-abbrev-table '())
 
@@ -31,13 +29,13 @@
 
 (define-abbrev-table 'grep-mode-abbrev-table '())
 
+(define-abbrev-table 'help-mode-abbrev-table '())
+
 (define-abbrev-table 'ledger-mode-abbrev-table '())
 
 (define-abbrev-table 'ledger-reconcile-mode-abbrev-table '())
 
 (define-abbrev-table 'ledger-report-mode-abbrev-table '())
-
-(define-abbrev-table 'lisp-interaction-mode-abbrev-table '())
 
 (define-abbrev-table 'lisp-mode-abbrev-table '())
 
@@ -57,16 +55,6 @@
 (define-abbrev-table 'process-menu-mode-abbrev-table '())
 
 (define-abbrev-table 'prog-mode-abbrev-table '())
-
-(define-abbrev-table 'sldb-mode-abbrev-table '())
-
-(define-abbrev-table 'slime-connection-list-mode-abbrev-table '())
-
-(define-abbrev-table 'slime-inspector-mode-abbrev-table '())
-
-(define-abbrev-table 'slime-thread-control-mode-abbrev-table '())
-
-(define-abbrev-table 'slime-xref-mode-abbrev-table '())
 
 (define-abbrev-table 'snippet-mode-abbrev-table '())
 

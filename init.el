@@ -41,6 +41,7 @@
 (require 'pager)
 (require 'ledger)
 (require 'auto-complete)
+(require 'undo-tree)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Some misc functions that should be moved somewhere more logical
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -333,9 +334,11 @@
  ;; If there is more than one, they won't work right.
  '(bbdb-file "~/.emacs.private/dot-bbdb")
  '(column-number-mode t)
+ '(confluence-default-space-alist (list (cons confluence-url "https://intranet.iprofs.nl/confluence/display/~abenedetti")))
+ '(confluence-url "https://intranet.iprofs.nl/confluence/rpc/xmlrpc")
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (zenburn)))
- '(custom-safe-themes (quote ("7acc0466fce1bc967ce1561c8c4fdcbf4358b4ae692577562a3ed747c109f9d7" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" "3c221cf1a0a4172917772c71da5c4d5e1d4f98c4" "cf4dda59b259ca9c6214a8e9acf84bf5909c6e59" "81695082c60ffdec4cb1c1e1050c95581861b0fb" default)))
+ '(custom-enabled-themes (quote (tsdh-light)))
+ '(custom-safe-themes (quote ("fdd0ae5d4de77df1904b33b9a73f66de173d0059dbb6c3b8fa06601402ad0c3d" "5727ad01be0a0d371f6e26c72f2ef2bafdc483063de26c88eaceea0674deb3d9" "aed9aa67f2adc9a72a02c30f4ebdb198e31874ae45d49125206d5ece794a8826" "7acc0466fce1bc967ce1561c8c4fdcbf4358b4ae692577562a3ed747c109f9d7" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" "3c221cf1a0a4172917772c71da5c4d5e1d4f98c4" "cf4dda59b259ca9c6214a8e9acf84bf5909c6e59" "81695082c60ffdec4cb1c1e1050c95581861b0fb" default)))
  '(ecb-layout-name "left9")
  '(ecb-maximize-ecb-window-after-selection t)
  '(ecb-options-version "2.32")
@@ -353,6 +356,7 @@
  '(erc-sound-path (quote ("~/.emacs.d/sounds")))
  '(erc-stamp-mode t)
  '(erc-user-full-name "Adolfo Benedetti")
+ '(fci-rule-color "#383838")
  '(fill-column 81)
  '(global-font-lock-mode t)
  '(global-linum-mode t)
@@ -384,4 +388,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "apple" :family "PragmataPro")))))
+ '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "apple" :family "PragmataPro")))))

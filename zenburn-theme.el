@@ -4,7 +4,7 @@
 
 ;; Author: Bozhidar Batsov <bozhidar.batsov@gmail.com>
 ;; URL: http://github.com/bbatsov/zenburn-emacs
-;; Version: 1.2
+;; Version: 1.4
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -294,7 +294,7 @@
    `(ido-subdir ((,class (:foreground ,zenburn-yellow))))
 
    ;; linum-mode
-   `(linum ((,class (:foreground ,zenburn-fg-1 :background ,zenburn-bg-1))))
+   `(linum ((,class (:foreground ,zenburn-green+2 :background ,zenburn-bg))))
 
    ;; magit
    `(magit-section-title ((,class (:foreground ,zenburn-yellow :weight bold))))
@@ -418,6 +418,14 @@
    `(rpm-spec-tag-face ((,class (:foreground ,zenburn-blue))))
    `(rpm-spec-var-face ((,class (:foreground ,zenburn-red))))
 
+   ;; rst-mode
+   `(rst-level-1-face ((,class (:foreground ,zenburn-orange))))
+   `(rst-level-2-face ((,class (:foreground ,zenburn-green+1))))
+   `(rst-level-3-face ((,class (:foreground ,zenburn-blue-1))))
+   `(rst-level-4-face ((,class (:foreground ,zenburn-yellow-2))))
+   `(rst-level-5-face ((,class (:foreground ,zenburn-cyan))))
+   `(rst-level-6-face ((,class (:foreground ,zenburn-green-1))))
+
    ;; show-paren
    `(show-paren-mismatch ((,class (:foreground ,zenburn-red-3 :background ,zenburn-bg :weight bold))))
    `(show-paren-match ((,class (:foreground ,zenburn-blue-1 :background ,zenburn-bg :weight bold))))
@@ -433,7 +441,7 @@
    `(whitespace-trailing ((,class (:foreground ,zenburn-red :background ,zenburn-bg))))
    `(whitespace-line ((,class (:background ,zenburn-bg-05 :foreground ,zenburn-magenta))))
    `(whitespace-space-before-tab ((,class (:background ,zenburn-orange :foreground ,zenburn-orange))))
-   `(whitespace-indentation ((,class (:background ,zenburn-yellow, :foreground ,zenburn-red))))
+   `(whitespace-indentation ((,class (:background ,zenburn-yellow :foreground ,zenburn-red))))
    `(whitespace-empty ((,class (:background ,zenburn-yellow :foreground ,zenburn-red))))
    `(whitespace-space-after-tab ((,class (:background ,zenburn-yellow :foreground ,zenburn-red))))
 
@@ -467,12 +475,16 @@
    `(wl-highlight-summary-displaying-face ((,class (:underline t :weight bold))))
 
    ;; which-func-mode
-   `(which-func ((,class (:foreground ,zenburn-green+1))))))
+   `(which-func ((,class (:foreground ,zenburn-green+1)))))
 
-(custom-theme-set-variables
- 'zenburn
- '(ansi-color-names-vector [zenburn-bg zenburn-red zenburn-green zenburn-yellow
-                                       zenburn-blue zenburn-magenta zenburn-cyan zenburn-fg]))
+  ;;; custom theme variables
+  (custom-theme-set-variables
+   'zenburn
+   `(ansi-color-names-vector [,zenburn-bg ,zenburn-red ,zenburn-green ,zenburn-yellow
+                                          ,zenburn-blue ,zenburn-magenta ,zenburn-cyan ,zenburn-fg])
+
+   ;; fill-column-indicator
+   `(fci-rule-color ,zenburn-bg-05)))
 
 ;;;###autoload
 (when load-file-name
