@@ -196,6 +196,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-vc")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Helm mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-library "adben-helm")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Egg mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-egg")
@@ -237,6 +241,10 @@
 ;;eshell  modex
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;(load-library "adben-eshell")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;magit
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-library "adben-magit")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;emms
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -337,8 +345,8 @@
  '(confluence-default-space-alist (list (cons confluence-url "https://intranet.iprofs.nl/confluence/display/~abenedetti")))
  '(confluence-url "https://intranet.iprofs.nl/confluence/rpc/xmlrpc")
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (tsdh-light)))
- '(custom-safe-themes (quote ("fdd0ae5d4de77df1904b33b9a73f66de173d0059dbb6c3b8fa06601402ad0c3d" "5727ad01be0a0d371f6e26c72f2ef2bafdc483063de26c88eaceea0674deb3d9" "aed9aa67f2adc9a72a02c30f4ebdb198e31874ae45d49125206d5ece794a8826" "7acc0466fce1bc967ce1561c8c4fdcbf4358b4ae692577562a3ed747c109f9d7" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" "3c221cf1a0a4172917772c71da5c4d5e1d4f98c4" "cf4dda59b259ca9c6214a8e9acf84bf5909c6e59" "81695082c60ffdec4cb1c1e1050c95581861b0fb" default)))
+ '(custom-enabled-themes (quote (zenburn)))
+ '(custom-safe-themes (quote ("edb0e9dce76acf08243762d30683293812c838773f0e9f41b7e6baf904776d6c" "54d1bcf3fcf758af4812f98eb53b5d767f897442753e1aa468cfeb221f8734f9" "284aece21e57abcf7c7d5f273d2d17dc646b24cb1465fd054ad9dca3555aed1c" "baed08a10ff9393ce578c3ea3e8fd4f8c86e595463a882c55f3bd617df7e5a45" "4fbc77d073bb1f75d60e1a7cc9e55747058a450ae99efc325c58d16180538cb1" "fdd0ae5d4de77df1904b33b9a73f66de173d0059dbb6c3b8fa06601402ad0c3d" "5727ad01be0a0d371f6e26c72f2ef2bafdc483063de26c88eaceea0674deb3d9" "aed9aa67f2adc9a72a02c30f4ebdb198e31874ae45d49125206d5ece794a8826" "7acc0466fce1bc967ce1561c8c4fdcbf4358b4ae692577562a3ed747c109f9d7" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" "3c221cf1a0a4172917772c71da5c4d5e1d4f98c4" "cf4dda59b259ca9c6214a8e9acf84bf5909c6e59" "81695082c60ffdec4cb1c1e1050c95581861b0fb" default)))
  '(ecb-layout-name "left9")
  '(ecb-maximize-ecb-window-after-selection t)
  '(ecb-options-version "2.32")

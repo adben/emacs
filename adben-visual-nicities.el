@@ -5,8 +5,6 @@
 ;;(require 'color-theme)
 ;;(require 'zenburn)
 ;;(zenburn)
-;;(load-library "adben-color-theme")
-;;(load-library "adben-color-theme-textmate")
 ;;(global-font-lock-mode 1)
 ;;mac
 ;;(require 'redo)

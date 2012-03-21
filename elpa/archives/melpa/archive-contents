@@ -1,6 +1,6 @@
 (1
  (yasnippet .
-	    [(20120313)
+	    [(20120320)
 	     nil "Yet another snippet extension for Emacs." tar])
  (vimgolf .
 	  [(20120228)
@@ -10,42 +10,42 @@
 	     nil "Treat undo history as a tree" single])
  (todochiku .
 	    [(20120202)
-	     nil "A mode for interfacing with Growl, Snarl, and the like." single])
+	     nil "No description available." single])
  (textile-mode .
 	       [(20100416)
 		nil "Textile markup editing major mode" tar])
  (starter-kit-ruby .
-		   [(20120314)
+		   [(20120316)
 		    ((inf-ruby
 		      (2 2 3))
 		     (starter-kit
 		      (2 0 1)))
 		    "Saner defaults and goodies for Ruby" single])
  (starter-kit-perl .
-		   [(20120314)
+		   [(20120316)
 		    nil "Some helpful Perl code" single])
  (starter-kit-lisp .
-		   [(20120314)
+		   [(20120316)
 		    ((starter-kit
 		      (2 0 2))
 		     (elisp-slime-nav
 		      (0 1)))
 		    "Saner defaults and goodies for lisp languages" single])
  (starter-kit-js .
-		 [(20120314)
+		 [(20120316)
 		  ((starter-kit
 		    (2 0 1)))
 		  "Saner defaults and goodies for Javascript" single])
  (starter-kit-eshell .
-		     [(20120314)
+		     [(20120316)
 		      nil "Saner defaults and goodies: eshell tweaks" single])
  (starter-kit-bindings .
-		       [(20120314)
+		       [(20120316)
 			((starter-kit
 			  (2 0 2)))
 			"Saner defaults and goodies: bindings" single])
  (starter-kit .
-	      [(20120314)
+	      [(20120316)
 	       ((paredit
 		 (22))
 		(idle-highlight-mode
@@ -62,11 +62,14 @@
  (smex .
        [(20120301)
 	nil "M-x interface with Ido-style fuzzy matching." single])
+ (smart-tab .
+	    [(20120115)
+	     nil "Intelligent tab completion and indentation." single])
  (slime-ritz .
 	     [(20120305)
 	      nil "slime extensions for ritz" single])
  (slime .
-	[(20120314)
+	[(20120319)
 	 nil "Superior Lisp Interaction Mode for Emacs" single])
  (rvm .
       [(20120201)
@@ -120,7 +123,7 @@
 	   [(20120114)
 	    nil "Allow Multiple Major Modes in a buffer" tar])
  (melpa .
-	[(20120313)
+	[(20120319)
 	 nil "special handling for the MELPA repository" single])
  (markdown-mode+ .
 		 [(20120219)
@@ -138,7 +141,7 @@
 	      (1 2)))
 	    "Magit extensions for using GitHub" single])
  (magit .
-	[(20120306)
+	[(20120317)
 	 nil "Control Git from Emacs." tar])
  (jump .
        [(20120130)
@@ -150,6 +153,9 @@
  (js3 .
       [(20120315)
        nil "JavaScript scanner" single])
+ (js2-mode .
+	   [(20120307)
+	    nil "an improved JavaScript editing mode" single])
  (ir_black-theme .
 		 [(20120313)
 		  nil "No description available." single])
@@ -165,11 +171,14 @@
  (idle-highlight-mode .
 		      [(20110817)
 		       nil "highlight the word the point is on" single])
+ (icicles .
+	  [(20120316)
+	   nil "Minibuffer input completion and cycling." tar])
  (hl-sentence .
 	      [(20111203)
 	       nil "highlight a sentence based on customizable face" single])
  (haskell-mode .
-	       [(20100702)
+	       [(20120320)
 		nil "A Haskell editing mode    -*-coding: iso-8859-1;-*-" tar])
  (git-blame .
 	    [(20120129)
@@ -180,9 +189,14 @@
  (full-ack .
 	   [(20111216)
 	    nil "a front-end for ack" single])
+ (flymake-perlcritic .
+		     [(20120103)
+		      ((flymake
+			(0 3)))
+		      "Flymake handler for Perl to invoke Perl::Critic" single])
  (flymake-cursor .
 		 [(20120307)
-		  nil "displays flymake error msg in minibuffer after delay" single])
+		  nil "No description available." single])
  (findr .
 	[(20120130)
 	 nil "Breadth-first file-finding facility for (X)Emacs" single])
@@ -193,7 +207,7 @@
 		[(20120227)
 		 nil "emulate surround.vim from Vim" single])
  (evil .
-       [(20120314)
+       [(20120320)
 	((undo-tree
 	  (0 3 0)))
 	"Extensible Vi layer for Emacs." tar])
@@ -209,6 +223,9 @@
  (dired+ .
 	 [(20120313)
 	  nil "Extensions to Dired." single])
+ (delim-kill .
+	     [(20100517)
+	      nil "Kill text between delimiters." single])
  (deft .
    [(20120307)
     nil "quickly browse, filter, and edit plain text notes" single])
@@ -218,6 +235,9 @@
  (csv-mode .
 	   [(20091203)
 	    nil "major mode for editing comma-separated value files" tar])
+ (cperl-mode .
+	     [(20110624)
+	      nil "Perl code editing commands for Emacs" single])
  (color-theme-sanityinc-tomorrow .
 				 [(20120217)
 				  nil "A version of Chris Kempson's various Tomorrow themes" tar])

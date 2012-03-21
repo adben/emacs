@@ -20,3 +20,5 @@
 ;;enable Redo see http://xahlee.org/emacs/emacs_make_modern.html
 (global-set-key (kbd "C-z") 'undo) ; Ctrl+z
 (global-set-key (kbd "C-S-z") 'redo) ;  Ctrl+Shift+z
+;;Voor Helm
+(global-set-key (kbd "C-c h") 'helm-mini)
