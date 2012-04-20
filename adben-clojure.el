@@ -1,9 +1,8 @@
-
 ;;
 (load-library "elein")
 
 ;; clojure-mode
-(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-1.10.0/")
+(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20120329/")
 (require 'clojure-mode)
 
 ;; swank-clojure
@@ -11,11 +10,11 @@
 (add-to-list 'load-path "~/git/swank-clojure")
 
 ;;(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.2.0/clojure-1.2.0.jar"
-(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.3.0-master-SNAPSHOT/clojure-1.3.0-master-SNAPSHOT.jar"
+(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.4.0-master-SNAPSHOT/clojure-1.4.0-master-SNAPSHOT.jar"
       swank-clojure-extra-classpaths (list
                                       ;;				      "~/.emacs.d/elpa/swank-clojure-1.1.0/"
-				      "~/git/swank-clojure"
-				      "~/.m2/org/clojure/clojure-contrib/1.2.0/clojure-contrib-1.2.0.jar"))
+				      "~/git/swank-clojure"))
+				      ;; "~/.m2/org/clojure/clojure-contrib/1.2.0/clojure-contrib-1.2.0.jar"))
 
 (require 'swank-clojure)
 
@@ -25,7 +24,10 @@
 '(progn (slime-setup '(slime-repl))))
 
 ;;(add-to-list 'load-path "~/git/slime")
-(add-to-list 'load-path "~/.emacs.d/elpa/slime-20100404.1/")
+(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120330
+
+
+")
 (require 'slime)
 (slime-setup) 
 
@@ -46,7 +48,6 @@
 (autoload 'swank-clojure-project "swank-clojure" "" t nil)
 (add-hook 'clojure-mode-hook 'clojure-test-maybe-enable)
 (add-hook 'slime-repl-mode-hook 'clojure-mode-font-lock-setup)
-
 
 ;; Use technomancy's bag of fancy clojure/slime tricks
 (add-to-list 'load-path "~/git/durendal")
@@ -79,7 +80,7 @@
       (when proc
 	(process-put proc :output nil)
 	(set-process-sentinel proc (lambda (proc event)
-r				     (message "%s%s: `%S'" 
+				     (message "%s%s: `%S'" 
 					      (process-get proc :output)
 					      proc (replace-regexp-in-string "\n" "" event))))
 	(set-process-filter proc

@@ -22,3 +22,4 @@
 (global-set-key (kbd "C-S-z") 'redo) ;  Ctrl+Shift+z
 ;;Voor Helm
 (global-set-key (kbd "C-c h") 'helm-mini)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
