@@ -2,7 +2,7 @@
 (load-library "elein")
 
 ;; clojure-mode
-(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20120329/")
+(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20120426/")
 (require 'clojure-mode)
 
 ;; swank-clojure
