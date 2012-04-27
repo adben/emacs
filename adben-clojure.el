@@ -24,10 +24,7 @@
 '(progn (slime-setup '(slime-repl))))
 
 ;;(add-to-list 'load-path "~/git/slime")
-(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120330
-
-
-")
+(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120423")
 (require 'slime)
 (slime-setup) 
 
