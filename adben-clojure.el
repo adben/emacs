@@ -2,7 +2,7 @@
 (load-library "elein")
 
 ;; clojure-mode
-(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20120426/")
+(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20120531/")
 (require 'clojure-mode)
 
 ;; swank-clojure
@@ -10,21 +10,22 @@
 (add-to-list 'load-path "~/git/swank-clojure")
 
 ;;(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.2.0/clojure-1.2.0.jar"
-(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.4.0-master-SNAPSHOT/clojure-1.4.0-master-SNAPSHOT.jar"
+(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.5.0-master-SNAPSHOT/clojure-1.5.0-master-SNAPSHOT.jar"
       swank-clojure-extra-classpaths (list
                                       ;;				      "~/.emacs.d/elpa/swank-clojure-1.1.0/"
 				      "~/git/swank-clojure"))
-				      ;; "~/.m2/org/clojure/clojure-contrib/1.2.0/clojure-contrib-1.2.0.jar"))
+;; "~/.m2/org/clojure/clojure-contrib/1.2.0/clojure-contrib-1.2.0.jar"))
 
 (require 'swank-clojure)
 
 ;; slime
+;; (add-to-list 'load-path "~/.emacs.d/elpa/slime-repl-20100404")
 (eval-after-load "slime"
-;'(setq slime-protocol-version 'ignore)
-'(progn (slime-setup '(slime-repl))))
+ ;; '(setq slime-protocol-version 'ignore)
+  '(progn (slime-setup '(slime-repl))))
 
 ;;(add-to-list 'load-path "~/git/slime")
-(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120423")
+(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120525")
 (require 'slime)
 (slime-setup) 
 
