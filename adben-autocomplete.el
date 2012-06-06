@@ -1,11 +1,4 @@
-;;
-;; adben-autocomplete.el
-;; 
-;; Made by Adolfo Benedetti
-;; Login   <adolfo@adolfo-desktop>
-;; 
-;; Started on  Tue Mar  9 10:12:43 2010 Adolfo Benedetti
-;; Last update Tue Mar  9 10:12:43 2010 Adolfo Benedetti
-;;
+(setq load-path (cons "~/.emacs.d/elpa/auto-complete-20120328/" load-path))
+;; Load my auto-complete, over-riding the one bundled with emacs
 (require 'auto-complete)
 (global-auto-complete-mode t)

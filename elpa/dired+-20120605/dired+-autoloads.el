@@ -4,20 +4,19 @@
 
 
 ;;;### (autoloads (diredp-send-bug-report diredp-dired-plus-help
-;;;;;;  diredp-describe-mode diredp-mouse-do-chown diredp-mouse-do-chgrp
-;;;;;;  diredp-mouse-do-chmod diredp-mouse-do-load diredp-mouse-do-byte-compile
-;;;;;;  diredp-mouse-do-compress diredp-mouse-do-grep diredp-mouse-do-print
-;;;;;;  diredp-mouse-do-hardlink diredp-mouse-do-symlink diredp-mouse-do-shell-command
-;;;;;;  diredp-mouse-do-delete diredp-mouse-downcase diredp-mouse-upcase
-;;;;;;  diredp-mouse-do-rename diredp-mouse-do-copy diredp-mouse-flag-file-deletion
-;;;;;;  diredp-mouse-mark/unmark-mark-region-files diredp-mouse-mark-region-files
-;;;;;;  diredp-mouse-mark/unmark diredp-mouse-unmark diredp-mouse-mark
-;;;;;;  diredp-mouse-backup-diff diredp-mouse-diff diredp-mouse-ediff
-;;;;;;  diredp-mouse-view-file diredp-mouse-find-file dired-mouse-find-file-other-window
-;;;;;;  diredp-mouse-find-file-other-frame diredp-find-file-other-frame
-;;;;;;  diredp-mouse-3-menu diredp-toggle-marks-in-region diredp-flag-region-files-for-deletion
-;;;;;;  diredp-unmark-region-files diredp-mark-region-files dired-mark-sexp
-;;;;;;  diredp-chown-this-file diredp-chgrp-this-file diredp-chmod-this-file
+;;;;;;  diredp-describe-mode diredp-mouse-do-chmod diredp-mouse-do-load
+;;;;;;  diredp-mouse-do-byte-compile diredp-mouse-do-compress diredp-mouse-do-grep
+;;;;;;  diredp-mouse-do-print diredp-mouse-do-hardlink diredp-mouse-do-symlink
+;;;;;;  diredp-mouse-do-shell-command diredp-mouse-do-delete diredp-mouse-downcase
+;;;;;;  diredp-mouse-upcase diredp-mouse-do-rename diredp-mouse-do-copy
+;;;;;;  diredp-mouse-flag-file-deletion diredp-mouse-mark/unmark-mark-region-files
+;;;;;;  diredp-mouse-mark-region-files diredp-mouse-mark/unmark diredp-mouse-unmark
+;;;;;;  diredp-mouse-mark diredp-mouse-backup-diff diredp-mouse-diff
+;;;;;;  diredp-mouse-ediff diredp-mouse-view-file diredp-mouse-find-file
+;;;;;;  dired-mouse-find-file-other-window diredp-mouse-find-file-other-frame
+;;;;;;  diredp-find-file-other-frame diredp-mouse-3-menu diredp-toggle-marks-in-region
+;;;;;;  diredp-flag-region-files-for-deletion diredp-unmark-region-files
+;;;;;;  diredp-mark-region-files dired-mark-sexp diredp-chmod-this-file
 ;;;;;;  diredp-load-this-file diredp-byte-compile-this-file diredp-mouse-describe-file
 ;;;;;;  diredp-describe-file diredp-mouse-copy-tags diredp-copy-tags-this-file
 ;;;;;;  diredp-set-tag-value-this-file diredp-paste-replace-tags-this-file
@@ -29,8 +28,7 @@
 ;;;;;;  diredp-rename-this-file diredp-upcase-this-file diredp-downcase-this-file
 ;;;;;;  diredp-capitalize-this-file diredp-delete-this-file diredp-capitalize
 ;;;;;;  dired-do-delete dired-do-flagged-delete dired-goto-file dired-up-directory
-;;;;;;  dired-do-find-marked-files dired-maybe-insert-subdir diredp-w32-drives
-;;;;;;  diredp-w32-list-mapped-drives diredp-w32-drives-mode dired-do-load
+;;;;;;  dired-do-find-marked-files dired-maybe-insert-subdir dired-do-load
 ;;;;;;  dired-do-byte-compile dired-do-compress diredp-ediff diredp-omit-unmarked
 ;;;;;;  diredp-omit-marked diredp-toggle-find-file-reuse-dir diredp-mouse-find-file-reuse-dir-buffer
 ;;;;;;  diredp-find-file-reuse-dir-buffer diredp-do-bookmark-in-bookmark-file
@@ -46,12 +44,11 @@
 ;;;;;;  diredp-mark-files-tagged-some diredp-mark-files-tagged-none
 ;;;;;;  diredp-mark-files-tagged-all diredp-mark/unmark-extension
 ;;;;;;  diredp-marked-other-window diredp-marked diredp-do-redisplay-recursive
-;;;;;;  diredp-do-touch-recursive diredp-do-chown-recursive diredp-do-chgrp-recursive
-;;;;;;  diredp-do-chmod-recursive diredp-do-copy-recursive diredp-do-move-recursive
-;;;;;;  diredp-downcase-recursive diredp-upcase-recursive diredp-capitalize-recursive
-;;;;;;  diredp-copy-filename-as-kill-recursive diredp-list-marked-recursive
-;;;;;;  diredp-marked-recursive-other-window diredp-marked-recursive
-;;;;;;  diredp-do-grep-recursive diredp-do-query-replace-regexp-recursive
+;;;;;;  diredp-do-touch-recursive diredp-do-chmod-recursive diredp-do-copy-recursive
+;;;;;;  diredp-do-move-recursive diredp-downcase-recursive diredp-upcase-recursive
+;;;;;;  diredp-capitalize-recursive diredp-copy-filename-as-kill-recursive
+;;;;;;  diredp-list-marked-recursive diredp-marked-recursive-other-window
+;;;;;;  diredp-marked-recursive diredp-do-grep-recursive diredp-do-query-replace-regexp-recursive
 ;;;;;;  diredp-do-find-marked-files-recursive diredp-set-bookmark-file-bookmark-for-marked-recursive
 ;;;;;;  diredp-do-bookmark-in-bookmark-file-recursive diredp-do-bookmark-recursive
 ;;;;;;  diredp-image-dired-comment-files-recursive diredp-image-dired-delete-tag-recursive
@@ -63,7 +60,7 @@
 ;;;;;;  diredp-dired-for-files-other-window diredp-dired-for-files
 ;;;;;;  diredp-dired-files-other-window diredp-dired-files diredp-w32-local-drives
 ;;;;;;  diredp-prompt-for-bookmark-prefix-flag diff-switches) "dired+"
-;;;;;;  "dired+.el" (20428 35927))
+;;;;;;  "dired+.el" (20431 4668))
 ;;; Generated autoloads from dired+.el
 
 (defvar diff-switches "-c" "\
@@ -524,16 +521,6 @@ to indicate that some of their files are to be changed.
 
 \(fn &optional IGNORE-MARKS-P)" t nil)
 
-(autoload 'diredp-do-chgrp-recursive "dired+" "\
-Change the group of the marked (or next ARG) files.
-
-\(fn &optional IGNORE-MARKS-P)" t nil)
-
-(autoload 'diredp-do-chown-recursive "dired+" "\
-Change the owner of the marked (or next ARG) files.
-
-\(fn &optional IGNORE-MARKS-P)" t nil)
-
 (autoload 'diredp-do-touch-recursive "dired+" "\
 Change the timestamp of marked files, including those in marked subdirs.
 This calls `touch'.  Like `dired-do-touch', but act recursively on
@@ -986,33 +973,6 @@ A prefix argument ARG specifies files to use instead of marked.
 
 \(fn &optional ARG)" t nil)
 
-(autoload 'diredp-w32-drives-mode "dired+" "\
-Open Dired for an MS Windows drive (local or remote).
-
-\(fn)" t nil)
-
-(autoload 'diredp-w32-list-mapped-drives "dired+" "\
-List network connection information for shared MS Windows resources.
-This just invokes the Windows `NET USE' command.
-
-\(fn)" t nil)
-
-(autoload 'diredp-w32-drives "dired+" "\
-Visit a list of MS Windows drives for use by Dired.
-With a prefix argument use another window for the list.
-In the list, use `mouse-2' or `RET' to open Dired for a given drive.
-
-The drives listed are the remote drives currently available, as
-determined by the Windows command `NET USE', plus the local drives
-specified by option `diredp-w32-local-drives', which you can
-customize.
-
-Note: When you are in Dired at the root of a drive (e.g. directory
-      `c:/'), command `dired-up-directory' invokes this command.
-      So you can use `\\[dired-up-directory]' to go up to the list of drives.
-
-\(fn &optional OTHER-WINDOW-P)" t nil)
-
 (autoload 'dired-maybe-insert-subdir "dired+" "\
 Move to Dired subdirectory line or subdirectory listing.
 This bounces you back and forth between a subdirectory line and its
@@ -1264,16 +1224,6 @@ In Dired, change the mode of the file on the cursor line.
 
 \(fn)" t nil)
 
-(autoload 'diredp-chgrp-this-file "dired+" "\
-In Dired, change the group of the file on the cursor line.
-
-\(fn)" t nil)
-
-(autoload 'diredp-chown-this-file "dired+" "\
-In Dired, change the owner of the file on the cursor line.
-
-\(fn)" t nil)
-
 (autoload 'dired-mark-sexp "dired+" "\
 Mark files for which PREDICATE returns non-nil.
 With non-nil prefix arg UNMARK-P, unmark those files instead.
@@ -1506,16 +1456,6 @@ This calls chmod, so symbolic modes like `g+w' are allowed.
 
 \(fn EVENT)" t nil)
 
-(autoload 'diredp-mouse-do-chgrp "dired+" "\
-Change the group of this file.
-
-\(fn EVENT)" t nil)
-
-(autoload 'diredp-mouse-do-chown "dired+" "\
-Change the owner of this file.
-
-\(fn EVENT)" t nil)
-
 (autoload 'diredp-describe-mode "dired+" "\
 Describe Dired mode, including Dired+ features.
 This is `describe-mode' plus a description of Dired+ features.
@@ -1535,7 +1475,7 @@ Send a bug report about a Dired+ problem.
 
 ;;;***
 
-;;;### (autoloads nil nil ("dired+-pkg.el") (20428 35927 642124))
+;;;### (autoloads nil nil ("dired+-pkg.el") (20431 4668 925766))
 
 ;;;***
 

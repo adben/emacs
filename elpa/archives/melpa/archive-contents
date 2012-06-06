@@ -9,7 +9,7 @@
 		[(20120529)
 		 nil "A low contrast color theme for Emacs. [source: github]" single])
  (yasnippet .
-	    [(20120529)
+	    [(20120605)
 	     nil "Yet another snippet extension for Emacs. [source: github]" tar])
  (yari .
        [(20110417)
@@ -154,6 +154,9 @@
  (scala-mode .
 	     [(20120524)
 	      nil "No description available. [source: github]" tar])
+ (save-visited-files .
+		     [(20120430)
+		      nil "save opened files across sessions [source: github]" single])
  (sauron .
 	 [(20120401)
 	  nil "Track (erc/org/dbus/...) events and react to them. [source: github]" tar])
@@ -464,7 +467,7 @@
 	   [(20120508)
 	    nil "JavaScript scanner [source: github]" single])
  (js2-mode .
-	   [(20120603)
+	   [(20120606)
 	    nil "an improved JavaScript editing mode [source: github]" tar])
  (js-comint .
 	    [(20080530)
@@ -642,6 +645,9 @@
 	((undo-tree
 	  (0 5 1)))
 	"Extensible Vi layer for Emacs. [source: git]" tar])
+ (etags-table .
+	      [(20090327)
+	       nil "Set tags table(s) based on current file [source: wiki]" single])
  (ess .
       [(20120522)
        nil "No description available. [source: github]" tar])
@@ -684,7 +690,7 @@
        [(20081128)
 	nil "simplified find-file, revert-file, save-buffer interface [source: wiki]" single])
  (dired+ .
-	 [(20120602)
+	 [(20120605)
 	  nil "Extensions to Dired. [source: wiki]" single])
  (delim-kill .
 	     [(20100517)
@@ -708,7 +714,7 @@
 	     [(20110624)
 	      nil "Perl code editing commands for Emacs [source: github]" single])
  (color-theme-solarized .
-			[(20120507)
+			[(20120605)
 			 ((color-theme
 			   (6 5 5)))
 			 "Solarized themes for Emacs [source: github]" tar])
