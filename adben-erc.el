@@ -109,21 +109,21 @@
            (get-buffer wants-name))
        returning)))
 
- (defun erc-znc-set-name (znc-name &optional buffer)
-   "Set the znc-buffer-name buffer local to znc-name in buffer or (current-buffer)"
-   (let ((buffer (get-buffer (or buffer (current-buffer)))))
-     (with-current-buffer buffer
-       (make-local-variable 'znc-buffer-name)
-       (setf znc-buffer-name znc-name))))
+ ;; (defun erc-znc-set-name (znc-name &optional buffer)
+ ;;   "Set the znc-buffer-name buffer local to znc-name in buffer or (current-buffer)"
+ ;;   (let ((buffer (get-buffer (or buffer (current-buffer)))))
+ ;;     (with-current-buffer buffer
+ ;;       (make-local-variable 'znc-buffer-name)
+ ;;       (setf znc-buffer-name znc-name))))
 
- (defun erc-znc (network user pass)
-   (let ((buffer (format "*irc-%s*" network))
-         (erc-buffer (erc :server "localhost"
-                          :port 12533
-                          :nick "Muta"
-                          :password (format "%s:%s" user pass))))
-     (when (get-buffer buffer)
-       (kill-buffer-always buffer))
-     (erc-znc-set-name buffer erc-buffer)
-     (with-current-buffer erc-buffer
-       (rename-buffer buffer))))
+ ;; (defun erc-znc (network user pass)
+ ;;   (let ((buffer (format "*irc-%s*" network))
+ ;;         (erc-buffer (erc :server "localhost"
+ ;;                          :port 12533
+ ;;                          :nick "Muta"
+ ;;                          :password (format "%s:%s" user pass))))
+ ;;     (when (get-buffer buffer)
+ ;;       (kill-buffer-always buffer))
+ ;;     (erc-znc-set-name buffer erc-buffer)
+ ;;     (with-current-buffer erc-buffer
+ ;;       (rename-buffer buffer))))

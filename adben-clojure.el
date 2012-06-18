@@ -1,4 +1,37 @@
-;;
+;; Auto reload saved source files and send them to the repl
+(defun ed/clojure-compile-on-save (&optional args)
+  "Compile with slime on save"
+  (interactive)
+  (if (and (eq major-mode 'clojure-mode)
+      (slime-connected-p))
+      (slime-compile-and-load-file)))
+(add-hook 'after-save-hook 'ed/clojure-compile-on-save)
+
+;; ;; paredit
+(require 'paredit)
+(require 'highlight-parentheses)
+(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
+(add-hook 'clojure-mode-hook
+          (lambda ()
+            (highlight-parentheses-mode t)
+            (paredit-mode t)
+            (slime-mode t)))
+(setq hl-paren-colors
+      '("red1" "orange1" "yellow1" "green1" "cyan1"
+        "slateblue1" "magenta1" "purple"))
+
+;; paredit in the REPL
+(autoload 'paredit-mode "paredit"   
+  "Minor mode for pseudo-structurally editing Lisp code."   
+  t)   
+;(add-hook 'lisp-mode-hook (lambda () (paredit-mode +1)))   
+(mapc (lambda (mode)   
+     (let ((hook (intern (concat (symbol-name mode)   
+                   "-mode-hook"))))   
+      (add-hook hook (lambda () (paredit-mode +1)))))   
+    '(emacs-lisp lisp inferior-lisp slime slime-repl))                       
+
+;; Elein
 (load-library "elein")
 
 ;; clojure-mode
@@ -25,7 +58,7 @@
   '(progn (slime-setup '(slime-repl))))
 
 ;;(add-to-list 'load-path "~/git/slime")
-(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120525")
+(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120612/")
 (require 'slime)
 (slime-setup) 
 
