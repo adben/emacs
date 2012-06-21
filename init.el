@@ -14,12 +14,11 @@
 ;;Add all top-level subdirectories of .emacs.d to the load path
 (progn (cd "~/.emacs.d")
        (normal-top-level-add-subdirs-to-load-path))
-(add-to-list 'load-path "~/.emacs.d/vendor/themes")
+(add-to-list 'exec-path "~/Dev/Soft/bin")
+(add-to-list 'exec-path "~/bin")
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'exec-path "/usr/texbin")
 (add-to-list 'exec-path "/opt/local/bin")
-(add-to-list 'exec-path "/Users/abenedetti/Dev/Soft/bin")
-(add-to-list 'exec-path "/Users/abenedetti/bin")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;ELPA package manager
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -63,9 +62,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-window-management")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;Flyspell
+;;Spelling unified
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-flyspell")
+(load-library "adben-spell")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;iswitchb
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -79,9 +78,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-keyboard")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;adben's global keybindings and behaviour
+;;adben's yasnippet
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-yasnippet")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Shortcuts
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-shortcuts")
@@ -102,6 +102,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-dired")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;rainbow delimiters mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-library "adben-rainbow-delimiters")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Autocomplete mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-autocomplete")
@@ -119,7 +123,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-zsh")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;
 ;;Groovy
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-groovy")
@@ -236,11 +239,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-org")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;clojure mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-clojure")
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;eshell  modex
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -263,35 +264,6 @@
 (load-library "adben-jira")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Startup gnus after loading other things
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Hunspell for ispell
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Use hunspell instead of ispell 
-;; (if (file-exists-p "/opt/local/bin/hunspell")
-(setq ispell-dictionary-alist
-      '(("en_US_hunspell"				
-         "[A-Za-z]" "[^A-Za-z]" "[\"]"
-         nil ("-d" "/opt/local/share/hunspell/en_US") nil utf-8)
-        ("es_ES_hunspell"
-         "[A-Za-z]" "[^A-Za-z]" "[\"]"
-         nil ("-d" "/opt/local/share/hunspell/es_ES") nil utf-8)
-        ("nl_NL_hunspell"
-         "[A-Za-z]" "[^A-Za-z]" "[\"]"
-         nil ("-d" "/opt/local/share/hunspell/nl_NL") nil utf-8)))
-(eval-after-load "ispell"
-  (progn
-    (setq ispell-dictionary "nl_NL_hunspell"
-          ispell-extra-args '("-a" "-i" "utf-8")
-          ispell-silently-savep t )))
-(setq-default ispell-program-name "hunspell")
-(require 'rw-language-and-country-codes)
-(require 'rw-ispell)
-(require 'rw-hunspell)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; toward balanced and colorful delimiters
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(when (require 'rainbow-delimiters nil 'noerror) 
-  (add-hook 'scheme-mode-hook 'rainbow-delimiters-mode))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Custmoized open files read only mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,6 +1,10 @@
 ;;-*-coding: utf-8;-*-
 (define-abbrev-table 'Buffer-menu-mode-abbrev-table '())
 
+(define-abbrev-table 'Custom-mode-abbrev-table '())
+
+(define-abbrev-table 'bookmark-bmenu-mode-abbrev-table '())
+
 (define-abbrev-table 'clojure-mode-abbrev-table '())
 
 (define-abbrev-table 'comint-mode-abbrev-table '())
@@ -33,7 +37,13 @@
 
 (define-abbrev-table 'grep-mode-abbrev-table '())
 
+(define-abbrev-table 'helm-grep-mode-abbrev-table '())
+
 (define-abbrev-table 'help-mode-abbrev-table '())
+
+(define-abbrev-table 'image-dired-display-image-mode-abbrev-table '())
+
+(define-abbrev-table 'image-dired-thumbnail-mode-abbrev-table '())
 
 (define-abbrev-table 'ledger-mode-abbrev-table '())
 
@@ -59,6 +69,8 @@
 (define-abbrev-table 'process-menu-mode-abbrev-table '())
 
 (define-abbrev-table 'prog-mode-abbrev-table '())
+
+(define-abbrev-table 'shell-mode-abbrev-table '())
 
 (define-abbrev-table 'sldb-mode-abbrev-table '())
 

@@ -3,7 +3,7 @@
   "Compile with slime on save"
   (interactive)
   (if (and (eq major-mode 'clojure-mode)
-      (slime-connected-p))
+           (slime-connected-p))
       (slime-compile-and-load-file)))
 (add-hook 'after-save-hook 'ed/clojure-compile-on-save)
 
@@ -24,12 +24,12 @@
 (autoload 'paredit-mode "paredit"   
   "Minor mode for pseudo-structurally editing Lisp code."   
   t)   
-;(add-hook 'lisp-mode-hook (lambda () (paredit-mode +1)))   
+                                        ;(add-hook 'lisp-mode-hook (lambda () (paredit-mode +1)))   
 (mapc (lambda (mode)   
-     (let ((hook (intern (concat (symbol-name mode)   
-                   "-mode-hook"))))   
-      (add-hook hook (lambda () (paredit-mode +1)))))   
-    '(emacs-lisp lisp inferior-lisp slime slime-repl))                       
+        (let ((hook (intern (concat (symbol-name mode)   
+                                    "-mode-hook"))))   
+          (add-hook hook (lambda () (paredit-mode +1)))))   
+      '(emacs-lisp lisp inferior-lisp slime slime-repl))                       
 
 ;; Elein
 (load-library "elein")
@@ -52,11 +52,10 @@
 (require 'swank-clojure)
 
 ;; slime
-;; (add-to-list 'load-path "~/.emacs.d/elpa/slime-repl-20100404")
+(add-to-list 'load-path "~/.emacs.d/elpa/slime-repl-20100404")
 (eval-after-load "slime"
- ;; '(setq slime-protocol-version 'ignore)
+  ;;'(setq slime-protocol-version 'ignore)
   '(progn (slime-setup '(slime-repl))))
-
 ;;(add-to-list 'load-path "~/git/slime")
 (add-to-list 'load-path "~/.emacs.d/elpa/slime-20120612/")
 (require 'slime)
@@ -124,16 +123,18 @@
 				(set-process-filter proc nil))))
 	(message "Starting swank server...")))))
 
-
-
-
+;;with viper
 (eval-after-load "viper"
   '(add-to-list 'viper-vi-state-mode-list 'clojure-mode))
 
+;; Rainbow delimiters
 (require 'rainbow-delimiters)
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
+;; Gist
+(add-to-list 'load-path "~/.emacs.d/elpa/gist-20120408")
 (eval-after-load "gist"
   '(add-to-list 'gist-supported-modes-alist '(clojure-mode . ".clj")))
+(require 'gist)
 
 (provide 'adben-clojure)
