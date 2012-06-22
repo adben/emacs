@@ -1,8 +1,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; YASNIPPET
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-file "~/.emacs.d/elpa/yasnippet-bundle-0.6.1/yasnippet-bundle.el")
-;;(require 'yasnippet)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq load-path (cons "~/.emacs.d/elpa/yasnippet-20120615/" load-path))
+(require 'yasnippet)
 ;Don't map TAB to yasnippet
 ;In fact, set it to something we'll never use because
 ;we'll only ever trigger it indirectly.

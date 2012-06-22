@@ -167,7 +167,7 @@
 	      [(20120131)
 	       nil "Utility for *scratch* buffer. [source: github]" single])
  (scala-mode .
-	     [(20120620)
+	     [(20120621)
 	      nil "No description available. [source: github]" tar])
  (save-visited-files .
 		     [(20120615)
@@ -288,8 +288,10 @@
 		    (23 1)))
 		  "Emacs Prelude: python.el configuration. [source: github]" single])
  (prelude-programming .
-		      [(20120501)
-		       nil "Emacs Prelude: prog-mode configuration [source: github]" single])
+		      [(20120622)
+		       ((guru-mode
+			 (0 1)))
+		       "Emacs Prelude: prog-mode configuration [source: github]" single])
  (prelude-perl .
 	       [(20120417)
 		nil "Emacs Prelude: decent Perl coding settings. [source: github]" single])
@@ -562,7 +564,7 @@
 		      [(20110817)
 		       nil "highlight the word the point is on [source: github]" single])
  (icicles .
-	  [(20120619)
+	  [(20120621)
 	   nil "Minibuffer input completion and cycling. [source: wiki]" tar])
  (ibuffer-vc .
 	     [(20111221)
@@ -609,7 +611,7 @@
 	    [(20101019)
 	     nil "Major mode for editing Haml files [source: github]" single])
  (guru-mode .
-	    [(20120615)
+	    [(20120622)
 	     nil "Become an Emacs guru [source: github]" single])
  (groovy-mode .
 	      [(20120331)
@@ -621,7 +623,7 @@
 		 [(20091009)
 		  nil "Google's C/C++ style for c-mode [source: svn]" single])
  (go-mode .
-	  [(20120613)
+	  [(20120621)
 	   nil "No description available. [source: hg]" tar])
  (gnuplot .
 	  [(20120420)
@@ -835,7 +837,7 @@
 		   [(20100315)
 		    nil "interactively insert items from kill-ring [source: github]" single])
  (bookmark+ .
-	    [(20120615)
+	    [(20120621)
 	     nil "Bookmark+: extensions to standard library `bookmark.el'. [source: wiki]" tar])
  (bm .
      [(20120611)
