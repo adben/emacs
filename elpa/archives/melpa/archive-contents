@@ -9,7 +9,7 @@
 		[(20120529)
 		 nil "A low contrast color theme for Emacs. [source: github]" single])
  (zen-and-art-theme .
-		    [(20120615)
+		    [(20120622)
 		     nil "zen and art color theme for GNU Emacs 24 [source: github]" single])
  (yasnippet .
 	    [(20120615)
@@ -35,6 +35,9 @@
  (wgrep .
 	[(20120530)
 	 nil "Writable grep buffer and apply the changes to files [source: github]" tar])
+ (w3m .
+      [(20120620)
+       nil "an Emacs interface to w3m [source: github]" tar])
  (volatile-highlights .
 		      [(20120215)
 		       nil "Minor mode for visual feedback on some operations. [source: github]" single])
@@ -87,7 +90,7 @@
 	   [(20120525)
 	    nil "emulate surround.vim from Vim [source: github]" single])
  (sunrise-commander .
-		    [(20120616)
+		    [(20120624)
 		     nil "two-pane file manager for Emacs based on Dired and inspired by MC [source: github]" tar])
  (stylus-mode .
 	      [(20120501)
@@ -158,8 +161,11 @@
 	     [(20120612)
 	      nil "slime extensions for ritz [source: github]" single])
  (slime .
-	[(20120612)
-	 nil "Superior Lisp Interaction Mode for Emacs [source: github]" single])
+	[(20120619)
+	 nil "Superior Lisp Interaction Mode for Emacs [source: git]" tar])
+ (shimbun .
+	  [(20120501)
+	   nil "No description available. [source: github]" tar])
  (scss-mode .
 	    [(20120424)
 	     nil "Major mode for editing SCSS files [source: github]" single])
@@ -536,6 +542,9 @@
  (ir_black-theme .
 		 [(20120503)
 		  nil "No description available. [source: github]" single])
+ (ir-black-theme .
+		 [(20120618)
+		  nil "Port of ir-black theme [source: github]" single])
  (inlineR .
 	  [(20120520)
 	   nil "insert Tag for inline image of R graphics [source: github]" single])
@@ -564,7 +573,7 @@
 		      [(20110817)
 		       nil "highlight the word the point is on [source: github]" single])
  (icicles .
-	  [(20120621)
+	  [(20120625)
 	   nil "Minibuffer input completion and cycling. [source: wiki]" tar])
  (ibuffer-vc .
 	     [(20111221)
@@ -592,7 +601,7 @@
 		     (0 6)))
 		   "Helm integration for Projectile [source: github]" single])
  (helm-git .
-	   [(20120603)
+	   [(20120621)
 	    nil "Helm extension for Git. [source: github]" single])
  (helm-R .
 	 [(20120523)
@@ -602,10 +611,10 @@
 	    (20120509)))
 	  "helm-sources and some utilities for GNU R. [source: github]" single])
  (helm .
-       [(20120621)
+       [(20120625)
 	nil "Helm is an Emacs incremental and narrowing framework [source: github]" tar])
  (haskell-mode .
-	       [(20120612)
+	       [(20120623)
 		nil "A Haskell editing mode [source: github]" tar])
  (haml-mode .
 	    [(20101019)
@@ -728,6 +737,9 @@
  (enclose .
 	  [(20120618)
 	   nil "Enclose cursor within punctuation pairs [source: github]" single])
+ (emms .
+       [(20110425)
+	nil "No description available. [source: git]" tar])
  (emacs-setup .
 	      [(20120524)
 	       ((revive
