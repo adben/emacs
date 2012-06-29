@@ -25,5 +25,5 @@
 (require 'find-dired)
 (setq find-ls-option '("-print0 | xargs -0 ls -ld" . "-ld"))
 ;;added dired-plus
-(setq load-path (cons "~/.emacs.d/elpa/dired+-20120621/" load-path))
+(setq load-path (cons "~/.emacs.d/elpa/dired+-20120626/" load-path))
 (require 'dired+)

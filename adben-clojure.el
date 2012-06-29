@@ -1,13 +1,4 @@
-;; Auto reload saved source files and send them to the repl
-(defun ed/clojure-compile-on-save (&optional args)
-  "Compile with slime on save"
-  (interactive)
-  (if (and (eq major-mode 'clojure-mode)
-           (slime-connected-p))
-      (slime-compile-and-load-file)))
-(add-hook 'after-save-hook 'ed/clojure-compile-on-save)
-
-;; ;; paredit
+;; paredit
 (require 'paredit)
 (require 'highlight-parentheses)
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
@@ -32,7 +23,8 @@
       '(emacs-lisp lisp inferior-lisp slime slime-repl))                       
 
 ;; Elein
-(load-library "elein")
+(add-to-list 'load-path "~/.emacs.d/elpa/elein-20120118/")
+(require 'elein)
 
 ;; clojure-mode
 (add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20120531/")
@@ -57,9 +49,18 @@
   ;;'(setq slime-protocol-version 'ignore)
   '(progn (slime-setup '(slime-repl))))
 ;;(add-to-list 'load-path "~/git/slime")
-(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120612/")
+(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120619/")
 (require 'slime)
 (slime-setup) 
+
+;; Auto reload saved source files and send them to the repl
+(defun ed/clojure-compile-on-save (&optional args)
+  "Compile with slime on save"
+  (interactive)
+  (if (and (eq major-mode 'clojure-mode)
+           (slime-connected-p))
+      (slime-compile-and-load-file)))
+(add-hook 'after-save-hook 'ed/clojure-compile-on-save)
 
 ;; Autoloads and basic wiring
 (autoload 'clojure-mode "clojure-mode" "Major mode for editing Clojure code." t nil)
