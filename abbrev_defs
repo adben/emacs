@@ -1,8 +1,6 @@
 ;;-*-coding: utf-8;-*-
 (define-abbrev-table 'Buffer-menu-mode-abbrev-table '())
 
-(define-abbrev-table 'Custom-mode-abbrev-table '())
-
 (define-abbrev-table 'bookmark-bmenu-mode-abbrev-table '())
 
 (define-abbrev-table 'clojure-mode-abbrev-table '())
@@ -45,6 +43,8 @@
 
 (define-abbrev-table 'image-dired-thumbnail-mode-abbrev-table '())
 
+(define-abbrev-table 'inferior-lisp-mode-abbrev-table '())
+
 (define-abbrev-table 'ledger-mode-abbrev-table '())
 
 (define-abbrev-table 'ledger-reconcile-mode-abbrev-table '())
@@ -86,9 +86,9 @@
 
 (define-abbrev-table 'special-mode-abbrev-table '())
 
-(define-abbrev-table 'speedbar-mode-abbrev-table '())
-
 (define-abbrev-table 'tabulated-list-mode-abbrev-table '())
+
+(define-abbrev-table 'test-case-result-mode-abbrev-table '())
 
 (define-abbrev-table 'text-mode-abbrev-table '())
 

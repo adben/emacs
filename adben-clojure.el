@@ -23,11 +23,11 @@
       '(emacs-lisp lisp inferior-lisp slime slime-repl))                       
 
 ;; Elein
-(add-to-list 'load-path "~/.emacs.d/elpa/elein-20120118/")
+(add-to-list 'load-path "~/.emacs.d/elpa/elein-20120118.1537/")
 (require 'elein)
 
 ;; clojure-mode
-(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20120531/")
+(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20120808.2212/")
 (require 'clojure-mode)
 
 ;; swank-clojure
@@ -49,7 +49,7 @@
   ;;'(setq slime-protocol-version 'ignore)
   '(progn (slime-setup '(slime-repl))))
 ;;(add-to-list 'load-path "~/git/slime")
-(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120619/")
+(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120813/")
 (require 'slime)
 (slime-setup) 
 
@@ -133,7 +133,7 @@
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
 ;; Gist
-(add-to-list 'load-path "~/.emacs.d/elpa/gist-20120408")
+(add-to-list 'load-path "~/.emacs.d/elpa/gist-20120805")
 (eval-after-load "gist"
   '(add-to-list 'gist-supported-modes-alist '(clojure-mode . ".clj")))
 (require 'gist)

@@ -35,12 +35,12 @@
 ;I have a nasty habit of quitting Emacs all the time
 ;Always ask me if I really want to quit Emacs
 ;(defadvice save-buffers-kill-emacs (before save-logs (arg) activate))
-(defun ask-before-quit ()
-  "Ask me before I quit emacs if I think that's a good thing to do"
-  (interactive)
-  (yes-or-no-p "Do you really want to quit Emacs?")
-)
-(add-hook 'kill-emacs-query-functions 'ask-before-quit)
+;; (defun ask-before-quit ()
+;;   "Ask me before I quit emacs if I think that's a good thing to do"
+;;   (interactive)
+;;   (yes-or-no-p "Do you really want to quit Emacs?")
+;; )
+;; (add-hook 'kill-emacs-query-functions 'ask-before-quit)
 ;;Allow fetching files from HTTP servers
 (url-handler-mode)
 ;;TRAMP should default to ssh

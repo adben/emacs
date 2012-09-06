@@ -1,4 +1,4 @@
-(setq load-path (cons "~/.emacs.d/elpa/org-20120628/" load-path))
+(setq load-path (cons "~/.emacs.d/elpa/org-20120903/" load-path))
 ;; Load my org mode, over-riding the one bundled with emacs
 (require 'org-install)
 ;; Org-mode settings
@@ -10,10 +10,10 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
-(setq org-agenda-files (list "~/org/work.org"
-                             "~/org/school.org" 
-                             "~/org/home.org"))
-;; Funtion to calculate Hours
+;; (setq org-agenda-files (list "~/org/work.org"
+;;                              "~/org/school.org" 
+;;                              "~/org/home.org"))
+;; Function to calculate Hours
 (defun uphours (n)
   "update all timestamps n hours"
   (interactive "nAdd hours: ")

@@ -23,7 +23,7 @@ Create the command to start clojure according to current settings.
 
 \(fn)" nil nil)
 
-(defadvice slime-read-interactive-args (before add-clojure) (require 'assoc) (aput 'slime-lisp-implementations 'clojure (list (swank-clojure-cmd) :init 'swank-clojure-init)))
+(defadvice slime-read-interactive-args (before add-clojure) (aput 'slime-lisp-implementations 'clojure (list (swank-clojure-cmd) :init 'swank-clojure-init)))
 
 (autoload 'swank-clojure-project "swank-clojure" "\
 Setup classpath for a clojure project and starts a new SLIME session.
