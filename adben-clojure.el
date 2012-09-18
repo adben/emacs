@@ -27,7 +27,7 @@
 (require 'elein)
 
 ;; clojure-mode
-(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20120808.2212/")
+(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20120914.1423/")
 (require 'clojure-mode)
 
 ;; swank-clojure
@@ -49,7 +49,7 @@
   ;;'(setq slime-protocol-version 'ignore)
   '(progn (slime-setup '(slime-repl))))
 ;;(add-to-list 'load-path "~/git/slime")
-(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120813/")
+(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120818.1634/")
 (require 'slime)
 (slime-setup) 
 

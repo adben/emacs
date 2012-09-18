@@ -45,4 +45,16 @@
 (url-handler-mode)
 ;;TRAMP should default to ssh
 (setq tramp-default-method "ssh")
-
+;;
+;;Using the hints from the Emacs wiki AlarmBell page, this does it for me:
+(defun my-bell-function ()
+  (unless (memq this-command
+    	'(isearch-abort abort-recursive-edit exit-minibuffer
+              keyboard-quit mwheel-scroll down up next-line previous-line
+              backward-char forward-char))
+    (ding)))
+(setq ring-bell-function 'my-bell-function)
+;;Switching Between Two Recently Used Buffers
+(defun switch-to-previous-buffer ()
+      (interactive)
+      (switch-to-buffer (other-buffer (current-buffer) 1)))
