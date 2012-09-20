@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (emms-cache-toggle emms-cache-disable emms-cache-enable)
-;;;;;;  "emms-cache" "emms-cache.el" (20552 62808))
+;;;;;;  "emms-cache" "emms-cache.el" (20569 38822))
 ;;; Generated autoloads from emms-cache.el
 
 (autoload 'emms-cache-enable "emms-cache" "\
@@ -25,7 +25,7 @@ Toggle caching of Emms track data.
 ;;;***
 
 ;;;### (autoloads (emms-lyrics-toggle emms-lyrics-disable emms-lyrics-enable)
-;;;;;;  "emms-lyrics" "emms-lyrics.el" (20552 62808))
+;;;;;;  "emms-lyrics" "emms-lyrics.el" (20569 38822))
 ;;; Generated autoloads from emms-lyrics.el
 
 (autoload 'emms-lyrics-enable "emms-lyrics" "\
@@ -46,7 +46,7 @@ Toggle displaying emms lyrics.
 ;;;***
 
 ;;;### (autoloads (emms-mode-line-toggle emms-mode-line-disable emms-mode-line-enable)
-;;;;;;  "emms-mode-line" "emms-mode-line.el" (20552 62808))
+;;;;;;  "emms-mode-line" "emms-mode-line.el" (20569 38822))
 ;;; Generated autoloads from emms-mode-line.el
 
 (autoload 'emms-mode-line-enable "emms-mode-line" "\
@@ -67,7 +67,7 @@ Toggle `emms-mode-line'.
 ;;;***
 
 ;;;### (autoloads (emms-player-mpd-show emms-player-mpd-connect emms-player-mpd-clear)
-;;;;;;  "emms-player-mpd" "emms-player-mpd.el" (20552 62808))
+;;;;;;  "emms-player-mpd" "emms-player-mpd.el" (20569 38822))
 ;;; Generated autoloads from emms-player-mpd.el
 
 (autoload 'emms-player-mpd-clear "emms-player-mpd" "\
@@ -106,7 +106,7 @@ rather than EMMS.
 ;;;***
 
 ;;;### (autoloads (emms-playing-time-disable-display emms-playing-time-enable-display)
-;;;;;;  "emms-playing-time" "emms-playing-time.el" (20552 62808))
+;;;;;;  "emms-playing-time" "emms-playing-time.el" (20569 38822))
 ;;; Generated autoloads from emms-playing-time.el
 
 (autoload 'emms-playing-time-enable-display "emms-playing-time" "\
@@ -123,7 +123,7 @@ Remove playing time from mode line.
 
 ;;;### (autoloads (emms-playlist-limit-toggle emms-playlist-limit-disable
 ;;;;;;  emms-playlist-limit-enable) "emms-playlist-limit" "emms-playlist-limit.el"
-;;;;;;  (20552 62808))
+;;;;;;  (20569 38822))
 ;;; Generated autoloads from emms-playlist-limit.el
 
 (autoload 'emms-playlist-limit-enable "emms-playlist-limit" "\
@@ -144,7 +144,7 @@ Toggle emms playlist limit.
 ;;;***
 
 ;;;### (autoloads (emms-playlist-mode) "emms-playlist-mode" "emms-playlist-mode.el"
-;;;;;;  (20552 62808))
+;;;;;;  (20569 38822))
 ;;; Generated autoloads from emms-playlist-mode.el
 
 (autoload 'emms-playlist-mode "emms-playlist-mode" "\
@@ -156,7 +156,7 @@ A major mode for Emms playlists.
 ;;;***
 
 ;;;### (autoloads (emms-score-toggle emms-score-disable emms-score-enable)
-;;;;;;  "emms-score" "emms-score.el" (20552 62809))
+;;;;;;  "emms-score" "emms-score.el" (20569 38822))
 ;;; Generated autoloads from emms-score.el
 
 (autoload 'emms-score-enable "emms-score" "\
@@ -177,7 +177,7 @@ Toggle emms-score.
 ;;;***
 
 ;;;### (autoloads (emms-default-players emms-devel emms-all emms-standard
-;;;;;;  emms-minimalistic) "emms-setup" "emms-setup.el" (20552 62809))
+;;;;;;  emms-minimalistic) "emms-setup" "emms-setup.el" (20569 38822))
 ;;; Generated autoloads from emms-setup.el
 
 (autoload 'emms-minimalistic "emms-setup" "\
@@ -218,7 +218,7 @@ Set `emms-player-list' to `emms-setup-default-player-list'.
 ;;;***
 
 ;;;### (autoloads (emms-locate emms-source-file-regex emms-source-file-directory-tree)
-;;;;;;  "emms-source-file" "emms-source-file.el" (20552 62809))
+;;;;;;  "emms-source-file" "emms-source-file.el" (20569 38822))
 ;;; Generated autoloads from emms-source-file.el
  (autoload 'emms-play-file "emms-source-file" nil t)
  (autoload 'emms-add-file "emms-source-file" nil t)
@@ -257,7 +257,7 @@ Search for REGEXP and display the results in a locate buffer
 ;;;***
 
 ;;;### (autoloads nil "emms-source-playlist" "emms-source-playlist.el"
-;;;;;;  (20552 62809))
+;;;;;;  (20569 38822))
 ;;; Generated autoloads from emms-source-playlist.el
  (autoload 'emms-play-playlist "emms-source-playlist" nil t)
  (autoload 'emms-add-playlist "emms-source-playlist" nil t)
@@ -281,7 +281,7 @@ Search for REGEXP and display the results in a locate buffer
 ;;;***
 
 ;;;### (autoloads (emms-streams) "emms-streams" "emms-streams.el"
-;;;;;;  (20552 62809))
+;;;;;;  (20569 38822))
 ;;; Generated autoloads from emms-streams.el
 
 (autoload 'emms-streams "emms-streams" "\
@@ -292,8 +292,8 @@ Opens the EMMS Streams interface.
 ;;;***
 
 ;;;### (autoloads (emms-volume-mode-minus emms-volume-mode-plus emms-volume-lower
-;;;;;;  emms-volume-raise) "emms-volume" "emms-volume.el" (20552
-;;;;;;  62809))
+;;;;;;  emms-volume-raise) "emms-volume" "emms-volume.el" (20569
+;;;;;;  38822))
 ;;; Generated autoloads from emms-volume.el
 
 (autoload 'emms-volume-raise "emms-volume" "\
@@ -319,7 +319,7 @@ Lower volume and enable or extend the `emms-volume-minor-mode' timeout.
 ;;;***
 
 ;;;### (autoloads (emms-volume-amixer-change) "emms-volume-amixer"
-;;;;;;  "emms-volume-amixer.el" (20552 62809))
+;;;;;;  "emms-volume-amixer.el" (20569 38822))
 ;;; Generated autoloads from emms-volume-amixer.el
 
 (autoload 'emms-volume-amixer-change "emms-volume-amixer" "\
@@ -329,7 +329,7 @@ Change amixer master volume by AMOUNT.
 
 ;;;***
 
-;;;### (autoloads (tq-create) "tq" "tq.el" (20552 62809))
+;;;### (autoloads (tq-create) "tq" "tq.el" (20569 38822))
 ;;; Generated autoloads from tq.el
 
 (autoload 'tq-create "tq" "\
@@ -351,8 +351,8 @@ to a tcp server on another machine.
 ;;;;;;  "emms-pkg.el" "emms-player-mpg321-remote.el" "emms-player-mplayer.el"
 ;;;;;;  "emms-player-simple.el" "emms-player-vlc.el" "emms-player-xine.el"
 ;;;;;;  "emms-playlist-sort.el" "emms-stream-info.el" "emms-tag-editor.el"
-;;;;;;  "emms-url.el" "emms.el" "jack.el" "later-do.el") (20552 62809
-;;;;;;  216483))
+;;;;;;  "emms-url.el" "emms.el" "jack.el" "later-do.el") (20569 38822
+;;;;;;  484944))
 
 ;;;***
 

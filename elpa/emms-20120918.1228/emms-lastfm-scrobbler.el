@@ -30,6 +30,7 @@
 
 (require 'emms)
 (require 'emms-playing-time)
+(require 'emms-lastfm-client)
 
 ;; Variables referenced from emms-lastfm-client:
 ;;  emms-lastfm-client-username, emms-lastfm-client-api-key,
@@ -312,7 +313,6 @@ to last.fm"
 (defun emms-lastfm-scrobbler-make-async-submission-call (track rating)
   "Make asynchronous submission call."
   (let ((flarb (emms-lastfm-scrobbler-submission-data track rating)))
-    (setq flooz flarb)
     (let* ((url-request-method "POST")
 	   (url-request-data flarb)
 	   (url-request-extra-headers

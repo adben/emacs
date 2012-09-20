@@ -243,9 +243,6 @@ standard Emacs.")
 
 (mapc
  (lambda (desc)
-   ;; Let Org open all OpenDocument files using system-registered app
-   (add-to-list 'org-file-apps
-		(cons (concat  "\\." (car desc) "\\'") 'system))
    ;; Let Emacs open all OpenDocument files in archive mode
    (add-to-list 'auto-mode-alist
 		(cons (concat  "\\." (car desc) "\\'") 'archive-mode)))
@@ -1479,7 +1476,7 @@ is turned on."
 			       (" " "<text:s/>")
 			       ("	" "<text:tab/>")))
 	 (hfy-face-to-css 'org-odt-hfy-face-to-css)
-	 (hfy-optimisations-1 (copy-seq hfy-optimisations))
+	 (hfy-optimisations-1 (copy-sequence hfy-optimisations))
 	 (hfy-optimisations (add-to-list 'hfy-optimisations-1
 					 'body-text-only))
 	 (hfy-begin-span-handler
@@ -2661,7 +2658,7 @@ using `org-open-file'."
 	 cache-dir display-msg)
     (cond
      ((eq latex-frag-opt 'dvipng)
-      (setq cache-dir "ltxpng/")
+      (setq cache-dir org-latex-preview-ltxpng-directory)
       (setq display-msg "Creating LaTeX image %s"))
      ((member latex-frag-opt '(mathjax t))
       (setq latex-frag-opt 'mathml)

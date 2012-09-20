@@ -115,6 +115,7 @@ Stars are put in group 1 and the trimmed body in group 2.")
 (declare-function org-at-clock-log-p "org-clock" ())
 (declare-function org-clock-timestamps-up "org-clock" ())
 (declare-function org-clock-timestamps-down "org-clock" ())
+(declare-function org-clock-sum-current-item "org-clock" (&optional tstart))
 
 ;; load languages based on value of `org-babel-load-languages'
 (defvar org-babel-load-languages)
@@ -235,6 +236,8 @@ When MESSAGE is non-nil, display a message with the version."
 	  (message version))
       (if message (message _version))
       _version)))
+
+(defconst org-version (org-version))
 
 ;;; Compatibility constants
 
@@ -1459,11 +1462,11 @@ t     Create an ID if needed to make a link to the current entry.
 create-if-interactive
       If `org-store-link' is called directly (interactively, as a user
       command), do create an ID to support the link.  But when doing the
-      job for remember, only use the ID if it already exists.  The
+      job for capture, only use the ID if it already exists.  The
       purpose of this setting is to avoid proliferation of unwanted
       IDs, just because you happen to be in an Org file when you
       call `org-capture' that automatically and preemptively creates a
-      link.  If you do want to get an ID link in a remember template to
+      link.  If you do want to get an ID link in a capture template to
       an entry not having an ID, create it first by explicitly creating
       a link to it, using `C-c C-l' first.
 
@@ -1868,14 +1871,15 @@ This is just a default location to look for Org files.  There is no need
 at all to put your files into this directory.  It is only used in the
 following situations:
 
-1. When a remember template specifies a target file that is not an
+1. When a capture template specifies a target file that is not an
    absolute path.  The path will then be interpreted relative to
    `org-directory'
-2. When a remember note is filed away in an interactive way (when exiting the
+2. When a capture note is filed away in an interactive way (when exiting the
    note buffer with `C-1 C-c C-c'.  The user is prompted for an org file,
    with `org-directory' as the default path."
   :group 'org-refile
   :group 'org-remember
+  :group 'org-capture
   :type 'directory)
 
 (defcustom org-default-notes-file (convert-standard-filename "~/.notes")
@@ -1884,6 +1888,7 @@ Used as a fall back file for org-remember.el and org-capture.el, for
 templates that do not specify a target file."
   :group 'org-refile
   :group 'org-remember
+  :group 'org-capture
   :type '(choice
 	  (const :tag "Default from remember-data-file" nil)
 	  file))
@@ -1913,6 +1918,7 @@ When nil, new notes will be filed to the end of a file or entry.
 This can also be a list with cons cells of regular expressions that
 are matched against file names, and values."
   :group 'org-remember
+  :group 'org-capture
   :group 'org-refile
   :type '(choice
 	  (const :tag "Reverse always" t)
@@ -2844,7 +2850,7 @@ This has influence for the following applications:
   the time given here, the day recognized as TODAY is actually yesterday.
 - When a date is read from the user and it is still before the time given
   here, the current date and time will be assumed to be yesterday, 23:59.
-  Also, timestamps inserted in remember templates follow this rule.
+  Also, timestamps inserted in capture templates follow this rule.
 
 IMPORTANT:  This is a feature whose implementation is and likely will
 remain incomplete.  Really, it is only here because past midnight seems to
@@ -4822,7 +4828,7 @@ but the stars and the body are.")
 	    (concat "^\\(\\*+\\)"
 		    "\\(?: +" org-todo-regexp "\\)?"
 		    "\\(?: +\\(\\[#.\\]\\)\\)?"
-		    "\\(?: +\\(.*?\\)\\)?"
+		    "\\(?: +\\(.*?\\)\\)??"
 		    (org-re "\\(?:[ \t]+\\(:[[:alnum:]_@#%:]+:\\)\\)?")
 		    "[ \t]*$")
 	    org-complex-heading-regexp-format
@@ -4840,7 +4846,7 @@ but the stars and the body are.")
 	    org-todo-line-tags-regexp
 	    (concat "^\\(\\*+\\)"
 		    "\\(?: +" org-todo-regexp "\\)?"
-		    "\\(?: +\\(.*?\\)\\)?"
+		    "\\(?: +\\(.*?\\)\\)??"
 		    (org-re "\\(?:[ \t]+\\(:[[:alnum:]:_@#%]+:\\)\\)?")
 		    "[ \t]*$")
 	    org-deadline-regexp (concat "\\<" org-deadline-string)
@@ -4944,7 +4950,7 @@ Respect keys that are already there."
   "Used in various places to store a window configuration.")
 (defvar org-finish-function nil
   "Function to be called when `C-c C-c' is used.
-This is for getting out of special buffers like remember.")
+This is for getting out of special buffers like capture.")
 
 
 ;; FIXME: Occasionally check by commenting these, to make sure
@@ -5163,7 +5169,16 @@ The following commands are available:
       (require 'org-indent)
       (org-indent-mode 1))
     (unless org-inhibit-startup-visibility-stuff
-      (org-set-startup-visibility))))
+      (org-set-startup-visibility)))
+  ;; Try to set org-hide correctly
+  (set-face-foreground
+   'org-hide
+   (or (face-background 'default)
+       (face-background 'org-default)
+       (cdr (assoc 'background-color default-frame-alist))
+       (cdr (assoc 'background-color initial-frame-alist))
+       (cdr (assoc 'background-color window-system-default-frame-alist))
+       (face-foreground 'org-hide))))
 
 (when (fboundp 'abbrev-table-put)
   (abbrev-table-put org-mode-abbrev-table
@@ -5448,24 +5463,18 @@ will be prompted for."
   "Run through the buffer and add overlays to links."
   (catch 'exit
     (let (f)
-      (if (and (re-search-forward (concat org-plain-link-re) limit t)
-	       (or (not (member 'bracket org-activate-links))
-		   (save-excursion
-		     (save-match-data
-		       (goto-char (match-beginning 0))
-		       (not (looking-back "\\[\\["))))))
-	  (progn
-	    (org-remove-flyspell-overlays-in (match-beginning 0) (match-end 0))
-	    (setq f (get-text-property (match-beginning 0) 'face))
-	    (if (or (eq f 'org-tag)
-		    (and (listp f) (memq 'org-tag f)))
-		nil
-	      (add-text-properties (match-beginning 0) (match-end 0)
-				   (list 'mouse-face 'highlight
-					 'face 'org-link
-					 'keymap org-mouse-map))
-	      (org-rear-nonsticky-at (match-end 0)))
-	    t)))))
+      (when (re-search-forward (concat org-plain-link-re) limit t)
+	(org-remove-flyspell-overlays-in (match-beginning 0) (match-end 0))
+	(setq f (get-text-property (match-beginning 0) 'face))
+	(if (or (eq f 'org-tag)
+		(and (listp f) (memq 'org-tag f)))
+	    nil
+	  (add-text-properties (match-beginning 0) (match-end 0)
+			       (list 'mouse-face 'highlight
+				     'face 'org-link
+				     'keymap org-mouse-map))
+	  (org-rear-nonsticky-at (match-end 0)))
+	t))))
 
 (defun org-activate-code (limit)
   (if (re-search-forward "^[ \t]*\\(:\\(?: .*\\|$\\)\n?\\)" limit t)
@@ -8849,7 +8858,7 @@ Special properties are:
               this when inserting this link into an Org-mode buffer.
 
 In addition to these, any additional properties can be specified
-and then used in remember templates.")
+and then used in capture templates.")
 
 (defun org-add-link-type (type &optional follow export)
   "Add TYPE to the list of `org-link-types'.
@@ -15616,15 +15625,14 @@ user."
       (setq ans "+0"))
 
     (when (setq delta (org-read-date-get-relative ans (current-time) org-def))
-      (unless (save-match-data (string-match org-plain-time-of-day-regexp ans))
-	(setq ans (replace-match "" t t ans)
-	      deltan (car delta)
-	      deltaw (nth 1 delta)
-	      deltadef (nth 2 delta))))
+      (setq ans (replace-match "" t t ans)
+	    deltan (car delta)
+	    deltaw (nth 1 delta)
+	    deltadef (nth 2 delta)))
 
-    ;; Check if there is an iso week date in there
-    ;; If yes, store the info and postpone interpreting it until the rest
-    ;; of the parsing is done
+    ;; Check if there is an iso week date in there.  If yes, store the
+    ;; info and postpone interpreting it until the rest of the parsing
+    ;; is done.
     (when (string-match "\\<\\(?:\\([0-9]+\\)-\\)?[wW]\\([0-9]\\{1,2\\}\\)\\(?:-\\([0-6]\\)\\)?\\([ \t]\\|$\\)" ans)
       (setq iso-year (if (match-end 1)
 			 (org-small-year-to-year
@@ -18785,6 +18793,7 @@ this function returns t, nil otherwise."
 
 (declare-function org-element-at-point "org-element" (&optional keep-trail))
 (declare-function org-element-type "org-element" (element))
+(declare-function org-element-context "org-element" ())
 (declare-function org-element-contents "org-element" (element))
 (declare-function org-element-property "org-element" (property element))
 (declare-function org-element-paragraph-parser "org-element" (limit))
@@ -21011,11 +21020,7 @@ hierarchy of headlines by UP levels before marking the subtree."
   (org-set-local 'fill-paragraph-function 'org-fill-paragraph)
   (org-set-local 'adaptive-fill-function 'org-adaptive-fill-function)
   (org-set-local 'normal-auto-fill-function 'org-auto-fill-function)
-  (org-set-local 'comment-line-break-function 'org-comment-line-break-function)
-  (org-set-local 'align-mode-rules-list
-		 '((org-in-buffer-settings
-		    (regexp . "^#\\+[A-Z_]+:\\(\\s-*\\)\\S-+")
-		    (modes . '(org-mode))))))
+  (org-set-local 'comment-line-break-function 'org-comment-line-break-function))
 
 (defvar org-element-paragraph-separate) ; org-element.el
 (defun org-fill-paragraph-separate-nobreak-p ()

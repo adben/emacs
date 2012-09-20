@@ -1,4 +1,4 @@
-(setq load-path (cons "~/.emacs.d/elpa/org-20120903/" load-path))
+(setq load-path (cons "~/.emacs.d/elpa/org-20120919/" load-path))
 ;; Load my org mode, over-riding the one bundled with emacs
 (require 'org-install)
 ;; Org-mode settings

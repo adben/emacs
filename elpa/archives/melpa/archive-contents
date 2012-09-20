@@ -181,7 +181,7 @@
 	    [(20120408 57)
 	     nil "replace a word with a synonym looked up in a web service. [source: wiki]" single])
  (textmate-to-yas .
-		  [(20120629 1239)
+		  [(20120918 825)
 		   nil "Import Textmate macros into yasnippet syntax [source: github]" tar])
  (textmate .
 	   [(20110816 1446)
@@ -216,7 +216,7 @@
 		 (0)))
 	       "Major mode for editing .jade files [source: github]" single])
  (string-utils .
-	       [(20120917 1939)
+	       [(20120918 2025)
 		nil "String-manipulation utilities [source: github]" single])
  (stem .
        [(20120826 2340)
@@ -430,7 +430,7 @@
 		   [(20111019 1608)
 		    nil "narrow-to-region that operates recursively [source: github]" single])
  (rase .
-       [(20120917 2107)
+       [(20120918 2319)
 	nil "Run At Sun Event daemon [source: github]" single])
  (rainbow-mode .
 	       [(20110923 1900)
@@ -605,7 +605,7 @@
 	    [(20120914 1627)
 	     nil "Minor mode for working with Django Projects [source: github]" tar])
  (pomodoro .
-	   [(20120824 2224)
+	   [(20120918 1001)
 	    nil "A timer for the Pomodoro Technique [source: github]" single])
  (pointback .
 	    [(20100210 1652)
@@ -675,7 +675,7 @@
 	       [(20120721 1825)
 		nil "Toodledo integration for Emacs Org mode [source: github]" tar])
  (org-readme .
-	     [(20120912 1720)
+	     [(20120918 847)
 	      ((http-post-simple
 		(1 0))
 	       (yaoddmuse
@@ -722,7 +722,7 @@
 	 [(20120823 1747)
 	  nil "Org-blog exporter [source: github]" tar])
  (nrepl-ritz .
-	     [(20120913 2349)
+	     [(20120918 2039)
 	      ((nrepl
 		(0 1 4)))
 	      "nrepl extensions for ritz [source: github]" single])
@@ -730,7 +730,7 @@
 		     [(20120914 1844)
 		      nil "Tiny functionality enhancements for evaluating sexps. [source: github]" single])
  (nrepl .
-	[(20120917 1828)
+	[(20120918 1949)
 	 ((clojure-mode
 	   (1 11)))
 	 "Client for Clojure nREPL [source: github]" single])
@@ -884,6 +884,9 @@
  (lively .
 	 [(20120728 1413)
 	  nil "Interactively updating text [source: wiki]" single])
+ (list-utils .
+	     [(20120918 1641)
+	      nil "List-manipulation utility functions [source: github]" single])
  (linum-relative .
 		 [(20120905 1503)
 		  nil "display relative line number in the left margin [source: wiki]" single])
@@ -903,7 +906,7 @@
 	 [(20120808 1322)
 	  nil "kill and delete text [source: github]" single])
  (keymap-utils .
-	       [(20120909 1950)
+	       [(20120918 2236)
 		nil "keymap utilities [source: github]" single])
  (keyfreq .
 	  [(20110312 1017)
@@ -1087,7 +1090,7 @@
 	    (20120509)))
 	  "helm-sources and some utilities for GNU R. [source: github]" single])
  (helm .
-       [(20120917 1206)
+       [(20120918 1840)
 	nil "Helm is an Emacs incremental and narrowing framework [source: github]" tar])
  (header-button .
 		[(20120731 2303)
@@ -1123,7 +1126,7 @@
 		 [(20110930 1055)
 		  nil "Fetch Google Weather forecasts. [source: git]" tar])
  (google-translate .
-		   [(20120823 1731)
+		   [(20120918 903)
 		    nil "Emacs interface to Google Translate [source: github]" single])
  (google-this .
 	      [(20120629 1421)
@@ -1197,7 +1200,7 @@
 	    [(20091203 1913)
 	     nil "No description available. [source: github]" single])
  (flyspell-lazy .
-		[(20120914 1525)
+		[(20120918 2102)
 		 nil "Improve flyspell responsiveness using idle timers [source: github]" single])
  (flymake-shell .
 		[(20120409 1704)
@@ -1284,7 +1287,7 @@
 	      [(20090327 1737)
 	       nil "Set tags table(s) based on current file [source: wiki]" single])
  (ess .
-      [(20120915 1150)
+      [(20120918 1223)
        nil "No description available. [source: github]" tar])
  (escreen .
 	  [(20091203 1913)
@@ -1308,7 +1311,7 @@
 	  [(20120618 2218)
 	   nil "Enclose cursor within punctuation pairs [source: github]" single])
  (emms .
-       [(20110425 1851)
+       [(20120918 1228)
 	nil "No description available. [source: git]" tar])
  (emacs-setup .
 	      [(20120727 926)
@@ -1326,7 +1329,7 @@
 	[(20120118 1537)
 	 nil "running leiningen commands from emacs [source: github]" single])
  (ein .
-      [(20120913 3)
+      [(20120919 124)
        ((websocket
 	 (0 9)))
        "Emacs IPython Notebook [source: github]" tar])
@@ -1334,7 +1337,7 @@
       [(20120824 1457)
        nil "Emacs Got Git - Emacs interface to Git [source: github]" tar])
  (edit-server .
-	      [(20120911 1818)
+	      [(20120918 1618)
 	       nil "server that responds to edit requests from Chrome [source: github]" single])
  (ebib .
        [(20120918 909)
@@ -1411,7 +1414,7 @@
 	 [(20120822 2050)
 	  nil "D Programming Language mode for (X)Emacs [source: github]" single])
  (ctags-update .
-	       [(20120917 102)
+	       [(20120919 946)
 		nil "(auto) update TAGS in parent directory using exuberant-ctags [source: github]" single])
  (ctags .
 	[(20110911 1204)
@@ -1596,7 +1599,7 @@
 		       [(20120829 1352)
 			nil "Show quote from http://theangrypolicecaptain.com in the minibuffer [source: github]" single])
  (anaphora .
-	   [(20120914 1547)
+	   [(20120918 1837)
 	    nil "anaphoric macros providing implicit temp variables [source: github]" single])
  (alert .
 	[(20120914 1442)

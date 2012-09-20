@@ -311,7 +311,7 @@ Mark current src block.
 ;;;;;;  org-search-view org-agenda-list org-batch-store-agenda-views
 ;;;;;;  org-store-agenda-views org-batch-agenda-csv org-batch-agenda
 ;;;;;;  org-agenda org-toggle-sticky-agenda) "org-agenda" "org-agenda.el"
-;;;;;;  (20547 19019))
+;;;;;;  (20568 33561))
 ;;; Generated autoloads from org-agenda.el
 
 (autoload 'org-toggle-sticky-agenda "org-agenda" "\
@@ -691,7 +691,7 @@ Extract anniversaries from BBDB for display in the agenda.
 ;;;***
 
 ;;;### (autoloads (org-capture-import-remember-templates org-capture-insert-template-here
-;;;;;;  org-capture) "org-capture" "org-capture.el" (20547 19019))
+;;;;;;  org-capture) "org-capture" "org-capture.el" (20567 22298))
 ;;; Generated autoloads from org-capture.el
 
 (defvar org-capture-initial nil)
@@ -765,7 +765,7 @@ Set up hooks for clock persistence.
 ;;;***
 
 ;;;### (autoloads (org-check-version) "org-compat" "org-compat.el"
-;;;;;;  (20548 37479))
+;;;;;;  (20559 38989))
 ;;; Generated autoloads from org-compat.el
 
 (autoload 'org-check-version "org-compat" "\
@@ -868,7 +868,7 @@ publishing directory.
 ;;;***
 
 ;;;### (autoloads (org-element-context org-element-at-point org-element-interpret-data)
-;;;;;;  "org-element" "org-element.el" (20546 31748))
+;;;;;;  "org-element" "org-element.el" (20561 50717))
 ;;; Generated autoloads from org-element.el
 
 (autoload 'org-element-interpret-data "org-element" "\
@@ -926,8 +926,8 @@ and :post-blank properties.
 ;;;***
 
 ;;;### (autoloads (org-insert-export-options-template org-export-as-org
-;;;;;;  org-export-visible org-export) "org-exp" "org-exp.el" (20547
-;;;;;;  19019))
+;;;;;;  org-export-visible org-export) "org-exp" "org-exp.el" (20568
+;;;;;;  20361))
 ;;; Generated autoloads from org-exp.el
 
 (autoload 'org-export "org-exp" "\
@@ -1128,7 +1128,7 @@ Convert FreeMind file MM-FILE to `org-mode' file ORG-FILE.
 ;;;### (autoloads (org-export-htmlize-generate-css org-export-as-html
 ;;;;;;  org-export-region-as-html org-replace-region-by-html org-export-as-html-to-buffer
 ;;;;;;  org-export-as-html-batch org-export-as-html-and-open) "org-html"
-;;;;;;  "org-html.el" (20535 39646))
+;;;;;;  "org-html.el" (20562 57177))
 ;;; Generated autoloads from org-html.el
 
 (put 'org-export-html-style-include-default 'safe-local-variable 'booleanp)
@@ -1250,7 +1250,7 @@ The file is stored under the name `org-combined-agenda-icalendar-file'.
 ;;;### (autoloads (org-id-store-link org-id-find-id-file org-id-find
 ;;;;;;  org-id-goto org-id-get-with-outline-drilling org-id-get-with-outline-path-completion
 ;;;;;;  org-id-get org-id-copy org-id-get-create) "org-id" "org-id.el"
-;;;;;;  (20548 37479))
+;;;;;;  (20559 38989))
 ;;; Generated autoloads from org-id.el
 
 (autoload 'org-id-get-create "org-id" "\
@@ -1431,7 +1431,7 @@ Export as LaTeX, then process through to PDF, and open.
 
 ;;;### (autoloads (org-lparse-region org-replace-region-by org-lparse-to-buffer
 ;;;;;;  org-lparse-batch org-lparse-and-open) "org-lparse" "org-lparse.el"
-;;;;;;  (20535 39646))
+;;;;;;  (20548 50675))
 ;;; Generated autoloads from org-lparse.el
 
 (autoload 'org-lparse-and-open "org-lparse" "\
@@ -1514,7 +1514,7 @@ Create a file that contains all custom agenda views.
 
 ;;;### (autoloads (org-export-as-odf-and-open org-export-as-odf org-export-odt-convert
 ;;;;;;  org-export-as-odt org-export-as-odt-batch org-export-as-odt-and-open)
-;;;;;;  "org-odt" "org-odt.el" (20546 23353))
+;;;;;;  "org-odt" "org-odt.el" (20562 57177))
 ;;; Generated autoloads from org-odt.el
 
 (put 'org-export-odt-preferred-output-format 'safe-local-variable 'stringp)
@@ -1845,7 +1845,7 @@ replace any running timer.
 ;;;***
 
 ;;;### (autoloads (org-git-version org-release) "org-version" "org-version.el"
-;;;;;;  (20548 38983))
+;;;;;;  (20569 2838))
 ;;; Generated autoloads from org-version.el
 
 (autoload 'org-release "org-version" "\
@@ -1885,8 +1885,8 @@ The XOXO buffer is named *xoxo-<source buffer name>*
 ;;;;;;  org-open-link-from-string org-open-at-point-global org-insert-link-global
 ;;;;;;  org-store-link org-run-like-in-org-mode turn-on-orgstruct++
 ;;;;;;  turn-on-orgstruct orgstruct-mode org-global-cycle org-mode
-;;;;;;  org-version org-babel-do-load-languages) "org" "org.el" (20547
-;;;;;;  23811))
+;;;;;;  org-version org-babel-do-load-languages) "org" "org.el" (20568
+;;;;;;  37166))
 ;;; Generated autoloads from org.el
 
 (autoload 'org-babel-do-load-languages "org" "\

@@ -90,7 +90,7 @@
 (defvar org-mobile-force-id-on-agenda-items)  ; defined in org-mobile.el
 (defvar org-habit-show-habits)                ; defined in org-habit.el
 (defvar org-habit-show-habits-only-for-today)
-(defvar org-habit-show-all-today nil)
+(defvar org-habit-show-all-today)
 
 ;; Defined somewhere in this file, but used before definition.
 (defvar org-agenda-buffer-name "*Org Agenda*")
@@ -160,8 +160,8 @@ before assigned to the variables.  So make sure to quote values you do
 	   (sexp :tag "Value"))))
 
 (defcustom org-agenda-before-write-hook '(org-agenda-add-entry-text)
-  "Hook run in temporary buffer before writing it to an export file.
-A useful function is `org-agenda-add-entry-text'."
+  "Hook run in a temporary buffer before writing the agenda to an export file.
+A useful function for this hook is `org-agenda-add-entry-text'."
   :group 'org-agenda-export
   :type 'hook
   :options '(org-agenda-add-entry-text))
@@ -169,7 +169,7 @@ A useful function is `org-agenda-add-entry-text'."
 (defcustom org-agenda-add-entry-text-maxlines 0
   "Maximum number of entry text lines to be added to agenda.
 This is only relevant when `org-agenda-add-entry-text' is part of
-`org-agenda-before-write-hook', which it is by default.
+`org-agenda-before-write-hook', which is the default.
 When this is 0, nothing will happen.  When it is greater than 0, it
 specifies the maximum number of lines that will be added for each entry
 that is listed in the agenda view.
@@ -902,7 +902,12 @@ to nil."
 
 (make-obsolete-variable 'org-finalize-agenda-hook 'org-agenda-finalize-hook "24.3")
 (defcustom org-agenda-finalize-hook nil
-  "Hook run just before displaying an agenda buffer."
+  "Hook run just before displaying an agenda buffer.
+The buffer is still writable when the hook is called.
+
+You can modify some of the buffer substrings but you should be
+extra careful not to modify the text properties of the agenda
+headlines as the agenda display heavily relies on them."
   :group 'org-agenda-startup
   :type 'hook)
 
@@ -1850,7 +1855,8 @@ works you probably want to add it to `org-agenda-custom-commands' for good."
 (defvar org-agenda-redo-command nil)
 (defvar org-agenda-query-string nil)
 (defvar org-agenda-mode-hook nil
-  "Hook for `org-agenda-mode', run after the mode is turned on.")
+  "Hook run after `org-agenda-mode' is turned on.
+The buffer is still writable when this hook is called.")
 (defvar org-agenda-type nil)
 (defvar org-agenda-force-single-file nil)
 (defvar org-agenda-bulk-marked-entries nil
@@ -2669,13 +2675,12 @@ L   Timeline for current buffer         #   List stuck projects (!=configure)
 				 ((stringp match)
 				  (setq match (copy-sequence match))
 				  (org-add-props match nil 'face 'org-warning))
-				 (match
-				  (format "set of %d commands" (length match)))
-				 (t ""))))
+				 ((listp type)
+				  (format "set of %d commands" (length type))))))
 		(if (org-string-nw-p match)
 		    (add-text-properties
 		     0 (length line) (list 'help-echo
-					   (concat "Matcher: "match)) line)))
+					   (concat "Matcher: " match)) line)))
 	      (push line lines)))
 	  (setq lines (nreverse lines))
 	  (when prefixes
@@ -3437,14 +3442,14 @@ generating a new one."
 	(org-agenda-entry-text-show))
       (if (functionp 'org-habit-insert-consistency-graphs)
 	  (org-habit-insert-consistency-graphs))
-      (run-hooks 'org-agenda-finalize-hook)
+      (let ((inhibit-read-only t))
+	(run-hooks 'org-agenda-finalize-hook))
       (setq org-agenda-type (org-get-at-bol 'org-agenda-type))
       (when (or org-agenda-tag-filter (get 'org-agenda-tag-filter :preset-filter))
 	(org-agenda-filter-apply org-agenda-tag-filter 'tag))
       (when (or org-agenda-category-filter (get 'org-agenda-category-filter :preset-filter))
 	(org-agenda-filter-apply org-agenda-category-filter 'category))
-      (org-add-hook 'kill-buffer-hook 'org-agenda-reset-markers 'append 'local)
-      )))
+      (org-add-hook 'kill-buffer-hook 'org-agenda-reset-markers 'append 'local))))
 
 (defun org-agenda-mark-clocking-task ()
   "Mark the current clock entry in the agenda if it is present."
@@ -5706,6 +5711,7 @@ FRACTION is what fraction of the head-warning time has passed."
 		  ;; org-is-habit-p uses org-entry-get, which is expansive
 		  ;; so we go extra mile to only call it once
 		  (and todayp
+		       (boundp 'org-habit-show-all-today)
 		       org-habit-show-all-today
 		       (setq did-habit-check-p t)
 		       (setq habitp (and (functionp 'org-is-habit-p)
@@ -5730,6 +5736,7 @@ FRACTION is what fraction of the head-warning time has passed."
 		(if habitp
 		    (if (or (not org-habit-show-habits)
 			    (and (not todayp)
+				 (boundp 'org-habit-show-habits-only-for-today)
 				 org-habit-show-habits-only-for-today))
 			(throw :skip nil))
 		  (if (and
@@ -7870,19 +7877,22 @@ use the dedicated frame)."
   (interactive)
   (if (and current-prefix-arg (listp current-prefix-arg))
       (org-agenda-do-tree-to-indirect-buffer)
-    (let ((agenda-window (selected-window))
+    (let ((agenda-buffer (buffer-name))
+	  (agenda-window (selected-window))
           (indirect-window
 	   (and org-last-indirect-buffer
 		(get-buffer-window org-last-indirect-buffer))))
       (save-window-excursion (org-agenda-do-tree-to-indirect-buffer))
-      (unwind-protect
-          (progn
-            (unless (and indirect-window (window-live-p indirect-window))
-              (setq indirect-window (split-window agenda-window)))
-            (select-window indirect-window)
-            (switch-to-buffer org-last-indirect-buffer :norecord)
-            (fit-window-to-buffer indirect-window))
-        (select-window (get-buffer-window org-agenda-buffer-name))))))
+      (unless (or (eq org-indirect-buffer-display 'new-frame)
+		  (eq org-indirect-buffer-display 'dedicated-frame))
+	(unwind-protect
+	    (progn
+	      (unless (and indirect-window (window-live-p indirect-window)))
+	      (setq indirect-window (split-window agenda-window)))
+	  (and indirect-window (select-window indirect-window))
+	  (switch-to-buffer org-last-indirect-buffer :norecord)
+	  (fit-window-to-buffer indirect-window)))
+      (select-window (get-buffer-window agenda-buffer)))))
 
 (defun org-agenda-do-tree-to-indirect-buffer ()
   "Same as `org-agenda-tree-to-indirect-buffer' without saving window."
@@ -8958,24 +8968,14 @@ The prefix arg is passed through to the command if possible."
 	  (setq cmd `(org-agenda-set-tags ,tag ,(if (eq action ?+) ''on ''off))))
 
 	 ((memq action '(?s ?d))
-	  (let* ((date (unless arg
-			 (or org-overriding-default-time
-			     (org-read-date
-			      nil nil nil
-			      (if (eq action ?s) "(Re)Schedule to" "(Re)Set Deadline to")
-			      nil (format-time-string (car org-time-stamp-formats)
-						      (org-get-cursor-date))))))
-		 (ans (if arg nil org-read-date-final-answer))
+	  (let* ((time
+		  (unless arg
+		    (org-read-date
+		     nil nil nil
+		     (if (eq action ?s) "(Re)Schedule to" "(Re)Set Deadline to")
+		     org-overriding-default-time)))
 		 (c1 (if (eq action ?s) 'org-agenda-schedule 'org-agenda-deadline)))
-	    (setq cmd `(let* ((bound (fboundp 'read-string))
-			      (old (and bound (symbol-function 'read-string))))
-			 (unwind-protect
-			     (progn
-			       (fset 'read-string (lambda (&rest ignore) ,ans))
-			       (eval '(,c1 arg)))
-			   (if bound
-			       (fset 'read-string old)
-			     (fmakunbound 'read-string)))))))
+	    (setq cmd `(eval '(,c1 arg ,time)))))
 
 	 ((equal action ?S)
 	  (if (not (org-agenda-check-type nil 'agenda 'timeline 'todo))
