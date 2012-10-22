@@ -1,4 +1,7 @@
 (1
+ (ack .
+      [(0 8)
+       nil "Interface to ack, a source code search tool" tar])
  (adaptive-wrap .
 		[(0 1)
 		 nil "Smart line-wrapping with wrap-prefix" single])
@@ -18,7 +21,7 @@
 	  [(0 5)
 	   nil "Flexible inline text and code completion" tar])
  (csv-mode .
-	   [(1 0)
+	   [(1 1)
 	    nil "Major mode for editing comma/char separated values" single])
  (debbugs .
 	  [(0 3)
@@ -83,12 +86,12 @@
  (nlinum .
 	 [(1 0)
 	  nil "Show line numbers in the margin" single])
+ (num3-mode .
+	    [(1 1)
+	     nil "highlight groups of digits in long numbers" single])
  (oauth2 .
 	 [(0 8)
 	  nil "OAuth 2.0 Authorization Protocol" single])
- (org .
-      [(20120919)
-       nil "Outline-based notes management and organizer" tar])
  (quarter-plane .
 		[(0 1)
 		 nil "Minor mode for quarter-plane style editing" single])
@@ -107,6 +110,9 @@
  (sisu-mode .
 	    [(3 0 3)
 	     nil "Major mode for SiSU markup text" single])
+ (smart-operator .
+		 [(4 0)
+		  nil "Insert operators with surrounding spaces smartly" single])
  (svg-clock .
 	    [(0 4)
 	     nil "Analog clock using Scalable Vector Graphics" single])
@@ -123,7 +129,7 @@
 	  (0 3)))
 	"Trie data structure" single])
  (undo-tree .
-	    [(0 5 4)
+	    [(0 5 5)
 	     nil "Treat undo history as a tree" single])
  (uni-confusables .
 		  [(0 1)
@@ -136,5 +142,7 @@
 	      nil "Resize windows interactively" single])
  (xclip .
 	[(1 0)
-	 nil "Emacs Interface to XClip" single]))
-
+	 nil "Emacs Interface to XClip" single])
+ (yasnippet .
+	    [(0 8 0)
+	     nil "A template system for Emacs" tar]))

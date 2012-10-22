@@ -1,6 +1,6 @@
-(setq load-path (cons "~/.emacs.d/elpa/org-20120919/" load-path))
+(setq load-path (cons "~/.emacs.d/elpa/org-plus-contrib-20121022/" load-path))
 ;; Load my org mode, over-riding the one bundled with emacs
-(require 'org-install)
+(require 'org)
 ;; Org-mode settings
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (add-to-list 'auto-mode-alist '("\\.org.txt$" . org-mode))
@@ -22,4 +22,5 @@
     (while (re-search-forward "[[<]" nil t)
       (when (org-at-timestamp-p t)
         (org-timestamp-change n 'hour)
+
         ))))

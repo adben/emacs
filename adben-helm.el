@@ -11,7 +11,7 @@
 ;;                             (menu-bar-lines . 0)
 ;;                             (fullscreen . nil)))
 ;; (blink-cursor-mode -1)
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/vendor/helm/"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/elpa/helm-20121020.1209/"))
 (require 'helm-config)
 (helm-mode 1)
 (define-key global-map [remap find-file] 'helm-find-files)

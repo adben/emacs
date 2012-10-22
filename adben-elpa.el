@@ -8,6 +8,7 @@
 ;;                            ("technomancy" . "http://repo.technomancy.us/emacs/")
 ;;                            ("marmalade" . "http://marmalade-repo.org/packages/"))))
 (package-initialize)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("technomancy" . "http://repo.technomancy.us/emacs/"))
 (add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/"))
