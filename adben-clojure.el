@@ -27,7 +27,7 @@
 (require 'elein)
 
 ;; clojure-mode
-(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20120914.1423/")
+(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20121027.1455/")
 (require 'clojure-mode)
 
 ;; swank-clojure
@@ -69,7 +69,8 @@
 
 (eval-after-load "clojure-mode"
   '(progn
-     (require 'clojure-test-mode)))
+     (require 'clojure-test-mode)
+     ))
 (autoload 'swank-clojure-init "swank-clojure" "" nil nil)
 (autoload 'swank-clojure-slime-mode-hook "swank-clojure" "" nil nil)
 (autoload 'swank-clojure-cmd "swank-clojure" "" nil nil)
