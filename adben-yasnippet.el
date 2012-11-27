@@ -1,7 +1,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; YASNIPPET
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(setq load-path (cons "~/.emacs.d/elpa/yasnippet-20121108.2222/" load-path))
+;;(setq load-path (cons "~/.emacs.d/elpa/yasnippet-20121108.2222/" load-path))
 (require 'yasnippet)
 ;Don't map TAB to yasnippet
 ;In fact, set it to something we'll never use because

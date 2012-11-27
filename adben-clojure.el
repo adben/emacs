@@ -27,7 +27,7 @@
 (require 'elein)
 
 ;; clojure-mode
-(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20121027.1455/")
+;; (add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20121027.1455/")
 (require 'clojure-mode)
 
 ;; swank-clojure
