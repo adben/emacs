@@ -1,3 +1,4 @@
+
 ;; paredit
 (require 'paredit)
 (require 'highlight-parentheses)
@@ -49,7 +50,7 @@
   ;;'(setq slime-protocol-version 'ignore)
   '(progn (slime-setup '(slime-repl))))
 ;;(add-to-list 'load-path "~/git/slime")
-(add-to-list 'load-path "~/.emacs.d/elpa/slime-20120818.1634/")
+(add-to-list 'load-path "~/.emacs.d/elpa/slime-20121227.2022/")
 (require 'slime)
 (slime-setup) 
 

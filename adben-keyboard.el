@@ -1,7 +1,21 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Global Keyboard Behaviour
-;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; key bindings, took from http://www.emacswiki.org/emacs/EmacsForMacOS
+;; mac-function-modifier
+;; mac-control-modifier
+;; mac-command-modifier
+;; mac-option-modifier
+;; mac-right-command-modifier
+;; mac-right-control-modifier
+;; mac-right-option-modifier
+;; values can be 'control, 'alt, 'meta, 'super, 'hyper, nil (setting to nil allows the OS to assign values)
+(when (eq system-type 'darwin) ;; mac specific settings
+  (setq mac-option-modifier 'alt)
+  (setq mac-control-modifier 'control)
+  (setq mac-command-modifier 'meta)
+  (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
+  )
 ;; Mark-ring is navigable by typing C-u C-SPC and then repeating C-SPC forever
 (setq set-mark-command-repeat-pop t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -32,7 +46,3 @@
 (global-set-key "\C-c\C-d" "\C-a\C- \C-n\M-w\C-y")
 ;;Switching Between Two Recently Used Buffers
 (global-set-key [C-tab] 'switch-to-previous-buffer)
-
-
-
-
