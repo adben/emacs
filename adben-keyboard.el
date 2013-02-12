@@ -10,12 +10,12 @@
 ;; mac-right-control-modifier
 ;; mac-right-option-modifier
 ;; values can be 'control, 'alt, 'meta, 'super, 'hyper, nil (setting to nil allows the OS to assign values)
-(when (eq system-type 'darwin) ;; mac specific settings
-  (setq mac-option-modifier 'alt)
-  (setq mac-control-modifier 'control)
-  (setq mac-command-modifier 'meta)
-  (global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
-  )
+(setq mac-control-modifier 'control)
+(setq mac-command-modifier 'meta)
+;; http://whattheemacsd.com/mac.el-01.html
+(setq mac-option-modifier 'super)
+(setq ns-function-modifier 'hyper)
+(global-set-key [kp-delete] 'delete-char) ;; sets fn-delete to be right-delete
 ;; Mark-ring is navigable by typing C-u C-SPC and then repeating C-SPC forever
 (setq set-mark-command-repeat-pop t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -46,3 +46,28 @@
 (global-set-key "\C-c\C-d" "\C-a\C- \C-n\M-w\C-y")
 ;;Switching Between Two Recently Used Buffers
 (global-set-key [C-tab] 'switch-to-previous-buffer)
+;; Keybonds
+;; see https://gist.github.com/raw/3498096/392fa92ae4b5feb5626f5ea92b5da531235720d4/mac-switch-meta.el
+(global-set-key [(hyper a)] 'mark-whole-buffer)
+(global-set-key [(hyper v)] 'yank)
+(global-set-key [(hyper c)] 'kill-ring-save)
+(global-set-key [(hyper s)] 'save-buffer)
+(global-set-key [(hyper l)] 'goto-line)
+(global-set-key [(hyper w)]
+                (lambda () (interactive) (delete-window)))
+(global-set-key [(hyper z)] 'undo)
+;; ;; mac switch meta key
+;; (defun mac-switch-meta nil 
+;;   "switch meta between Option and Command"
+;;   (interactive)
+;;   (if (eq mac-option-modifier nil)
+;;       (progn
+;; 	(setq mac-option-modifier 'meta)
+;; 	(setq mac-command-modifier 'hyper)
+;; 	)
+;;     (progn 
+;;       (setq mac-option-modifier nil)
+;;       (setq mac-command-modifier 'meta)
+;;       )
+;;     )
+;;   )

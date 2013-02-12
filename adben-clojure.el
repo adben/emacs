@@ -1,5 +1,3 @@
-
-
 ;; paredit
 (require 'paredit)
 (require 'highlight-parentheses)
@@ -25,33 +23,23 @@
       '(emacs-lisp lisp inferior-lisp slime slime-repl))                       
 
 ;; Elein
-(add-to-list 'load-path "~/.emacs.d/elpa/elein-20120118.1537/")
 (require 'elein)
 
 ;; clojure-mode
-;; (add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-20121027.1455/")
 (require 'clojure-mode)
 
 ;; swank-clojure
-;;(add-to-list 'load-path "~/.emacs.d/elpa/swank-clojure-1.1.0/")
-(add-to-list 'load-path "~/git/swank-clojure")
+;; (add-to-list 'load-path "~/git/swank-clojure")
 
-;;(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.2.0/clojure-1.2.0.jar"
 (setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.5.0-master-SNAPSHOT/clojure-1.5.0-master-SNAPSHOT.jar"
-      swank-clojure-extra-classpaths (list
-                                      ;;				      "~/.emacs.d/elpa/swank-clojure-1.1.0/"
-				      "~/git/swank-clojure"))
-;; "~/.m2/org/clojure/clojure-contrib/1.2.0/clojure-contrib-1.2.0.jar"))
+      swank-clojure-extra-classpaths (list "~/git/swank-clojure"))
 
 (require 'swank-clojure)
 
 ;; slime
-(add-to-list 'load-path "~/.emacs.d/elpa/slime-repl-20100404")
 (eval-after-load "slime"
   ;;'(setq slime-protocol-version 'ignore)
   '(progn (slime-setup '(slime-repl))))
-;;(add-to-list 'load-path "~/git/slime")
-;;(add-to-list 'load-path "~/.emacs.d/elpa/slime-20130105.1138/");;Slime is loaded by default by elpa
 (require 'slime)
 (slime-setup) 
 
