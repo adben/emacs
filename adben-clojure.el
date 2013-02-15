@@ -1,31 +1,56 @@
-;;
-(load-library "elein")
+;; paredit
+(require 'paredit)
+(require 'highlight-parentheses)
+(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
+(add-hook 'clojure-mode-hook
+          (lambda ()
+            (highlight-parentheses-mode t)
+            (paredit-mode t)
+            (slime-mode t)))
+(setq hl-paren-colors
+      '("red1" "orange1" "yellow1" "green1" "cyan1"
+        "slateblue1" "magenta1" "purple"))
+
+;; paredit in the REPL
+(autoload 'paredit-mode "paredit"   
+  "Minor mode for pseudo-structurally editing Lisp code."   
+  t)   
+                                        ;(add-hook 'lisp-mode-hook (lambda () (paredit-mode +1)))   
+(mapc (lambda (mode)   
+        (let ((hook (intern (concat (symbol-name mode)   
+                                    "-mode-hook"))))   
+          (add-hook hook (lambda () (paredit-mode +1)))))   
+      '(emacs-lisp lisp inferior-lisp slime slime-repl))                       
+
+;; Elein
+(require 'elein)
 
 ;; clojure-mode
-(add-to-list 'load-path "~/.emacs.d/elpa/clojure-mode-1.8.0/")
 (require 'clojure-mode)
 
 ;; swank-clojure
-;;(add-to-list 'load-path "~/.emacs.d/elpa/swank-clojure-1.1.0/")
-(add-to-list 'load-path "~/git/swank-clojure")
+;; (add-to-list 'load-path "~/git/swank-clojure")
 
-(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.2.0/clojure-1.2.0.jar"
-      swank-clojure-extra-classpaths (list
-                                      ;;				      "~/.emacs.d/elpa/swank-clojure-1.1.0/"
-				      "~/git/swank-clojure"
-				      "~/.m2/repository/org/clojure/clojure-contrib/1.2.0/clojure-contrib-1.2.0.jar"))
+(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.5.0-master-SNAPSHOT/clojure-1.5.0-master-SNAPSHOT.jar"
+      swank-clojure-extra-classpaths (list "~/git/swank-clojure"))
 
 (require 'swank-clojure)
 
 ;; slime
 (eval-after-load "slime"
-;'(setq slime-protocol-version 'ignore)
-'(progn (slime-setup '(slime-repl))))
-
-;;(add-to-list 'load-path "~/git/slime")
-(add-to-list 'load-path "~/.emacs.d/elpa/slime-20100404.1/")
+  ;;'(setq slime-protocol-version 'ignore)
+  '(progn (slime-setup '(slime-repl))))
 (require 'slime)
 (slime-setup) 
+
+;; Auto reload saved source files and send them to the repl
+(defun ed/clojure-compile-on-save (&optional args)
+  "Compile with slime on save"
+  (interactive)
+  (if (and (eq major-mode 'clojure-mode)
+           (slime-connected-p))
+      (slime-compile-and-load-file)))
+(add-hook 'after-save-hook 'ed/clojure-compile-on-save)
 
 ;; Autoloads and basic wiring
 (autoload 'clojure-mode "clojure-mode" "Major mode for editing Clojure code." t nil)
@@ -34,7 +59,8 @@
 
 (eval-after-load "clojure-mode"
   '(progn
-     (require 'clojure-test-mode)))
+     (require 'clojure-test-mode)
+     ))
 (autoload 'swank-clojure-init "swank-clojure" "" nil nil)
 (autoload 'swank-clojure-slime-mode-hook "swank-clojure" "" nil nil)
 (autoload 'swank-clojure-cmd "swank-clojure" "" nil nil)
@@ -45,13 +71,12 @@
 (add-hook 'clojure-mode-hook 'clojure-test-maybe-enable)
 (add-hook 'slime-repl-mode-hook 'clojure-mode-font-lock-setup)
 
-
 ;; Use technomancy's bag of fancy clojure/slime tricks
 (add-to-list 'load-path "~/git/durendal")
 (require 'durendal)
 (durendal-enable t)
 
-;;(add-hook 'clojure-mode-hook 'enable-paredit-mode) ;; ToDo check hubert's paredit config
+(add-hook 'clojure-mode-hook 'enable-paredit-mode)
 (add-hook 'clojure-mode-hook 'font-lock-mode) ;; because it doesn't turn on in Emacs 24
 
 (defun slime-clojure-repl-setup ()
@@ -90,13 +115,18 @@
 				(set-process-filter proc nil))))
 	(message "Starting swank server...")))))
 
-
-
-
+;;with viper
 (eval-after-load "viper"
   '(add-to-list 'viper-vi-state-mode-list 'clojure-mode))
 
+;; Rainbow delimiters
+(require 'rainbow-delimiters)
+(add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
+
+;; Gist
+(add-to-list 'load-path "~/.emacs.d/elpa/gist-20120805")
 (eval-after-load "gist"
   '(add-to-list 'gist-supported-modes-alist '(clojure-mode . ".clj")))
+(require 'gist)
 
 (provide 'adben-clojure)

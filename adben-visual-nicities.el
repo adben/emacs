@@ -1,49 +1,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Visual Nicities
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
-<<<<<<< HEAD
-(require 'color-theme)
-(load-library "adben-color-theme")
-(global-font-lock-mode 1)
-(color-theme-initialize)
-(color-theme-adben)
-;Show column numbers
-(column-number-mode 1)
-(setq-default fill-column 72)
-(setq auto-fill-mode 1)
-;Show what's being selected
-(transient-mark-mode 1)
-;Show matching parentheses
-(show-paren-mode 1)
-;Line by line scrolling
-(setq scroll-step 1)
-(setq inhibit-startup-message t)
-;Disable the menubar (promotes good emacs memory :)
-(menu-bar-mode 1)
-(tool-bar-mode -1)
-(scroll-bar-mode 1)
-;Make page up and page down a whole lot nicer
-=======
-=======
->>>>>>> emacs24
+;;(require 'sr-speedbar)
 ;;(require 'color-theme)
 ;;(require 'zenburn)
 ;;(zenburn)
-;;(load-library "adben-color-theme")
-;;(load-library "adben-color-theme-textmate")
 ;;(global-font-lock-mode 1)
 ;;mac
 ;;(require 'redo)
-;;(color-theme-initialize)
-;;(color-theme-adben)
-;;(color-theme-tango)
-;;(color-theme-standard)
-;;(color-theme-bharadwaj)
-;;(color-theme-textmate)
-;;(color-theme-robin-hood)
-;;(color-theme-emacs-nw)
-;(column-number-mode 1)
 (setq-default fill-column 100)
 (setq auto-fill-mode 1)
 ;;Show what's being selected
@@ -54,16 +18,12 @@
 (setq scroll-step 1)
 (setq inhibit-startup-message t)
 ;;Disable the menubar (promotes good emacs memory :)
-;;(menu-bar-mode 0)
-(tool-bar-mode -1)
+(menu-bar-mode 1)
+(tool-bar-mode 1)
 (scroll-bar-mode -1)
-;;activate by default the speedbar into thw workspace
-;;(speedbar 0)
+;;activate by default the speedbar into the workspace
+;;; contrib-loaddefs.el --- Auto-generated CEDET autoloads
 ;;Make page up and page down a whole lot nicer
-<<<<<<< HEAD
->>>>>>> emacs24
-=======
->>>>>>> emacs24
 (global-set-key "\C-v"	   'pager-page-down)
 (global-set-key [next] 	   'pager-page-down)
 (global-set-key "\ev"	   'pager-page-up)
@@ -72,18 +32,9 @@
 (global-set-key '[M-kp-8]  'pager-row-up)
 (global-set-key '[M-down]  'pager-row-down)
 (global-set-key '[M-kp-2]  'pager-row-down)
-<<<<<<< HEAD
-<<<<<<< HEAD
-;Show newlines at end of file
-=======
 ;;Show newlines at end of file
->>>>>>> emacs24
-=======
-;;Show newlines at end of file
->>>>>>> emacs24
 (define-fringe-bitmap 'empty-line [0 0 #x3c #x3c #x3c #x3c 0 0])
 (set-default 'indicate-empty-lines nil)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Increase/Decrease font size on the fly
 ;;; Taken from: http://is.gd/iaAo
@@ -101,16 +52,16 @@
                       nil
                       :height
                       (floor (* 0.9
-                                  (face-attribute 'default :height)))))
+                                (face-attribute 'default :height)))))
 (global-set-key (kbd "C-+") 'adben/increase-font-size)
 (global-set-key (kbd "C--") 'adben/decrease-font-size)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;;column line-numbers 1 for on, 0 for off.
 ;;(global-visual-line-mode 1)
->>>>>>> emacs24
-=======
-;;column line-numbers 1 for on, 0 for off.
-;;(global-visual-line-mode 1)
->>>>>>> emacs24
+;;Text Highlighting, see http://xahlee.org/emacs/emacs_make_modern.html
+(transient-mark-mode 1) ; highlight text selection
+(delete-selection-mode 1) ; delete seleted text when typing
+(global-font-lock-mode 1) ; turn on syntax coloring, default in emacs 22, 23, 24
+(show-paren-mode 1) ; turn on paren match highlighting
+(global-hl-line-mode 1) ;; turn on highlighting current line
+(setq redisplay-dont-pause t)
+;;(set-face-attribute hl-line-face nil :underline nil) ; avoid the underline in the highlighted line

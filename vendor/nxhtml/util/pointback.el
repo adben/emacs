@@ -31,7 +31,7 @@
 
 ;;; Code:
 
-(require 'assoc)
+;;(require 'assoc)
 
 (defconst pointback-version "0.2")
 

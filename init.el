@@ -1,23 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Adolfo Benedetti's Emacs Environment
 ;; adolfo.benedetti@gmail.com
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-=======
-=======
->>>>>>> emacs24
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Adolfo Benedetti's Emacs Environment
-;; adolfo.benedetti@gmail.com
-;; a.benedetti@sourcesense.com
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
->>>>>>> emacs24
-=======
->>>>>>> emacs24
+;; abenedetti@iprofs.nl
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Library Paths
 ;; Note: I like to keep every emacs library underneath
@@ -26,44 +10,23 @@
 ;;   multiple systems.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/.emacs.d")
-                                        ;Add all top-level subdirectories of .emacs.d to the load path
+;;Add all top-level subdirectories of .emacs.d to the load path
 (progn (cd "~/.emacs.d")
        (normal-top-level-add-subdirs-to-load-path))
-                                        ;I like to keep third party libraries seperate in ~/.emacs.d/vendor
-(add-to-list 'load-path "~/.emacs.d/vendor")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+(add-to-list 'exec-path "~/Dev/Soft/bin")
+(add-to-list 'exec-path "~/bin")
 (add-to-list 'exec-path "/usr/local/bin")
+(add-to-list 'exec-path "/usr/texbin")
 (add-to-list 'exec-path "/opt/local/bin")
->>>>>>> emacs24
-=======
-(add-to-list 'exec-path "/usr/local/bin")
-(add-to-list 'exec-path "/opt/local/bin")
->>>>>>> emacs24
-(progn (cd "~/.emacs.d/vendor")
-       (normal-top-level-add-subdirs-to-load-path))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;ELPA package manager
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-elpa")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> emacs24
-;;lorem-ipsum
-(load-library "adben-lorem")
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;column-marker
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-column-marker")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
->>>>>>> emacs24
-=======
->>>>>>> emacs24
 ;;Passwords
 ;; Needs to be loaded sooner rather than later
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -74,25 +37,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'lorem-ipsum)
 (require 'column-marker)
-<<<<<<< HEAD
-<<<<<<< HEAD
-(require 'dired-single)
 (require 'pair-mode)
 (require 'pager)
-(require 'twit)
-=======
-=======
->>>>>>> emacs24
-(require 'dired)
-(require 'pair-mode)
-(require 'pager)
-;;(require 'twit)
-<<<<<<< HEAD
->>>>>>> emacs24
-=======
->>>>>>> emacs24
 (require 'ledger)
-(require 'auto-complete)
+;;(require 'cedet-contrib)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Some misc functions that should be moved somewhere more logical
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -114,17 +62,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-window-management")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;Flyspell
+;;Spelling unified
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-flyspell")
+(load-library "adben-spell")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;iswitchb
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-iswitchb")
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;Anything.el
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-anything")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Jabber
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -134,7 +78,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-keyboard")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;adben's global keybindings and behaviour
+;;adben's yasnippet
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-yasnippet")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -142,21 +86,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-shortcuts")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;CEDET
+;;Cedet mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-cedet")
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;Python mode
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
-<<<<<<< HEAD
-(load-library "adben-python")
-=======
-;;(load-library "adben-python")
->>>>>>> emacs24
-=======
-;;(load-library "adben-python")
->>>>>>> emacs24
+;;(load-library "adben-cedet")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;W3M mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -166,43 +98,38 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-dired")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;rainbow delimiters mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-library "adben-rainbow-delimiters")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Autocomplete mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-library "adben-autocomplete")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Lisp mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-lisp")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Java/Javascript
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-                                        ;disabled till I get JDE to compile from the submodule correctly
-<<<<<<< HEAD
-<<<<<<< HEAD
-(load-library "adben-java")
-=======
+;;disabled till I get JDE to compile from the submodule correctly
 ;;(load-library "adben-java")
->>>>>>> emacs24
-=======
-;;(load-library "adben-java")
->>>>>>> emacs24
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Zsh
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-library "adben-zsh")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Groovy
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-groovy")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> emacs24
 ;;jsp
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-jsp")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
->>>>>>> emacs24
-=======
->>>>>>> emacs24
 ;;CSharp
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-csharp")
+;;(load-library "adben-csharp")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;NXML mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -214,7 +141,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Shell mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-shell")
+;;(load-library "adben-shell")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Mako mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -222,31 +149,19 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ERC mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-erc")
+;;(load-library "adben-erc")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Org Mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-org")
+;;(load-library "adben-org")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Misc stuff
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-misc")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;Mac OSX stuff
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                        ;(load-library "adben-OSX")
-=======
-(load-library "adben-OSX")
->>>>>>> emacs24
-=======
-(load-library "adben-OSX")
->>>>>>> emacs24
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;EasyPG stuff
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-easypg")
+;;(load-library "adben-easypg")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Wanderlust stuff
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -258,29 +173,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;NXHTML mode - HTML, PHP etc
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                                        ;(load-library "adben-nxhtml")
-=======
-(load-library "adben-nxhtml")
->>>>>>> emacs24
-=======
-(load-library "adben-nxhtml")
->>>>>>> emacs24
-                                        ;This thing has problems. It screws up syntax highlighting in
-                                        ;unrelated modes.. disabled for now.
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;Adben's Pymacs extensions
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
-<<<<<<< HEAD
-(load-library "adben-pymacs-extensions")
-=======
-;;(load-library "adben-pymacs-extensions")
->>>>>>> emacs24
-=======
-;;(load-library "adben-pymacs-extensions")
->>>>>>> emacs24
+;;(load-library "adben-nxhtml")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Ansi-term stuff
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -302,266 +195,132 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-vc")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;Magit mode
+;;Helm mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-magit")
+(load-library "adben-helm")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
-<<<<<<< HEAD
-;;Magit mode
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-magit")
-=======
 ;;Egg mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-egg")
->>>>>>> emacs24
-=======
-;;Egg mode
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-egg")
->>>>>>> emacs24
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;log4j mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-log4j")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> emacs24
 ;;Confluence mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-confluence")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
->>>>>>> emacs24
-=======
->>>>>>> emacs24
 ;;ido mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-ido")
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;autocomplete mode
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-autocomplete")
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> emacs24
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;velocity  mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-velocity")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;modeline  mode
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-library "adben-modeline")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Org mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-org")
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;(load-library "adben-org")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;clojure mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;(load-library "adben-clojure")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;clojura mode
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-clojure")
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;eshell  modex
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;N(load-library "adben-eshell")
+;;(load-library "adben-eshell")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
->>>>>>> emacs24
-=======
->>>>>>> emacs24
-;;Emms
+;;magit
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-library "adben-magit")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;emms
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;(load-library "adben-emms")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-<<<<<<< HEAD
-<<<<<<< HEAD
-;;Startup gnus after loading other things
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-                                        ;(gnus)
-=======
-=======
->>>>>>> emacs24
-;;Undo Tree - vim
+;;Undo Tree
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-undo")
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Jira mode 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (load-library "adben-jira")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Git glutter 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-library "adben-gitglutter")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Startup gnus after loading other things
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;Another repositories for elpa and... (gnus)
-;;adding swank-clojure slime-connect for version
-(setq package-archives '(("ELPA" . "http://tromey.com/elpa/") 
-			 ("gnu" . "http://elpa.gnu.org/packages/")
-			 ("technomancy" . "http://repo.technomancy.us/emacs/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")))
+;;Customized open files read only mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Hunspell for ispell
+;; Use: C-x C-q to toggle the read-only state of a file.
+;; (global-set-key "\C-x\C-f" 'find-file-read-only)
+;; (add-hook 'find-file-hook
+;; 	  '(lambda ()
+;; 	     (when (and (buffer-file-name)
+;; 			(file-exists-p (buffer-file-name))
+;; 			(file-writable-p (buffer-file-name)))
+;; 	       (message "Toggle to read-only for existing file")
+;; 	       (toggle-read-only 1))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Use hunspell instead of ispell 
-;; (if (file-exists-p "/opt/local/bin/hunspell")
-(setq ispell-dictionary-alist
-       '((nil				
-          "[A-Za-z]" "[^A-Za-z]" "[\"]"
-          nil ("-d" "/opt/local/share/hunspell/en_US") nil utf-8)
-         ("es_ES_hunspell"
-          "[A-Za-z]" "[^A-Za-z]" "[\"]"
-          nil ("-d" "/opt/local/share/hunspell/es_ES") nil utf-8)
-         ("nl_NL_hunspell"
-          "[A-Za-z]" "[^A-Za-z]" "[\"]"
-          nil ("-d" "/opt/local/share/hunspell/nl_NL") nil utf-8)))
-(eval-after-load "ispell"
-  (progn
-    (setq ispell-dictionary "nl_NL_hunspell"
-          ispell-extra-args '("-a" "-i" "utf-8")
-          ispell-silently-savep t )))
-(setq-default ispell-program-name "hunspell")
-(require 'rw-language-and-country-codes)
-(require 'rw-ispell)
-(require 'rw-hunspell)
-<<<<<<< HEAD
->>>>>>> emacs24
-=======
->>>>>>> emacs24
+;; Backup and files, see http://xahlee.org/emacs/emacs_make_modern.html
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(setq make-backup-files nil) ; stop creating those backup~ files
+(setq auto-save-default nil) ; stop creating those #autosave# files
+(recentf-mode 1) ; menu of recently opened files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Line Margin and Line Spacing, see http://xahlee.org/emacs/emacs_make_modern.html
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(global-visual-line-mode 1) ; lines soft wrapped at word boundary, 1 for on, 0 for off.
+(global-set-key (kbd "<f7>") 'toggle-truncate-lines) ;to set the right margin to something
+;;like infinity, so that long lines runs off screen instead wrapping at the window border
+(defun toggle-line-spacing () ;;to set the spacing between lines
+  "Toggle line spacing between no extra space to extra half line height."
+  (interactive)
+  (if (eq line-spacing nil)
+      (setq-default line-spacing 0.2) ; add 0.2 height between lines
+    (setq-default line-spacing nil)   ; no extra heigh between lines
+    ))
+(global-set-key (kbd "<f7>") 'toggle-line-spacing)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Open recently opened file
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(recentf-mode 1)
+(global-set-key (kbd "<f9>") 'recentf-open-files)
+(global-set-key (kbd "C-x C-r") 'recentf-open-files) ;; was find-file-read-only
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; make buffer names easily identifiable
+;;see http://xahlee.blogspot.com/2011/07/emacs-unique-buffer-names-auto-compile.html
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'uniquify) ; bundled with GNU Emacs 23.2.1 or earlier
+(setq uniquify-buffer-name-style 'forward)
+;;The OS X Terminal.app uses UTF-8 by default. To get the correct behaviour
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Custmoized Settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (custom-set-variables
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(bbdb-file "~/.emacs.private/dot-bbdb")
- '(column-number-mode t)
- '(display-time-mode nil)
-=======
-=======
->>>>>>> emacs24
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(bbdb-file "~/.emacs.private/dot-bbdb")
- '(column-number-mode t)
- '(confluence-default-space-alist (list (cons confluence-url "https://wiki.rijksoverheid.nl/display/PONS")))
- '(confluence-url "https://wiki.rijksoverheid.nl/rpc/xmlrpc")
+ '(auto-indent-next-pair-timer-geo-mean (quote ((default 0.0005 0))))
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (tango)))
- '(custom-safe-themes (quote ("81f92df1f435dc251bc3816e882688b5a19039af" "324c41970f27ceb68e7579d722bc3b69b6390e13" "649ccffdb140fcd021013f6297dedeb313b74fa5" default)))
-<<<<<<< HEAD
->>>>>>> emacs24
-=======
->>>>>>> emacs24
- '(ecb-layout-name "left9")
- '(ecb-maximize-ecb-window-after-selection t)
- '(ecb-options-version "2.32")
- '(ecb-source-path (quote (("/" "/"))))
- '(ecb-tip-of-the-day nil)
- '(ecb-windows-width 0.2)
- '(erc-beep-match-types (quote (current-nick keyword)))
- '(erc-default-sound "~/.emacs.d/sounds/combeep4a.wav")
- '(erc-echo-timestamps t)
- '(erc-hide-timestamps t)
- '(erc-match-mode t)
- '(erc-modules (quote (button completion fill irccontrols log netsplit noncommands readonly ring scrolltobottom services smiley track)))
- '(erc-services-mode t)
- '(erc-sound-mode t)
-<<<<<<< HEAD
-<<<<<<< HEAD
- '(erc-sound-path (quote ("/home/adolfo/.emacs.d/sounds")))
- '(erc-stamp-mode t)
- '(erc-user-full-name "Adolfo Benedetti")
- '(fill-column 81)
- '(gnus-article-sort-functions (quote ((not gnus-article-sort-by-date))))
- '(gnus-thread-sort-functions (quote ((not gnus-thread-sort-by-date))))
-=======
-=======
->>>>>>> emacs24
- '(erc-sound-path (quote ("~/.emacs.d/sounds")))
- '(erc-stamp-mode t)
- '(erc-user-full-name "Adolfo Benedetti")
- '(fill-column 81)
- '(global-font-lock-mode t)
- '(global-linum-mode 1)
- '(gnus-article-sort-functions (quote ((not gnus-article-sort-by-date))))
- '(gnus-thread-sort-functions (quote ((not gnus-thread-sort-by-date))))
- '(jira-url "https://dev.sourcesense.com/jira/rpc/xmlrpc")
- '(max-lisp-eval-depth 50000)
- '(max-specpdl-size 100000)
-<<<<<<< HEAD
->>>>>>> emacs24
-=======
->>>>>>> emacs24
- '(mew-rc-file "~/.emacs.d/dot-mew.el" t)
- '(mouse-wheel-mode t)
- '(nxhtml-skip-welcome t)
- '(paren-match-face (quote paren-face-match-light))
- '(paren-sexp-mode t)
-<<<<<<< HEAD
-<<<<<<< HEAD
- '(show-paren-mode t)
- '(speedbar-frame-parameters (quote ((minibuffer) (width . 20) (border-width . 0) (menu-bar-lines . 0) (tool-bar-lines . 0) (unsplittable . t) (set-background-color "black"))))
- '(svn-status-hide-unmodified t)
- '(svn-status-verbose nil)
- '(twit-mode t)
- '(user-mail-address "adolfo.benedetti@gmail.com")
- '(w3m-default-display-inline-images t))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-'(default ((t (:inherit nil :stipple nil :background "#191717" :foreground "#D2DEC4" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "apple" :family "Lucida Console")))))
-
-(global-font-lock-mode t)               ; Turn on font-lock-mode, generally.
-(setq font-lock-verbose 500000)          ; "Fontifying...done" only if big buffer.
-(setq font-lock-maximum-size 5120000)    ; Double the default size.
-=======
-=======
->>>>>>> emacs24
- '(rw-hunspell-default-dictionary "nl_NL_hunspell")
- '(rw-hunspell-dicpath-list (quote ("/opt/local/share/hunspell")))
- '(rw-hunspell-make-dictionary-menu t)
- '(rw-hunspell-use-rw-ispell t)
- '(setq font-lock-maximum-size t)
- '(show-paren-mode t)
- '(svn-status-hide-unmodified t)
- '(svn-status-verbose nil)
- '(tool-bar-mode nil)
- ;;'(twit-mode t)
- '(user-mail-address "adolfo.benedetti@gmail.com")
- '(w3m-default-display-inline-images t))
-    ; Double the default size. big logs log4j
-;;Fonting
+ '(custom-enabled-themes (quote (zenburn)))
+ '(custom-safe-themes (quote ("0bac11bd6a3866c6dee5204f76908ec3bdef1e52f3c247d5ceca82860cccfa9d" "27470eddcaeb3507eca2760710cc7c43f1b53854372592a3afa008268bcf7a75" "cfde97b1d5ed1770b8e2e1b739611820c3a3e370cbda75d96e78ef2a5f359b27" "64b7be5703b90e05f7bc1f63a9f689a7c931626462697bea9476b397da194bd9" "9693400531dfeca544c1445e8a1255c236d22cc5b41fdc4958bb48562f1bb6db" "a64e1e2ead17a9322f6011f6af30f41bd6c2b3bbbf5e62700c8c3717aac36cbf" "0ef08a15ee92e04b60d0db3a660c50315ec676190ee8ac105481d21e3650d2dc" "b3ec790f9828e1ae16ddf27d53df136b1e9615b895d70f25fdf05b98cf365c5c" "746b83f9281c7d7e34635ea32a8ffa374cd8e83f438b13d9cc7f5d14dc826d56" "bf7ed640479049f1d74319ed004a9821072c1d9331bc1147e01d22748c18ebdf" "34543312860bbc58b2fcf4d24a9bdc5c114347f16903ac9d7ae70f3c44616a9e" "be7eadb2971d1057396c20e2eebaa08ec4bfd1efe9382c12917c6fe24352b7c1" "78b1c94c1298bbe80ae7f49286e720be25665dca4b89aea16c60dacccfbb0bca" "93815fc47d9324a7761b56754bc46cd8b8544a60fca513e634dfa16b8c761400" "9117c98819cfdeb59780cb43e5d360ff8a5964d7dd9783b01708bda83098b9fd" "e992575f7c09459bfc190e6776b8f5f96964023e98267a87fb3094e7c9686776" "e439d894bf9406baf73056cf7e3c913ee5c794b6adadbbb9f614aebed0fd9ce7" "4870e6cb6f0a70c14ee73db30b69a8a1f08d6ec9a689c366e88636fb81e8022d" "cf2bb5e8046ca363183c87e8d33932f2a76a3d705b9db2721631777bbce92968" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "f38dd27d6462c0dac285aa95ae28aeb7df7e545f8930688c18960aeaf4e807ed" "cc83fa4ffec1545d4bde6a44b1fb8431f9090874a22554920c709fa97338d0aa" "3580fb8e37ee9e0bcb60762b81260290329a97f3ca19249569d404fce422342f" "bf9d5728e674bde6a112979bd830cc90327850aaaf2e6f3cc4654f077146b406" "14c7aded9ed365719e66c60470e90ceefdd4720045932536137e7b417730f1b0" "7b4a6cbd00303fc53c2d486dfdbe76543e1491118eba6adc349205dbf0f7063a" "501caa208affa1145ccbb4b74b6cd66c3091e41c5bb66c677feda9def5eab19c" "128d3b867d93fbc926a324bc0fec3fd34545a68d09124296acb3958713afc88b" "5e1d1564b6a2435a2054aa345e81c89539a72c4cad8536cfe02583e0b7d5e2fa" "d2622a2a2966905a5237b54f35996ca6fda2f79a9253d44793cfe31079e3c92b" "71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" "7579f5fcf8308474126751ca3098a82b53e80701789bce8b92498f8899eaa031" "7cced48b557e24937f437e59c7f6a6cea5ace4e603377beb5067d0b2c27b4b7d" "6938c51c0a89f078c61b979af23ae4c32204458f16a6a08c1a683ab478a7bc6b" "d589f8adcca47e586469f7719e11a1d3ead95d13bf365ac0ae15b04fa6ca7c93" "870bd363bb2770316775ffa6e5938d73bee3adaba1f4d5b7b129533b3e0fed41" "edb0e9dce76acf08243762d30683293812c838773f0e9f41b7e6baf904776d6c" "54d1bcf3fcf758af4812f98eb53b5d767f897442753e1aa468cfeb221f8734f9" "284aece21e57abcf7c7d5f273d2d17dc646b24cb1465fd054ad9dca3555aed1c" "baed08a10ff9393ce578c3ea3e8fd4f8c86e595463a882c55f3bd617df7e5a45" "4fbc77d073bb1f75d60e1a7cc9e55747058a450ae99efc325c58d16180538cb1" "fdd0ae5d4de77df1904b33b9a73f66de173d0059dbb6c3b8fa06601402ad0c3d" "5727ad01be0a0d371f6e26c72f2ef2bafdc483063de26c88eaceea0674deb3d9" "aed9aa67f2adc9a72a02c30f4ebdb198e31874ae45d49125206d5ece794a8826" "7acc0466fce1bc967ce1561c8c4fdcbf4358b4ae692577562a3ed747c109f9d7" "d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" "3c221cf1a0a4172917772c71da5c4d5e1d4f98c4" "cf4dda59b259ca9c6214a8e9acf84bf5909c6e59" "81695082c60ffdec4cb1c1e1050c95581861b0fb" default)))
+ '(show-paren-mode t))
+;;Fonting;;
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "Courier")))))
-
-<<<<<<< HEAD
->>>>>>> emacs24
-=======
->>>>>>> emacs24
+ '(default ((t (:slant normal :weight light :height 130 :width normal :foundry "nil" :family "Source Code Pro")))))
