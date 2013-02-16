@@ -1160,7 +1160,7 @@
 			       [(20121223 154)
 				nil "Advice for magit-log-edit-commit [source: github]" single])
  (magit .
-	[(20130216 826)
+	[(20130216 838)
 	 nil "Control Git from Emacs. [source: github]" tar])
  (mag-menu .
 	   [(20130127 2113)
@@ -1936,6 +1936,9 @@
  (erc-hl-nicks .
 	       [(20130114 1648)
 		nil "ERC nick highlighter that ignores uniquifying chars when colorizing [source: github]" single])
+ (eproject .
+	   [(20130206 918)
+	    nil "assign files to projects, programatically [source: github]" tar])
  (epc .
       [(20130130 2128)
        ((concurrent
@@ -2072,7 +2075,7 @@
 	 [(20111009 1416)
 	  nil "A more pleasant way to manage your project's subprocesses in Emacs. [source: github]" tar])
  (dispass .
-	  [(20130120 1558)
+	  [(20130216 1048)
 	   nil "Emacs wrapper for DisPass [source: github]" single])
  (disk .
        [(20081128 1506)
@@ -2508,9 +2511,6 @@
  (abl-mode .
 	   [(20120718 1655)
 	    nil "Python TDD minor mode [source: github]" single])
- (eproject .
-	   [(20130206 918)
-	    nil "assign files to projects, programatically [source: github]" tar])
  (emacs-eclim .
 	      [(20130203 1712)
 	       nil "An interface to the Eclipse IDE. [source: github]" tar]))

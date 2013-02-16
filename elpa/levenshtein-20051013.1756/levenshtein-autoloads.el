@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads nil nil ("levenshtein-pkg.el" "levenshtein.el")
-;;;;;;  (20552 62768 300409))
+;;;;;;  (20767 27682 775721 0))
 
 ;;;***
 
