@@ -2,21 +2,21 @@
 ;; Automatically generated file!!! DO NOT EDIT!!!
 
 (setq url-cookie-storage
- '((".github.com"
-  [url-cookie "logged_in" "no" "14-Feb-2033 09:37:08.00 GMT" "/" ".github.com" nil])
+ '((".j.mp"
+  [url-cookie "_bit" "511cc549-003cd-010f3-441cf10a" "Tue Aug 13 11:06:49 2013" "/" ".j.mp" nil]
+  [url-cookie "HttpOnly" nil "Tue Aug 13 11:06:49 2013" "/" ".j.mp" nil])
+ ("marmalade-repo.org"
+  [url-cookie "httpOnly" nil "Sat, 16 Feb 2013 03:53:42 GMT" "/" "marmalade-repo.org" nil]
+  [url-cookie "connect.sid" "lZX0uGEI0bHGXxfGYpkmq4Cq.%2FbYjrV7bQxlwhkgr37ZFrqsI76P2bc8k846%2Fn8AyyWU" "Sat, 16 Feb 2013 03:53:42 GMT" "/" "marmalade-repo.org" nil])
  ("hippo.2275632.n2.nabble.com"
   [url-cookie "anonymousId" "a107323305" "10-Jun-2013 04:53:30.00 GMT" "/" "hippo.2275632.n2.nabble.com" nil])
- ("marmalade-repo.org"
-  [url-cookie "connect.sid" "KSl8kzLvTBWYo5hI38cnOM8J.QWIBqTus%2FA4KiGnohZgK2LTtWQGxqB4awEEDn80M7L8" "Thu, 14 Feb 2013 17:41:56 GMT" "/" "marmalade-repo.org" nil]
-  [url-cookie "httpOnly" nil "Thu, 14 Feb 2013 17:41:56 GMT" "/" "marmalade-repo.org" nil])
- (".j.mp"
-  [url-cookie "HttpOnly" nil "Tue Aug 13 11:06:49 2013" "/" ".j.mp" nil]
-  [url-cookie "_bit" "511cc549-003cd-010f3-441cf10a" "Tue Aug 13 11:06:49 2013" "/" ".j.mp" nil]))
+ (".github.com"
+  [url-cookie "logged_in" "no" "14-Feb-2033 09:37:08.00 GMT" "/" ".github.com" nil]))
 )
 (setq url-cookie-secure-storage
  '(("github.com"
-  [url-cookie "_gh_sess" "BAh7BzoPc2Vzc2lvbl9pZCIlMTQ4ZDcwNWVhZTRjNzgxZTcyOWY1MDYxMjY3OTM1MjM6EF9jc3JmX3Rva2VuSSIxa2d1R3Z4THFncFN4WVNJVVhxTWNMWXJNODdjOS9LdDRVLzdPOGkxMG9MRT0GOgZFRg%3D%3D--3bbbd9f053a0763264fed29282f95859b12fd165" "01-Jan-2023 00:00:00.00 GMT" "/" "github.com" t]
-  [url-cookie "HttpOnly" nil "01-Jan-2023 00:00:00.00 GMT" "/" "github.com" t]))
+  [url-cookie "HttpOnly" nil "01-Jan-2023 00:00:00.00 GMT" "/" "github.com" t]
+  [url-cookie "_gh_sess" "BAh7BzoPc2Vzc2lvbl9pZCIlMTQ4ZDcwNWVhZTRjNzgxZTcyOWY1MDYxMjY3OTM1MjM6EF9jc3JmX3Rva2VuSSIxa2d1R3Z4THFncFN4WVNJVVhxTWNMWXJNODdjOS9LdDRVLzdPOGkxMG9MRT0GOgZFRg%3D%3D--3bbbd9f053a0763264fed29282f95859b12fd165" "01-Jan-2023 00:00:00.00 GMT" "/" "github.com" t]))
 )
 
 ;; Local Variables:

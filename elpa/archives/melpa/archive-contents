@@ -18,13 +18,13 @@
 	 (5 3)))
        "ZNC + ERC [source: github]" single])
  (zlc .
-      [(20110826 1723)
-       nil "Provides zsh like completion for minibuffer [source: github]" single])
+      [(20130216 1637)
+       nil "Provides zsh like completion system to Emacs [source: github]" single])
  (zencoding-mode .
 		 [(20111231 345)
 		  nil "Unfold CSS-selector-like expressions to markup [source: github]" single])
  (zenburn-theme .
-		[(20130129 1529)
+		[(20130215 1443)
 		 nil "A low contrast color theme for Emacs. [source: github]" single])
  (zen-and-art-theme .
 		    [(20120622 937)
@@ -448,7 +448,7 @@
 	 [(20130109 2015)
 	  nil "Create and switch between named window configurations. [source: github]" single])
  (solarized-theme .
-		  [(20130108 651)
+		  [(20130215 1446)
 		   nil "The Solarized color theme, ported to Emacs. [source: github]" tar])
  (snippet .
 	  [(20130210 1815)
@@ -593,7 +593,7 @@
 	    [(20130117 1644)
 	     nil "A better backspace [source: github]" single])
  (s .
-    [(20130214 2120)
+    [(20130215 1406)
      nil "The long lost Emacs string manipulation library. [source: github]" single])
  (rvm .
       [(20130210 1710)
@@ -701,7 +701,7 @@
       [(20120928 2154)
        nil "Recursive Descent Parser library [source: github]" single])
  (rbenv .
-	[(20130211 1004)
+	[(20130215 2220)
 	 nil "Emacs integration for rbenv [source: github]" single])
  (rase .
        [(20120928 2345)
@@ -808,7 +808,7 @@
 		  [(20120403 1455)
 		   nil "Interact with Pivotal Tracker through its API [source: github]" single])
  (php-mode .
-	   [(20130208 7)
+	   [(20130215 1721)
 	    nil "Major mode for editing PHP code [source: github]" tar])
  (php-eldoc .
 	    [(20130131 1429)
@@ -994,7 +994,7 @@
 		     [(20121011 2145)
 		      nil "Tiny functionality enhancements for evaluating sexps. [source: github]" single])
  (nrepl .
-	[(20130213 1442)
+	[(20130214 1546)
 	 ((clojure-mode
 	   (2 0 0)))
 	 "Client for Clojure nREPL [source: github]" single])
@@ -1160,7 +1160,7 @@
 			       [(20121223 154)
 				nil "Advice for magit-log-edit-commit [source: github]" single])
  (magit .
-	[(20130206 1334)
+	[(20130216 826)
 	 nil "Control Git from Emacs. [source: github]" tar])
  (mag-menu .
 	   [(20130127 2113)
@@ -1412,7 +1412,7 @@
 		[(20130204 1653)
 		 nil "Major mode API client for status.net open microblogging [source: github]" tar])
  (icicles .
-	  [(20130212 1725)
+	  [(20130216 18)
 	   nil "Minibuffer input completion and cycling. [source: wiki]" tar])
  (ibuffer-vc .
 	     [(20121217 826)
@@ -1519,7 +1519,7 @@
 		   [(20120906 28)
 		    nil "helm source for yasnippet.el [source: github]" single])
  (helm-c-moccur .
-		[(20120820 926)
+		[(20130216 1417)
 		 nil "helm source for color-moccur.el [source: github]" single])
  (helm-R .
 	 [(20120820 914)
@@ -1529,7 +1529,7 @@
 	    (20120509)))
 	  "helm-sources and some utilities for GNU R. [source: github]" single])
  (helm .
-       [(20130214 929)
+       [(20130216 722)
 	nil "Helm is an Emacs incremental and narrowing framework [source: github]" tar])
  (header2 .
 	  [(20121228 2051)
@@ -1651,7 +1651,7 @@
 		 [(20121012 1635)
 		  nil "Major mode for editing .gitconfig files [source: github]" single])
  (git-gutter .
-	     [(20130214 2343)
+	     [(20130216 34)
 	      nil "Port of Sublime Text 2 plugin GitGutter [source: github]" single])
  (git-dwim .
 	   [(20130130 2150)
@@ -1936,9 +1936,6 @@
  (erc-hl-nicks .
 	       [(20130114 1648)
 		nil "ERC nick highlighter that ignores uniquifying chars when colorizing [source: github]" single])
- (eproject .
-	   [(20130206 918)
-	    nil "assign files to projects, programatically [source: github]" tar])
  (epc .
       [(20130130 2128)
        ((concurrent
@@ -2177,7 +2174,7 @@
 	       [(20090510 2255)
 		nil "Mode for editing crontab files [source: github]" single])
  (creole .
-	 [(20130213 822)
+	 [(20130216 27)
 	  nil "A parser for the Creole Wiki language [source: github]" single])
  (crappy-jsp-mode .
 		  [(20121117 1856)
@@ -2357,7 +2354,7 @@
 		(3 0)))
 	      "vCard import/export for BBDB [source: github]" tar])
  (bbdb .
-       [(20130202 703)
+       [(20130215 2248)
 	nil "core of BBDB [source: git]" tar])
  (bbcode-mode .
 	      [(20130121 2108)
@@ -2432,7 +2429,7 @@
 	      [(20080905 553)
 	       nil "major mode for editing Apache configuration files [source: wiki]" single])
  (anti-zenburn-theme .
-		     [(20130129 2357)
+		     [(20130216 39)
 		      nil "Low-contrast Zenburn-inverted theme [source: github]" single])
  (ansi .
        [(20121008 1920)
@@ -2511,6 +2508,9 @@
  (abl-mode .
 	   [(20120718 1655)
 	    nil "Python TDD minor mode [source: github]" single])
+ (eproject .
+	   [(20130206 918)
+	    nil "assign files to projects, programatically [source: github]" tar])
  (emacs-eclim .
 	      [(20130203 1712)
 	       nil "An interface to the Eclipse IDE. [source: github]" tar]))
