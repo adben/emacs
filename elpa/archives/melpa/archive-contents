@@ -18,7 +18,7 @@
 	 (5 3)))
        "ZNC + ERC [source: github]" single])
  (zlc .
-      [(20130216 1637)
+      [(20130216 2203)
        nil "Provides zsh like completion system to Emacs [source: github]" single])
  (zencoding-mode .
 		 [(20111231 345)
@@ -30,7 +30,7 @@
 		    [(20120622 937)
 		     nil "zen and art color theme for GNU Emacs 24 [source: github]" single])
  (yasnippet .
-	    [(20130112 1823)
+	    [(20130216 1027)
 	     nil "Yet another snippet extension for Emacs. [source: github]" tar])
  (yascroll .
 	   [(20120502 1738)
@@ -47,6 +47,9 @@
  (yaml-mode .
 	    [(20120901 1329)
 	     nil "Major mode for editing YAML files [source: github]" single])
+ (yalinum .
+	  [(20130217 1711)
+	   nil "yet another display line numbers. [source: github]" single])
  (yagist .
 	 [(20130114 2346)
 	  ((json
@@ -115,7 +118,7 @@
 	    [(20130123 2144)
 	     nil "Emacs WebSocket client and server [source: github]" single])
  (web-mode .
-	   [(20130215 821)
+	   [(20130218 28)
 	    nil "major mode for editing HTML templates [source: github]" single])
  (wc-mode .
 	  [(20120531 1344)
@@ -472,7 +475,7 @@
 	   [(20120905 2101)
 	    nil "Support sequential operation which omitted prefix keys. [source: github]" single])
  (smartparens .
-	      [(20130214 2132)
+	      [(20130217 1410)
 	       ((dash
 		 (1 0 2)))
 	       "Smart insertion and wrapping with parens/user defined pairs/tags [source: github]" tar])
@@ -593,7 +596,7 @@
 	    [(20130117 1644)
 	     nil "A better backspace [source: github]" single])
  (s .
-    [(20130215 1406)
+    [(20130216 1611)
      nil "The long lost Emacs string manipulation library. [source: github]" single])
  (rvm .
       [(20130210 1710)
@@ -670,6 +673,9 @@
  (restclient .
 	     [(20121122 1336)
 	      nil "An interactive HTTP client for Emacs [source: github]" tar])
+ (requirejs-mode .
+		 [(20130215 1604)
+		  nil "Improved AMD module management [source: github]" single])
  (request .
 	  [(20130110 2144)
 	   nil "Compatible layer for URL request in Emacs [source: github]" tar])
@@ -682,9 +688,6 @@
  (regex-dsl .
 	    [(20100124 1228)
 	     nil "lisp syntax for regexps [source: github]" single])
- (redshank .
-	   [(20120510 1230)
-	    nil "No description available. [source: git]" tar])
  (redo+ .
 	[(20120811 1102)
 	 nil "Redo/undo system for Emacs [source: wiki]" single])
@@ -750,7 +753,7 @@
 		[(20130212 2034)
 		 nil "Project oriented automatic builder and error highlighter, flymake for projects [source: github]" tar])
  (projectile .
-	     [(20130213 443)
+	     [(20130217 1826)
 	      ((s
 		(1 0 0))
 	       (dash
@@ -829,7 +832,7 @@
 	      [(20121130 1746)
 	       nil "switch between named \"perspectives\" of the editor [source: github]" single])
  (persp-mode .
-	     [(20130123 1108)
+	     [(20130217 1540)
 	      ((workgroups
 		(0 2 0)))
 	      "\"perspectives\" shared between frames. [source: github]" single])
@@ -1020,7 +1023,7 @@
       [(20120507 7)
        nil "Emacs mode for filesystem navigation [source: hg]" tar])
  (namespaces .
-	     [(20130212 1023)
+	     [(20130217 1750)
 	      nil "An implementation of namespaces for Elisp, with an emphasis on immutabilty. [source: github]" single])
  (n3-mode .
 	  [(20130115 2145)
@@ -1093,7 +1096,7 @@
 			[(20121205 1456)
 			 nil "Very lean session saver [source: github]" single])
  (midje-mode .
-	     [(20121015 2222)
+	     [(20130212 26)
 	      ((nrepl
 		(0 1 4))
 	       (clojure-mode
@@ -1226,12 +1229,23 @@
  (less-css-mode .
 		[(20121108 1718)
 		 nil "Major mode for editing LESS CSS files (lesscss.org) [source: github]" single])
+ (lemon-mode .
+	     [(20130216 2204)
+	      nil "A major mode for editing lemon grammar files [source: github]" single])
+ (lein .
+       [(20130216 940)
+	((nrepl
+	  (0 1 7)))
+	"Eshell interface to Leiningen [source: github]" single])
  (legalese .
 	   [(20100119 2148)
 	    nil "Add legalese to your program files [source: wiki]" single])
  (latex-pretty-symbols .
 		       [(20111011 1446)
 			nil "Display many latex symbols as their unicode counterparts [source: hg]" single])
+ (lang-refactor-perl .
+		     [(20130217 1816)
+		      nil "Simple refactorings, primarily for Perl [source: github]" single])
  (lacarte .
 	  [(20121228 1947)
 	   nil "Execute menu items as commands, with completion. [source: wiki]" single])
@@ -1239,7 +1253,7 @@
        [(20130207 31)
 	nil "communcate with the KWin window manager [source: github]" single])
  (kv .
-     [(20130202 1543)
+     [(20130217 1638)
       nil "key/value data structure functions [source: github]" single])
  (kite .
        [(20130201 2038)
@@ -1300,8 +1314,10 @@
 		  (1 0 0)))
 		"The beginnings of a JavaScript refactoring library in emacs. [source: github]" tar])
  (js2-mode .
-	   [(20130210 1002)
-	    nil "Improved JavaScript editing mode [source: github]" tar])
+	   [(20130217 821)
+	    ((emacs
+	      (24 1)))
+	    "Improved JavaScript editing mode [source: github]" tar])
  (js-comint .
 	    [(20080530 957)
 	     nil "Run javascript in an inferior process window. [source: svn]" single])
@@ -1412,7 +1428,7 @@
 		[(20130204 1653)
 		 nil "Major mode API client for status.net open microblogging [source: github]" tar])
  (icicles .
-	  [(20130216 18)
+	  [(20130217 424)
 	   nil "Minibuffer input completion and cycling. [source: wiki]" tar])
  (ibuffer-vc .
 	     [(20121217 826)
@@ -1489,10 +1505,10 @@
 		 (20120811)))
 	       "Migemo plug-in for helm [source: github]" single])
  (helm-mercurial-queue .
-		       [(20130115 1935)
+		       [(20130217 840)
 			nil "No description available. [source: github]" tar])
  (helm-ls-git .
-	      [(20130117 843)
+	      [(20130217 841)
 	       nil "list git files. [source: github]" single])
  (helm-gtags .
 	     [(20130130 1218)
@@ -1513,7 +1529,7 @@
 		 [(20120327 1351)
 		  nil "Yet Another `describe-bindings' with `helm'. [source: github]" single])
  (helm-cmd-t .
-	     [(20130116 2059)
+	     [(20130217 2124)
 	      nil "cmd-t style completion [source: github]" tar])
  (helm-c-yasnippet .
 		   [(20120906 28)
@@ -1529,7 +1545,7 @@
 	    (20120509)))
 	  "helm-sources and some utilities for GNU R. [source: github]" single])
  (helm .
-       [(20130216 722)
+       [(20130217 1928)
 	nil "Helm is an Emacs incremental and narrowing framework [source: github]" tar])
  (header2 .
 	  [(20121228 2051)
@@ -1686,6 +1702,9 @@
  (gap-mode .
 	   [(20121214 1631)
 	    nil "Major mode for editing files in the GAP programing language. [source: hg]" tar])
+ (fyure .
+	[(20130216 2214)
+	 nil "An interface to fix Japanese hyoki-yure [source: github]" tar])
  (fwb-cmds .
 	   [(20120808 1317)
 	    nil "misc frame, window and buffer commands [source: github]" single])
@@ -1801,7 +1820,7 @@
 		    (0 1)))
 		  "A flymake handler for coffee script [source: github]" single])
  (flycheck .
-	   [(20130214 2117)
+	   [(20130217 1919)
 	    ((s
 	      (1 3 1))
 	     (dash
@@ -1876,7 +1895,7 @@
 		 (0)))
 	       "let there be <leader> [source: github]" single])
  (evil .
-       [(20130212 906)
+       [(20130217 1210)
 	((undo-tree
 	  (0 5 1)))
 	"Extensible Vi layer for Emacs. [source: git]" tar])
@@ -1922,7 +1941,7 @@
 	 [(20120831 1448)
 	  nil "No description available. [source: github]" tar])
  (ergoemacs-mode .
-		 [(20130211 1039)
+		 [(20130216 1332)
 		  nil "A minor mode, a keybinding set based on ergonomics. [source: git]" tar])
  (eredis .
 	 [(20120808 2207)
@@ -1964,12 +1983,35 @@
  (emacs-setup .
 	      [(20120727 926)
 	       nil "Package for maintaining your emacs configuration. Clean up your .emacs! [source: github]" tar])
+ (emacs-eclim .
+	      [(20130214 1017)
+	       (("json"
+		 (1 2)))
+	       "An interface to the Eclipse IDE. [source: github]" tar])
  (elscreen .
 	   [(20120413 1107)
 	    nil "Emacs window session manager [source: github]" single])
  (elpy .
-       [(20130214 1122)
-	nil "Emacs Lisp Python Environment [source: github]" single])
+       [(20130217 2259)
+	((auto-complete
+	  (1 4))
+	 (fuzzy
+	  (0 1))
+	 (yasnippet
+	  (0 8))
+	 (virtualenv
+	  (1 2))
+	 (highlight-indentation
+	  (0 5 0))
+	 (find-file-in-project
+	  (3 2))
+	 (idomenu
+	  (0 1))
+	 (nose
+	  (0 1 1))
+	 (iedit
+	  (0 97)))
+	"Emacs Lisp Python Environment [source: github]" tar])
  (elpa-audit .
 	     [(20121121 1747)
 	      nil "Handy functions for inspecting and comparing package archives [source: github]" single])
@@ -2274,10 +2316,10 @@
 	      [(20121008 1918)
 	       nil "Major mode for editing Citrus files [source: github]" tar])
  (circe .
-	[(20130214 37)
+	[(20130218 6)
 	 nil "Client for IRC in Emacs [source: github]" tar])
  (chicken-scheme .
-		 [(20130110 1837)
+		 [(20130216 950)
 		  nil "Scheme-mode extensions for Chicken Scheme [source: github]" single])
  (change-inner .
 	       [(20130208 2030)
@@ -2357,7 +2399,7 @@
 		(3 0)))
 	      "vCard import/export for BBDB [source: github]" tar])
  (bbdb .
-       [(20130215 2248)
+       [(20130216 1043)
 	nil "core of BBDB [source: git]" tar])
  (bbcode-mode .
 	      [(20130121 2108)
@@ -2365,6 +2407,9 @@
  (bash-completion .
 		  [(20111120 1539)
 		   nil "BASH completion for the shell buffer [source: github]" tar])
+ (base16-theme .
+	       [(20130216 947)
+		nil "No description available. [source: github]" tar])
  (backup-walker .
 		[(20120625 1244)
 		 nil "quickly traverse all backups of a file [source: github]" single])
@@ -2416,6 +2461,9 @@
  (auto-async-byte-compile .
 			  [(20120811 837)
 			   nil "Automatically byte-compile when saved [source: wiki]" single])
+ (async .
+	[(20130217 26)
+	 nil "Asynchronous processing in Emacs [source: github]" tar])
  (ascope .
 	 [(20120229 1700)
 	  nil "No description available. [source: wiki]" single])
@@ -2511,7 +2559,7 @@
  (abl-mode .
 	   [(20120718 1655)
 	    nil "Python TDD minor mode [source: github]" single])
- (emacs-eclim .
-	      [(20130203 1712)
-	       nil "An interface to the Eclipse IDE. [source: github]" tar]))
+ (redshank .
+	   [(20120510 1230)
+	    nil "No description available. [source: git]" tar]))
 
