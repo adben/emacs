@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads nil nil ("purple-haze-theme-pkg.el" "purple-haze-theme.el")
-;;;;;;  (20768 56335 151555 0))
+;;;;;;  (20771 45657 988639 0))
 
 ;;;***
 

@@ -23,5 +23,4 @@
     (while (re-search-forward "[[<]" nil t)
       (when (org-at-timestamp-p t)
         (org-timestamp-change n 'hour)
-
         ))))
