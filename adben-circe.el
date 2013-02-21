@@ -3,7 +3,8 @@
 (setq circe-network-options
       `(("Freenode"
          :nick "adben"
-         :channels ("#emacs" "#emacs-circe" "#clojure" "#liferay")
+         ;;:channels ("#emacs" "#emacs-circe" "#clojure" "#liferay")
+         :channels ("#emacs")
          :nickserv-password freenode-passwd
          )))
 ;;Quick IRC Commandx

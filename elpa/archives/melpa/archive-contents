@@ -118,7 +118,7 @@
 	[(20130114 1335)
 	 nil "Writable grep buffer and apply the changes to files [source: github]" single])
  (weechat .
-	  [(20130221 228)
+	  [(20130221 1458)
 	   nil "No description available. [source: github]" tar])
  (websocket .
 	    [(20130123 2144)
@@ -1471,6 +1471,9 @@
  (html-script-src .
 		  [(20121008 1907)
 		   nil "Insert <script ...> tags for popular JavaScript libraries [source: github]" tar])
+ (ht .
+     [(20130220 1423)
+      nil "The missing hash table library for Emacs [source: github]" single])
  (hlinum .
 	 [(20110605 955)
 	  nil "Extension for linum.el to highlight current line number [source: hg]" single])
@@ -1552,7 +1555,7 @@
 		 [(20120327 1351)
 		  nil "Yet Another `describe-bindings' with `helm'. [source: github]" single])
  (helm-cmd-t .
-	     [(20130217 2124)
+	     [(20130221 1940)
 	      nil "cmd-t style completion [source: github]" tar])
  (helm-c-yasnippet .
 		   [(20120906 28)
@@ -1568,7 +1571,7 @@
 	    (20120509)))
 	  "helm-sources and some utilities for GNU R. [source: github]" single])
  (helm .
-       [(20130221 735)
+       [(20130221 1344)
 	nil "Helm is an Emacs incremental and narrowing framework [source: github]" tar])
  (header2 .
 	  [(20121228 2051)
@@ -1943,6 +1946,9 @@
  (espuds .
 	 [(20121202 1535)
 	  nil "Ecukes step definitions [source: github]" tar])
+ (espresso-theme .
+		 [(20130221 1600)
+		  nil "Espresso Tutti Colori port for Emacs [source: github]" single])
  (escreen .
 	  [(20091203 1913)
 	   nil "emacs window session manager [source: github]" single])
