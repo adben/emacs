@@ -1,12 +1,7 @@
 ;; When turning on flyspell-mode, automatically check the entire buffer.
-;; Why this isn't the default baffles me.
-<<<<<<< HEAD
-<<<<<<< HEAD
+;; Why this isn't the default baffles me.<<<<<<< HEAD
 (defadvice flyspell-mode (after advice-flyspell-check-buffer-on-start activate)
   (flyspell-buffer))
-=======
-=======
->>>>>>> emacs24
 ;;ispell configs for Mac OSX. dutch as default, english configured
 ;;hunspell
 ;; (setq ispell-program-name "hunspell")
@@ -89,8 +84,3 @@
 (defadvice flyspell-mode (after advice-flyspell-check-buffer-on-start activate)
   (flyspell-buffer))
 (setq flyspell-issue-welcome-flag nil)
-<<<<<<< HEAD
->>>>>>> emacs24
-=======
->>>>>>> emacs24
-

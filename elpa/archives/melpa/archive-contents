@@ -120,7 +120,7 @@
 	[(20130114 1335)
 	 nil "Writable grep buffer and apply the changes to files [source: github]" single])
  (weechat .
-	  [(20130225 223)
+	  [(20130225 1551)
 	   nil "No description available. [source: github]" tar])
  (websocket .
 	    [(20130123 2144)
