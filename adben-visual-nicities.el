@@ -24,14 +24,6 @@
 ;;activate by default the speedbar into the workspace
 ;;; contrib-loaddefs.el --- Auto-generated CEDET autoloads
 ;;Make page up and page down a whole lot nicer
-(global-set-key "\C-v"	   'pager-page-down)
-(global-set-key [next] 	   'pager-page-down)
-(global-set-key "\ev"	   'pager-page-up)
-(global-set-key [prior]	   'pager-page-up)
-(global-set-key '[M-up]    'pager-row-up)
-(global-set-key '[M-kp-8]  'pager-row-up)
-(global-set-key '[M-down]  'pager-row-down)
-(global-set-key '[M-kp-2]  'pager-row-down)
 ;;Show newlines at end of file
 (define-fringe-bitmap 'empty-line [0 0 #x3c #x3c #x3c #x3c 0 0])
 (set-default 'indicate-empty-lines nil)

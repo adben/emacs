@@ -94,6 +94,15 @@
 (global-set-key [S-right] 'windmove-right)        ; move to right window
 (global-set-key [S-up] 'windmove-up)              ; move to upper window
 (global-set-key [S-down] 'windmove-down)          ; move to lower window;The generic apropos (of any symbol) is MUCH more useful than apropos-command
+;; Cursor movement settings
+(global-set-key "\C-v"	   'pager-page-down)
+(global-set-key [next] 	   'pager-page-down)
+(global-set-key "\ev"	   'pager-page-up)
+(global-set-key [prior]	   'pager-page-up)
+(global-set-key '[M-up]    'pager-row-up)
+(global-set-key '[M-kp-8]  'pager-row-up)
+(global-set-key '[M-down]  'pager-row-down)
+(global-set-key '[M-kp-2]  'pager-row-down)
 (global-set-key "\C-ha" 'apropos)
 ;;enable Redo see http://xahlee.org/emacs/emacs_make_modern.html
 (global-set-key (kbd "C-z") 'undo) ; Ctrl+z
