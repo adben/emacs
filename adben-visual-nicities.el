@@ -57,3 +57,5 @@
 (global-hl-line-mode 1) ;; turn on highlighting current line
 (setq redisplay-dont-pause t)
 ;;(set-face-attribute hl-line-face nil :underline nil) ; avoid the underline in the highlighted line
+;;(setq load-path (cons "~/.emacs.d/elpa/purple-haze-theme-0.0.3/" load-path))
+;;(require 'purple-haze)
