@@ -59,6 +59,8 @@
 (require 'lorem-ipsum)
 (require 'column-marker)
 (require 'eieio)
+(require 'cogre)
+(require 'cedet-contrib)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Some misc functions that should be moved somewhere more logical
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
