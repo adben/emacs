@@ -123,10 +123,9 @@
 (require 'rainbow-delimiters)
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
-;; ;; Gist
-;; (add-to-list 'load-path "~/.emacs.d/elpa/gist-20130313.2038")
-;; (eval-after-load "gist"
-;;   '(add-to-list 'gist-supported-modes-alist '(clojure-mode . ".clj")))
-;; (require 'gist)
+;; Gist
+(eval-after-load "gist"
+  '(add-to-list 'gist-supported-modes-alist '(clojure-mode . ".clj")))
+(require 'gist)
 
 (provide 'adben-clojure)

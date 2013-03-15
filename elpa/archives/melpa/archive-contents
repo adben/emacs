@@ -120,7 +120,7 @@
 	[(20130114 1335)
 	 nil "Writable grep buffer and apply the changes to files [source: github]" single])
  (weechat .
-	  [(20130314 1420)
+	  [(20130315 926)
 	   nil "No description available. [source: github]" tar])
  (websocket .
 	    [(20130123 2144)
@@ -1813,11 +1813,11 @@
 	    [(20110509 1226)
 	     nil "Minor mode for incremental blame for Git [source: github]" single])
  (gist .
-       [(20130313 2038)
+       [(20130315 843)
 	((eieio
 	  (1 3))
 	 (gh
-	  (0 7 0))
+	  (0 7 2))
 	 (tabulated-list
 	  (0)))
 	"Emacs integration for gist.github.com [source: github]" single])
@@ -1830,7 +1830,7 @@
       [(20130305 1526)
        nil "ghc-mod front-end for haskell-mode [source: github]" tar])
  (gh .
-     [(20130314 1151)
+     [(20130315 745)
       ((eieio
 	(1 3))
        (pcache
