@@ -5,8 +5,8 @@
 
 ;;;### (autoloads (global-git-gutter-mode git-gutter:toggle git-gutter-mode
 ;;;;;;  git-gutter:clear git-gutter git-gutter:previous-hunk git-gutter:next-hunk
-;;;;;;  git-gutter:popup-diff git-gutter:revert-hunk) "git-gutter"
-;;;;;;  "git-gutter.el" (20798 62708 0 0))
+;;;;;;  git-gutter:popup-hunk git-gutter:revert-hunk) "git-gutter"
+;;;;;;  "git-gutter.el" (20802 61764 0 0))
 ;;; Generated autoloads from git-gutter.el
 
 (autoload 'git-gutter:revert-hunk "git-gutter" "\
@@ -14,7 +14,7 @@ Revert current hunk.
 
 \(fn)" t nil)
 
-(autoload 'git-gutter:popup-diff "git-gutter" "\
+(autoload 'git-gutter:popup-hunk "git-gutter" "\
 popup current diff hunk
 
 \(fn &optional DIFFINFO)" t nil)
@@ -72,7 +72,7 @@ See `git-gutter-mode' for more information on Git-Gutter mode.
 
 ;;;***
 
-;;;### (autoloads nil nil ("git-gutter-pkg.el") (20798 62708 349889
+;;;### (autoloads nil nil ("git-gutter-pkg.el") (20802 61764 380637
 ;;;;;;  0))
 
 ;;;***

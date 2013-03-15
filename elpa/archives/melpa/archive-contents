@@ -120,7 +120,7 @@
 	[(20130114 1335)
 	 nil "Writable grep buffer and apply the changes to files [source: github]" single])
  (weechat .
-	  [(20130313 1542)
+	  [(20130314 1420)
 	   nil "No description available. [source: github]" tar])
  (websocket .
 	    [(20130123 2144)
@@ -131,7 +131,7 @@
 	       (1 6 8)))
 	     "Weblog maintenance via XML-RPC APIs [source: bzr]" single])
  (web-mode .
-	   [(20130313 2259)
+	   [(20130314 2250)
 	    nil "major mode for editing HTML templates [source: github]" single])
  (wc-mode .
 	  [(20120531 1344)
@@ -164,7 +164,7 @@
 	  [(20120228 848)
 	   nil "VimGolf interface for the One True Editor [source: github]" single])
  (viewer .
-	 [(20121231 1151)
+	 [(20130314 2337)
 	  nil "View-mode extension [source: wiki]" single])
  (vector-utils .
 	       [(20121205 1458)
@@ -363,6 +363,9 @@
  (systemtap-mode .
 		 [(20121210 10)
 		  nil "A mode for SystemTap [source: github]" single])
+ (syntactic-sugar .
+		  [(20121205 1457)
+		   nil "Effect-free forms such as if/then/else [source: github]" single])
  (synonyms .
 	   [(20121229 2306)
 	    nil "Look up synonyms for a word or phrase in a thesaurus. [source: wiki]" single])
@@ -386,6 +389,9 @@
  (sudo-ext .
 	   [(20130130 2151)
 	    nil "sudo support [source: wiki]" single])
+ (sudden-death .
+	       [(20121218 2249)
+		nil "Totsuzen-no-Shi [source: github]" single])
  (subshell-proc .
 		[(20130122 1322)
 		 nil "Functions for working with comints [source: github]" single])
@@ -397,6 +403,9 @@
 	       ((sws-mode
 		 (0)))
 	       "Major mode for editing .jade files [source: github]" single])
+ (stripe-buffer .
+		[(20121111 1751)
+		 nil "Use a different background for even and odd lines [source: github]" single])
  (string-utils .
 	       [(20121108 1917)
 		((list-utils
@@ -408,9 +417,23 @@
  (stem .
        [(20130120 2111)
 	nil "- routines for stemming [source: github]" single])
+ (starter-kit-ruby .
+		   [(20120128 1450)
+		    ((inf-ruby
+		      (2 2 3))
+		     (starter-kit
+		      (2 0 1)))
+		    "Saner defaults and goodies for Ruby [source: github]" single])
  (starter-kit-perl .
 		   [(20120128 1450)
 		    nil "Some helpful Perl code [source: github]" single])
+ (starter-kit-lisp .
+		   [(20120504 2007)
+		    ((starter-kit
+		      (2 0 2))
+		     (elisp-slime-nav
+		      (0 1)))
+		    "Saner defaults and goodies for lisp languages [source: github]" single])
  (starter-kit-js .
 		 [(20110930 2320)
 		  ((starter-kit
@@ -488,7 +511,7 @@
 	   [(20120905 2101)
 	    nil "Support sequential operation which omitted prefix keys. [source: github]" single])
  (smartparens .
-	      [(20130312 22)
+	      [(20130314 2018)
 	       ((dash
 		 (1 0 2)))
 	       "Smart insertion and wrapping with parens/user defined pairs/tags [source: github]" tar])
@@ -498,6 +521,9 @@
  (smart-tabs-mode .
 		  [(20121202 1829)
 		   nil "Intelligently indent with tabs, align with spaces! [source: github]" single])
+ (smart-tab .
+	    [(20130304 1509)
+	     nil "Intelligent tab completion and indentation. [source: github]" single])
  (smart-operator .
 		 [(20051013 1756)
 		  nil "Beautify the operators in codes [source: wiki]" single])
@@ -609,7 +635,7 @@
 	       (3 0 15)))
 	     "Major mode for editing Sass files [source: github]" single])
  (sackspace .
-	    [(20130117 1644)
+	    [(20130315 250)
 	     nil "A better backspace [source: github]" single])
  (s .
     [(20130228 1244)
@@ -952,6 +978,9 @@
 	     (xml-rpc
 	      (1 6 8)))
 	    "Blog from Org mode to wordpress [source: github]" tar])
+ (org-toodledo .
+	       [(20130312 1926)
+		nil "Toodledo integration for Emacs Org mode [source: github]" tar])
  (org-readme .
 	     [(20130313 1504)
 	      ((http-post-simple
@@ -1231,7 +1260,7 @@
 	     [(20090309 1715)
 	      nil "in-buffer mathematical operations [source: github]" single])
  (lua-mode .
-	   [(20120919 1821)
+	   [(20130315 821)
 	    nil "a major-mode for editing Lua scripts [source: github]" single])
  (lorem-ipsum .
 	      [(20051013 1756)
@@ -1365,7 +1394,7 @@
 	   [(20130212 1353)
 	    nil "JavaScript scanner [source: github]" tar])
  (js2-refactor .
-	       [(20130314 642)
+	       [(20130314 1639)
 		((js2-mode
 		  (20101228))
 		 (multiple-cursors
@@ -1398,7 +1427,7 @@
 		[(20121004 1726)
 		 nil "Watch continuous integration build status [source: github]" single])
  (jedi .
-       [(20130307 2022)
+       [(20130314 1645)
 	((epc
 	  (0 1 0))
 	 (auto-complete
@@ -1643,7 +1672,7 @@
 	    (20120509)))
 	  "helm-sources and some utilities for GNU R. [source: github]" single])
  (helm .
-       [(20130312 1129)
+       [(20130313 2255)
 	nil "Helm is an Emacs incremental and narrowing framework [source: github]" tar])
  (header2 .
 	  [(20121228 2051)
@@ -1772,7 +1801,7 @@
 		       (0 1 1)))
 		     "Fringe version of git-gutter.el [source: github]" single])
  (git-gutter .
-	     [(20130311 2055)
+	     [(20130314 2132)
 	      nil "Port of Sublime Text plugin GitGutter [source: github]" single])
  (git-dwim .
 	   [(20130130 2150)
@@ -1801,7 +1830,7 @@
       [(20130305 1526)
        nil "ghc-mod front-end for haskell-mode [source: github]" tar])
  (gh .
-     [(20130313 2025)
+     [(20130314 1151)
       ((eieio
 	(1 3))
        (pcache
@@ -1928,7 +1957,7 @@
 		  (0 1)))
 		"A flymake handler for haml files [source: github]" single])
  (flymake-go .
-	     [(20130303 1633)
+	     [(20130314 1541)
 	      ((flymake
 		(0 4 13)))
 	      "A flymake handler for go-mode files [source: github]" single])
@@ -2749,7 +2778,7 @@
 	     (1 4)))
 	   "Auto-complete sources for input of mathematical symbols and latex tags [source: github]" single])
  (ac-js2 .
-	 [(20130314 2201)
+	 [(20130314 2336)
 	  ((js2-mode
 	    (20090723))
 	   (skewer-mode
@@ -2760,34 +2789,5 @@
 	      nil "auto-complete.el source for dabbrev [source: wiki]" single])
  (abl-mode .
 	   [(20120718 1655)
-	    nil "Python TDD minor mode [source: github]" single])
- (syntactic-sugar .
-		  [(20121205 1457)
-		   nil "Effect-free forms such as if/then/else [source: github]" single])
- (sudden-death .
-	       [(20121218 2249)
-		nil "Totsuzen-no-Shi [source: github]" single])
- (stripe-buffer .
-		[(20121111 1751)
-		 nil "Use a different background for even and odd lines [source: github]" single])
- (starter-kit-ruby .
-		   [(20120128 1450)
-		    ((inf-ruby
-		      (2 2 3))
-		     (starter-kit
-		      (2 0 1)))
-		    "Saner defaults and goodies for Ruby [source: github]" single])
- (starter-kit-lisp .
-		   [(20120504 2007)
-		    ((starter-kit
-		      (2 0 2))
-		     (elisp-slime-nav
-		      (0 1)))
-		    "Saner defaults and goodies for lisp languages [source: github]" single])
- (smart-tab .
-	    [(20130304 1509)
-	     nil "Intelligent tab completion and indentation. [source: github]" single])
- (org-toodledo .
-	       [(20120721 1825)
-		nil "Toodledo integration for Emacs Org mode [source: github]" tar]))
+	    nil "Python TDD minor mode [source: github]" single]))
 
