@@ -1,5 +1,5 @@
 ;; using contrib instead of the original
-(setq load-path (cons "~/.emacs.d/elpa/org-plus-contrib-20130311/" load-path))
+(setq load-path (cons "~/.emacs.d/elpa/org-plus-contrib-20130318/" load-path))
 ;; Load my org mode, over-riding the one bundled with emacs
 (require 'org)
 ;; Org-mode settings
