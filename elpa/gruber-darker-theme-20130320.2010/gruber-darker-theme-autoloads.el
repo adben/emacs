@@ -4,15 +4,15 @@
 
 
 ;;;### (autoloads nil "gruber-darker-theme" "gruber-darker-theme.el"
-;;;;;;  (20809 29630 0 0))
+;;;;;;  (20811 10357 0 0))
 ;;; Generated autoloads from gruber-darker-theme.el
 
 (when load-file-name (add-to-list 'custom-theme-load-path (file-name-as-directory (file-name-directory load-file-name))))
 
 ;;;***
 
-;;;### (autoloads nil nil ("gruber-darker-theme-pkg.el") (20809 29630
-;;;;;;  128279 0))
+;;;### (autoloads nil nil ("gruber-darker-theme-pkg.el") (20811 10357
+;;;;;;  937358 0))
 
 ;;;***
 

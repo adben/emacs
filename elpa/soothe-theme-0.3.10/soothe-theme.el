@@ -162,9 +162,10 @@
    ;; Basics
    `(default                                   ((t (:foreground ,foreground  :background ,background                    ))))
    `(cursor                                    ((t (                         :background ,orange-1                      ))))
-   `(region                                    ((t (:foreground nil          :background ,selection                     ))))
+   `(region                                    ((t (:foreground nil          :background ,purple-4                      ))))
    `(highlight                                 ((t (:foreground ,blue-3      :background ,blue-3bg                      ))))
-   `(hl-line                                   ((t (                         :background ,hl-line                       ))))
+   `(hl-line                                   ((t (                         :background ,hl-line
+                                                                                         ))))
    `(minibuffer-prompt                         ((t (:foreground ,orange-1    :background ,orange-1bg                    ))))
    `(escape-glyph                              ((t (:foreground ,red-1       :background ,purple-1bg                    ))))
    `(error                                     ((t (:foreground ,red-1       :background ,red-1bg                       ))))
