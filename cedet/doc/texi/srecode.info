@@ -62,7 +62,7 @@ commonality allows it to work in multiple languages with ease.
 * Developing Template Functions:: How to write your own template insert functions.
 * Template Naming Conventions:: Creating a set of core templates
 * Inserting Tag Lists::         Inserting Semantic tags via templates
-* Application Writing::         Writing an SRecoder application
+* Application Writing::         Writing an SRecode application
 * GNU Free Documentation License:: The license for this documentation.
 * Index::
 
@@ -145,8 +145,8 @@ like to update.  Copy it into your user template file, and change it.
 file, then you would get this new template instead of the one that
 comes with SRecode.  Higher level applications should always use
 `declaration:function' when generating their own code, so higher level
-templates will then adopt your changes to `declaration:function' into
-themselves.
+templates will then adopt user template changes to
+`declaration:function' into themselves.
 
    You can also override variables.  Core variables are stored in the
 SRecode root template file `default.srt', and that contains the
@@ -478,6 +478,14 @@ templates are compiled, including:
           set escape_start "$"
           set escape_end "$"
 
+     If you need to insert the characters that belong to the variables
+     `escape_start' or `escape_end', then place those into a variable,
+     and use that variable.  For example
+
+          set escape_start "$"
+          set escape_end "$"
+          set DOLLAR "$"
+
 `mode'
      This is the major mode, as a string with the full Emacs Lisp
      symbol in it.  All templates in this file will be installed into
@@ -526,24 +534,13 @@ templates are compiled, including:
      under that directory will be able to access the templates in that
      file.
 
-     Any template file that has a project specified will get have a
-     priority that is set between SRecode base templates, and user
-     defined templates.
-
-     Templates can be compiled via a project system, such as EDE.  EDE
-     loaded templates will get a PROJECT set automatically.
+     Any template file that has a project specified will get a priority
+     that is set between SRecode base templates, and user defined
+     templates.
 
      Example:
           set project "/tmp/testproject"
 
-
-   If you need to insert the characters that belong to the variables
-`escape_start' or `escape_end', then place those into a variable.  For
-example
-
-     set escape_start "$"
-     set escape_end "$"
-     set DOLLAR "$"
 
 
 File: srecode.info,  Node: Automatic Loop Variables,  Next: Compound Variable Values,  Prev: Special Variables,  Up: Variables
@@ -2302,60 +2299,60 @@ Index
 
 Tag Table:
 Node: Top827
-Node: Quick Start2898
-Ref: srecode-map-load-path3617
-Ref: srecode-insert3815
-Node: User Templates4208
-Ref: srecode-map-save-file4591
-Node: Parts of SRecode6100
-Node: SRecode Minor Mode9987
-Ref: srecode-insert-ask-variable-method11379
-Node: Template Writing12566
-Ref: `SRecode-template-mode'12710
-Node: Variables13829
-Node: String Values14855
-Node: Multi-string Values15284
-Node: Section Show16118
-Node: Special Variables16640
-Node: Automatic Loop Variables19726
-Node: Compound Variable Values20361
-Node: Templates20847
-Node: Template Section Dictionaries21722
-Node: Template Macros24232
-Node: Contexts27647
-Node: Prompts28689
-Node: Dictionaries30563
-Node: Create a Dictionary31506
-Ref: srecode-create-dictionary31714
-Node: Setting Dictionary Values31984
-Ref: srecode-dictionary-set-value32458
-Ref: srecode-dictionary-show-section32688
-Ref: srecode-dictionary-add-section-dictionary32854
-Node: Compound Dictionary Values33805
-Ref: srecode-dictionary-compound-value34277
-Ref: srecode-compound-toString34737
-Ref: srecode-dump35108
-Node: Argument Resolution36179
-Ref: srecode-resolve-arguments36648
-Node: Creating new Arguments36762
-Node: Querying a Dictionary37744
-Ref: srecode-dictionary-lookup-name38250
-Node: Template Argument Dictionary Entries38503
-Node: Base Arguments39129
-Node: Semantic Arguments42396
-Ref: srecode-semantic-selected-tag43035
-Node: Language Arguments44780
-Node: Developing Template Functions47095
-Ref: srecode-read-template-name49526
-Ref: srecode-table49904
-Ref: srecode-template-get-table50137
-Ref: srecode-insert-fcn51329
-Node: Template Naming Conventions51434
-Node: Inserting Tag Lists55106
-Ref: srecode-semantic-insert-tag55694
-Node: Application Writing57378
-Ref: srecode-load-tables-for-mode58331
-Node: GNU Free Documentation License58655
-Node: Index83835
+Node: Quick Start2897
+Ref: srecode-map-load-path3616
+Ref: srecode-insert3814
+Node: User Templates4207
+Ref: srecode-map-save-file4590
+Node: Parts of SRecode6108
+Node: SRecode Minor Mode9995
+Ref: srecode-insert-ask-variable-method11387
+Node: Template Writing12574
+Ref: `SRecode-template-mode'12718
+Node: Variables13837
+Node: String Values14863
+Node: Multi-string Values15292
+Node: Section Show16126
+Node: Special Variables16648
+Node: Automatic Loop Variables19647
+Node: Compound Variable Values20282
+Node: Templates20768
+Node: Template Section Dictionaries21643
+Node: Template Macros24153
+Node: Contexts27568
+Node: Prompts28610
+Node: Dictionaries30484
+Node: Create a Dictionary31427
+Ref: srecode-create-dictionary31635
+Node: Setting Dictionary Values31905
+Ref: srecode-dictionary-set-value32379
+Ref: srecode-dictionary-show-section32609
+Ref: srecode-dictionary-add-section-dictionary32775
+Node: Compound Dictionary Values33726
+Ref: srecode-dictionary-compound-value34198
+Ref: srecode-compound-toString34658
+Ref: srecode-dump35029
+Node: Argument Resolution36100
+Ref: srecode-resolve-arguments36569
+Node: Creating new Arguments36683
+Node: Querying a Dictionary37665
+Ref: srecode-dictionary-lookup-name38171
+Node: Template Argument Dictionary Entries38424
+Node: Base Arguments39050
+Node: Semantic Arguments42317
+Ref: srecode-semantic-selected-tag42956
+Node: Language Arguments44701
+Node: Developing Template Functions47016
+Ref: srecode-read-template-name49447
+Ref: srecode-table49825
+Ref: srecode-template-get-table50058
+Ref: srecode-insert-fcn51250
+Node: Template Naming Conventions51355
+Node: Inserting Tag Lists55027
+Ref: srecode-semantic-insert-tag55615
+Node: Application Writing57299
+Ref: srecode-load-tables-for-mode58252
+Node: GNU Free Documentation License58576
+Node: Index83756
 
 End Tag Table
