@@ -1,9 +1,9 @@
 ;;; srt-wy.el --- Generated parser support file
 
-;; Copyright (C) 2005, 2007, 2008, 2009, 2010 Eric M. Ludlam
+;; Copyright (C) 2005, 2007, 2008, 2009, 2010, 2013 Eric M. Ludlam
 
 ;; Author: Adolfo Benedetti <abenedetti@adbenosx.local>
-;; Created: 2013-03-15 15:20:00+0100
+;; Created: 2013-04-19 15:23:05+0200
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 
@@ -140,6 +140,10 @@
 	((SET symbol insertable-string-list newline)
 	 (wisent-raw-tag
 	  (semantic-tag-new-variable $2 nil $3)))
+	((SET symbol number newline)
+	 (wisent-raw-tag
+	  (semantic-tag-new-variable $2 nil
+				     (list $3))))
 	((SHOW symbol newline)
 	 (wisent-raw-tag
 	  (semantic-tag-new-variable $2 nil t))))
@@ -299,8 +303,8 @@ It ignores whitespace, newlines and comments."
   srecode-template-separator-block
   srecode-template-wy--<keyword>-keyword-analyzer
   srecode-template-property-analyzer
-  srecode-template-wy--<symbol>-regexp-analyzer
   srecode-template-wy--<number>-regexp-analyzer
+  srecode-template-wy--<symbol>-regexp-analyzer
   srecode-template-wy--<string>-sexp-analyzer
   srecode-template-wy--<punctuation>-string-analyzer
   semantic-lex-default-action
