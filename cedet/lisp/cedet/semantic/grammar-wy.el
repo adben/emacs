@@ -3,7 +3,7 @@
 ;; Copyright (C) 2002, 2003, 2004 David Ponce
 
 ;; Author: Adolfo Benedetti <abenedetti@adbenosx.local>
-;; Created: 2013-03-15 15:20:28+0100
+;; Created: 2013-05-03 15:29:54+0200
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 
