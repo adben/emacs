@@ -79,7 +79,7 @@
 		  [(20130401 229)
 		   nil "show whole days of world-time diffs [source: github]" single])
  (workgroups2 .
-	      [(20130501 1330)
+	      [(20130502 2259)
 	       nil "New workspaces for Emacs [source: github]" tar])
  (workgroups .
 	     [(20110724 1825)
@@ -594,7 +594,7 @@
 	   [(20130109 2015)
 	    nil "Manage window splits [source: github]" single])
  (sparql-mode .
-	      [(20130502 1445)
+	      [(20130503 1400)
 	       nil "Edit and interactively evaluate SPARQL queries. [source: github]" single])
  (spaces .
 	 [(20130109 2015)
@@ -757,7 +757,7 @@
 	     (0 21)))
 	   "Paste to the web via scp. [source: wiki]" single])
  (sclang-extensions .
-		    [(20130503 41)
+		    [(20130503 1422)
 		     ((auto-complete
 		       (1 4 0))
 		      (s
@@ -903,6 +903,9 @@
  (replace-from-region .
 		      [(20130316 2304)
 		       nil "Replace commands whose query is from region [source: wiki]" single])
+ (region-bindings-mode .
+		       [(20130430 2107)
+			nil "Enable custom bindings when mark is active. [source: github]" single])
  (regex-tool .
 	     [(20130328 1510)
 	      nil "A regular expression evaluation tool for programmers [source: github]" single])
@@ -970,6 +973,9 @@
  (python-magic .
 	       [(20120505 1355)
 		nil "outline mode extension for python mode [source: wiki]" single])
+ (python-django .
+		[(20130317 1317)
+		 nil "A Jazzy package for managing Django projects [source: github]" single])
  (pyregexp .
 	   [(20130401 1520)
 	    nil "A Python regexp/replace command for Emacs with interactive visual feedback [source: github]" tar])
@@ -1158,7 +1164,7 @@
 		   [(20130427 1706)
 		    nil "Display ugly ^L page breaks as tidy horizontal lines [source: github]" single])
  (packed .
-	 [(20130426 1932)
+	 [(20130502 2340)
 	  ((cl-lib
 	    (0 2))
 	   (magit
@@ -1497,10 +1503,10 @@
 		    (1 1 0)))
 		  "GitHub pull requests extension for Magit [source: github]" single])
  (magit-commit-training-wheels .
-			       [(20130328 1436)
+			       [(20130406 2035)
 				nil "Advice for magit-log-edit-commit [source: github]" single])
  (magit .
-	[(20130501 2106)
+	[(20130502 1609)
 	 ((cl-lib
 	   (0 2)))
 	 "Control Git from Emacs. [source: github]" tar])
@@ -1714,7 +1720,7 @@
 		  (20130218)))
 		"A JavaScript refactoring library for emacs. [source: github]" tar])
  (js2-mode .
-	   [(20130430 2037)
+	   [(20130502 2359)
 	    ((emacs
 	      (24 1)))
 	    "Improved JavaScript editing mode [source: github]" tar])
@@ -2209,7 +2215,7 @@
 	  [(20130207 101)
 	   nil "drive gnuplot from within emacs [source: github]" tar])
  (glsl-mode .
-	    [(20130501 900)
+	    [(20130502 1213)
 	     nil "major mode for Open GLSL shader files [source: github]" single])
  (gitty .
 	[(20121014 1642)
@@ -2465,7 +2471,7 @@
 			      (1 2)))
 			    "Change mode line color with Flycheck status [source: github]" single])
  (flycheck .
-	   [(20130501 1258)
+	   [(20130502 1916)
 	    ((s
 	      (1 3 1))
 	     (dash
@@ -2476,7 +2482,7 @@
 	      (24 1)))
 	    "On-the-fly syntax checking (Flymake done right) [source: github]" tar])
  (flex-isearch .
-	       [(20120606 1317)
+	       [(20130502 1253)
 		nil "Flex matching (like ido) in isearch. [source: hg]" single])
  (flex-autopair .
 		[(20120809 2118)
@@ -2712,7 +2718,7 @@
 	   [(20120413 1107)
 	    nil "Emacs window session manager [source: github]" single])
  (elpy .
-       [(20130427 1648)
+       [(20130503 1212)
 	((auto-complete
 	  (1 4))
 	 (fuzzy
@@ -2776,9 +2782,7 @@
 	      nil "Show eldoc when using M-: [source: github]" single])
  (el-x .
        [(20130418 2335)
-	((cl-lib
-	  (0 2)))
-	"Emacs-lisp extensions. [source: github]" tar])
+	nil "main entry point for el-x package [source: github]" tar])
  (el-swank-fuzzy .
 		 [(20091023 1909)
 		  nil "fuzzy symbol completion. [source: wiki]" single])
@@ -2889,7 +2893,7 @@
 	       [(20130404 2150)
 		nil "Aspell extra dictionary for Drupal [source: github]" tar])
  (drupal-mode .
-	      [(20130307 2249)
+	      [(20130503 1229)
 	       ((php-mode
 		 (1 5 0)))
 	       "Advanced minor mode for Drupal development [source: github]" tar])
@@ -3171,7 +3175,7 @@
 	      [(20121008 1918)
 	       nil "Major mode for editing Citrus files [source: github]" tar])
  (chicken-scheme .
-		 [(20130216 950)
+		 [(20130502 2142)
 		  nil "Scheme-mode extensions for Chicken Scheme [source: github]" single])
  (change-inner .
 	       [(20130208 2030)
@@ -3248,7 +3252,7 @@
 	     [(20080905 553)
 	      nil "minor mode to visualize TAB, (HARD) SPACE, NEWLINE [source: wiki]" single])
  (bitly .
-	[(20130323 2054)
+	[(20130503 1049)
 	 nil "Shorten URLs using the bitly.com shortener service [source: github]" single])
  (bitlbee .
 	  [(20130328 1118)
@@ -3339,7 +3343,7 @@
 		      [(20120612 2224)
 		       nil "Auto Completion source for clang for GNU Emacs [source: github]" single])
  (auto-complete .
-		[(20130330 1836)
+		[(20130503 2013)
 		 ((popup
 		   (0 5 0)))
 		 "Auto Completion for GNU Emacs [source: github]" tar])
