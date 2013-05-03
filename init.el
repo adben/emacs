@@ -33,7 +33,9 @@
 (require 'cogre)
 (require 'cedet-contrib)
 (require 'eieio)
-;;the rest
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Extra loads
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (add-to-list 'load-path "~/.emacs.d")
 ;;Add all top-level subdirectories of .emacs.d to the load path
 (progn (cd "~/.emacs.d")
@@ -43,10 +45,6 @@
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'exec-path "/usr/texbin")
 (add-to-list 'exec-path "/opt/local/bin")
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;CEDET <= must be load at f
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;(load-library "adben-cedet")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;ELPA package manager
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
