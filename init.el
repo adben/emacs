@@ -21,6 +21,7 @@
 ;; Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,
 ;; MA 02111-1307, USA.
 ;;
+;; https://www.gnu.org/licenses/gpl-2.0.html
 ;; This file is not part of GNU Emacs.
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
