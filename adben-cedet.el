@@ -21,3 +21,4 @@
 (load-file "~/.emacs.d/cedet/contrib/cedet-contrib-load.el")
 (require 'cogre)
 (require 'cedet-contrib)
+(require 'eieio-base)

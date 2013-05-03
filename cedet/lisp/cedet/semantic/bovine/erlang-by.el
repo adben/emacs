@@ -3,7 +3,7 @@
 ;; Copyright (C) 2002, 2003 Vladimir G. Sekissov
 
 ;; Author: Adolfo Benedetti <abenedetti@adbenosx.local>
-;; Created: 2013-03-15 15:20:50+0100
+;; Created: 2013-05-03 15:30:18+0200
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 
