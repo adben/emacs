@@ -3,7 +3,7 @@
 ;;; Copyright (C) 2007 Daniel Debertin (debertin@gmail.com)
 
 ;; Author: Adolfo Benedetti <abenedetti@adbenosx.local>
-;; Created: 2013-03-15 15:33:48+0100
+;; Created: 2013-05-03 15:32:21+0200
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 

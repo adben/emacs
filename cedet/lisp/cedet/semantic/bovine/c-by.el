@@ -3,7 +3,7 @@
 ;; Copyright (C) 1999-2012 Free Software Foundation, Inc.
 
 ;; Author: Adolfo Benedetti <abenedetti@adbenosx.local>
-;; Created: 2013-03-15 15:20:46+0100
+;; Created: 2013-05-03 15:30:14+0200
 ;; Keywords: syntax
 ;; X-RCS: $Id$
 
