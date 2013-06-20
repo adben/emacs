@@ -31,7 +31,7 @@
 ;; swank-clojure
 ;; (add-to-list 'load-path "~/git/swank-clojure")
 
-(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.5.0-master-SNAPSHOT/clojure-1.5.0-master-SNAPSHOT.jar"
+(setq swank-clojure-jar-path "~/.m2/repository/org/clojure/clojure/1.6.0-master-SNAPSHOT/clojure-1.6.0-master-SNAPSHOT-sources.jar"
       swank-clojure-extra-classpaths (list "~/git/swank-clojure"))
 
 (require 'swank-clojure)

@@ -69,7 +69,7 @@
 	      [(1 0)
 	       nil "Major mode for Jgraph files" single])
  (js2-mode .
-	   [(20130608)
+	   [(20130619)
 	    ((emacs
 	      (24 1)))
 	    "Improved JavaScript editing mode" single])
