@@ -4,7 +4,7 @@
 
 ;; Author: Alexey Kutepov <reximkut@gmail.com>
 ;; URL: http://github.com/rexim/gruber-darker-theme
-;; Version: 20130619.1954
+;; Version: 20130620.2121
 ;; X-Original-Version: 0.4
 
 ;; Permission is hereby granted, free of charge, to any person
@@ -220,12 +220,10 @@
                                        :background gruber-darker-sea-wave))))
 
    ;; Show Paren
-   `(show-paren-match-face ((t ,(list :background gruber-darker-bg
-                                      :foreground gruber-darker-green
-                                      :weight 'bold))))
-   `(show-paren-mismatch-face ((t ,(list :background gruber-darker-bg
-                                         :foreground gruber-darker-red
-                                         :weight 'bold))))
+   `(show-paren-match-face ((t ,(list :background gruber-darker-bg+4
+                                      :foreground gruber-darker-fg+1))))
+   `(show-paren-mismatch-face ((t ,(list :background gruber-darker-red-1
+                                         :foreground gruber-darker-fg+1))))
    ))
 
 ;;;###autoload

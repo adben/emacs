@@ -524,7 +524,7 @@
 		[(20130122 1322)
 		 nil "Functions for working with comints [github]" single])
  (sublimity .
-	    [(20130620 1909)
+	    [(20130620 2345)
 	     nil "smooth-scrolling and minimap, like sublime editor [github]" tar])
  (subatomic256-theme .
 		     [(20130612 27)
@@ -1164,7 +1164,7 @@
 			  [(20130306 1515)
 			   nil "Monochromatic version of the Phoenix theme [github]" single])
  (phi-search .
-	     [(20130620 1843)
+	     [(20130621 49)
 	      nil "another incremental search command, compatible with \"multiple-cursors\" [github]" tar])
  (ph .
      [(20130312 2037)
@@ -2084,7 +2084,7 @@
 	      [(20121016 957)
 	       nil "convert english words between singular and plural [github]" single])
  (inf-ruby .
-	   [(20130618 416)
+	   [(20130620 1746)
 	    nil "Run a ruby process in a buffer [github]" single])
  (inf-php .
 	  [(20130414 1621)
@@ -2433,7 +2433,7 @@
 	       (0 3 0)))
 	     "Guide the following key bindings automatically and dynamically [github]" single])
  (gruber-darker-theme .
-		      [(20130619 1954)
+		      [(20130620 2121)
 		       nil "Gruber Darker color theme for Emacs 24. [github]" single])
  (groovy-mode .
 	      [(20130506 1025)
@@ -2973,8 +2973,8 @@
 		 [(20130301 1148)
 		  nil "Espresso Tutti Colori port for Emacs [github]" single])
  (esh-buf-stack .
-		[(20130619 1614)
-		 nil "No description available. [github]" single])
+		[(20130620 2354)
+		 nil "Add a buffer stack feature to Eshell [github]" single])
  (escreen .
 	  [(20091203 1913)
 	   nil "emacs window session manager [github]" single])
@@ -3835,10 +3835,8 @@
 			  [(20120811 837)
 			   nil "Automatically byte-compile when saved [wiki]" single])
  (auctex-latexmk .
-		 [(20130615 145)
-		  ((auctex
-		    (11 86)))
-		  "Add LatexMk support to AUCTeX [github]" single])
+		 [(20130620 2312)
+		  nil "Add LatexMk support to AUCTeX [github]" single])
  (async .
 	[(20130611 1809)
 	 nil "Asynchronous processing in Emacs [github]" tar])
