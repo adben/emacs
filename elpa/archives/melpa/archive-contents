@@ -454,7 +454,7 @@
      [(20130403 1455)
       nil "a Japanese input method with T-Code on Emacs [github]" tar])
  (tangotango-theme .
-		   [(20121014 1916)
+		   [(20130715 1126)
 		    nil "Tango Palette color theme for Emacs 24. [github]" single])
  (tango-2-theme .
 		[(20120312 1325)
@@ -657,13 +657,13 @@
 		  (24 1)))
 		"a dark colorful theme for Emacs24. [github]" single])
  (solarized-theme .
-		  [(20130714 2215)
+		  [(20130715 1136)
 		   nil "The Solarized color theme, ported to Emacs. [github]" tar])
  (snippet .
 	  [(20130210 1815)
 	   nil "Insert snippets of text into a buffer [github]" single])
  (smotitah .
-	   [(20130702 946)
+	   [(20130715 1233)
 	    nil "Modular emacs configuration framework [github]" tar])
  (smooth-scrolling .
 		   [(20130602 1609)
@@ -703,7 +703,7 @@
 		 [(20051013 1756)
 		  nil "Beautify the operators in codes [wiki]" single])
  (smart-mode-line .
-		  [(20130714 2206)
+		  [(20130715 1028)
 		   nil "A color coded smart mode-line. [github]" single])
  (smart-forward .
 		[(20130205 1352)
