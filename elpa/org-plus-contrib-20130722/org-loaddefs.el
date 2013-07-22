@@ -860,7 +860,7 @@ tree can be found.
 ;;;***
 
 ;;;### (autoloads (org-element-context org-element-at-point org-element-interpret-data)
-;;;;;;  "org-element" "org-element.el" "209769da8282fbb5c8b1fd5819b1532f")
+;;;;;;  "org-element" "org-element.el" "63f37029da475dfaf7d33aa9b1ced9fa")
 ;;; Generated autoloads from org-element.el
 
 (autoload 'org-element-interpret-data "org-element" "\
@@ -1846,7 +1846,7 @@ DIRECTORY is where the directory org-mode/ lives (i.e. the
 ;;;***
 
 ;;;### (autoloads (org-git-version org-release) "org-version" "org-version.el"
-;;;;;;  (20963 33279))
+;;;;;;  (20972 48258))
 ;;; Generated autoloads from org-version.el
 
 (autoload 'org-release "org-version" "\

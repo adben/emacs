@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "magit" "magit.el" (20971 34903 0 0))
+;;;### (autoloads nil "magit" "magit.el" (20972 56615 0 0))
 ;;; Generated autoloads from magit.el
 
 (autoload 'magit-status "magit" "\
@@ -20,7 +20,7 @@ when asking for user input.
 
 ;;;***
 
-;;;### (autoloads nil "magit-blame" "magit-blame.el" (20971 34903
+;;;### (autoloads nil "magit-blame" "magit-blame.el" (20972 56615
 ;;;;;;  0 0))
 ;;; Generated autoloads from magit-blame.el
 
@@ -31,7 +31,7 @@ Display blame information inline.
 
 ;;;***
 
-;;;### (autoloads nil "magit-flow" "magit-flow.el" (20971 34903 0
+;;;### (autoloads nil "magit-flow" "magit-flow.el" (20972 56615 0
 ;;;;;;  0))
 ;;; Generated autoloads from magit-flow.el
 
@@ -47,7 +47,7 @@ Unconditionally turn on `magit-flow-mode'.
 
 ;;;***
 
-;;;### (autoloads nil "magit-stgit" "magit-stgit.el" (20971 34903
+;;;### (autoloads nil "magit-stgit" "magit-stgit.el" (20972 56615
 ;;;;;;  0 0))
 ;;; Generated autoloads from magit-stgit.el
 
@@ -63,7 +63,7 @@ Unconditionally turn on `magit-stgit-mode'.
 
 ;;;***
 
-;;;### (autoloads nil "magit-svn" "magit-svn.el" (20971 34903 0 0))
+;;;### (autoloads nil "magit-svn" "magit-svn.el" (20972 56615 0 0))
 ;;; Generated autoloads from magit-svn.el
 
 (autoload 'magit-svn-mode "magit-svn" "\
@@ -78,7 +78,7 @@ Unconditionally turn on `magit-svn-mode'.
 
 ;;;***
 
-;;;### (autoloads nil "magit-topgit" "magit-topgit.el" (20971 34903
+;;;### (autoloads nil "magit-topgit" "magit-topgit.el" (20972 56615
 ;;;;;;  0 0))
 ;;; Generated autoloads from magit-topgit.el
 
@@ -94,7 +94,7 @@ Unconditionally turn on `magit-topgit-mode'.
 
 ;;;***
 
-;;;### (autoloads nil "magit-wip" "magit-wip.el" (20971 34903 0 0))
+;;;### (autoloads nil "magit-wip" "magit-wip.el" (20972 56615 0 0))
 ;;; Generated autoloads from magit-wip.el
 
 (defvar magit-wip-mode nil "\
@@ -143,7 +143,7 @@ See `magit-wip-save-mode' for more information on Magit-Wip-Save mode.
 
 ;;;***
 
-;;;### (autoloads nil "rebase-mode" "rebase-mode.el" (20971 34903
+;;;### (autoloads nil "rebase-mode" "rebase-mode.el" (20972 56615
 ;;;;;;  0 0))
 ;;; Generated autoloads from rebase-mode.el
 
@@ -162,7 +162,7 @@ running 'man git-rebase' at the command line) for details.
 ;;;***
 
 ;;;### (autoloads nil nil ("magit-bisect.el" "magit-cherry.el" "magit-compat.el"
-;;;;;;  "magit-key-mode.el" "magit-pkg.el") (20971 34904 54698 0))
+;;;;;;  "magit-key-mode.el" "magit-pkg.el") (20972 56615 675116 0))
 
 ;;;***
 

@@ -1,5 +1,5 @@
 This is
-/home/melpa/melpa/working/haskell-mode-20130720.1906/haskell-mode.info,
+/home/melpa/melpa/working/haskell-mode-20130721.2322/haskell-mode.info,
 produced by makeinfo version 4.13 from
 /home/melpa/melpa/working/haskell-mode/haskell-mode.texi.
 
@@ -33,9 +33,11 @@ interpreter (e.g. GHCi).
 
 * Introduction::
 * Getting Started::
+* Getting Help and Reporting Bugs::
 * Editing Haskell Code::
 * Unicode::
 * Indentation::
+* haskell-decl-scan-mode::
 * inferior-haskell-mode::
 * haskell-interactive-mode::
 * haskell-cabal-mode::
@@ -64,8 +66,14 @@ editing Haskell (http://www.haskell.org) programs.
 
    * scanning declarations and placing them in a menu.
 
-   This Info manual is work in progress and incomplete. However, you
-can find more information at these locations:
+
+File: haskell-mode.info,  Node: Getting Help and Reporting Bugs,  Next: Editing Haskell Code,  Prev: Getting Started,  Up: Top
+
+2 Getting Help and Reporting Bugs
+*********************************
+
+This Info manual is work in progress and incomplete. However, you can
+find more information at these locations in the meantime:
 
    * Haskell Mode's GitHub Home
      (https://github.com/haskell/haskell-mode)
@@ -73,14 +81,29 @@ can find more information at these locations:
    * Haskell Wiki Emacs Page
      (http://www.haskell.org/haskellwiki/Haskell_mode_for_Emacs)
 
-
-File: haskell-mode.info,  Node: Getting Started,  Next: Editing Haskell Code,  Prev: Introduction,  Up: Top
+   If you have any questions or like to discuss something regarding
+Haskell Mode, please consider sending an email to the Haskellmode-emacs
+mailing list
+(http://projects.haskell.org/cgi-bin/mailman/listinfo/haskellmode-emacs).
+The mailing list is also available on Gmane (http://gmane.org/) via the
+gmane.comp.lang.haskell.emacs
+(http://dir.gmane.org/gmane.comp.lang.haskell.emacs) newsgroup.
 
-2 Getting Started
+   If you have discovered a bug or wish to request a new feature, you
+can file a new issue
+(https://github.com/haskell/haskell-mode/issues/new) with Haskell
+Mode's issue tracker. When filing a bug, please state your currently
+used software version (`M-x haskell-version', `M-x version') and what
+steps to perform in order to reproduce the bug you're experiencing.
+
+
+File: haskell-mode.info,  Node: Getting Started,  Next: Getting Help and Reporting Bugs,  Prev: Introduction,  Up: Top
+
+3 Getting Started
 *****************
 
 If you are reading this, you have most likely already managed to
-install Haskell mode in one way or another. However, just for the
+install Haskell Mode in one way or another. However, just for the
 record, the officially recommended way to install Haskell Mode via the
 Marmalade package archive
 (http://marmalade-repo.org/packages/haskell-mode) which contains the
@@ -100,12 +123,12 @@ you set up indentation to match to match your preferences, *Note
 Indentation::.
 
 
-File: haskell-mode.info,  Node: Editing Haskell Code,  Next: Unicode,  Prev: Getting Started,  Up: Top
+File: haskell-mode.info,  Node: Editing Haskell Code,  Next: Unicode,  Prev: Getting Help and Reporting Bugs,  Up: Top
 
-3 Editing Haskell Code
+4 Editing Haskell Code
 **********************
 
-"Haskell mode" is actually a collection of so-called major modes(1) one
+"Haskell Mode" is actually a collection of so-called major modes(1) one
 of which is called `haskell-mode'.  To avoid confusion, when referring
 to this package the name "Haskell mode" is written in a normal font,
 whereas when referring the major mode of the same name `haskell-mode'
@@ -154,7 +177,7 @@ Modes: (emacs)Choosing Modes.
 
 File: haskell-mode.info,  Node: Unicode,  Next: Indentation,  Prev: Editing Haskell Code,  Up: Top
 
-4 Unicode support
+5 Unicode support
 *****************
 
 See the Haskell Wiki's entry on Unicode Symbols
@@ -189,9 +212,9 @@ can turn it off by setting `input-method-highlight-flag' to `nil' via
 `M-x customize-variable'.
 
 
-File: haskell-mode.info,  Node: Indentation,  Next: inferior-haskell-mode,  Prev: Unicode,  Up: Top
+File: haskell-mode.info,  Node: Indentation,  Next: haskell-decl-scan-mode,  Prev: Unicode,  Up: Top
 
-5 Indentation
+6 Indentation
 *************
 
 For general information about GNU Emacs' support for indentation *Note
@@ -248,9 +271,66 @@ conveying the block structure. However, most Haskell written by humans
 uses indentation for block structuring.
 
 
-File: haskell-mode.info,  Node: inferior-haskell-mode,  Next: haskell-interactive-mode,  Prev: Indentation,  Up: Top
+File: haskell-mode.info,  Node: haskell-decl-scan-mode,  Next: inferior-haskell-mode,  Prev: Indentation,  Up: Top
 
-6 `inferior-haskell-mode'
+7 `haskell-decl-scan-mode'
+**************************
+
+`haskell-decl-scan-mode' is a minor mode which performs declaration
+scanning and provides `M-x imenu' support (*Note Imenu: (emacs)Imenu,
+for more information).
+
+   For non-literate and TeX-style literate scripts, the common
+convention that top-level declarations start at the first column is
+assumed.  For Bird-style literate scripts, the common convention that
+top-level declarations start at the third column, ie. after `> ', is
+assumed.
+
+   When `haskell-decl-scan-mode' is active, the standard Emacs
+top-level definition movement commands (*note Moving by Defuns:
+(emacs)Moving by Defuns.) are enabled to operate on Haskell
+declarations:
+
+`C-M-a'
+     Move to beginning of current or preceding declaration
+     (`beginning-of-defun').
+
+`C-M-e'
+     Move to end of current or following declaration (`end-of-defun').
+
+`C-M-h'
+     Select whole current or following declaration (`mark-defun').
+
+   Moreover, if enabled via the option
+`haskell-decl-scan-add-to-menubar', a menu item "Declarations" is added
+to the menu bar listing the scanned declarations and allowing to jump
+to declarations in the source buffer.
+
+   It's recommended to have font lock mode enabled (*note Font Lock:
+(emacs)Font Lock.) as `haskell-decl-scan-mode' ignores text highlighted
+with `font-lock-comment-face'.
+
+   As usual, in order to activate `haskell-decl-scan-mode'
+automatically for Haskell buffers, add `turn-on-haskell-decl-scan' to
+`haskell-mode-hook':
+
+     (add-hook 'haskell-mode-hook 'turn-on-haskell-decl-scan)
+
+   `haskell-decl-scan-mode' enables the use of features that build upon
+`imenu' support such as Speedbar Frames (*note Speedbar:
+(emacs)Speedbar.) or the global "Which Function" minor mode (*note
+Which Function: (emacs)Which Function.).
+
+   In order to enable `which-function-mode' for Haskell buffers you
+need to add the following to your Emacs initialization:
+
+     (eval-after-load "which-func"
+       '(add-to-list 'which-func-modes 'haskell-mode))
+
+
+File: haskell-mode.info,  Node: inferior-haskell-mode,  Next: haskell-interactive-mode,  Prev: haskell-decl-scan-mode,  Up: Top
+
+8 `inferior-haskell-mode'
 *************************
 
 The major mode `inferior-haskell-mode' provides support for interacting
@@ -267,7 +347,7 @@ auto-detected by default, but is customizable via the
 
 File: haskell-mode.info,  Node: haskell-interactive-mode,  Next: haskell-cabal-mode,  Prev: inferior-haskell-mode,  Up: Top
 
-7 `haskell-interactive-mode'
+9 `haskell-interactive-mode'
 ****************************
 
 A new mode for the REPL (read–eval–print loop) and GHCi sessions is
@@ -279,8 +359,8 @@ called `haskell-interactive-mode', it intends to replace
 
 File: haskell-mode.info,  Node: haskell-cabal-mode,  Next: Concept index,  Prev: haskell-interactive-mode,  Up: Top
 
-8 `haskell-cabal-mode'
-**********************
+10 `haskell-cabal-mode'
+***********************
 
 TODO/WRITEME
 
@@ -310,6 +390,8 @@ Function index
 * Menu:
 
 * haskell-customize:                     Getting Started.      (line 13)
+* haskell-decl-scan-mode:                haskell-decl-scan-mode.
+                                                               (line  6)
 * haskell-mode:                          Editing Haskell Code. (line  6)
 * inferior-cabal-mode:                   haskell-cabal-mode.   (line  6)
 * inferior-haskell-find-definition:      inferior-haskell-mode.
@@ -331,6 +413,8 @@ Function index
 * inferior-haskell-type:                 inferior-haskell-mode.
                                                                (line  6)
 * literate-haskell-mode:                 Editing Haskell Code. (line 29)
+* turn-on-haskell-decl-scan:             haskell-decl-scan-mode.
+                                                               (line  6)
 * turn-on-haskell-indent:                Indentation.          (line 23)
 * turn-on-haskell-indentation:           Indentation.          (line 33)
 * turn-on-haskell-simple-indent:         Indentation.          (line 17)
@@ -344,29 +428,36 @@ Variable index
  [index ]
 * Menu:
 
-* haskell-program-name:                  inferior-haskell-mode. (line 6)
-* inferior-cabal-mode-hook:              haskell-cabal-mode.    (line 6)
-* inferior-haskell-mode-hook:            inferior-haskell-mode. (line 6)
+* haskell-decl-scan-mode-hook:           haskell-decl-scan-mode.
+                                                               (line  6)
+* haskell-mode-hook:                     Getting Started.      (line 18)
+* haskell-program-name:                  inferior-haskell-mode.
+                                                               (line  6)
+* inferior-cabal-mode-hook:              haskell-cabal-mode.   (line  6)
+* inferior-haskell-mode-hook:            inferior-haskell-mode.
+                                                               (line  6)
 
 
 
 Tag Table:
 Node: Top781
-Node: Introduction1341
-Node: Getting Started2127
-Node: Editing Haskell Code3244
-Ref: Editing Haskell Code-Footnote-14867
-Ref: Editing Haskell Code-Footnote-24970
-Ref: Editing Haskell Code-Footnote-35021
-Node: Unicode5120
-Node: Indentation6732
-Ref: Indentation-Footnote-18917
-Node: inferior-haskell-mode9093
-Node: haskell-interactive-mode9607
-Node: haskell-cabal-mode10009
-Node: Concept index10189
-Node: Function index10787
-Node: Variable index12689
+Node: Introduction1404
+Node: Getting Help and Reporting Bugs1899
+Node: Getting Started3161
+Node: Editing Haskell Code4289
+Ref: Editing Haskell Code-Footnote-15928
+Ref: Editing Haskell Code-Footnote-26031
+Ref: Editing Haskell Code-Footnote-36082
+Node: Unicode6181
+Node: Indentation7793
+Ref: Indentation-Footnote-19979
+Node: haskell-decl-scan-mode10155
+Node: inferior-haskell-mode12286
+Node: haskell-interactive-mode12811
+Node: haskell-cabal-mode13213
+Node: Concept index13395
+Node: Function index13993
+Node: Variable index16171
 
 End Tag Table
 

@@ -6,11 +6,11 @@
 ;; Maintainer: Drew Adams
 ;; Copyright (C) 1999-2013, Drew Adams, all rights reserved.
 ;; Created: Fri Mar 19 15:58:58 1999
-;; Version: 20130720.2145
+;; Version: 20130722.105
 ;; X-Original-Version: 2013-07-19
-;; Last-Updated: Sat Jul 20 12:05:11 2013 (-0700)
+;; Last-Updated: Sun Jul 21 18:01:09 2013 (-0700)
 ;;           By: dradams
-;;     Update #: 6910
+;;     Update #: 7061
 ;; URL: http://www.emacswiki.org/dired+.el
 ;; Doc URL: http://www.emacswiki.org/DiredPlus
 ;; Keywords: unix, mouse, directories, diredp, dired
@@ -280,9 +280,16 @@
 ;;    `diredp-find-file-reuse-dir-buffer',
 ;;    `diredp-flag-region-files-for-deletion',
 ;;    `diredp-grep-this-file', `diredp-hardlink-this-file',
+;;    `diredp-image-dired-comment-file',
 ;;    `diredp-image-dired-comment-files-recursive',
+;;    `diredp-image-dired-copy-with-exif-name',
+;;    `diredp-image-dired-create-thumb',
+;;    `diredp-image-dired-delete-tag',
 ;;    `diredp-image-dired-delete-tag-recursive',
+;;    `diredp-image-dired-display-thumb',
 ;;    `diredp-image-dired-display-thumbs-recursive',
+;;    `diredp-image-dired-edit-comment-and-tags',
+;;    `diredp-image-dired-tag-file',
 ;;    `diredp-image-dired-tag-files-recursive',
 ;;    `diredp-insert-as-subdir', `diredp-insert-subdirs',
 ;;    `diredp-insert-subdirs-recursive',
@@ -375,7 +382,7 @@
 ;;    `diredp-mark-files-tagged-some/not-all',
 ;;    `diredp-paste-add-tags', `diredp-paste-replace-tags',
 ;;    `diredp-read-bookmark-file-args', `diredp-remove-if-not',
-;;    `diredp-set-tag-value', `diredp-tag',
+;;    `diredp-set-tag-value', `diredp-string-match-p', `diredp-tag',
 ;;    `diredp-this-file-marked-p', `diredp-this-file-unmarked-p',
 ;;    `diredp-this-subdir', `diredp-untag', `diredp-y-or-n-files-p'.
 ;;
@@ -475,6 +482,14 @@
 ;;
 ;;; Change Log:
 ;;
+;; 2013/07/21 dadams
+;;     Added: diredp-image-dired-(comment-file|copy-with-exif-name|(create|display)-thumb|
+;;                                delete-tag|edit-comment-and-tags|tag-file),
+;;            diredp-string-match-p, diredp-menu-bar-immediate-image-menu.
+;;     Put this-file image commands on new menu diredp-menu-bar-immediate-image-menu.
+;;     diredp-menu-bar-images-menu: Added diredp-do-display-images.
+;;     Use diredp-string-match-p instead of string-match where appropriate.
+;;     diredp-find-a-file-read-args: Removed #' from lambda.
 ;; 2013/07/19 dadams
 ;;     Added redefinition of dired-hide-details-mode.
 ;;     Added: diredp-hide-details-propagate-flag, diredp-hide-details-initially-flag,
@@ -1066,17 +1081,29 @@ rather than FUN itself, to `minibuffer-setup-hook'."
 ;; Quiet the byte-compiler.
 (defvar bmkp-copied-tags)               ; In `bookmark+-1.el'
 (defvar bmkp-current-bookmark-file)     ; In `bookmark+-1.el'
+(defvar bookmark-default-file)          ; In `bookmark.el'
 (defvar dired-keep-marker-hardlink)     ; In `dired-x.el'
 (defvar dired-switches-alist)
 (defvar dired-subdir-switches)
 (defvar dired-touch-program) ; Emacs 22+
 (defvar dired-use-ls-dired) ; Emacs 22+
 (defvar diredp-hide-details-initially-flag) ; Here, Emacs 24.4+
+(defvar diredp-hide-details-last-state) ; Here, Emacs 24.4+
 (defvar diredp-hide-details-propagate-flag) ; Here, Emacs 24.4+
+(defvar diredp-hide-details-toggled)    ; Here, Emacs 24.4+
+(defvar diredp-menu-bar-immediate-bookmarks-menu) ; Here, if Bookmark+ is available
 (defvar filesets-data)
 (defvar grep-use-null-device)
+(defvar icicle-file-sort)               ; In `icicles-opt.el'
+(defvar icicle-sort-comparer)           ; In `icicles-opt.el'
 (defvar image-dired-line-up-method)     ; In `image-dired.el'
+(defvar image-dired-main-image-directory) ; In `image-dired.el'
 (defvar image-dired-thumbnail-buffer)   ; In `image-dired.el'
+(defvar image-dired-widget-list)        ; In `image-dired.el'
+(defvar minibuffer-default-add-function) ; In `simple.el', Emacs 23+
+(defvar mouse3-dired-function)          ; In `mouse3.el'
+(defvar w32-browser-wait-time)          ; In `w32-browser.el'
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;
  
@@ -1197,7 +1224,7 @@ Argument ARG:
       (when (and fname  (or (not arg)  (eq arg 'all-files-no-dirs))  (file-directory-p fname))
         (setq fname  nil))
       (when (and fname  (eq arg 'all-files-no-dots)
-                 (or (member fname '("." ".."))  (string-match "/\.\.?$" fname)))
+                 (or (member fname '("." ".."))  (diredp-string-match-p "/\.\.?$" fname)))
         (setq fname  nil))
       (forward-line 1))
     (forward-line -1)
@@ -1287,6 +1314,13 @@ If DISTINGUISH-ONE-MARKED is non-nil, then return (t FILENAME) instead
     (dired-move-to-filename)))
  
 ;;; Utility functions
+
+;; Same as `tap-string-match-p' in `thingatpt+.el'.
+(if (fboundp 'string-match-p)
+    (defalias 'diredp-string-match-p 'string-match-p) ; Emacs 23+
+  (defun diredp-string-match-p (regexp string &optional start)
+    "Like `string-match', but this saves and restores the match data."
+    (save-match-data (string-match regexp string start))))
 
 (unless (fboundp 'derived-mode-p)       ; Emacs 20, 21.
   (defun derived-mode-p (&rest modes)
@@ -1441,8 +1475,8 @@ a prefix arg lets you edit the `ls' switches used for the new listing."
   "Return non-nil if the string SWITCHES contains `-b' or `--escape'."
   ;; Do not match things like "--block-size" that happen to contain "b".
   (if (> emacs-major-version 21)
-      (string-match "\\(\\`\\| \\)-[[:alnum:]]*b\\|--escape\\>" switches)
-    (string-match "\\(\\`\\| \\)-\\(\w\\|[0-9]\\)*b\\|--escape\\>" switches)))
+      (diredp-string-match-p "\\(\\`\\| \\)-[[:alnum:]]*b\\|--escape\\>" switches)
+    (diredp-string-match-p "\\(\\`\\| \\)-\\(\w\\|[0-9]\\)*b\\|--escape\\>" switches)))
 
 
 ;; From `dired.el'
@@ -1506,14 +1540,12 @@ If HDR is non-nil, insert a header line with the directory name."
           (dolist (f  file-list)
             (let ((beg  (point)))
               ;; Compute wildcard arg for this file.
-              (insert-directory f switches (string-match "[[?*]" f) nil)
+              (insert-directory f switches (diredp-string-match-p "[[?*]" f) nil)
               ;; Re-align fields, if necessary.
               (dired-align-file beg (point))))
         (insert-directory dir switches wildcard (not wildcard)))
-      ;; Quote certain characters, unless ls quoted them for us.
-      (unless (if (fboundp 'dired-switches-escape-p)
-                  (dired-switches-escape-p dired-actual-switches)
-                (string-match "b" dired-actual-switches))
+      ;; Quote certain characters, unless `ls' quoted them for us.
+      (unless (dired-switches-escape-p dired-actual-switches)
         (save-excursion
           (setq end  (point-marker))
           (goto-char opoint)
@@ -1562,6 +1594,8 @@ If HDR is non-nil, insert a header line with the directory name."
 ;;; Image stuff.
 
 (when (fboundp 'image-dired-get-thumbnail-image) ; Emacs 22+, `image-dired.el'.
+
+  ;; Similar to `image-dired-dired-toggle-marked-thumbs'.
   (defun image-dired-dired-insert-marked-thumbs () ; Not bound
     "Insert thumbnails before file names of marked files in the dired buffer."
     (interactive)
@@ -1580,7 +1614,127 @@ If HDR is non-nil, insert a header line with the directory name."
          (overlay-put overlay 'image-file image-file)
          (overlay-put overlay 'thumb-file thumb-file)))
      nil)
-    (add-hook 'dired-after-readin-hook 'image-dired-dired-after-readin-hook nil t)))
+    (add-hook 'dired-after-readin-hook 'image-dired-dired-after-readin-hook nil t))
+
+  ;; Corresponds to `image-dired-dired-comment-files'.
+  (defun diredp-image-dired-comment-file ()
+    "Add comment to this image file."
+    (interactive)
+    (image-dired-write-comments (cons (dired-get-filename) (image-dired-read-comment))))
+
+  ;; Corresponds to `image-dired-tag-files'.
+  (defun diredp-image-dired-tag-file ()
+    "Tag this image file."
+    (interactive)
+    (image-dired-write-tags (cons (dired-get-filename)
+                                  (read-string "Tags to add (use `;' to separate): "))))
+
+  ;; Corresponds to `image-dired-delete-tag'.
+  (defun diredp-image-dired-delete-tag ()
+    "Remove tag from  this image file."
+    (interactive)
+    (image-dired-remove-tag (list (dired-get-filename)) (read-string "Tag to remove: ")))
+
+  ;; Corresponds to `image-dired-display-thumbs'.
+  (defun diredp-image-dired-display-thumb (&optional append)
+    "Pop to thumbnail of this image file, in `image-dired-thumbnail-buffer'.
+If a thumbnail image does not yet exist for this file, create it.
+With a prefix arg, append the thumbnail to the thumbnails buffer,
+instead of clearing the buffer first."
+    (interactive "P")
+    (let* ((dired-buf   (current-buffer))
+           (curr-file   (dired-get-filename))
+           (thumb-name  (image-dired-thumb-name curr-file)))
+      (with-current-buffer (image-dired-create-thumbnail-buffer)
+        (let ((inhibit-read-only  t))
+          (if (not append) (erase-buffer) (goto-char (point-max)))
+          (if (and (not (file-exists-p thumb-name))
+                   (not (zerop (image-dired-create-thumb curr-file thumb-name))))
+              (message "Cannot create thumbnail image for file `%s'" curr-file)
+            (image-dired-insert-thumbnail thumb-name curr-file dired-buf)))
+        (cond ((eq 'dynamic image-dired-line-up-method)     (image-dired-line-up-dynamic))
+              ((eq 'fixed image-dired-line-up-method)       (image-dired-line-up))
+              ((eq 'interactive image-dired-line-up-method) (image-dired-line-up-interactive))
+              ((eq 'none image-dired-line-up-method)        nil)
+              (t                                            (image-dired-line-up-dynamic))))
+      (pop-to-buffer image-dired-thumbnail-buffer)))
+
+  ;; Corresponds to `image-dired-copy-with-exif-file-name'.
+  (defun diredp-image-dired-copy-with-exif-name ()
+    "Copy this image file to your main image directory.
+Uses `image-dired-get-exif-file-name' to name the new file."
+    (interactive)
+    (let* ((curr-file  (dired-get-filename))
+           (new-name   (format "%s/%s" (file-name-as-directory
+                                        (expand-file-name image-dired-main-image-directory))
+                               (image-dired-get-exif-file-name curr-file))))
+      (message "Copying `%s' to `%s'..." curr-file new-name)
+      (copy-file curr-file new-name)
+      (message "Copying `%s' to `%s'...done" curr-file new-name)))
+
+  ;; Corresponds to `image-dired-dired-edit-comment-and-tags'.
+  (defun diredp-image-dired-edit-comment-and-tags ()
+    "Edit comment and tags for this image file."
+    (interactive)
+    (setq image-dired-widget-list  ())
+    (let ((file  (dired-get-filename)))
+      (switch-to-buffer "*Image-Dired Edit Meta Data*")
+      (kill-all-local-variables)
+      (make-local-variable 'widget-example-repeat)
+      (let ((inhibit-read-only  t))
+        (erase-buffer)
+        (remove-overlays)
+        (widget-insert
+         "\nEdit comment and tags for the image.  Separate multiple tags
+with a comma (`,').  Move forward among fields using `TAB' or `RET'.
+Move backward using `S-TAB'.  Click `Save' to save your edits or
+`Cancel' to abandon them.\n\n")
+        (let* ((thumb-file  (image-dired-thumb-name file))
+               (img         (create-image thumb-file))
+               comment-widget  tag-widget)
+          (insert-image img)
+          (widget-insert "\n\nComment: ")
+          (setq comment-widget  (widget-create 'editable-field :size 60 :format "%v "
+                                               :value (or (image-dired-get-comment file)  "")))
+          (widget-insert "\nTags:    ")
+          (setq tag-widget  (widget-create 'editable-field :size 60 :format "%v "
+                                           :value (or (mapconcat #'identity
+                                                                 (image-dired-list-tags file)
+                                                                 ",")
+                                                      "")))
+          ;; Save info in widgets to use when the user saves the form.
+          (setq image-dired-widget-list  (append image-dired-widget-list
+                                                 (list (list file comment-widget tag-widget))))
+          (widget-insert "\n\n")))
+      (widget-insert "\n")
+      (widget-create 'push-button :notify (lambda (&rest _ignore)
+                                            (image-dired-save-information-from-widgets)
+                                            (bury-buffer)
+                                            (message "Done"))
+                     "Save")
+      (widget-insert " ")
+      (widget-create 'push-button :notify (lambda (&rest _ignore)
+                                            (bury-buffer)
+                                            (message "Operation canceled"))
+                     "Cancel")
+      (widget-insert "\n")
+      (use-local-map widget-keymap)
+      (widget-setup)
+      (widget-forward 1)))              ; Jump to the first widget.
+
+  ;; Corresponds to `image-dired-create-thumbs'.
+  (defun diredp-image-dired-create-thumb (&optional arg)
+    "Create thumbnail image for this file.
+With a prefix arg, replace any existing thumbnail for the file."
+    (interactive "P")
+    (let* ((curr-file   (dired-get-filename))
+           (thumb-name  (image-dired-thumb-name curr-file)))
+      (when arg (clear-image-cache))
+      (when (or arg  (not (file-exists-p thumb-name)))
+        (unless (zerop (image-dired-create-thumb curr-file (image-dired-thumb-name curr-file)))
+          (error "Thumbnail could not be created")))))
+  )
+
 
 (when (fboundp 'image-file-name-regexp) ; Emacs 22+, `image-file.el'.
   (defun diredp-do-display-images (&optional arg)
@@ -1599,9 +1753,7 @@ A prefix argument ARG specifies files to use instead of those marked.
           (failure  nil))
       (save-excursion
         (if (let ((inhibit-changing-match-data  t))
-              (string-match
-               (image-file-name-regexp)
-               file 0))
+              (diredp-string-match-p (image-file-name-regexp) file))
             (condition-case err
                 (let ((find-file-run-dired  nil)) (find-file-other-window file))
               (error (setq failure  (error-message-string err))))
@@ -1631,22 +1783,12 @@ A prefix argument ARG specifies files to use instead of those marked.
 ;; REPLACE ORIGINAL `Immediate' menu in `dired.el'.
 ;;
 (defvar diredp-menu-bar-immediate-menu (make-sparse-keymap "Single"))
-(define-key dired-mode-map [menu-bar immediate]
-  (cons "Single" diredp-menu-bar-immediate-menu))
+(define-key dired-mode-map [menu-bar immediate] (cons "Single" diredp-menu-bar-immediate-menu))
 
 (define-key diredp-menu-bar-immediate-menu [diredp-describe-file]
   '(menu-item "Describe" diredp-describe-file
     :help "Describe the file or directory at cursor"))
 (define-key diredp-menu-bar-immediate-menu [separator-describe] '("--")) ; ---------------------
-
-(when (fboundp 'image-dired-dired-display-image) ; Emacs 22+
-    (define-key diredp-menu-bar-immediate-menu [image-dired-dired-display-external]
-      '(menu-item "Display Image Externally" image-dired-dired-display-external
-                  :help "Display image in external viewer"))
-    (define-key diredp-menu-bar-immediate-menu [image-dired-dired-display-image]
-      '(menu-item "Display Image" image-dired-dired-display-image
-                  :help "Display sized image in a separate window"))
-    (define-key diredp-menu-bar-immediate-menu [separator-image] '("--"))) ; -------------------
 
 (when (fboundp 'diredp-chown-this-file)
   (define-key diredp-menu-bar-immediate-menu [chown]
@@ -1789,6 +1931,45 @@ A prefix argument ARG specifies files to use instead of those marked.
   '(menu-item "Open" dired-find-file :help "Edit file at cursor"))
 
 
+;; `Single' > `Image' menu.
+;;
+(when (fboundp 'image-dired-dired-display-image) ; Emacs 22+
+  (defvar diredp-menu-bar-immediate-image-menu (make-sparse-keymap "Image"))
+  (defalias 'diredp-menu-bar-immediate-image-menu diredp-menu-bar-immediate-image-menu)
+  (define-key diredp-menu-bar-immediate-menu [image]
+    '(menu-item "Image" diredp-menu-bar-immediate-image-menu
+      :enable (diredp-string-match-p
+               (image-file-name-regexp) (dired-get-filename 'LOCALP 'NO-ERROR))))
+
+  (define-key diredp-menu-bar-immediate-image-menu [diredp-image-dired-display-thumb]
+    '(menu-item "Go To Thumbnail" diredp-image-dired-display-thumb
+      :help "Pop to buffer showing the thumbnail of this image file"))
+  (define-key diredp-menu-bar-immediate-image-menu [diredp-image-dired-create-thumb]
+    '(menu-item "Create Thumbnail" diredp-image-dired-create-thumb
+      :help "Create a thumbnail image for this image file"))
+  (define-key diredp-menu-bar-immediate-image-menu [diredp-image-dired-edit-comment-and-tags]
+    '(menu-item "Edit Comment and Tags..." diredp-image-dired-edit-comment-and-tags
+      :help "Edit comment and tags for this image file"))
+  (define-key diredp-menu-bar-immediate-image-menu [diredp-image-dired-delete-tag]
+    '(menu-item "Delete Tag..." diredp-image-dired-delete-tag
+      :help "Remove a tag from this image file"))
+  (define-key diredp-menu-bar-immediate-image-menu [diredp-image-dired-tag-file]
+    '(menu-item "Add Tags..." diredp-image-dired-tag-file
+      :help "Add tags to this image file"))
+  (define-key diredp-menu-bar-immediate-image-menu [diredp-image-dired-comment-file]
+    '(menu-item "Add Comment..." diredp-image-dired-comment-file
+      :help "Add a comment to this image file"))
+  (define-key diredp-menu-bar-immediate-image-menu [diredp-image-dired-copy-with-exif-name]
+    '(menu-item "Copy with EXIF Name" diredp-image-dired-copy-with-exif-name
+      :help "Copy this image file to main image dir using EXIF name"))
+  (define-key diredp-menu-bar-immediate-image-menu [image-dired-dired-display-external]
+    '(menu-item "Display Externally" image-dired-dired-display-external
+      :help "Display image in external viewer"))
+  (define-key diredp-menu-bar-immediate-image-menu [image-dired-dired-display-image]
+    '(menu-item "Display" image-dired-dired-display-image
+      :help "Display sized image in a separate window")))
+
+
 ;; `Single' > `Encryption' menu.
 ;;
 (when (fboundp 'epa-dired-do-encrypt)   ; Emacs 23+
@@ -1857,8 +2038,7 @@ If no one is selected, symmetric encryption will be performed.  "
     '(menu-item "Remove Tags..." diredp-untag-this-file
       :help "Remove some tags from the file at cursor (`C-u': remove all tags)"))
   (define-key diredp-menu-bar-immediate-bookmarks-menu [diredp-tag-this-file]
-    '(menu-item "Add Tags..." diredp-tag-this-file :help "Add some tags to the file at cursor")))
-(when (require 'bookmark+ nil t)
+    '(menu-item "Add Tags..." diredp-tag-this-file :help "Add some tags to the file at cursor"))
   (define-key diredp-menu-bar-immediate-bookmarks-menu [diredp-bookmark-this-file]
     '(menu-item "Bookmark..." diredp-bookmark-this-file :help "Bookmark the file at cursor")))
 
@@ -1868,35 +2048,7 @@ If no one is selected, symmetric encryption will be performed.  "
 ;; REPLACE ORIGINAL "Operate" menu in `dired.el'.
 ;;
 (defvar diredp-menu-bar-operate-menu (make-sparse-keymap "Multiple"))
-(define-key dired-mode-map [menu-bar operate]
-  (cons "Multiple" diredp-menu-bar-operate-menu))
-
-(when (fboundp 'epa-dired-do-decrypt)   ; Emacs 23+
-  (define-key diredp-menu-bar-operate-menu [epa-dired-do-decrypt]
-    '(menu-item "Decrypt" epa-dired-do-decrypt :help "Decrypt file at cursor"))
-  (define-key diredp-menu-bar-operate-menu [epa-dired-do-verify]
-    '(menu-item "Verify" epa-dired-do-verify
-      :help "Verify digital signature of file at cursor"))
-  (define-key diredp-menu-bar-operate-menu [epa-dired-do-sign]
-    '(menu-item "Sign" epa-dired-do-sign :help "Create digital signature of file at cursor"))
-  (define-key diredp-menu-bar-operate-menu [epa-dired-do-encrypt]
-    '(menu-item "Encrypt" epa-dired-do-encrypt :help "Encrypt file at cursor"))
-  (define-key diredp-menu-bar-operate-menu [separator-encryption] '("--"))) ; ------------------
-
-(when (fboundp 'image-dired-delete-tag) ; Emacs 22+
-  (define-key diredp-menu-bar-operate-menu [image-dired-delete-tag]
-    '(menu-item "Delete Image Tag..." image-dired-delete-tag
-      :help "Delete image tag from marked files"))
-  (define-key diredp-menu-bar-operate-menu [image-dired-tag-files]
-    '(menu-item "Add Image Tags..." image-dired-tag-files
-      :help "Add image tags to marked files"))
-  (define-key diredp-menu-bar-operate-menu [image-dired-dired-comment-files]
-    '(menu-item "Add Image Comment..." image-dired-dired-comment-files
-      :help "Add image comment to marked files"))
-  (define-key diredp-menu-bar-operate-menu [image-dired-display-thumbs]
-    '(menu-item "Display Image Thumbnails" image-dired-display-thumbs
-      :help "Display image thumbnails for marked image files"))
-  (define-key diredp-menu-bar-operate-menu [separator-image] '("--"))) ; -----------------------
+(define-key dired-mode-map [menu-bar operate] (cons "Multiple" diredp-menu-bar-operate-menu))
 
 (unless (memq system-type '(windows-nt ms-dos))
   (define-key diredp-menu-bar-operate-menu [chown]
@@ -2033,8 +2185,7 @@ If no one is selected, symmetric encryption will be performed.  "
 ;;
 (when (fboundp 'image-dired-display-thumbs) ; Emacs 22+
   (defvar diredp-menu-bar-images-menu (make-sparse-keymap "Images"))
-  (define-key diredp-menu-bar-operate-menu [images]
-    (cons "Images" diredp-menu-bar-images-menu))
+  (define-key diredp-menu-bar-operate-menu [images] (cons "Images" diredp-menu-bar-images-menu))
 
   ;; Remove the items from `Multiple' menu.
   (define-key diredp-menu-bar-operate-menu [image-dired-delete-tag] nil)
@@ -2044,17 +2195,20 @@ If no one is selected, symmetric encryption will be performed.  "
 
   ;; Add them to `Multiple' > `Images' menu.
   (define-key diredp-menu-bar-images-menu [image-dired-delete-tag]
-    '(menu-item "Delete Image Tag..." image-dired-delete-tag
-      :help "Delete image tag for marked files"))
+    '(menu-item "Delete Tag..." image-dired-delete-tag
+      :help "Delete tag from marked image files"))
   (define-key diredp-menu-bar-images-menu [image-dired-tag-files]
-    '(menu-item "Add Image Tags..." image-dired-tag-files
-      :help "Add image tags to marked files"))
+    '(menu-item "Add Tags..." image-dired-tag-files
+      :help "Add tags to marked image files"))
   (define-key diredp-menu-bar-images-menu [image-dired-dired-comment-files]
-    '(menu-item "Add Image Comment..." image-dired-dired-comment-files
-      :help "Add image comment to marked files"))
+    '(menu-item "Add Comment..." image-dired-dired-comment-files
+      :help "Add comment to marked image files"))
   (define-key diredp-menu-bar-images-menu [image-dired-display-thumbs]
-    '(menu-item "Display Image Thumbnails" image-dired-display-thumbs
-      :help "Display image thumbnails for marked image files")))
+    '(menu-item "Display Thumbnails" image-dired-display-thumbs
+      :help "Display thumbnails for marked image files"))
+  (define-key diredp-menu-bar-images-menu [diredp-do-display-images]
+    '(menu-item "Display" diredp-do-display-images
+      :help "Display the marked image files")))
 
 
 ;; `Multiple' > `Encryption' menu.
@@ -2297,8 +2451,7 @@ If no one is selected, symmetric encryption will be performed.  "
 ;; REPLACE ORIGINAL `Regexp' menu in `dired.el'.
 ;;
 (defvar diredp-menu-bar-regexp-menu (make-sparse-keymap "Regexp"))
-(define-key dired-mode-map [menu-bar regexp]
-  (cons "Regexp" diredp-menu-bar-regexp-menu))
+(define-key dired-mode-map [menu-bar regexp] (cons "Regexp" diredp-menu-bar-regexp-menu))
 
 (define-key diredp-menu-bar-regexp-menu [hardlink]
   '(menu-item "Hardlink to..." dired-do-hardlink-regexp
@@ -2475,8 +2628,8 @@ If no one is selected, symmetric encryption will be performed.  "
 ;; REPLACE ORIGINAL "Subdir" menu in `dired.el'.
 ;;
 (defvar diredp-menu-bar-subdir-menu (make-sparse-keymap "Dir"))
-(define-key dired-mode-map [menu-bar subdir]
-  (cons "Dir" diredp-menu-bar-subdir-menu))
+(define-key dired-mode-map [menu-bar subdir] (cons "Dir" diredp-menu-bar-subdir-menu))
+
 (when (fboundp 'dired-omit-mode)
   (define-key diredp-menu-bar-subdir-menu [dired-omit-mode]
     '(menu-item "Hide/Show Uninteresting (Omit Mode)" dired-omit-mode
@@ -3491,7 +3644,7 @@ Optional arg BUFNAME is the name of the buffer for the display.
       (dolist (file  files)
         (unless (or (string= file "")   ; Ignore empty file names.
                     (and predicate  (not (funcall predicate file))))
-          (if (not (string-match "[[?*]" file))
+          (if (not (diredp-string-match-p "[[?*]" file))
               (add-to-list 'all-files-no-wildcards (expand-file-name file))
             (setq file-dir    (or (file-name-directory file)  default-directory)
                   file-alist  (directory-files-and-attributes file-dir 'FULL "[[?*]" 'NOSORT))
@@ -4388,11 +4541,11 @@ Dired buffer and all subdirs, recursively."
                                                  (if (equal attribute-name "Timestamp")
                                                      (list "-t" new-attribute)
                                                    (list new-attribute)))
-                                               (and (string-match "gnu" system-configuration)
+                                               (and (diredp-string-match-p "gnu"
+                                                                           system-configuration)
                                                     '("--"))) ; --------------------------------
                                        files))
-    (with-current-buffer this-buff
-      (diredp-do-redisplay-recursive 'MSGP))
+    (with-current-buffer this-buff (diredp-do-redisplay-recursive 'MSGP))
     (when failures (dired-log-summary (format "%s: error" operation) nil))))
 
 ;;;###autoload
@@ -4421,7 +4574,7 @@ to indicate that some of their files are to be changed."
                       nil files))))
     (when (equal modes "") (error "No file mode specified"))
     (dolist (file  files)
-      (set-file-modes file (or (and (string-match "^[0-7]+" modes)
+      (set-file-modes file (or (and (diredp-string-match-p "^[0-7]+" modes)
                                     (string-to-number modes 8))
                                (file-modes-symbolic-to-number modes (file-modes file)))))
     (diredp-do-redisplay-recursive 'MSGP)))
@@ -4703,8 +4856,9 @@ You need library `bookmark+.el' to use this command."
                                      (btgs   (and bmk  (bmkp-get-tags bmk)))
                                      (anyp   (and btgs  (bmkp-some
                                                          #'(lambda (tag)
-                                                             (string-match regexp
-                                                                           (bmkp-tag-name tag)))
+                                                             (diredp-string-match-p
+                                                              regexp
+                                                              (bmkp-tag-name tag)))
                                                          btgs))))
                         (and btgs  (if notp (not anyp) anyp))))
                  "some-tag-matching-regexp file"))
@@ -4730,8 +4884,9 @@ You need library `bookmark+.el' to use this command."
                                        (btgs   (and bmk  (bmkp-get-tags bmk)))
                                        (anyp   (and btgs (bmkp-some
                                                           #'(lambda (tag)
-                                                              (string-match regexp
-                                                                            (bmkp-tag-name tag)))
+                                                              (diredp-string-match-p
+                                                               regexp
+                                                               (bmkp-tag-name tag)))
                                                           btgs))))
                           (and btgs  (if notp (not anyp) anyp))))
                    "some-tag-matching-regexp file")))
@@ -5403,8 +5558,8 @@ As a side effect, killed dired buffers for DIR are removed from
                                                (if (consp dired-directory)
                                                    (car dired-directory)
                                                  dired-directory))))
-                              (or (= 0 (length wildcards))
-                                  (string-match (dired-glob-regexp wildcards) file)))
+                              (or (zerop (length wildcards))
+                                  (diredp-string-match-p (dired-glob-regexp wildcards) file)))
                           (member (expand-file-name file dir) (cdr dired-directory))))
                     (setq result  (cons buf result)))))))
     result))
@@ -5436,8 +5591,8 @@ As a side effect, killed dired buffers for DIR are removed from
 
   (defun diredp-find-a-file-read-args (prompt mustmatch) ; Not bound
     (list (lexical-let ((find-file-default  (abbreviate-file-name (dired-get-file-for-visit))))
-            (minibuffer-with-setup-hook #'(lambda ()
-                                            (setq minibuffer-default  find-file-default))
+            (minibuffer-with-setup-hook (lambda ()
+                                          (setq minibuffer-default  find-file-default))
                                         (read-file-name prompt nil default-directory mustmatch)))
           t)))
 
@@ -5888,7 +6043,7 @@ Non-interactively:
     (let ((dired-marker-char  (if unflag-p ?\   dired-marker-char)))
       (dired-mark-if (and (looking-at " ") ; Not already marked
                           (let ((fn  (dired-get-filename localp t))) ; Uninteresting
-                            (and fn  (string-match regexp fn))))
+                            (and fn  (diredp-string-match-p regexp fn))))
                      msg))))
 
 
@@ -6451,7 +6606,7 @@ Otherwise, an error occurs in these cases."
 
         ;; Escape whitespace.  Added per Emacs 24 addition in `unless' code below:
         (when (and (dired-switches-escape-p dired-actual-switches)
-                   (string-match "[ \t\n]" search-string))
+                   (diredp-string-match-p "[ \t\n]" search-string))
           ;; FIXME: fix this for all possible file names (embedded control chars etc).
           ;;        Need to escape everything that `ls -b' escapes.
           (setq search-string  (replace-regexp-in-string " " "\\ "  search-string nil t)
@@ -6483,7 +6638,7 @@ Otherwise, an error occurs in these cases."
             
             ;; Escape whitespace.  Sexp added by Emacs 24:
             (when (and (dired-switches-escape-p dired-actual-switches)
-                       (string-match "[ \t\n]" search-string))
+                       (diredp-string-match-p "[ \t\n]" search-string))
               ;; FIXME: fix this for all possible file names (embedded control chars etc).
               ;;        Need to escape everything that `ls -b' escapes.
               (setq search-string  (replace-regexp-in-string " " "\\ " search-string nil t)
@@ -6676,7 +6831,7 @@ REGEXP is added to `regexp-search-ring', for regexp search."
     (dired-mark-if (and (not (looking-at dired-re-dot))
                         (not (eolp))    ; Empty line
                         (let ((fn  (dired-get-filename t t)))
-                          (and fn  (string-match regexp fn))))
+                          (and fn  (diredp-string-match-p regexp fn))))
                    "matching file")))
 
 ;;;###autoload
@@ -6789,7 +6944,7 @@ buffer `*Async Shell Command*'."
   (interactive
    (list (dired-read-shell-command (concat "& on " "%s: ") 1 (list (dired-get-filename t)))
          (list (dired-get-filename t))))
-  (unless (string-match "&[ \t]*\\'" command) (setq command  (concat command " &")))
+  (unless (diredp-string-match-p "&[ \t]*\\'" command) (setq command  (concat command " &")))
   (dired-do-shell-command command 1 filelist))
 
 ;;;###autoload
@@ -7440,7 +7595,7 @@ which are options for `diff'."
                                 (if (stringp diff-switches)
                                     diff-switches
                                   (mapconcat 'identity diff-switches " "))
-                                (lambda (c) (string-match "switches" (symbol-name c))))
+                                (lambda (c) (diredp-string-match-p "switches" (symbol-name c))))
                              (read-string "Options for diff: "
                                           (if (stringp diff-switches)
                                               diff-switches
@@ -7462,7 +7617,7 @@ With prefix arg, prompt for SWITCHES which are the options for `diff'."
                               (if (stringp diff-switches)
                                   diff-switches
                                 (mapconcat 'identity diff-switches " "))
-                              (lambda (c) (string-match "switches" (symbol-name c))))
+                              (lambda (c) (diredp-string-match-p "switches" (symbol-name c))))
                            (read-string "Options for diff: "
                                         (if (stringp diff-switches)
                                             diff-switches

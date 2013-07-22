@@ -90,13 +90,6 @@
  (workgroups .
 	     [(20110724 1825)
 	      nil "workgroups for windows (for Emacs) [github]" single])
- (with-namespace .
-		 [(20130407 1922)
-		  ((dash
-		    (1 1 0))
-		   (loop
-		    (1 1)))
-		  "interoperable elisp namespaces [github]" single])
  (wisp-mode .
 	    [(20130527 1609)
 	     ((clojure-mode
@@ -540,6 +533,9 @@
  (sublimity .
 	    [(20130623 1220)
 	     nil "smooth-scrolling and minimap, like sublime editor [github]" tar])
+ (sublime-themes .
+		 [(20130721 2142)
+		  nil "No description available. [github]" tar])
  (subatomic256-theme .
 		     [(20130621 1210)
 		      nil "Fork of subatomic-theme for terminals. [github]" single])
@@ -1831,7 +1827,7 @@
 			       [(20130518 0)
 				nil "Advice for magit-log-edit-commit [github]" single])
  (magit .
-	[(20130720 1918)
+	[(20130722 239)
 	 nil "control Git from Emacs [github]" tar])
  (mag-menu .
 	   [(20130224 56)
@@ -2539,7 +2535,7 @@
 	   (1 2)))
 	 "Emacs client for hastebin (http://hastebin.com/about.md) [github]" single])
  (haskell-mode .
-	       [(20130721 1410)
+	       [(20130721 2322)
 		nil "A Haskell editing mode [github]" tar])
  (hardhat .
 	  [(20130522 1243)
@@ -2858,7 +2854,7 @@
 	    [(20130608 1859)
 	     nil "Non-interactive frame and window functions. [wiki]" single])
  (frame-cmds .
-	     [(20130721 854)
+	     [(20130722 1)
 	      ((frame-fns
 		(21 1)))
 	      "Frame and window commands (interactive functions). [wiki]" single])
@@ -3617,7 +3613,7 @@
 		[(20130328 1119)
 		 nil "make file details hide-able in dired [wiki]" single])
  (dired+ .
-	 [(20130720 2145)
+	 [(20130722 105)
 	  nil "Extensions to Dired. [wiki]" single])
  (dircmp .
 	 [(20130316 1327)
@@ -3970,7 +3966,7 @@
 	   [(20081011 2126)
 	    nil "Quote text with a semi-box. [github]" single])
  (bookmark+ .
-	    [(20130721 325)
+	    [(20130722 44)
 	     nil "Bookmark+: extensions to standard library `bookmark.el'. [wiki]" tar])
  (bm .
      [(20121212 2224)
@@ -4277,5 +4273,12 @@
 	    nil "Python TDD minor mode [github]" single])
  (abc-mode .
 	   [(20130607 917)
-	    nil "Major mode for editing abc music files [github]" single]))
+	    nil "Major mode for editing abc music files [github]" single])
+ (with-namespace .
+		 [(20130407 1922)
+		  ((dash
+		    (1 1 0))
+		   (loop
+		    (1 1)))
+		  "interoperable elisp namespaces [github]" single]))
 

@@ -118,11 +118,6 @@ Use the function by the same name instead of this variable.")
   :group 'magit
   :type 'string)
 
-(defcustom magit-git-standard-options '("--no-pager")
-  "Standard options when running Git."
-  :group 'magit
-  :type '(repeat string))
-
 (defcustom magit-repo-dirs nil
   "Directories containing Git repositories.
 Magit will look into these directories for Git repositories and
@@ -1097,6 +1092,9 @@ Read `completing-read' documentation for the meaning of the argument."
           (setq lines (cdr lines)))
       (nreverse lines))))
 
+(defvar magit-git-standard-options '("--no-pager")
+  "Standard options when running Git.")
+
 (defun magit-git-insert (args)
   (insert (magit-git-output args)))
 
@@ -1337,6 +1335,10 @@ non-nil).  In addition, it will filter out revs involving HEAD."
 (defun magit-commit-parents (commit)
   (cdr (split-string (magit-git-string "rev-list" "-1" "--parents" commit))))
 
+(defun magit-assert-one-parent (commit command)
+  (when (> (length (magit-commit-parents commit)) 1)
+    (error (format "Cannot %s a merge commit" command))))
+
 ;;;; Various Utilities
 
 (defmacro magit-with-refresh (&rest body)
@@ -1395,14 +1397,6 @@ This is calculated from `magit-highlight-indentation'.")
                (line-beginning-position) (line-beginning-position 2))))
     (with-current-buffer buf
       (insert text))))
-
-;; XXX - let the user choose the parent
-
-(defun magit-choose-parent-id (commit op)
-  (let* ((parents (magit-commit-parents commit)))
-    (if (> (length parents) 1)
-        (error "Can't %s merge commits" op)
-      nil)))
 
 ;;; Revisions and Ranges
 
@@ -2580,28 +2574,27 @@ magit-topgit and magit-svn"
   (magit-with-refresh
     (magit-run* (cons cmd args))))
 
+(defun magit-run-git* (subcmd-and-args
+                       &optional logline noerase noerror nowait input)
+  (magit-run* (append (cons magit-git-executable
+                            magit-git-standard-options)
+                      subcmd-and-args)
+              logline noerase noerror nowait input))
+
 (defun magit-run-git (&rest args)
   (magit-with-refresh
-    (magit-run* (append (cons magit-git-executable
-                              magit-git-standard-options)
-                        args))))
+    (magit-run-git* args)))
 
 (defun magit-run-git-with-input (input &rest args)
   (magit-with-refresh
-    (magit-run* (append (cons magit-git-executable
-                              magit-git-standard-options)
-                        args)
-                nil nil nil nil input)))
+    (magit-run-git* args nil nil nil nil input)))
 
 (defun magit-run-git-async (&rest args)
   (message "Running %s %s" magit-git-executable (mapconcat 'identity args " "))
-  (magit-run* (append (cons magit-git-executable
-                            magit-git-standard-options)
-                      args)
-              nil nil nil t))
+  (magit-run-git* args nil nil nil t))
 
-(defun magit-run-async-with-input (input cmd &rest args)
-  (magit-run* (cons cmd args) nil nil nil t input))
+(defun magit-run-git-async-with-input (input &rest args)
+  (magit-run-git* args nil nil nil t input))
 
 (defun magit-display-process ()
   "Display output from most recent git command."
@@ -4376,7 +4369,7 @@ if FULLY-QUALIFIED-NAME is non-nil."
         (and (y-or-n-p (format "Directory %s does not exists.  Create it? " dir))
              (make-directory dir)))
       (let ((default-directory dir))
-        (magit-run* (list magit-git-executable "init"))))))
+        (magit-run-git* (list "init"))))))
 
 (define-derived-mode magit-status-mode magit-mode "Magit"
   "Mode for looking at git status.
@@ -5063,9 +5056,9 @@ With a prefix arg, also remove untracked files.  With two prefix args, remove ig
 (defun magit-rewrite-finish ()
   (interactive)
   (magit-with-refresh
-    (magit-rewrite-finish-step t)))
+    (magit-rewrite-finish-step)))
 
-(defun magit-rewrite-finish-step (first-p)
+(defun magit-rewrite-finish-step ()
   (let ((info (magit-read-rewrite-info)))
     (or info
         (error "No rewrite in progress"))
@@ -5078,9 +5071,9 @@ With a prefix arg, also remove untracked files.  With two prefix args, remove ig
            (commit (car first-unused)))
       (cond ((not first-unused)
              (magit-rewrite-stop t))
-            ((magit-apply-commit commit t (not first-p))
+            ((magit-cherry-pick-commit commit)
              (magit-rewrite-set-commit-property commit 'used t)
-             (magit-rewrite-finish-step nil))))))
+             (magit-rewrite-finish-step))))))
 
 ;;;; Fetching
 
@@ -5175,10 +5168,7 @@ typing and automatically refreshes the status buffer."
   (let ((args (magit-parse-arguments command))
         (magit-process-popup-time 0))
     (magit-with-refresh
-      (magit-run* (append (cons magit-git-executable
-                                magit-git-standard-options)
-                          args)
-                  nil nil nil t))))
+      (magit-run-git* args nil nil nil t))))
 
 ;;;; Pushing
 
@@ -5444,24 +5434,17 @@ environment (potentially empty)."
           (commit-buf (current-buffer)))
       (with-current-buffer (magit-find-status-buffer default-directory)
         (let ((process-environment env))
-          (cond (tag-name
-                 (apply #'magit-run-git-with-input commit-buf
-                        "tag" (append tag-options
-                                      (list tag-name "-a" "-F" "-" tag-rev))))
-                (t
-                 (apply #'magit-run-async-with-input commit-buf
-                        magit-git-executable
-                        (append magit-git-standard-options
-                                '("commit")
-                                magit-custom-options
-                                '("-F" "-")
-                                (when (and commit-all (not allow-empty))
-                                  '("--all"))
-                                (when amend '("--amend"))
-                                (when allow-empty '("--allow-empty"))
-                                (when sign-off '("--signoff"))
-                                (when gpg-sign '("-S"))
-                                (when no-verify '("--no-verify")))))))))
+          (if tag-name
+              (apply #'magit-run-git-with-input commit-buf "tag"
+                     `(,@tag-options ,tag-name "-a" "-F" "-" ,tag-rev))
+            (apply #'magit-run-git-async-with-input commit-buf "commit"
+                   `(,@magit-custom-options "-F" "-"
+                     ,@(and commit-all (not allow-empty) (list "--all"))
+                     ,@(and amend       (list "--amend"))
+                     ,@(and allow-empty (list "--allow-empty"))
+                     ,@(and sign-off    (list "--signoff"))
+                     ,@(and gpg-sign    (list "-S"))
+                     ,@(and no-verify   (list "--no-verify"))))))))
     ;; shouldn't we kill that buffer altogether?
     (erase-buffer)
     ;; potentially the local environment has been altered with settings that
@@ -5785,28 +5768,6 @@ With prefix argument, changes in staging area are kept.
                                 range args)))))))
 ;;;; Apply
 
-(defun magit-apply-commit (commit &optional docommit noerase revert)
-  (let* ((parent-id (magit-choose-parent-id commit "cherry-pick"))
-         (success (magit-run* `(,magit-git-executable
-                                ,@magit-git-standard-options
-                                ,(if revert "revert" "cherry-pick")
-                                ,@(if parent-id
-                                      (list "-m" (number-to-string parent-id)))
-                                ,@(if (not docommit) (list "--no-commit"))
-                                ,commit)
-                              nil noerase)))
-    (when (and (not docommit) success)
-      (cond (revert
-             (magit-log-edit-append
-              (magit-format-commit commit "Reverting \"%s\"")))
-            (t
-             (magit-log-edit-append
-              (magit-format-commit commit "%s%n%n%b"))
-             (magit-log-edit-set-field
-              'author
-              (magit-format-commit commit "%an <%ae>, %ai")))))
-    success))
-
 (defun magit-apply-item ()
   (interactive)
   (magit-section-action (item info "apply")
@@ -5826,18 +5787,31 @@ With prefix argument, changes in staging area are kept.
     ((stash)
      (magit-run-git "stash" "apply" info))))
 
+(defun magit-apply-commit (commit)
+  (magit-assert-one-parent commit "cherry-pick")
+  (when (magit-run-git* (list "cherry-pick" "--no-commit" commit))
+    (magit-log-edit-append
+     (magit-format-commit commit "%s%n%n%b"))
+    (magit-log-edit-set-field
+     'author
+     (magit-format-commit commit "%an <%ae>, %ai"))))
+
 ;;;; Cherry-Pick
 
 (defun magit-cherry-pick-item ()
   (interactive)
   (magit-section-action (item info "cherry-pick")
     ((pending commit)
-     (magit-apply-commit info t)
+     (magit-cherry-pick-commit info)
      (magit-rewrite-set-commit-property info 'used t))
     ((commit)
-     (magit-apply-commit info t))
+     (magit-cherry-pick-commit info))
     ((stash)
      (magit-run-git "stash" "pop" info))))
+
+(defun magit-cherry-pick-commit (commit)
+  (magit-assert-one-parent commit "cherry-pick")
+  (magit-run-git* (list "cherry-pick" commit)))
 
 ;;;; Revert
 
@@ -5851,13 +5825,13 @@ With prefix argument, changes in staging area are kept.
   (magit-section-action (item info "revert")
     ((pending commit)
      (magit-with-revert-confirmation
-      (magit-apply-commit info nil nil t)
+      (magit-revert-commit info)
       (magit-rewrite-set-commit-property info 'used nil)))
     ((commit)
      (magit-with-revert-confirmation
-      (magit-apply-commit info nil nil t)))
-    ;; Reverting unstaged changes cannot be undone
+      (magit-revert-commit info)))
     ((unstaged *)
+     ;; Asking the user is handled by `magit-discard-item'.
      (magit-discard-item))
     ((hunk)
      (magit-with-revert-confirmation
@@ -5865,6 +5839,12 @@ With prefix argument, changes in staging area are kept.
     ((diff)
      (magit-with-revert-confirmation
       (magit-apply-diff-item item "--reverse")))))
+
+(defun magit-revert-commit (commit)
+  (magit-assert-one-parent commit "revert")
+  (when (magit-run-git* (list "revert" "--no-commit" commit))
+    (magit-log-edit-append
+     (magit-format-commit commit "Reverting \"%s\""))))
 
 ;;; Log Mode
 
