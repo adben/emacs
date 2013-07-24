@@ -396,4 +396,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:slant normal :weight normal :height 150 :width normal :foundry "apple" :family "PragmataPro"))))
- '(linum ((t (:foreground "black" :height 100)))))
+ '(linum ((t (:foreground "#DFAF8F" :height 100)))))

@@ -142,6 +142,7 @@
 (declare-function haskell-session-cabal-dir "haskell-session" (session))
 (declare-function haskell-session-maybe "haskell-session" ())
 (declare-function haskell-session-tags-filename "haskell-session" (session))
+(declare-function haskell-session-current-dir "haskell-session" (session))
 
 ;; All functions/variables start with `(literate-)haskell-'.
 
@@ -166,9 +167,9 @@ When MESSAGE is non-nil, display a message with the version."
   (let* ((haskell-mode-dir (ignore-errors
                              (file-name-directory (or (locate-library "haskell-mode") ""))))
          (_version (format "haskell-mode version %s (%s @ %s)"
-                            haskell-version
-                            haskell-git-version
-                            haskell-mode-dir)))
+                           haskell-version
+                           haskell-git-version
+                           haskell-mode-dir)))
     (if here
         (insert _version)
       (message "%s" _version))))
@@ -796,21 +797,21 @@ remains unchanged."
           (with-temp-buffer
             (insert-file-contents tmp-file)
             (buffer-substring-no-properties (point-min) (point-max)))))
-      (if (string= "" stderr-output)
-          (if (string= "" stdout-output)
-              (funcall errout
-               "Error: %s produced no output, leaving buffer alone" cmd)
-            (save-restriction
-              (widen)
-              ;; command successful, insert file with replacement to preserve
-              ;; markers.
-              (insert-file-contents tmp-file nil nil nil t)))
-        ;; non-null stderr, command must have failed
-        (funcall errout "%s failed: %s" cmd stderr-output)
-        )
-      (delete-file tmp-file)
-      (delete-file err-file)
-      ))
+    (if (string= "" stderr-output)
+        (if (string= "" stdout-output)
+            (funcall errout
+                     "Error: %s produced no output, leaving buffer alone" cmd)
+          (save-restriction
+            (widen)
+            ;; command successful, insert file with replacement to preserve
+            ;; markers.
+            (insert-file-contents tmp-file nil nil nil t)))
+      ;; non-null stderr, command must have failed
+      (funcall errout "%s failed: %s" cmd stderr-output)
+      )
+    (delete-file tmp-file)
+    (delete-file err-file)
+    ))
 
 (defun haskell-mode-stylish-buffer ()
   "Apply stylish-haskell to the current buffer."
@@ -867,6 +868,18 @@ remains unchanged."
                (> (match-end 1) old-point))
           (kill-region (match-beginning 0) (match-end 0))
         (error "No SCC at point")))))
+
+(defun haskell-rgrep (&optional prompt)
+  "Grep the effective project for the symbol at point. Very
+useful for codebase navigation. Prompts for an arbitrary regexp
+given a prefix arg."
+  (interactive "P")
+  (let ((sym (if prompt
+                 (read-from-minibuffer "Look for: ")
+               (haskell-ident-at-point))))
+    (rgrep sym
+           "*.hs" ;; TODO: common Haskell extensions.
+           (haskell-session-current-dir (haskell-session)))))
 
 
 ;; Provide ourselves:

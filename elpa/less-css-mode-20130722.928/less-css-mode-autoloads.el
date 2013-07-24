@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (less-css-mode less-css-compile) "less-css-mode"
-;;;;;;  "less-css-mode.el" (20918 61992 0 0))
+;;;### (autoloads nil "less-css-mode" "less-css-mode.el" (20973 23535
+;;;;;;  0 0))
 ;;; Generated autoloads from less-css-mode.el
 
 (autoload 'less-css-compile "less-css-mode" "\
@@ -19,12 +19,7 @@ Special commands:
 
 \(fn)" t nil)
 
-(add-to-list 'auto-mode-alist '("\\.less" . less-css-mode))
-
-;;;***
-
-;;;### (autoloads nil nil ("less-css-mode-pkg.el") (20918 61992 749343
-;;;;;;  0))
+(add-to-list 'auto-mode-alist '("\\.less\\'" . less-css-mode))
 
 ;;;***
 

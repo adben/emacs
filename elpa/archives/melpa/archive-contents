@@ -90,6 +90,13 @@
  (workgroups .
 	     [(20110724 1825)
 	      nil "workgroups for windows (for Emacs) [github]" single])
+ (with-namespace .
+		 [(20130407 1922)
+		  ((dash
+		    (1 1 0))
+		   (loop
+		    (1 1)))
+		  "interoperable elisp namespaces [github]" single])
  (wisp-mode .
 	    [(20130527 1609)
 	     ((clojure-mode
@@ -534,8 +541,8 @@
 	    [(20130623 1220)
 	     nil "smooth-scrolling and minimap, like sublime editor [github]" tar])
  (sublime-themes .
-		 [(20130721 2142)
-		  nil "No description available. [github]" tar])
+		 [(20130722 1225)
+		  nil "A collection of themes based on Sublime Text [github]" tar])
  (subatomic256-theme .
 		     [(20130621 1210)
 		      nil "Fork of subatomic-theme for terminals. [github]" single])
@@ -662,7 +669,7 @@
 		  (24 1)))
 		"a dark colorful theme for Emacs24. [github]" single])
  (solarized-theme .
-		  [(20130719 1519)
+		  [(20130722 1616)
 		   nil "The Solarized color theme, ported to Emacs. [github]" tar])
  (snippet .
 	  [(20130210 1815)
@@ -960,6 +967,9 @@
  (rnc-mode .
 	   [(20121227 1802)
 	    nil "A major mode for editing RELAX NG Compact syntax. [github]" single])
+ (rings .
+	[(20130721 2305)
+	 nil "Buffer rings. Like tabs, but better. [github]" single])
  (rinari .
 	 [(20130721 1241)
 	  ((ruby-mode
@@ -1315,7 +1325,7 @@
 	       [(20120403 2010)
 		nil "Specify package.el packages to use in a package spec [github]" single])
  (package-build .
-		[(20130710 8)
+		[(20130722 1011)
 		 ((cl-lib
 		   (0 2)))
 		 "Tools for assembling a package archive [github]" tar])
@@ -1480,7 +1490,7 @@
 			 (24 2)))
 		       "Display org properties in the agenda buffer. [github]" single])
  (org .
-      [(20130721 1554)
+      [(20130722 1606)
        nil "Outline-based notes management and organizer [git]" tar])
  (openwith .
 	   [(20120531 1636)
@@ -1798,6 +1808,9 @@
 		    ((yasnippet
 		      (0 8 0)))
 		    "Yasnippets for Mallard [github]" tar])
+ (mallard-mode .
+	       [(20130722 620)
+		nil "Major mode for editing Mallard files [github]" tar])
  (main-line .
 	    [(20130405 1304)
 	     nil "modeline replacement forked from an early version of powerline.el [github]" single])
@@ -1950,7 +1963,7 @@
 	   [(20130214 105)
 	    nil "Check the erroneous assignments in let forms [github]" single])
  (less-css-mode .
-		[(20130610 1645)
+		[(20130722 928)
 		 nil "Major mode for editing LESS CSS files (lesscss.org) [github]" single])
  (lemon-mode .
 	     [(20130216 2204)
@@ -2535,7 +2548,7 @@
 	   (1 2)))
 	 "Emacs client for hastebin (http://hastebin.com/about.md) [github]" single])
  (haskell-mode .
-	       [(20130721 2322)
+	       [(20130722 1217)
 		nil "A Haskell editing mode [github]" tar])
  (hardhat .
 	  [(20130522 1243)
@@ -3190,7 +3203,7 @@
 	    (1 0)))
 	  "A collection of emacs utilities [github]" tar])
  (ert-runner .
-	     [(20130718 749)
+	     [(20130722 1047)
 	      ((s
 		(1 6 1))
 	       (dash
@@ -3370,7 +3383,7 @@
 	 [(20130330 2100)
 	  nil "Redmine API access via elisp. [github]" single])
  (elixir-mode .
-	      [(20130720 1123)
+	      [(20130721 2352)
 	       nil "Major mode for editing Elixir files [github]" tar])
  (elixir-mix .
 	     [(20130720 1119)
@@ -3675,7 +3688,7 @@
 	  [(20120115 1513)
 	   nil "a pcl-cvs like interface for managing darcs patches [darcs]" tar])
  (d-mode .
-	 [(20130707 1740)
+	 [(20130722 1048)
 	  nil "D Programming Language mode for (X)Emacs [github]" single])
  (cyberpunk-theme .
 		  [(20130515 1255)
@@ -4273,12 +4286,5 @@
 	    nil "Python TDD minor mode [github]" single])
  (abc-mode .
 	   [(20130607 917)
-	    nil "Major mode for editing abc music files [github]" single])
- (with-namespace .
-		 [(20130407 1922)
-		  ((dash
-		    (1 1 0))
-		   (loop
-		    (1 1)))
-		  "interoperable elisp namespaces [github]" single]))
+	    nil "Major mode for editing abc music files [github]" single]))
 
