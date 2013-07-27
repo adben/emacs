@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "nrepl" "nrepl.el" (20978 61982 0 0))
+;;;### (autoloads nil "nrepl" "nrepl.el" (20979 44930 0 0))
 ;;; Generated autoloads from nrepl.el
 
 (autoload 'nrepl-interaction-mode "nrepl" "\
