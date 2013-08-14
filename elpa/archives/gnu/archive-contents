@@ -167,7 +167,7 @@
 		  [(0 1)
 		   nil "Unicode confusables table" tar])
  (vlf .
-      [(0 9)
+      [(0 9 1)
        nil "View Large Files" single])
  (websocket .
 	    [(1 1)

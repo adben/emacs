@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "circe" "circe.el" (20963 56126 0 0))
+;;;### (autoloads nil "circe" "circe.el" (21003 16643 0 0))
 ;;; Generated autoloads from circe.el
 
 (autoload 'circe "circe" "\
@@ -30,7 +30,7 @@ See `circe-network-options' for a list of common options.
 ;;;***
 
 ;;;### (autoloads nil "circe-color-nicks" "circe-color-nicks.el"
-;;;;;;  (20963 56126 0 0))
+;;;;;;  (21003 16643 0 0))
 ;;; Generated autoloads from circe-color-nicks.el
 
 (autoload 'enable-circe-color-nicks "circe-color-nicks" "\
@@ -42,7 +42,7 @@ This module colors all encountered nicks in a cross-server fashion.
 ;;;***
 
 ;;;### (autoloads nil "circe-highlight-all-nicks" "circe-highlight-all-nicks.el"
-;;;;;;  (20963 56126 0 0))
+;;;;;;  (21003 16643 0 0))
 ;;; Generated autoloads from circe-highlight-all-nicks.el
 
 (autoload 'enable-circe-highlight-all-nicks "circe-highlight-all-nicks" "\
@@ -54,7 +54,7 @@ channel in messages of other people.
 
 ;;;***
 
-;;;### (autoloads nil "circe-lagmon" "circe-lagmon.el" (20963 56126
+;;;### (autoloads nil "circe-lagmon" "circe-lagmon.el" (21003 16643
 ;;;;;;  0 0))
 ;;; Generated autoloads from circe-lagmon.el
 
@@ -77,7 +77,7 @@ in the mode-line.
 ;;;***
 
 ;;;### (autoloads nil nil ("circe-chanop.el" "circe-fix-minibuffer.el"
-;;;;;;  "circe-pkg.el" "circe-tests.el") (20963 56126 906982 0))
+;;;;;;  "circe-pkg.el" "circe-tests.el") (21003 16643 367311 0))
 
 ;;;***
 
