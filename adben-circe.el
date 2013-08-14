@@ -10,7 +10,7 @@
       `(("Freenode"
          :nick ,freenode-user
          ;;:channels ("#emacs" "#emacs-circe" "#clojure" "#liferay")
-         :channels ("#emacs" "#angularjs" "#clojure" "#liferay")
+         ;;:channels ("#emacs" "#angularjs" "#clojure" "#liferay")
          ;;:channels ("#emacs")
          :nickserv-password ,freenode-password
          )))
