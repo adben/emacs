@@ -1,13 +1,19 @@
+;;Circe settings
+;;(autoload 'circe "circe" "Connect to an IRC server" t)
 (require 'circe)
+
+;; private config settings
+(when (file-exists-p "~/.private.el")
+  (load-file "~/.private.el"))
 
 (setq circe-network-options
       `(("Freenode"
-         :nick "adben"
+         :nick ,freenode-user
          ;;:channels ("#emacs" "#emacs-circe" "#clojure" "#liferay")
-         :channels ("#emacs")
-         :nickserv-password freenode-passwd
+         :channels ("#emacs" "#angularjs" "#clojure" "#liferay")
+         ;;:channels ("#emacs")
+         :nickserv-password ,freenode-password
          )))
-;;Quick IRC Commandx
 ;;If you have a number of networks you use, it can be useful to have a simple command to connect to them all.
 (defun irc ()
   "Connect to IRC"
@@ -120,3 +126,11 @@
   (circe-reconnect))
 
 ;; Some of the built-in commands have longer lists of arguments and 'interactive' forms. These are simply to allow those commands to be called in other contexts such from key bindings or the M-x prompt.
+
+;;Here is how to gray out, and not track, channel messages from known bots.
+(defvar custom-circe-bot-list '("fsbot" "rudybot"))
+(defun custom-circe-message-option-bot (nick &rest ignored)
+  (when (member nick custom-circe-bot-list)
+    '((text-properties . (face circe-fool-face
+                               lui-do-not-track t)))))
+(add-hook 'circe-message-option-functions 'custom-circe-message-option-bot)
