@@ -23,10 +23,10 @@
   (circe "IRCnet"))
 ;; Spell Checker
 ;; Circe's user interface, Lui, comes with spellchecking support. You can configure per-channel dictionaries. The following example will enable flyspell in Lui globally, and use the american dictionary by default, except in the channel #nederland, where it will use holandes.
-(setq lui-flyspell-p t
-      lui-flyspell-alist '(("#nederland" "nl_NL_hunspell")
-                           (".*" "en_US_hunspell"))
-      )
+;; (setq lui-flyspell-p t
+;;       lui-flyspell-alist '(("#nederland" "nl_NL_hunspell")
+;;                            (".*" "en_US_hunspell"))
+;;       )
 ;;Hiding the Join/Part Spam
 ;;Say you don't want Circe to show JOIN, PART and QUIT messages. You have two options.
 ;;
