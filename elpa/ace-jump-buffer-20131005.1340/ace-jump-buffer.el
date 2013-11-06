@@ -4,7 +4,7 @@
 ;;
 ;; Author: Justin Talbott <justin@waymondo.com>
 ;; URL: https://github.com/waymondo/ace-jump-buffer
-;; Version: 20130627.2104
+;; Version: 20131005.1340
 ;; X-Original-Version: 0.1.1
 ;; Package-Requires: ((ace-jump-mode "1.0"))
 ;;
@@ -36,7 +36,10 @@
                    (with-current-buffer buf
                      (not (member buf (persp-buffers persp-curr)))))) nil))
 
-(defvar ajb-bs-configuration (if (require 'perspective nil 'noerror) "persp" "all"))
+(defvar ajb-bs-configuration
+  (if (and (require 'perspective nil 'noerror) (not (eq persp-mode nil)))
+      "persp"
+    "all"))
 
 ;; settings for a barebones `bs' switcher
 (defvar ajb-bs-header-lines-length 0)

@@ -3,7 +3,7 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "cider" "cider.el" (21107 26722 0 0))
+;;;### (autoloads nil "cider" "cider.el" (21114 13204 0 0))
 ;;; Generated autoloads from cider.el
 
 (autoload 'cider-jack-in "cider" "\
@@ -23,7 +23,7 @@ Connect to an nREPL server identified by HOST and PORT.
 ;;;***
 
 ;;;### (autoloads nil "cider-interaction" "cider-interaction.el"
-;;;;;;  (21107 26722 0 0))
+;;;;;;  (21114 13204 0 0))
 ;;; Generated autoloads from cider-interaction.el
 
 (autoload 'cider-enable-on-existing-clojure-buffers "cider-interaction" "\
@@ -40,7 +40,7 @@ See command `cider-mode'.
 
 ;;;***
 
-;;;### (autoloads nil "cider-mode" "cider-mode.el" (21107 26722 0
+;;;### (autoloads nil "cider-mode" "cider-mode.el" (21114 13204 0
 ;;;;;;  0))
 ;;; Generated autoloads from cider-mode.el
 
@@ -53,8 +53,8 @@ Minor mode for REPL interaction from a Clojure buffer.
 
 ;;;***
 
-;;;### (autoloads nil "cider-selector" "cider-selector.el" (21107
-;;;;;;  26722 0 0))
+;;;### (autoloads nil "cider-selector" "cider-selector.el" (21114
+;;;;;;  13204 0 0))
 ;;; Generated autoloads from cider-selector.el
 
 (autoload 'cider-selector "cider-selector" "\
@@ -69,7 +69,7 @@ See `def-cider-selector-method' for defining new methods.
 
 ;;;***
 
-;;;### (autoloads nil "nrepl-client" "nrepl-client.el" (21107 26722
+;;;### (autoloads nil "nrepl-client" "nrepl-client.el" (21114 13204
 ;;;;;;  0 0))
 ;;; Generated autoloads from nrepl-client.el
 
@@ -79,7 +79,7 @@ See `def-cider-selector-method' for defining new methods.
 
 ;;;### (autoloads nil nil ("cider-eldoc.el" "cider-macroexpansion.el"
 ;;;;;;  "cider-pkg.el" "cider-repl-mode.el" "cider-repl.el" "cider-util.el"
-;;;;;;  "cider-version.el") (21107 26722 906753 0))
+;;;;;;  "cider-version.el") (21114 13204 526034 0))
 
 ;;;***
 

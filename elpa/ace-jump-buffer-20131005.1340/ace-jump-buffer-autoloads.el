@@ -3,8 +3,8 @@
 ;;; Code:
 (add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads nil "ace-jump-buffer" "ace-jump-buffer.el" (20979
-;;;;;;  50741 0 0))
+;;;### (autoloads nil "ace-jump-buffer" "ace-jump-buffer.el" (21114
+;;;;;;  13207 0 0))
 ;;; Generated autoloads from ace-jump-buffer.el
 
 (autoload 'ace-jump-buffer "ace-jump-buffer" "\
