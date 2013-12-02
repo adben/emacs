@@ -340,6 +340,10 @@
 (global-set-key (kbd "<f9>") 'recentf-open-files)
 (global-set-key (kbd "C-x C-r") 'recentf-open-files) ;; was find-file-read-only
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Autoreverting buffers in on
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(global-auto-revert-mode 1)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; make buffer names easily identifiable
 ;;see http://xahlee.blogspot.com/2011/07/emacs-unique-buffer-names-auto-compile.html
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -378,6 +382,7 @@
  '(powerline-color1 "#191919")
  '(powerline-color2 "#111111")
  '(tool-bar-mode nil)
+ '(auto-revert-interval 1)
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
    (quote
