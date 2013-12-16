@@ -58,9 +58,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Extra loads
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 ;;Add all top-level subdirectories of .emacs.d to the load path
-(progn (cd "~/.emacs.d")
+(progn (cd "~/.emacs.d/")
        (normal-top-level-add-subdirs-to-load-path))
 (add-to-list 'exec-path "~/Dev/Soft/bin")
 (add-to-list 'exec-path "~/bin")
@@ -342,7 +342,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Autoreverting buffers in on
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(global-auto-revert-mode 1)
+(global-auto-revert-mode 0)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; make buffer names easily identifiable
 ;;see http://xahlee.blogspot.com/2011/07/emacs-unique-buffer-names-auto-compile.html
@@ -382,7 +382,7 @@
  '(powerline-color1 "#191919")
  '(powerline-color2 "#111111")
  '(tool-bar-mode nil)
- '(auto-revert-interval 1)
+;; '(auto-revert-interval 1)
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map
    (quote
