@@ -1,0 +1,26 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/adben/" . ".m2/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/adben/.m2/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "settings.xml"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/adben/.m2/" (21392 5566 0 0) "settings.xml" "repository/" "../" "./")
+
+ ("/Users/adben/" (21392 6210 0 0) "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "Dev/" "Desktop/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-MacBook Pro van Adolfo-5.0.5" ".Xauthority" ".Trash/" ".ssh/" ".serverauth.73477" ".rnd" ".private.el~" ".private.el" ".oh-my-zsh/" ".npm/" ".m2/" ".gitconfig" ".gem/" ".emacs.d/" ".DS_Store" ".CFUserTextEncoding" ".cache/" ".bash_profile" ".bash_history" ".atom/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
