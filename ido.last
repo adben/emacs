@@ -19,9 +19,9 @@
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/adben/.emacs.d/" (21400 156 0 0) "web-vcs-log.org" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "lisp/" "init.el" "ido.last" "games/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".git/" ".DS_Store" "../" "./")
+ ("/Users/adben/.emacs.d/" (21408 14834 0 0) "web-vcs-log.org" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "lisp/" "init.el" "ido.last" "games/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".git/" ".DS_Store" "../" "./")
 
- ("/Users/adben/" (21400 26534 0 0) "Public/" "Pictures/" "Music/" "Movies/" "Library/" "go/" "Downloads/" "Documents/" "Dev/" "Desktop/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-MacBook Pro van Adolfo-5.0.5" ".z" ".Xauthority" ".Trash/" ".ssh/" ".serverauth.73477" ".rnd" ".private.el~" ".private.el" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".mysql_history" ".m2/" ".local/" ".jmsn/" ".htoprc" ".gitconfig" ".gem/" ".emacs.d/" ".DS_Store" ".config/" ".CFUserTextEncoding" ".cache/" ".bower/" ".bash_profile" ".bash_history" ".atom/" ".android/" "../" "./")
+ ("/Users/adben/" (21408 14852 0 0) "Public/" "Pictures/" "Music/" "Movies/" "Library/" "go/" "Downloads/" "Documents/" "Dev/" "Desktop/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-MacBook Pro van Adolfo-5.0.5" ".z" ".Xauthority" ".wireshark/" ".travis.yml" ".Trash/" ".ssh/" ".serverauth.73477" ".rnd" ".private.el~" ".private.el" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".mysql_history" ".m2/" ".local/" ".jshintrc" ".jmsn/" ".htoprc" ".gitignore" ".gitconfig" ".gitattributes" ".gem/" ".emacs.d/" ".editorconfig" ".DS_Store" ".config/" ".CFUserTextEncoding" ".cache/" ".bowerrc" ".bower/" ".bash_profile" ".bash_history" ".atom/" ".android/" "../" "./")
 
  ("/Users/adben/.m2/" (21392 5566 0 0) "settings.xml" "repository/" "../" "./")
 )
