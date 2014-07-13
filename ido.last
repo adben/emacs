@@ -2,28 +2,78 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Applications/IntelliJ IDEA 14 EAP.app/" . "Contents/")
+ ("/Applications/" . "IntelliJ IDEA 14 EAP.app/")
+ ("/" . "Applications/")
+ ("/Users/adben/Dev/" . "grapes/")
  ("/Users/adben/" . ".emacs.d/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Applications/IntelliJ IDEA 14 EAP.app/Contents/"
  "/Users/adben/.emacs.d/"
+ "/Users/adben/"
+ "/Users/adben/Documents/"
+ "/Users/adben/Dev/grapes/"
  "/Users/adben/.m2/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "Info.plist"
  "init.el"
+ ".zshrc"
+ "licard.txt"
+ "project.clj"
  "settings.xml"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/adben/.emacs.d/" (21408 14834 0 0) "web-vcs-log.org" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "lisp/" "init.el" "ido.last" "games/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".git/" ".DS_Store" "../" "./")
+ ("/Applications/IntelliJ IDEA 14 EAP.app/Contents/" (21437 26834 0 0) "Resources/" "redist/" "plugins/" "MacOS/" "license/" "lib/" "Info.plist" "help/" "build.txt" "bin/" "_CodeSignature/" "../" "./")
 
- ("/Users/adben/" (21408 14852 0 0) "Public/" "Pictures/" "Music/" "Movies/" "Library/" "go/" "Downloads/" "Documents/" "Dev/" "Desktop/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-MacBook Pro van Adolfo-5.0.5" ".z" ".Xauthority" ".wireshark/" ".travis.yml" ".Trash/" ".ssh/" ".serverauth.73477" ".rnd" ".private.el~" ".private.el" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".mysql_history" ".m2/" ".local/" ".jshintrc" ".jmsn/" ".htoprc" ".gitignore" ".gitconfig" ".gitattributes" ".gem/" ".emacs.d/" ".editorconfig" ".DS_Store" ".config/" ".CFUserTextEncoding" ".cache/" ".bowerrc" ".bower/" ".bash_profile" ".bash_history" ".atom/" ".android/" "../" "./")
+ ("/Applications/IntelliJ IDEA 14 EAP.app/" (21437 26834 0 0) "Contents/" "../" "./")
 
- ("/Users/adben/.m2/" (21392 5566 0 0) "settings.xml" "repository/" "../" "./")
+ ("/Applications/IntelliJ IDEA 13.app/" (21375 5922 0 0) "redist/" "plugins/" "license/" "lib/" "help/" "Contents/" "build.txt" "bin/" "../" "./")
+
+ ("/Applications/" (21438 43328 0 0) "Xcode.app/" "Wireshark.app/" "VLC.app/" "uTorrent.app/" "Utilities/" "Time Machine.app/" "TextEdit.app/" "System Preferences.app/" "Stickies.app/" "Spotify.app/" "Spectacle.app/" "Skype.app/" "Safari.app/" "Reminders.app/" "QuickTime Player.app/" "Python Launcher.app/" "Preview.app/" "Popcorn-Time.app/" "Photo Booth.app/" "Pages.app/" "Numbers.app/" "Notes.app/" "Mission Control.app/" "Messages.app/" "Maps.app/" "Mail.app/" "LightTable/" "Launchpad.app/" "Keynote.app/" "iTunes.app/" "iTerm.app/" "iPhoto.app/" "IntelliJ IDEA 14 EAP.app/" "IntelliJ IDEA 13.app/" "iMovie.app/" "Image Capture.app/" "IDLE.app/" "iBooks.app/" "HTC Sync Manager.app/" "gulp.app/" "Google Chrome.app/" "GarageBand.app/" "Game Center.app/" "Font Book.app/" "FirefoxNightly.app/" "Firefox.app/" "FaceTime.app/" "Emacs.app/" "DVD Player.app/" "Dictionary.app/" "Dashboard.app/" "Dash.app/" "dart/" "Contacts.app/" "Chess.app/" "Calendar.app/" "Calculator.app/" "Automator.app/" "Atom.app/" "App Store.app/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/adben/" (21438 41796 0 0) "tillnow.txt" "Public/" "Pictures/" "npm-debug.log" "Music/" "Movies/" "Library/" "gopath/" "go/" "Downloads/" "Documents/" "Dev/" "Desktop/" "Applications/" ".zshrc.backup" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-MacBook Pro van Adolfo-5.0.5" ".z" ".Xauthority" ".wireshark/" ".travis.yml" ".Trash/" ".ssh/" ".serverauth.73477" ".rnd" ".private.el~" ".private.el" ".overtone/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".mysql_history" ".m2/" ".local/" ".lein/" ".jshintrc" ".jmsn/" ".htoprc" ".gitignore" ".gitconfig" ".gitattributes" ".gem/" ".emacs.d/" ".editorconfig" ".DS_Store" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bowerrc" ".bower/" ".bash_profile.backup" ".bash_profile" ".bash_history" ".atom/" ".android/" "../" "./")
+
+ ("/Users/" (21388 15258 0 0) "Shared/" "adben/" ".localized" "../" "./")
+
+ ("/Users/adben/Documents/" (21426 28139 0 0) "oldDocs/" "licard.txt" "Kostendecl_mei_2014.pdf" "Kostendecl_mei_2014.numbers/" "kjkj.html" "KennisBoekMaart.pdf" "javadocset" "iprofs/" "hjh.html" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/adben/Documents/iprofs/" (21417 10348 0 0) "shl/" ".DS_Store" "../" "./")
+
+ ("/Users/adben/Documents/iprofs/shl/" (21437 9886 0 0) "temp/" "medewerker-portaal/" "logs/" "cssWorkshop/" "clienten-portaal/" ".DS_Store" "../" "./")
+
+ ("/Users/adben/Documents/iprofs/shl/temp/" (21437 11220 0 0) "home/" "current-bundle/" "cp-1.0.0-SNAPSHOT/" ".DS_Store" "../" "./")
+
+ ("/Users/adben/Documents/iprofs/shl/temp/cp-1.0.0-SNAPSHOT/" (21437 11206 0 0) "tomcat-7.0.42/" "readme.html" "patching-tool/" "license/" "deploy/" "../" "./")
+
+ ("/Users/adben/Documents/iprofs/shl/temp/cp-1.0.0-SNAPSHOT/tomcat-7.0.42/" (21437 11204 0 0) "work/" "webapps/" "temp/" "RUNNING.txt" "RELEASE-NOTES" "NOTICE" "logs/" "LICENSE" "lib/" "conf/" "bin/" "../" "./")
+
+ ("/Users/adben/Documents/iprofs/shl/temp/cp-1.0.0-SNAPSHOT/tomcat-7.0.42/webapps/" (21437 15231 0 0) "web-form-portlet/" "vw-theme/" "sync-web/" "ROOT/" "resources-importer-web/" "opensocial-portlet/" "notifications-portlet/" "marketplace-portlet/" "kaleo-web/" "kaleo-forms-portlet/" "kaleo-designer-portlet/" "cp-theme/" "cp-startup-hook/" "cp-portlet/" "cp-hooks/" "cp-app-portlet/" "calendar-portlet/" ".DS_Store" "../" "./")
+
+ ("/Users/adben/Documents/iprofs/shl/temp/cp-1.0.0-SNAPSHOT/tomcat-7.0.42/webapps/ROOT/" (21437 15241 0 0) "WEB-INF/" "wap/" "layouttpl/" "index.jsp" "html/" "favicon.ico" "errors/" "dtd/" ".DS_Store" "../" "./")
+
+ ("/Users/adben/Documents/iprofs/shl/temp/cp-1.0.0-SNAPSHOT/tomcat-7.0.42/webapps/ROOT/html/" (21437 15241 0 0) "VAADIN/" "themes/" "taglib/" "portlet/" "portal/" "js/" "icons/" "css/" "common/" ".DS_Store" "../" "./")
+
+ ("/Users/adben/Documents/iprofs/shl/temp/cp-1.0.0-SNAPSHOT/tomcat-7.0.42/webapps/ROOT/html/portlet/" (21437 15246 0 0) "xsl_content/" "workflow_tasks/" "workflow_instances/" "workflow_definitions/" "workflow_definition_links/" "wiki_display/" "wiki/" "web_proxy/" "users_admin/" "user_statistics/" "user_groups_admin/" "unit_converter/" "trash/" "translator/" "staging_bar/" "software_catalog/" "social_activity/" "sites_directory/" "sites_admin/" "site_map/" "site_browser/" "shopping/" "search/" "rss/" "roles_admin/" "requests/" "recent_documents/" "recent_bloggers/" "quick_note/" "portlet_sharing/" "portlet_css/" "portlet_configuration/" "portal_settings/" "polls_display/" "polls/" "plugins_admin/" "password_policies_admin/" "password_generator/" "page_ratings/" "page_flags/" "page_comments/" "network/" "nested_portlets/" "navigation/" "my_sites/" "my_places/" "my_account/" "monitoring/" "mobile_device_rules/" "message_boards_admin/" "message_boards/" "login/" "loan_calculator/" "license_manager/" "layouts_admin/" "layout_set_prototypes/" "layout_prototypes/" "language/" "journal_content_search/" "journal_content/" "journal_articles/" "journal/" "invitation/" "init.jsp" "init-ext.jsp" "image_gallery_display/" "iframe/" "hello_velocity/" "group_statistics/" "flags/" "expando/" "dynamic_data_mapping/" "dynamic_data_lists/" "dynamic_data_list_display/" "document_library_display/" "document_library/" "dockbar/" "directory/" "dictionary/" "currency_converter/" "control_panel_menu/" "control_panel_home/" "breadcrumb/" "bookmarks/" "blogs_aggregator/" "blogs_admin/" "blogs/" "background_task/" "asset_tags_navigation/" "asset_tag_admin/" "asset_publisher/" "asset_category_admin/" "asset_categories_navigation/" "asset_browser/" "announcements/" "amazon_rankings/" "admin/" "activities/" ".DS_Store" "../" "./")
+
+ ("/Users/adben/Documents/iprofs/shl/temp/cp-1.0.0-SNAPSHOT/tomcat-7.0.42/webapps/ROOT/html/portlet/journal/" (21437 15329 0 0) "view_resources.jsp" "view_recent.jsp" "view_folders.jsp" "view_folder_icon.jsp" "view_folder_descriptive.jsp" "view_feeds.jsp" "view_entries.jsp" "view_article_icon.jsp" "view_article_history.jsp" "view_article_descriptive.jsp" "view_article_content.jsp" "view_article.jsp" "view.jsp" "update_translation_redirect.jsp" "toolbar.jsp" "sort_button.jsp" "select_folder.jsp" "search_resources.jsp" "raw_article_content.jsp" "preview_article_content.jsp" "move_folder.jsp" "move_entries.jsp" "move_article.jsp" "js/" "init.jsp" "init-ext.jsp" "folder_columns.jspf" "folder_action.jsp" "feed_search_results.jspf" "feed_search.jsp" "feed_action.jsp" "error.jsp" "edit_folder.jsp" "edit_feed.jsp" "edit_article.jsp" "display_style_buttons.jsp" "css/" "copy_article.jsp" "configuration.jsp" "cast_result.jspf" "breadcrumb.jsp" "asset/" "article_version_action.jsp" "article_toolbar.jsp" "article_search_results_index.jspf" "article_search_results_database.jspf" "article_search_results.jspf" "article_search.jsp" "article_header.jsp" "article_columns.jspf" "article_action.jsp" "article/" "add_button.jsp" "../" "./")
+
+ ("/Users/adben/.emacs.d/" (21429 41498 0 0) "web-vcs-log.org" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "lisp/" "init.elc" "init.el" "ido.last" "games/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/adben/Desktop/" (21429 21035 0 0) "yofix2.patch" "yofix.patch" "Wi-Fi-probleemoplossing-C02MQ278FD59-20140611165642.tar.gz" "Schermafbeelding 2014-06-16 om 23.23.16.png" "Schermafbeelding 2014-06-02 om 22.13.50.png" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/adben/.m2/" (21392 35351 0 0) "settings.xml" "settings-security.xml" "repository/" "../" "./")
+
+ ("/Users/adben/Dev/grapes/" (21409 38171 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "doc/" ".lein-repl-history" ".gitignore" "../" "./")
+
+ ("/Users/adben/Dev/" (21409 35948 0 0) "testyeoman/" "scheduler.30mhz.com/" "radar.30mhz.com/" "protractor/" "grapes/" "git/" "css-day-usb/" "advancedsass-cssday/" "admin.30mhz.com/" "30mhz.com/" "30mhz/" ".DS_Store" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----
