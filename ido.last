@@ -2,6 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/" . "db/")
  ("/Applications/IntelliJ IDEA 14 EAP.app/" . "Contents/")
  ("/Applications/" . "IntelliJ IDEA 14 EAP.app/")
  ("/" . "Applications/")
@@ -11,6 +12,10 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/db/"
+ "/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/resources/"
+ "/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/core/"
+ "/Users/adben/Documents/iprofs/shl/migratie/"
  "/Applications/IntelliJ IDEA 14 EAP.app/Contents/"
  "/Users/adben/.emacs.d/"
  "/Users/adben/"
@@ -21,6 +26,10 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "PirateDAO.java"
+ "PirateResource.java"
+ "Ship.java"
+ "pom.xml"
  "Info.plist"
  "init.el"
  ".zshrc"
@@ -31,15 +40,25 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/db/" (21447 57811 0 0) "ShipDAO.java" "PirateDAO.java" "../" "./")
+
+ ("/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/resources/" (21447 57811 0 0) "ShipResource.java" "PirateResource.java" "../" "./")
+
+ ("/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/" (21447 57909 0 0) "resources/" "HelloXmlConfiguration.java" "HelloXmlApplication.java" "db/" "core/" ".DS_Store" "../" "./")
+
+ ("/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/core/" (21447 57811 0 0) "Ship.java" "Pirate.java" "../" "./")
+
+ ("/Users/adben/Documents/iprofs/shl/migratie/" (21443 48760 0 0) "README.md" "pom.xml" "clientenportaal.yml" "clientenportaal-server/" "clientenportaal-client/" "clientenportaal-api/" ".git/" "../" "./")
+
+ ("/Applications/" (21439 63495 0 0) "Xcode.app/" "Wireshark.app/" "VLC.app/" "uTorrent.app/" "Utilities/" "Time Machine.app/" "TextEdit.app/" "System Preferences.app/" "Stickies.app/" "Spotify.app/" "Spectacle.app/" "Skype.app/" "Safari.app/" "Reminders.app/" "QuickTime Player.app/" "Python Launcher.app/" "Preview.app/" "Popcorn-Time.app/" "Photo Booth.app/" "Pages.app/" "Opera Developer.app/" "Numbers.app/" "Notes.app/" "Mission Control.app/" "Messages.app/" "Maps.app/" "Mail.app/" "LightTable/" "Launchpad.app/" "Keynote.app/" "iTunes.app/" "iTerm.app/" "iPhoto.app/" "IntelliJ IDEA 14 EAP.app/" "IntelliJ IDEA 13.app/" "iMovie.app/" "Image Capture.app/" "IDLE.app/" "iBooks.app/" "HTC Sync Manager.app/" "gulp.app/" "Google Chrome.app/" "GarageBand.app/" "Game Center.app/" "Font Book.app/" "FirefoxNightly.app/" "Firefox.app/" "FaceTime.app/" "Emacs.app/" "DVD Player.app/" "Dictionary.app/" "Dashboard.app/" "Dash.app/" "dart/" "Contacts.app/" "Chess.app/" "Calendar.app/" "Calculator.app/" "Automator.app/" "Atom.app/" "App Store.app/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/adben/" (21442 50152 0 0) "tillnow.txt" "Public/" "Pictures/" "npm-debug.log" "Music/" "Movies/" "Library/" "gopath/" "go/" "Downloads/" "Documents/" "Dev/" "Desktop/" "Applications/" ".zshrc.backup" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-MacBook Pro van Adolfo-5.0.5" ".z" ".Xauthority" ".wireshark/" ".travis.yml" ".Trash/" ".ssh/" ".serverauth.73477" ".rnd" ".private.el~" ".private.el" ".overtone/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".mysql_history" ".m2/" ".local/" ".lein/" ".jshintrc" ".jmsn/" ".htoprc" ".gitignore" ".gitconfig" ".gitattributes" ".gem/" ".emacs.d/" ".editorconfig" ".DS_Store" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bowerrc" ".bower/" ".bash_profile.backup" ".bash_profile" ".bash_history" ".atom/" ".android/" "../" "./")
+
  ("/Applications/IntelliJ IDEA 14 EAP.app/Contents/" (21437 26834 0 0) "Resources/" "redist/" "plugins/" "MacOS/" "license/" "lib/" "Info.plist" "help/" "build.txt" "bin/" "_CodeSignature/" "../" "./")
 
  ("/Applications/IntelliJ IDEA 14 EAP.app/" (21437 26834 0 0) "Contents/" "../" "./")
 
  ("/Applications/IntelliJ IDEA 13.app/" (21375 5922 0 0) "redist/" "plugins/" "license/" "lib/" "help/" "Contents/" "build.txt" "bin/" "../" "./")
-
- ("/Applications/" (21438 43328 0 0) "Xcode.app/" "Wireshark.app/" "VLC.app/" "uTorrent.app/" "Utilities/" "Time Machine.app/" "TextEdit.app/" "System Preferences.app/" "Stickies.app/" "Spotify.app/" "Spectacle.app/" "Skype.app/" "Safari.app/" "Reminders.app/" "QuickTime Player.app/" "Python Launcher.app/" "Preview.app/" "Popcorn-Time.app/" "Photo Booth.app/" "Pages.app/" "Numbers.app/" "Notes.app/" "Mission Control.app/" "Messages.app/" "Maps.app/" "Mail.app/" "LightTable/" "Launchpad.app/" "Keynote.app/" "iTunes.app/" "iTerm.app/" "iPhoto.app/" "IntelliJ IDEA 14 EAP.app/" "IntelliJ IDEA 13.app/" "iMovie.app/" "Image Capture.app/" "IDLE.app/" "iBooks.app/" "HTC Sync Manager.app/" "gulp.app/" "Google Chrome.app/" "GarageBand.app/" "Game Center.app/" "Font Book.app/" "FirefoxNightly.app/" "Firefox.app/" "FaceTime.app/" "Emacs.app/" "DVD Player.app/" "Dictionary.app/" "Dashboard.app/" "Dash.app/" "dart/" "Contacts.app/" "Chess.app/" "Calendar.app/" "Calculator.app/" "Automator.app/" "Atom.app/" "App Store.app/" ".localized" ".DS_Store" "../" "./")
-
- ("/Users/adben/" (21438 41796 0 0) "tillnow.txt" "Public/" "Pictures/" "npm-debug.log" "Music/" "Movies/" "Library/" "gopath/" "go/" "Downloads/" "Documents/" "Dev/" "Desktop/" "Applications/" ".zshrc.backup" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zcompdump-MacBook Pro van Adolfo-5.0.5" ".z" ".Xauthority" ".wireshark/" ".travis.yml" ".Trash/" ".ssh/" ".serverauth.73477" ".rnd" ".private.el~" ".private.el" ".overtone/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".mysql_history" ".m2/" ".local/" ".lein/" ".jshintrc" ".jmsn/" ".htoprc" ".gitignore" ".gitconfig" ".gitattributes" ".gem/" ".emacs.d/" ".editorconfig" ".DS_Store" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bowerrc" ".bower/" ".bash_profile.backup" ".bash_profile" ".bash_history" ".atom/" ".android/" "../" "./")
 
  ("/Users/" (21388 15258 0 0) "Shared/" "adben/" ".localized" "../" "./")
 
