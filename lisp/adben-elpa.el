@@ -7,13 +7,15 @@
 ;;                            ("gnu" . "http://elpa.gnu.org/packages/")
 ;;                            ("technomancy" . "http://repo.technomancy.us/emacs/")
 ;;                            ("marmalade" . "http://marmalade-repo.org/packages/"))))
-(package-initialize)
+(require 'package)
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("technomancy" . "http://repo.technomancy.us/emacs/"))
 (add-to-list 'package-archives '("ELPA" . "http://tromey.com/elpa/"))
 (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+;; discontinued support
+;;(add-to-list 'package-archives '("technomancy" . "http://repo.technomancy.org/emacs/")) 
+(add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
+(package-initialize)
 ;; issue with emacs24 => (setq url-http-attempt-keepalives nil)
 ;; There are a number of small bugs in Emacs24’s package.el.
 ;; First, when installing dependencies, the packages were
@@ -28,19 +30,19 @@
 ;;   (package-install-from-buffer  (package-buffer-info) 'single))
 
 (defadvice package-compute-transaction
-  (before
-   package-compute-transaction-reverse (package-list requirements)
-   activate compile)
+    (before
+     package-compute-transaction-reverse (package-list requirements)
+     activate compile)
   "reverse the requirements"
   (setq requirements (reverse requirements))
   (print requirements))
 
 (defadvice package-download-tar
-  (after package-download-tar-initialize activate compile)
+    (after package-download-tar-initialize activate compile)
   "initialize the package after compilation"
   (package-initialize))
 
 (defadvice package-download-single
-  (after package-download-single-initialize activate compile)
+    (after package-download-single-initialize activate compile)
   "initialize the package after compilation"
   (package-initialize))
