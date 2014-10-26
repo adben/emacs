@@ -2,6 +2,8 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/adolfobenedetti/.emacs.d/" . "CheatSheets/")
+ ("/Users/adolfobenedetti/" . ".emacs.d/")
  ("/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/" . "db/")
  ("/Applications/IntelliJ IDEA 14 EAP.app/" . "Contents/")
  ("/Applications/" . "IntelliJ IDEA 14 EAP.app/")
@@ -12,6 +14,8 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/adolfobenedetti/.emacs.d/CheatSheets/"
+ "/Users/adolfobenedetti/.emacs.d/"
  "/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/db/"
  "/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/resources/"
  "/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/core/"
@@ -26,20 +30,26 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "VC-mode.org.txt"
+ "init.el"
  "PirateDAO.java"
  "PirateResource.java"
  "Ship.java"
  "pom.xml"
  "Info.plist"
- "init.el"
  ".zshrc"
  "licard.txt"
  "project.clj"
- "settings.xml"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/adolfobenedetti/.emacs.d/CheatSheets/" (21549 46337 0 0) "VC-mode.org.txt.REMOTE.1323.txt" "VC-mode.org.txt.orig" "VC-mode.org.txt.LOCAL.1323.txt" "VC-mode.org.txt.BACKUP.1323.txt" "VC-mode.org.txt" "../" "./")
+
+ ("/Users/adolfobenedetti/.emacs.d/" (21575 44390 0 0) "web-vcs-log.org" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "lisp/" "init.el" "ido.last" "games/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" ".#init.el" "../" "./")
+
+ ("/Users/adolfobenedetti/" (21578 20803 0 0) "temp/" "Public/" "Pictures/" "p/" "Music/" "Movies/" "Library/" "go/" "g/" "emacs-meta/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "Command attempted to use minibuffer while in minibuffer" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s MacBook Pro-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.2" ".z" ".Trash/" ".ssh/" ".sbt/" ".private.el~" ".private.el" ".orig-emacs.d/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".m2/" ".local/" ".ivy2/" ".IntelliJIdea14/" ".htoprc" ".gitconfig" ".gem/" ".emacs.d/" ".DS_Store" ".dropbox/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_history" ".android/" "../" "./")
+
  ("/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/db/" (21447 57811 0 0) "ShipDAO.java" "PirateDAO.java" "../" "./")
 
  ("/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/resources/" (21447 57811 0 0) "ShipResource.java" "PirateResource.java" "../" "./")
