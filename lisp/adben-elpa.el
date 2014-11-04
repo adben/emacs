@@ -14,7 +14,7 @@
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 ;; discontinued support
 ;;(add-to-list 'package-archives '("technomancy" . "http://repo.technomancy.org/emacs/")) 
-(add-to-list 'package-archives '("melpa-stable" . "http://melpa-stable.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 ;; issue with emacs24 => (setq url-http-attempt-keepalives nil)
 ;; There are a number of small bugs in Emacs24’s package.el.
