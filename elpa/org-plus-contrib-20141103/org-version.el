@@ -11,7 +11,7 @@
 (defun org-git-version ()
   "The Git version of org-mode.
   Inserted by installing org-mode or when a release is made."
-   (let ((org-git-version "8.2.10-elpaplus"))
+   (let ((org-git-version "8.2.10-5-g20dcd0-elpaplus"))
      org-git-version))
 ;;;###autoload
 (defvar org-odt-data-dir "/usr/share/emacs/etc/org"

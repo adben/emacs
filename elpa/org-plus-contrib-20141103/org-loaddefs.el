@@ -292,7 +292,7 @@ used to limit the exported source code blocks by language.
 ;;;;;;  org-search-view org-agenda-list org-batch-store-agenda-views
 ;;;;;;  org-store-agenda-views org-batch-agenda-csv org-batch-agenda
 ;;;;;;  org-agenda org-toggle-sticky-agenda) "org-agenda" "org-agenda.el"
-;;;;;;  (21571 18375))
+;;;;;;  (21589 48329))
 ;;; Generated autoloads from org-agenda.el
 
 (autoload 'org-toggle-sticky-agenda "org-agenda" "\
@@ -655,8 +655,8 @@ UTF-8 bullets for `org-mode'.
 ;;;***
 
 ;;;### (autoloads (org-capture-import-remember-templates org-capture
-;;;;;;  org-capture-string) "org-capture" "org-capture.el" (21571
-;;;;;;  18375))
+;;;;;;  org-capture-string) "org-capture" "org-capture.el" (21591
+;;;;;;  6637))
 ;;; Generated autoloads from org-capture.el
 
 (autoload 'org-capture-string "org-capture" "\
@@ -859,7 +859,7 @@ Convert a computed column number to a string value, according to FMT.
 ;;;### (autoloads (org-agenda-columns org-insert-columns-dblock org-dblock-write:columnview
 ;;;;;;  org-columns-number-to-string org-columns-compute org-columns
 ;;;;;;  org-columns-get-format-and-top-level org-columns-remove-overlays)
-;;;;;;  "org-colview" "org-colview.el" (21571 18375))
+;;;;;;  "org-colview" "org-colview.el" (21589 48329))
 ;;; Generated autoloads from org-colview.el
 
 (autoload 'org-columns-remove-overlays "org-colview" "\
@@ -923,7 +923,7 @@ Turn on or update column view in the agenda.
 ;;;***
 
 ;;;### (autoloads (org-check-version) "org-compat" "org-compat.el"
-;;;;;;  (21571 18375))
+;;;;;;  (21589 48329))
 ;;; Generated autoloads from org-compat.el
 
 (autoload 'org-check-version "org-compat" "\
@@ -934,7 +934,7 @@ Try very hard to provide sensible version strings.
 ;;;***
 
 ;;;### (autoloads (org-contacts) "org-contacts" "org-contacts.el"
-;;;;;;  (21571 18375))
+;;;;;;  (21589 48329))
 ;;; Generated autoloads from org-contacts.el
 
 (autoload 'org-contacts "org-contacts" "\
@@ -1205,7 +1205,7 @@ Dispatch to the appropriate function to store a link to an IRC session.
 ;;;***
 
 ;;;### (autoloads (org-load-noerror-mustsuffix) "org-macs" "org-macs.el"
-;;;;;;  (21571 18375))
+;;;;;;  (21589 48329))
 ;;; Generated autoloads from org-macs.el
 
 (autoload 'org-load-noerror-mustsuffix "org-macs" "\
@@ -2056,7 +2056,7 @@ DIRECTORY is where the directory org-mode/ lives (i.e. the
 ;;;***
 
 ;;;### (autoloads (org-git-version org-release) "org-version" "org-version.el"
-;;;;;;  (21572 38632))
+;;;;;;  (21591 6649))
 ;;; Generated autoloads from org-version.el
 
 (autoload 'org-release "org-version" "\
@@ -2082,7 +2082,7 @@ The location of ODT styles.")
 ;;;;;;  org-run-like-in-org-mode turn-on-orgstruct++ turn-on-orgstruct
 ;;;;;;  orgstruct-mode org-global-cycle org-cycle org-mode org-clock-persistence-insinuate
 ;;;;;;  turn-on-orgtbl org-version org-babel-load-file org-babel-do-load-languages)
-;;;;;;  "org" "org.el" (21571 18375))
+;;;;;;  "org" "org.el" (21591 6637))
 ;;; Generated autoloads from org.el
 
 (autoload 'org-babel-do-load-languages "org" "\
@@ -2914,7 +2914,7 @@ The file is stored under the name chosen in
 
 ;;;### (autoloads (org-koma-letter-export-to-pdf org-koma-letter-export-to-latex
 ;;;;;;  org-koma-letter-export-as-latex) "ox-koma-letter" "ox-koma-letter.el"
-;;;;;;  (21571 18375))
+;;;;;;  (21589 48329))
 ;;; Generated autoloads from ox-koma-letter.el
 
 (autoload 'org-koma-letter-export-as-latex "ox-koma-letter" "\
@@ -3142,7 +3142,7 @@ Return output file name.
 ;;;***
 
 ;;;### (autoloads (org-md-export-to-markdown org-md-convert-region-to-md
-;;;;;;  org-md-export-as-markdown) "ox-md" "ox-md.el" "02d27e093680dff82b16ebedcda8cba8")
+;;;;;;  org-md-export-as-markdown) "ox-md" "ox-md.el" "a92b0bfe0c1f83d7f4eae46292f54597")
 ;;; Generated autoloads from ox-md.el
 
 (autoload 'org-md-export-as-markdown "ox-md" "\
@@ -3385,7 +3385,7 @@ the project.
 ;;;***
 
 ;;;### (autoloads (org-rss-publish-to-rss org-rss-export-to-rss org-rss-export-as-rss)
-;;;;;;  "ox-rss" "ox-rss.el" (21571 18375))
+;;;;;;  "ox-rss" "ox-rss.el" (21589 48329))
 ;;; Generated autoloads from ox-rss.el
 
 (autoload 'org-rss-export-as-rss "ox-rss" "\
@@ -3451,7 +3451,7 @@ Return output file name.
 
 ;;;### (autoloads (org-taskjuggler-export-process-and-open org-taskjuggler-export-and-process
 ;;;;;;  org-taskjuggler-export) "ox-taskjuggler" "ox-taskjuggler.el"
-;;;;;;  (21571 18375))
+;;;;;;  (21589 48329))
 ;;; Generated autoloads from ox-taskjuggler.el
 
 (autoload 'org-taskjuggler-export "ox-taskjuggler" "\

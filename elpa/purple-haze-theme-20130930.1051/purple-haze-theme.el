@@ -52,8 +52,8 @@
 ;; Listening to All along the watchtower is not mandatory, although
 ;; the Jimi Hendrix version is recommended.
 
-(unless (>= 24 emacs-major-version)
-  (error "purple-haze-theme requires Emacs 24 or later."))
+;; (unless (>= 24 emacs-major-version)
+;;  (error "purple-haze-theme requires Emacs 24 or later."))
 
 (deftheme purple-haze
   "purple-haze-theme By: Jason Milkins - emacsfodder.github.com")
