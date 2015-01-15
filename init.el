@@ -411,4 +411,4 @@
      (340 . "#94BFF3")
      (360 . "#DC8CC3"))))
  '(vc-annotate-very-old-color "#DC8CC3"))
-(set-default-font "-apple-source code pro-light-r-normal--12-130-72-72-m-130-iso10646-1")
+(set-default-font "-apple-source code pro-light-r-normal--15-120-72-72-m-130-iso10646-1")
