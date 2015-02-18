@@ -3,8 +3,8 @@
 
 ;; Copyright 2011-2015 François-Xavier Bois
 
-;; Version: 20150214.137
-;; X-Original-Version: 10.4.03
+;; Version: 20150217.2253
+;; X-Original-Version: 10.4.05
 ;; Author: François-Xavier Bois <fxbois AT Google Mail Service>
 ;; Maintainer: François-Xavier Bois
 ;; Created: July 2011
@@ -25,7 +25,7 @@
 
 ;;---- CONSTS ------------------------------------------------------------------
 
-(defconst web-mode-version "10.4.03"
+(defconst web-mode-version "10.4.05"
   "Web Mode version.")
 
 ;;---- GROUPS ------------------------------------------------------------------
@@ -2197,7 +2197,10 @@ the environment as needed for ac-sources, right before they're used.")
   (when web-mode-enable-whitespace-fontification
     (web-mode-whitespaces-on))
 
-  (when web-mode-enable-tab-indentation
+  ;;(message "%S" indent-tabs-mode)
+  (when (and (boundp 'indent-tabs-mode) indent-tabs-mode)
+    ;;web-mode-enable-tab-indentation
+    ;;(message "use tabs")
     (web-mode-use-tabs))
 
   (when web-mode-enable-sexp-functions
@@ -5771,6 +5774,7 @@ the environment as needed for ac-sources, right before they're used.")
            ((and (boundp 'tab-width) tab-width) tab-width)
            ((and (boundp 'standard-indent) standard-indent) standard-indent)
            (t 4)))
+;;    (message "offset(%S)" offset)
     (setq web-mode-attr-indent-offset offset)
     (setq web-mode-code-indent-offset offset)
     (setq web-mode-css-indent-offset offset)
@@ -6186,6 +6190,7 @@ the environment as needed for ac-sources, right before they're used.")
 
          ((eq (get-text-property pos 'block-token) 'delimiter-end)
           (when (web-mode-block-beginning)
+            (setq reg-col (current-indentation)) ;; TODO: bad hack
             (setq offset (current-column))))
 
          ((and (get-text-property pos 'tag-beg)
@@ -6461,6 +6466,7 @@ the environment as needed for ac-sources, right before they're used.")
 
          ) ;cond
 
+        ;;(message "offset=%S" offset)
         (when (and offset reg-col (< offset reg-col)) (setq offset reg-col))
 
         ) ;let
