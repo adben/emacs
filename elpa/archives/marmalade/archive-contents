@@ -1,11 +1,4 @@
 (1
- (niclein .
-	  [(0 0 1)
-	   ((shadchen
-	     (1 4))
-	    (smartparens
-	     (1 5)))
-	   "Nic's lein and clojure integration" single])
  (zone-matrix .
 	      [(0 0 1)
 	       nil "Matrix themed Zone mode" tar])
@@ -542,6 +535,11 @@
  (syntactic-sugar .
 		  [(0 9 4)
 		   nil "Effect-free forms such as if/then/else" single])
+ (synosaurus .
+	     [(0 1 0)
+	      ((cl-lib
+		(0 5)))
+	      "An extensible thesaurus supporting lookup and substitution." tar])
  (synonyms .
 	   [(1 0)
 	    nil "Look up synonyms for a word or phrase in a thesaurus." single])
@@ -1347,6 +1345,9 @@
  (pinboard .
 	   [(0 0 1)
 	    nil "get stuff from pinboard" single])
+ (picpocket .
+	    [(2)
+	     nil "Image viewer" single])
  (pickup .
 	 [(0 0 3)
 	  nil "pickup file." single])
@@ -1529,7 +1530,7 @@
 	     [(0 0 8)
 	      nil "export html and meta data used by static blog like nikola from org file" tar])
  (org2jekyll .
-	     [(0 1 2)
+	     [(0 1 4)
 	      ((dash
 		(2 10 0))
 	       (dash-functional
@@ -1547,7 +1548,7 @@
 	      (1 6 8)))
 	    "Blog from Org mode to wordpress" tar])
  (org-trello .
-	     [(0 6 9 1)
+	     [(0 6 9 2)
 	      ((request-deferred
 		(0 1 0))
 	       (deferred
@@ -1736,6 +1737,13 @@
 	       ((auto-complete
 		 (1 4)))
 	       "A major mode for the Nimrod programming language" single])
+ (niclein .
+	  [(0 0 1)
+	   ((shadchen
+	     (1 4))
+	    (smartparens
+	     (1 5)))
+	   "Nic's lein and clojure integration" single])
  (nginx-mode .
 	     [(1 1)
 	      nil "major mode for editing nginx config files" single])
@@ -3397,15 +3405,13 @@
 	   [(1 4 6)
 	    nil "Screen for Emacsen" single])
  (elpy .
-       [(1 6 0)
+       [(1 7 0)
 	((company
 	  (0 8 2))
 	 (find-file-in-project
 	  (3 3))
 	 (highlight-indentation
 	  (0 5 0))
-	 (idomenu
-	  (0 1))
 	 (pyvenv
 	  (1 3))
 	 (yasnippet

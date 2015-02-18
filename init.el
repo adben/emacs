@@ -385,6 +385,9 @@
  '(main-line-color1 "#191919")
  '(main-line-color2 "#111111")
  '(main-line-separator-style (quote chamfer))
+ '(package-selected-packages
+   (quote
+    (zenburn-theme yalinum wtf wrap-region worklog web-mode web-beautify undo-tree thread-dump textmate texdrive tex-math-preview test-case-mode tagedit swank-clojure swank-cdt soothe-theme smart-tab shellfm shell-current-directory scpaste scala-mode sass-mode rw-language-and-country-codes rw-ispell rw-hunspell redo+ rainbow-delimiters purple-haze-theme puppet-mode project-local-variables powerline perspective pastie pabbrev org-table-comment org-plus-contrib mv-shell multi-web-mode multi-project mode-compile mediawiki main-line magit lusty-explorer lua-mode lorem-ipsum log4j-mode linum-off less-css-mode less lein kill-ring-search keywiz karma jump jtags js3-mode js2-mode jira javascript javadoc-help idle-highlight-mode icomplete+ http-post-simple htmlize html-script-src highlight-parentheses helm-ls-git helm-gtags helm-git-grep helm-git helm-dired-recent-dirs haskell-mode guess-style gruber-darker-theme google-c-style go-snippets go-play go-mode gitconfig git-gutter-fringe+ git-gutter gist ghc flymake-shell flymake-sass flymake-csslint flymake-css flymake-coffee evil-nerd-commenter ess elisp-cache elein el-swank-fuzzy durendal drag-stuff dired+ diff-git dictionary datomic-snippets dash-at-point dart-mode css-mode confluence-edit confluence columnify column-marker coffee-mode closure-template-html-mode closure-lint-mode clojurescript-mode clojure-test-mode clojure-snippets clojure-project-mode clojure-cheatsheet cljdoc circe chess buffer-move blank-mode auto-indent-mode auto-dictionary auto-complete applescript-mode angular-snippets ace-jump-buffer 4clojure)))
  '(powerline-color1 "#191919")
  '(powerline-color2 "#111111")
  '(show-paren-mode t)
@@ -411,4 +414,10 @@
      (340 . "#94BFF3")
      (360 . "#DC8CC3"))))
  '(vc-annotate-very-old-color "#DC8CC3"))
-(set-default-font "-apple-source code pro-light-r-normal--15-120-72-72-m-130-iso10646-1")
+(set-default-font "-apple-source code pro-light-r-normal--14-120-72-72-m-130-iso10646-1")
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

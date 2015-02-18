@@ -2,6 +2,25 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/NetBeans/" . "etc/")
+ ("/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/" . "NetBeans/")
+ ("/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/" . "Resources/")
+ ("/Applications/NetBeans/NetBeans Dev 201502150001.app/" . "Contents/")
+ ("/var/log/" . "zensie/")
+ ("/var/" . "log/")
+ ("/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/Resources/NetBeans/" . "etc/")
+ ("/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/Resources/" . "NetBeans/")
+ ("/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/" . "Resources/")
+ ("/Applications/NetBeans/NetBeans Dev 201502120001.app/" . "Contents/")
+ ("/Users/adolfobenedetti/.m2/" . "repository/")
+ ("/Users/adolfobenedetti/p/referee.30mhz.com/" . "project/")
+ ("/Users/adolfobenedetti/p/scheduler.30mhz.com/" . "project/")
+ ("/Users/adolfobenedetti/p/" . "referee.30mhz.com/")
+ ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/" . "etc/")
+ ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/" . "NetBeans/")
+ ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/" . "Resources/")
+ ("/Applications/NetBeans/NetBeans 8.0.2.app/" . "Contents/")
+ ("/Applications/NetBeans/" . "NetBeans Dev 201502150001.app/")
  ("/Users/adolfobenedetti/Library/Preferences/" . "IntelliJIdea14/")
  ("/Users/adolfobenedetti/Library/" . "Preferences/")
  ("/Applications/IntelliJ IDEA 14.app/" . "Contents/")
@@ -9,10 +28,10 @@
  ("/Users/" . "adolfobenedetti/")
  ("/Users/adolfobenedetti/.emacs.d/elpa/" . "purple-haze-theme-20130930.1051/")
  ("/Users/adolfobenedetti/.emacs.d/" . "lisp/")
- ("/Users/adolfobenedetti/" . "Library/")
+ ("/Users/adolfobenedetti/" . ".emacs.d/")
  ("/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/" . "db/")
  ("/Applications/IntelliJ IDEA 14 EAP.app/" . "Contents/")
- ("/Applications/" . "IntelliJ IDEA 14.app/")
+ ("/Applications/" . "NetBeans/")
  ("/" . "Applications/")
  ("/Users/adben/Dev/" . "grapes/")
  ("/Users/adben/" . ".emacs.d/")
@@ -20,16 +39,25 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/Applications/IntelliJ IDEA 14.app/Contents/"
- "/Users/adolfobenedetti/"
- "/Users/adolfobenedetti/Library/Preferences/IntelliJIdea14/"
- "/Users/adolfobenedetti/.m2/"
+ "/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/NetBeans/etc/"
  "/Users/adolfobenedetti/.emacs.d/"
- "/Users/adolfobenedetti/.emacs.d/lisp/"
+ "/var/log/zensie/"
+ "/Users/adolfobenedetti/config/"
+ "/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/Resources/NetBeans/etc/"
+ "/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/"
+ "/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/etc/"
+ "/Users/adolfobenedetti/"
+ "/Users/adolfobenedetti/.m2/"
  "/Users/adolfobenedetti/p/lidar.30mhz.com/"
+ "/Users/adolfobenedetti/Library/Preferences/IntelliJIdea14/"
+ "/Applications/IntelliJ IDEA 14 EAP.app/Contents/"
+ "/Users/adolfobenedetti/p/referee.30mhz.com/project/"
+ "/Users/adolfobenedetti/p/scheduler.30mhz.com/project/"
+ "/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-client/yo/app/views/"
+ "/Applications/IntelliJ IDEA 14.app/Contents/"
+ "/Users/adolfobenedetti/.emacs.d/lisp/"
  "/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-application/"
  "/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-client/"
- "/Applications/IntelliJ IDEA 14 EAP.app/Contents/"
  "/Users/adolfobenedetti/Documents/"
  "/Users/adolfobenedetti/.emacs.d/elpa/purple-haze-theme-20130930.1051/"
  "/Users/adolfobenedetti/.emacs.d/CheatSheets/"
@@ -46,31 +74,105 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "netbeans.conf"
+ "init.el"
+ "zensie.log"
  "Info.plist"
  ".zshrc"
- "idea.vmoptions"
  "settings.xml"
- "testing.txt"
- ".#test.json"
- "test.json"
- "init.el"
- ".private.el"
- ".gitignore"
+ "pom.xml"
+ "idea.vmoptions"
+ "plugins.sbt"
+ "signup.html"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/NetBeans/etc/" (21728 3881 0 0) "netbeans.import" "netbeans.conf" "netbeans.clusters" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/NetBeans/" (21730 19871 0 0) "websvccommon/" "webcommon/" "THIRDPARTYLICENSE.txt" "THIRDPARTYLICENSE-generated.txt" "README.html" "profiler/" "platform/" "php/" "netbeans.css" "nb/" "moduleCluster.properties" "mobility/" "LICENSE.txt" "javafx/" "java/" "ide/" "harness/" "groovy/" "extide/" "etc/" "ergonomics/" "enterprise/" "dlight/" "CREDITS.html" "cnd/" "bin/" "apisupport/" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/" (21728 14247 0 0) "netbeans.icns" "NetBeans/" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/" (21728 14247 0 0) "Resources/" "MacOS/" "Info.plist" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans Dev 201502150001.app/" (21728 40914 0 0) "Contents/" "../" "./")
+
+ ("/Applications/NetBeans/" (21728 40818 0 0) "NetBeans Dev 201502150001.app/" "NetBeans Dev 201502120001.app/" "NetBeans 8.0.2.app/" "glassfish-4.1/" "../" "./")
+
+ ("/Applications/" (21730 6292 0 0) "Xcode.app/" "Xcode-Beta.app/" "Who's On My WiFi.app/" "VLC.app/" "Van Dale Dictionaries.app/" "uTorrent.app/" "Utilities/" "Twitter.app/" "TuneUp.app/" "Transmission.app/" "TorBrowser.app/" "Time Machine.app/" "The Unarchiver.app/" "TextEdit.app/" "System Preferences.app/" "Stickies.app/" "Spotify.app/" "Spectacle.app/" "Slack.app/" "Skype.app/" "SketchBook.app/" "Sim Daltonism.app/" "Shazam.app/" "Safari.app/" "Remote Desktop.app/" "Reminders.app/" "QuickTime Player.app/" "Python Launcher.app/" "Preview.app/" "PopcornTime.app/" "Pixlr.app/" "Photo Booth.app/" "Pages.app/" "Opera.app/" "Numbers.app/" "Notes.app/" "Nike+ Connect.app/" "NetBeans/" "Mission Control.app/" "Messages.app/" "Maps.app/" "Mail.app/" "LightTable.app/" "Launchpad.app/" "Keynote.app/" "iTunes.app/" "iTerm.app/" "IntelliJ IDEA 14.app/" "IntelliJ IDEA 14 EAP.app/" "ImageOptim.app/" "Image Capture.app/" "IDLE.app/" "iBooks.app/" "HTC Sync Manager.app/" "Hex Fiend.app/" "Google Earth Pro.app/" "Google Chrome.app/" "Game Center.app/" "Font Book.app/" "FirefoxDeveloperEdition.app/" "FirefoxAurora.app/" "Firefox.app/" "FaceTime.app/" "Extreme Landings.app/" "Emacs.app/" "DVD Player.app/" "Dropbox.app/" "DrCleaner.app/" "Dictionary.app/" "Dashboard.app/" "Dash.app/" "Cryptocat.app/" "Contacts.app/" "Chess.app/" "Calendar.app/" "Calculator.app/" "Automator.app/" "App Store.app/" "Alfred.app/" "__MACOSX/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/adolfobenedetti/.emacs.d/" (21730 4797 0 0) "web-vcs-log.org" "var/" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "lisp/" "init.elc" "init.el" "ido.last" "games/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/adolfobenedetti/" (21730 19910 0 0) "zensie.log" "temp/" "Public/" "profiler1.xml" "Pictures/" "p/" "netbeans_key_55.zip" "Music/" "Movies/" "Library/" "idea.vmoptions" "go/" "g/" "emacs-meta/" "dropbox-30mhz/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "deploy/" "config.json" "config/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s mbp zensi-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.2" ".z.29382" ".z.13846" ".z.12542" ".z" ".viminfo" ".Trash/" ".ssh/" ".sonar/" ".scala_history" ".sbt/" ".private.el~" ".private.el" ".orig-emacs.d/" ".openvpn/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".nbprofiler/" ".mysql_history" ".matplotlib/" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea14/" ".htoprc" ".gradle/" ".gitconfig" ".gem/" ".emacs.d/" ".ec2.zoran" ".ec2.webclusive" ".ec2.wakoopa" ".ec2.videodock" ".ec2.usabilla" ".ec2.truthtrap" ".ec2.self" ".ec2.ranj" ".ec2.qelp" ".ec2.publitas.rebuild" ".ec2.publitas" ".ec2.poikos" ".ec2.olery" ".ec2.millmobile" ".ec2.marvia.staging" ".ec2.marvia" ".ec2.maplin" ".ec2.malmberg" ".ec2.layar.staging" ".ec2.layar" ".ec2.kulitzer" ".ec2.insided" ".ec2.fashiolista" ".ec2.directness" ".ec2.dev.buzzer" ".ec2.buzzer" ".ec2.book" ".ec2.9apps" ".DS_Store" ".dropbox/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_history" ".appcfg_nag" ".android/" ".activator/" ".#zensie.log" ".#testing.txt" ".#test.json" ".#config.json" "../" "./")
+
+ ("/var/log/zensie/" (21726 14528 0 0) "zensie.log" "access.log" "../" "./")
+
+ ("/var/log/" (21729 43206 0 0) "zensie/" "wifi.log" "weekly.out" "watchdogd/" "uucp/" "system.log.7.gz" "system.log.6.gz" "system.log.5.gz" "system.log.4.gz" "system.log.3.gz" "system.log.2.gz" "system.log.1.gz" "system.log.0.gz" "system.log" "shutdown_monitor.log" "secinitd.log.7.gz" "secinitd.log.6.gz" "secinitd.log.5.gz" "secinitd.log.4.gz" "secinitd.log.3.gz" "secinitd.log.2.gz" "secinitd.log.1.gz" "secinitd.log.0.gz" "secinitd.log" "sa/" "ppp.log" "ppp/" "powermanagement/" "performance/" "opendirectoryd.log.9" "opendirectoryd.log.8" "opendirectoryd.log.7" "opendirectoryd.log.6" "opendirectoryd.log.5" "opendirectoryd.log.4" "opendirectoryd.log.3" "opendirectoryd.log.2" "opendirectoryd.log.1" "opendirectoryd.log.0" "opendirectoryd.log" "notifyd.log" "monthly.out" "module/" "install.log" "hdiejectd.log" "fsck_hfs.log" "fax/" "emond/" "displaypolicyd.stdout.log" "displaypolicyd.log" "DiagnosticMessages/" "daily.out" "cups/" "coreduetd.log" "commerce.log" "com.apple.xpc.launchd/" "com.apple.revisiond/" "com.apple.launchd.peruser.97/" "com.apple.launchd.peruser.92/" "com.apple.launchd.peruser.89/" "com.apple.launchd.peruser.55/" "com.apple.launchd.peruser.501/" "com.apple.launchd.peruser.4294967294/" "com.apple.launchd.peruser.212/" "com.apple.launchd.peruser.205/" "com.apple.launchd.peruser.202/" "com.apple.launchd.peruser.200/" "com.apple.launchd.peruser.0/" "com.apple.clouddocs.asl/" "CDIS.custom" "bookstore.log.1.gz" "bookstore.log.0.gz" "bluetooth.pklg" "authd.log.6.gz" "authd.log.5.gz" "authd.log.4.gz" "authd.log.3.gz" "authd.log.2.gz" "authd.log.1.gz" "authd.log.0.gz" "asl/" "appstore.log.7.gz" "appstore.log.6.gz" "appstore.log.5.gz" "appstore.log.4.gz" "appstore.log.3.gz" "appstore.log.2.gz" "appstore.log.1.gz" "appstore.log.0.gz" "appstore.log" "apache2/" "accountpolicy.log.7.gz" "accountpolicy.log.6.gz" "accountpolicy.log.5.gz" "accountpolicy.log.4.gz" "accountpolicy.log.3.gz" "accountpolicy.log.2.gz" "accountpolicy.log.1.gz" "accountpolicy.log.0.gz" "accountpolicy.log" "../" "./")
+
+ ("/var/" (21568 63634 0 0) "yp/" "vm/" "tmp/" "spool/" "rwho/" "run/" "rpc/" "root/" "networkd/" "netboot/" "msgs/" "mail/" "log/" "lib/" "jabberd/" "folders~orig/" "folders/" "empty/" "db/" "backups/" "audit/" "at/" "agentx/" "../" "./")
+
+ ("/Users/adolfobenedetti/config/" (21624 10837 0 0) "userChrome.css" "powerline.zsh-theme" "netbeans.conf" "idea.vmoptions" "hosts" "daily_stuff.sh" "Custom_flymake.css" "Custom.css" "adben.zsh-theme" "adben-new.zsh-theme" ".zshrc" ".gitignore" ".gitconfig" ".git/" ".bashrc" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/Resources/NetBeans/etc/" (21725 7417 0 0) "netbeans.import" "netbeans.conf" "netbeans.clusters" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/Resources/NetBeans/" (21724 57181 0 0) "websvccommon/" "webcommon/" "THIRDPARTYLICENSE.txt" "THIRDPARTYLICENSE-generated.txt" "README.html" "profiler/" "platform/" "php/" "netbeans.css" "nb/" "moduleCluster.properties" "mobility/" "LICENSE.txt" "javafx/" "java/" "ide/" "harness/" "groovy/" "extide/" "etc/" "ergonomics/" "enterprise/" "dlight/" "CREDITS.html" "cnd/" "bin/" "apisupport/" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/Resources/" (21724 8605 0 0) "netbeans.icns" "NetBeans/" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/" (21724 8605 0 0) "Resources/" "MacOS/" "Info.plist" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans Dev 201502120001.app/" (21724 33730 0 0) "Contents/" "../" "./")
+
+ ("/Users/adolfobenedetti/p/lidar.30mhz.com/" (21724 62984 0 0) "zensie.iml" "zensie-model/" "zensie-dw-es/" "zensie-dw-dynamo/" "zensie-client/" "zensie-application/" "README.md" "protractor-tests/" "pom.xml" ".idea/" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-model/" (21724 57046 0 0) "zensie-model.iml" "target/" "src/" "pom.xml" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/" (21724 31501 0 0) "websvccommon/" "webcommon/" "THIRDPARTYLICENSE.txt" "README.html" "profiler/" "platform/" "php/" "netbeans.css" "nbscala/" "nbms/" "nb/" "moduleCluster.properties" "mobility/" "LICENSE.txt" "javatextcopypaste/" "javafx/" "java/" "ide/" "html4j4nb/" "harness/" "groovy/" "extra/" "extide/" "etc/" "ergonomics/" "enterprise/" "dlight/" "CREDITS.html" "cnd/" "bin/" "apisupport/" "../" "./")
+
+ ("/Users/adolfobenedetti/.m2/repository/" (21694 24616 0 0) "xpp3/" "xmlunit/" "xmlpull/" "xml-apis/" "xerces/" "xalan/" "velocity/" "stax/" "sslext/" "regexp/" "oro/" "org/" "nl/" "net/" "mysql/" "logkit/" "log4j/" "junit/" "joda-time/" "jdom/" "jaxen/" "javax/" "jakarta-regexp/" "io/" "dom4j/" "de/" "commons-validator/" "commons-logging/" "commons-lang/" "commons-io/" "commons-httpclient/" "commons-digester/" "commons-configuration/" "commons-collections/" "commons-codec/" "commons-cli/" "commons-chain/" "commons-beanutils/" "com/" "classworlds/" "ch/" "cglib/" "br/" "backport-util-concurrent/" "avalon-framework/" "asm/" "aopalliance/" "antlr/" "../" "./")
+
+ ("/Users/adolfobenedetti/.m2/" (21722 19591 0 0) "settings.xml" "settings-security.xml" "repository/" "../" "./")
+
+ ("/Users/adolfobenedetti/Library/Preferences/IntelliJIdea14/" (21722 30611 0 0) "VSS/" "tasks/" "remoteTools/" "quicklists/" "qaplug_profiles/" "port" "options/" "keymaps/" "inspection/" "ideTalk/" "idea14.key" "idea.vmoptions~" "idea.vmoptions" "fileTemplates/" "eval/" "disabled_update.txt" "disabled_plugins.txt" "componentVersions/" "colors/" "codestyles/" "../" "./")
+
+ ("/Users/adolfobenedetti/Library/Preferences/" (21722 30954 0 0) "widget-com.apple.widget.weather.plist" "widget-com.apple.widget.calendar.plist" "QuickTime Preferences" "org.videolan.vlc.plist" "org.videolan.vlc.LSSharedFileList.plist" "org.videolan.vlc/" "org.netbeans.modules.plist" "org.mozilla.tor browser.plist" "org.mozilla.firefoxdeveloperedition.plist" "org.mozilla.firefox.plist" "org.mozilla.crashreporter.plist" "org.mozilla.aurora.plist" "org.m0k.transmission.plist" "org.m0k.transmission.LSSharedFileList.plist" "org.gnu.Emacs.plist" "OLDIntelliJIdea14BETA/" "net.pornel.ImageOptim.plist" "net.java.openjdk.cmd.plist" "Macromedia/" "loginwindow.plist" "jetbrains.communicator.core.plist" "IntelliJIdea14/" "com.tuneupmedia.TuneUp.plist" "com.trolltech.plist" "com.time4popcorn.Popcorn Time.plist" "com.spotify.client.plist" "com.skype.skypewifi.plist" "com.skype.skype.plist" "com.ridiculousfish.HexFiend.plist" "com.ridiculousfish.HexFiend.LSSharedFileList.plist" "com.oracle.javadeployment.plist" "com.oracle.java.JavaAppletPlugin.plist" "com.oracle.java.Java-Updater.plist" "com.nike.nikeplusconnect.plist" "com.kodowa.LightTable.plist" "com.kapeli.dash.plist" "com.jetbrains.intellij.plist" "com.intel.nw.plist" "com.intel.nw.helper.plist" "com.install4j.installations.plist" "com.htc.HTC-Sync-Manager.plist" "com.googlecode.iterm2.plist" "com.google.Keystone.Agent.plist" "com.Google.GoogleEarthPro.plist" "com.google.GoogleEarthPlus.plist" "com.google.GECommonSettings.plist" "com.google.Chrome.plist" "com.divisiblebyzero.Spectacle.plist" "com.Breakpad.crash_report_sender.plist" "com.bittorrent.uTorrent.plist" "com.bittorrent.uTorrent-Installer.plist" "com.azureus.vuze.plist" "com.apple.xpc.activity2.plist" "com.apple.xpc.activity.plist" "com.apple.wifi.keychain-format.plist" "com.apple.UserAccountUpdater.plist" "com.apple.universalaccess.plist" "com.apple.ubd.plist" "com.apple.twitterd.plist" "com.apple.TextEdit.LSSharedFileList.plist" "com.apple.Terminal.plist" "com.apple.TelephonyUtilities.plist" "com.apple.systemuiserver.plist" "com.apple.SystemProfiler.plist" "com.apple.systempreferences.plist" "com.apple.syncserver.plist" "com.apple.symbolichotkeys.plist" "com.apple.storeagent.plist" "com.apple.Spotlight.plist" "com.apple.speech.voice.prefs.plist" "com.apple.speech.recognition.AppleSpeechRecognition.prefs.plist" "com.apple.speech.prefs.plist" "com.apple.spaces.plist" "com.apple.sidebarlists.plist" "com.apple.sharingd.plist" "com.apple.sharekit.recents.plist" "com.apple.SetupAssistant.plist" "com.apple.ServicesMenu.Services.plist" "com.apple.security.KCN.plist" "com.apple.security.cloudkeychainproxy3.keysToRegister.plist" "com.apple.screensaver.plist" "com.apple.scheduler.plist" "com.apple.Safari.plist" "com.apple.Safari.Extensions.plist" "com.apple.recentitems.plist" "com.apple.QuickTimePlayerX.LSSharedFileList.plist" "com.apple.quicktime.plugin.preferences.plist" "com.apple.QuickLookDaemon.plist" "com.apple.quicklookconfig.plist" "com.apple.quicklook.satellite.plist" "com.apple.PubSubAgent.plist" "com.apple.ProblemReporter.plist" "com.apple.Preview.LSSharedFileList.plist" "com.apple.preferences.extensions.ShareMenu.plist" "com.apple.preferences.extensions.ServicesWithUI.plist" "com.apple.preference.general.plist" "com.apple.notificationcenterui.plist" "com.apple.NetworkUtility.plist" "com.apple.networkConnect.plist" "com.apple.network.prefPaneSimulate.plist" "com.apple.metadata.SpotlightNetHelper.plist" "com.apple.messaging.expire.plist" "com.apple.MessagesHistoryImporter.plist" "com.apple.mediaaccessibility.public.plist" "com.apple.Maps.plist" "com.apple.loginwindow.plist" "com.apple.loginitems.plist" "com.apple.LaunchServices.QuarantineEventsV2" "com.apple.LaunchServices.plist" "com.apple.LaunchServices/" "com.apple.keychainaccess.plist" "com.apple.java.util.prefs.plist" "com.apple.JapaneseAnalysis/" "com.apple.iWork.Pages.plist" "com.apple.iWork.Numbers.LSSharedFileList.plist" "com.apple.iWork.Keynote.plist" "com.apple.iWork.Keynote.LSSharedFileList.plist" "com.apple.iTunesHelper.plist" "com.apple.iTunes.plist" "com.apple.iTunes.eq.plist" "com.apple.iPod.plist" "com.apple.internetconnect.plist" "com.apple.internetconfigpriv.plist" "com.apple.InputMethodKit.UserDictionary.plist" "com.apple.imservice.ids.iMessage.plist" "com.apple.imservice.ids.FaceTime.plist" "com.apple.Image_Capture.plist" "com.apple.identityservicesd.plist" "com.apple.icloud.fmfd.plist" "com.apple.iChat.Yahoo.plist" "com.apple.iChat.Jabber.plist" "com.apple.iChat.AIM.plist" "com.apple.icbaccountsd.plist" "com.apple.iCal.plist" "com.apple.ibooks.plist" "com.apple.iApps.plist" "com.apple.HIToolbox.plist" "com.apple.helpviewer.plist" "com.apple.helpd.plist" "com.apple.help.plist" "com.apple.GEO.plist" "com.apple.frameworks.diskimages.diuiagent.plist" "com.apple.FontBook.plist" "com.apple.finder.plist" "com.apple.FileStatsAgent.plist" "com.apple.FaceTime.plist" "com.apple.facetime.bag.plist" "com.apple.dt.Xcode.plist" "com.apple.dt.Xcode.LSSharedFileList.plist" "com.apple.driver.AppleHIDMouse.plist" "com.apple.driver.AppleBluetoothMultitouch.trackpad.plist" "com.apple.driver.AppleBluetoothMultitouch.mouse.plist" "com.apple.dock.plist" "com.apple.diskimages.fsck" "com.apple.dashboard.plist" "com.apple.dashboard.client.plist" "com.apple.coreservices.uiagent.plist" "com.apple.CoreGraphics.plist" "com.apple.Console.plist" "com.apple.Console.LSSharedFileList.plist" "com.apple.commerce.plist" "com.apple.commerce.knownclients.plist" "com.apple.CharacterPicker.plist" "com.apple.CaptiveNetworkAssistant.plist" "com.apple.calculateframework.plist" "com.apple.bookstoreagent.plist" "com.apple.BluetoothFileExchange.plist" "com.apple.BezelServices.plist" "com.apple.ATS.plist" "com.apple.assistant.support.plist" "com.apple.assistant.plist" "com.apple.archiveutility.plist" "com.apple.appstore.plist" "com.apple.AppleMultitouchTrackpad.plist" "com.apple.AddressBook.plist" "com.apple.ActivityMonitor.plist" "com.apple.accountsd.plist" "callservicesd.plist" "ByHost/" ".GlobalPreferences.plist" "../" "./")
+
+ ("/Applications/IntelliJ IDEA 14 EAP.app/Contents/" (21721 1298 0 0) "Resources/" "redist/" "plugins/" "MacOS/" "license/" "lib/" "Info.plist" "help/" "bin/" "_CodeSignature/" "../" "./")
+
+ ("/Applications/IntelliJ IDEA 14 EAP.app/" (21721 530 0 0) "Contents/" "../" "./")
+
+ ("/Users/adolfobenedetti/p/referee.30mhz.com/project/" (21722 16455 0 0) "target/" "project/" "plugins.sbt" "build.properties" "assembly.sbt" "../" "./")
+
+ ("/Users/adolfobenedetti/p/referee.30mhz.com/" (21722 16499 0 0) "version.sbt" "target/" "src/" "README.md" "project/" "lib/" "build.sbt" "assembly.sbt" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/adolfobenedetti/p/scheduler.30mhz.com/project/" (21640 6576 0 0) "target/" "project/" "plugins.sbt" "build.properties" "assembly.sbt" "../" "./")
+
+ ("/Users/adolfobenedetti/p/scheduler.30mhz.com/" (21722 16132 0 0) "version.sbt" "target/" "src/" "README.md" "projectFilesBackup/" "project/" "build.sbt" "assembly.sbt" ".idea/" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/etc/" (21722 15292 0 0) "netbeans.import" "netbeans.conf" "netbeans.clusters" "../" "./")
+
+ ("/Users/adolfobenedetti/p/" (21714 25474 0 0) "zeppelin/" "test/" "scheduler.30mhz.com/" "referee.30mhz.com/" "radar.30mhz.com/" "lidar.30mhz.com/" "CPU-20141020T205737.cpuprofile" ".DS_Store" "../" "./")
+
+ ("/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-client/" (21715 18413 0 0) "zensie-client.iml" "yo/" "target/" "pom.xml" ".DS_Store" "../" "./")
+
+ ("/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-client/yo/" (21720 57153 0 0) "test/" "README.md" "package.json" "node_modules/" "nbproject/" "Gruntfile.js" "dist/" "bower_components/" "bower.json" "app/" ".travis.yml" ".tmp/" ".sass-cache/" ".jshintrc" ".gitignore" ".gitattributes" ".editorconfig" ".DS_Store" ".bowerrc" "../" "./")
+
+ ("/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-client/yo/app/" (21721 50121 0 0) "views/" "styles/" "scripts/" "robots.txt" "mstile-70x70.png" "mstile-310x310.png" "mstile-310x150.png" "mstile-150x150.png" "mstile-144x144.png" "languages/" "index.html" "images/" "fonts/" "favicon.ico" "favicon-96x96.png" "favicon-32x32.png" "favicon-196x196.png" "favicon-16x16.png" "favicon-160x160.png" "desktop.ini" "browserconfig.xml" "apple-touch-icon.png" "apple-touch-icon-precomposed.png" "apple-touch-icon-76x76.png" "apple-touch-icon-72x72.png" "apple-touch-icon-60x60.png" "apple-touch-icon-57x57.png" "apple-touch-icon-152x152.png" "apple-touch-icon-144x144.png" "apple-touch-icon-120x120.png" "apple-touch-icon-114x114.png" "404.html" ".htaccess" ".buildignore" "../" "./")
+
+ ("/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-client/yo/app/views/" (21722 11624 0 0) "urbandetail.html" "urban.html" "terms.html" "signup.html" "presenceglobal.html" "presencedetail.html" "presence.html" "policy.html" "newcheck.html" "login.html" "dashboard.html" "checkdetail.html" "cavedetail.html" "cave.html" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/" (21620 43600 0 0) "netbeans.icns" "NetBeans/" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/" (21620 43600 0 0) "Resources/" "MacOS/" "Info.plist" "../" "./")
+
+ ("/Applications/NetBeans/NetBeans 8.0.2.app/" (21632 7506 0 0) "Contents/" "../" "./")
+
  ("/Applications/IntelliJ IDEA 14.app/Contents/" (21695 18188 0 0) "Resources/" "redist/" "plugins/" "MacOS/" "license/" "lib/" "Info.plist" "help/" "bin/" "_CodeSignature/" "../" "./")
 
  ("/Applications/IntelliJ IDEA 14.app/" (21695 17666 0 0) "Contents/" "../" "./")
 
- ("/Applications/" (21699 56747 0 0) "Xcode.app/" "Xcode-Beta.app/" "Who's On My WiFi.app/" "VLC.app/" "Van Dale Dictionaries.app/" "uTorrent.app/" "Utilities/" "Twitter.app/" "TuneUp.app/" "Transmission.app/" "TorBrowser.app/" "Time Machine.app/" "The Unarchiver.app/" "TextEdit.app/" "System Preferences.app/" "Stickies.app/" "Spotify.app/" "Spectacle.app/" "Slack.app/" "Skype.app/" "SketchBook.app/" "Shazam.app/" "Safari.app/" "Remote Desktop.app/" "Reminders.app/" "QuickTime Player.app/" "Python Launcher.app" "Preview.app/" "Popcorn-Time.app/" "Pixlr.app/" "Photo Booth.app/" "Pages.app/" "Opera.app/" "Numbers.app/" "Notes.app/" "Nike+ Connect.app/" "NetBeans/" "Mission Control.app/" "Messages.app/" "Maps.app/" "Mail.app/" "LightTable.app/" "Launchpad.app/" "Keynote.app/" "iTunes.app/" "iTerm.app/" "IntelliJ IDEA 14.app/" "Image Capture.app/" "IDLE.app" "iBooks.app/" "Hex Fiend.app/" "Google Earth.app/" "Google Chrome.app/" "Game Center.app/" "Font Book.app/" "FirefoxDeveloperEdition.app/" "FirefoxAurora.app/" "Firefox.app/" "FaceTime.app/" "Extreme Landings.app/" "Emacs.app/" "DVD Player.app/" "Dropbox.app/" "DrCleaner.app/" "Dictionary.app/" "Dashboard.app/" "Dash.app/" "Cryptocat.app/" "Contacts.app/" "Chess.app/" "Calendar.app/" "Calculator.app/" "Automator.app/" "App Store.app/" "Alfred.app/" "__MACOSX/" ".localized" ".DS_Store" "../" "./")
-
- ("/Users/adolfobenedetti/" (21699 56658 0 0) "temp/" "Public/" "Pictures/" "p/" "Music/" "Movies/" "Library/" "idea.vmoptions" "go/" "g/" "emacs-meta/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "deploy/" "config.json" "config/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s mbp zensi-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.2" ".z.29382" ".z.13846" ".z.12542" ".z" ".viminfo" ".Trash/" ".ssh/" ".sonar/" ".sbt/" ".private.el~" ".private.el" ".orig-emacs.d/" ".openvpn/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".mysql_history" ".matplotlib/" ".m2/" ".local/" ".ivy2/" ".IntelliJIdea14/" ".htoprc" ".gitconfig" ".gem/" ".emacs.d/" ".DS_Store" ".dropbox/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_history" ".appcfg_nag" ".android/" ".#testing.txt" ".#test.json" ".#config.json" "../" "./")
-
  ("/usr/local/Cellar/sonar/5.0/libexec/" (21699 34310 0 0) "web/" "temp/" "logs/" "lib/" "java_pid3875.hprof" "extensions/" "data/" "COPYING" "conf/" "bin/" "../" "./")
-
- ("/Users/adolfobenedetti/Library/Preferences/" (21696 56811 0 0) "widget-com.apple.widget.weather.plist" "widget-com.apple.widget.calendar.plist" "QuickTime Preferences" "org.videolan.vlc.plist" "org.videolan.vlc.LSSharedFileList.plist" "org.videolan.vlc/" "org.netbeans.modules.plist" "org.mozilla.tor browser.plist" "org.mozilla.firefoxdeveloperedition.plist" "org.mozilla.firefox.plist" "org.mozilla.crashreporter.plist" "org.mozilla.aurora.plist" "org.m0k.transmission.plist" "org.m0k.transmission.LSSharedFileList.plist" "org.gnu.Emacs.plist" "net.java.openjdk.cmd.plist" "Macromedia/" "loginwindow.plist" "jetbrains.communicator.core.plist" "IntelliJIdea14/" "com.tuneupmedia.TuneUp.plist" "com.trolltech.plist" "com.time4popcorn.Popcorn Time.plist" "com.spotify.client.plist" "com.skype.skypewifi.plist" "com.skype.skype.plist" "com.ridiculousfish.HexFiend.plist" "com.ridiculousfish.HexFiend.LSSharedFileList.plist" "com.oracle.javadeployment.plist" "com.oracle.java.JavaAppletPlugin.plist" "com.oracle.java.Java-Updater.plist" "com.nike.nikeplusconnect.plist" "com.kodowa.LightTable.plist" "com.kapeli.dash.plist" "com.jetbrains.intellij.plist" "com.intel.nw.plist" "com.intel.nw.helper.plist" "com.install4j.installations.plist" "com.googlecode.iterm2.plist" "com.google.Keystone.Agent.plist" "com.google.GoogleEarthPlus.plist" "com.google.GECommonSettings.plist" "com.google.Chrome.plist" "com.divisiblebyzero.Spectacle.plist" "com.Breakpad.crash_report_sender.plist" "com.bittorrent.uTorrent.plist" "com.bittorrent.uTorrent-Installer.plist" "com.azureus.vuze.plist" "com.apple.xpc.activity2.plist" "com.apple.xpc.activity.plist" "com.apple.wifi.keychain-format.plist" "com.apple.UserAccountUpdater.plist" "com.apple.universalaccess.plist" "com.apple.ubd.plist" "com.apple.twitterd.plist" "com.apple.TextEdit.LSSharedFileList.plist" "com.apple.Terminal.plist" "com.apple.TelephonyUtilities.plist" "com.apple.systemuiserver.plist" "com.apple.SystemProfiler.plist" "com.apple.systempreferences.plist" "com.apple.syncserver.plist" "com.apple.symbolichotkeys.plist" "com.apple.storeagent.plist" "com.apple.Spotlight.plist" "com.apple.speech.voice.prefs.plist" "com.apple.speech.recognition.AppleSpeechRecognition.prefs.plist" "com.apple.speech.prefs.plist" "com.apple.spaces.plist" "com.apple.sidebarlists.plist" "com.apple.sharingd.plist" "com.apple.sharekit.recents.plist" "com.apple.SetupAssistant.plist" "com.apple.ServicesMenu.Services.plist" "com.apple.security.KCN.plist" "com.apple.security.cloudkeychainproxy3.keysToRegister.plist" "com.apple.screensaver.plist" "com.apple.scheduler.plist" "com.apple.Safari.plist" "com.apple.Safari.Extensions.plist" "com.apple.recentitems.plist" "com.apple.QuickTimePlayerX.LSSharedFileList.plist" "com.apple.quicktime.plugin.preferences.plist" "com.apple.QuickLookDaemon.plist" "com.apple.quicklookconfig.plist" "com.apple.quicklook.satellite.plist" "com.apple.PubSubAgent.plist" "com.apple.ProblemReporter.plist" "com.apple.Preview.LSSharedFileList.plist" "com.apple.preferences.extensions.ShareMenu.plist" "com.apple.preferences.extensions.ServicesWithUI.plist" "com.apple.preference.general.plist" "com.apple.notificationcenterui.plist" "com.apple.NetworkUtility.plist" "com.apple.networkConnect.plist" "com.apple.network.prefPaneSimulate.plist" "com.apple.metadata.SpotlightNetHelper.plist" "com.apple.messaging.expire.plist" "com.apple.MessagesHistoryImporter.plist" "com.apple.mediaaccessibility.public.plist" "com.apple.Maps.plist" "com.apple.loginwindow.plist" "com.apple.loginitems.plist" "com.apple.LaunchServices.QuarantineEventsV2" "com.apple.LaunchServices.plist" "com.apple.LaunchServices/" "com.apple.keychainaccess.plist" "com.apple.java.util.prefs.plist" "com.apple.JapaneseAnalysis/" "com.apple.iWork.Pages.plist" "com.apple.iWork.Numbers.LSSharedFileList.plist" "com.apple.iWork.Keynote.plist" "com.apple.iWork.Keynote.LSSharedFileList.plist" "com.apple.iTunesHelper.plist" "com.apple.iTunes.plist" "com.apple.iTunes.eq.plist" "com.apple.iPod.plist" "com.apple.internetconnect.plist" "com.apple.internetconfigpriv.plist" "com.apple.InputMethodKit.UserDictionary.plist" "com.apple.imservice.ids.iMessage.plist" "com.apple.imservice.ids.FaceTime.plist" "com.apple.Image_Capture.plist" "com.apple.identityservicesd.plist" "com.apple.icloud.fmfd.plist" "com.apple.iChat.Yahoo.plist" "com.apple.iChat.Jabber.plist" "com.apple.iChat.AIM.plist" "com.apple.icbaccountsd.plist" "com.apple.iCal.plist" "com.apple.ibooks.plist" "com.apple.iApps.plist" "com.apple.HIToolbox.plist" "com.apple.helpviewer.plist" "com.apple.helpd.plist" "com.apple.help.plist" "com.apple.GEO.plist" "com.apple.frameworks.diskimages.diuiagent.plist" "com.apple.FontBook.plist" "com.apple.finder.plist" "com.apple.FileStatsAgent.plist" "com.apple.FaceTime.plist" "com.apple.facetime.bag.plist" "com.apple.dt.Xcode.plist" "com.apple.dt.Xcode.LSSharedFileList.plist" "com.apple.driver.AppleHIDMouse.plist" "com.apple.driver.AppleBluetoothMultitouch.trackpad.plist" "com.apple.driver.AppleBluetoothMultitouch.mouse.plist" "com.apple.dock.plist" "com.apple.diskimages.fsck" "com.apple.dashboard.plist" "com.apple.dashboard.client.plist" "com.apple.coreservices.uiagent.plist" "com.apple.CoreGraphics.plist" "com.apple.Console.plist" "com.apple.Console.LSSharedFileList.plist" "com.apple.commerce.plist" "com.apple.commerce.knownclients.plist" "com.apple.CaptiveNetworkAssistant.plist" "com.apple.calculateframework.plist" "com.apple.bookstoreagent.plist" "com.apple.BluetoothFileExchange.plist" "com.apple.BezelServices.plist" "com.apple.ATS.plist" "com.apple.assistant.support.plist" "com.apple.assistant.plist" "com.apple.archiveutility.plist" "com.apple.appstore.plist" "com.apple.AppleMultitouchTrackpad.plist" "com.apple.AddressBook.plist" "com.apple.ActivityMonitor.plist" "com.apple.accountsd.plist" "callservicesd.plist" "ByHost/" ".GlobalPreferences.plist" "../" "./")
 
  ("/usr/local/Cellar/sonar/5.0/libexec/logs/" (21695 44194 0 0) "sonar.log" "analysis_reports.log" "access.log" "../" "./")
 
@@ -82,15 +184,9 @@
 
  ("/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-application/" (21694 21408 0 0) "zensie.keystore" "zensie.json" "zensie-application.iml" "target/" "src/" "pom.xml" ".DS_Store" "../" "./")
 
- ("/Users/adolfobenedetti/p/lidar.30mhz.com/" (21693 25700 0 0) "zensie.iml" "zensie-model/" "zensie-dw-es/" "zensie-dw-dynamo/" "zensie-client/" "zensie-application/" "target/" "README.md" "protractor-tests/" "pom.xml" ".idea/" ".gitignore" ".git/" ".DS_Store" "../" "./")
-
- ("/Users/adolfobenedetti/.m2/" (21693 25824 0 0) "settings.xml" "settings-security.xml" "repository/" "../" "./")
-
  ("/usr/local/Cellar/sonar/4.5.2/libexec/" (21693 25478 0 0) "web/" "temp/" "logs/" "lib/" "extensions/" "data/" "COPYING" "conf/" "bin/" "../" "./")
 
  ("/usr/local/Cellar/sonar/4.5.2/libexec/logs/" (21693 24522 0 0) "sonar.log" "access.log" "../" "./")
-
- ("/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-client/" (21692 7868 0 0) "zensie-client.iml" "yo/" "target/" "pom.xml" ".DS_Store" "../" "./")
 
  ("/usr/" (21570 15339 0 0) "X11R6/" "X11/" "standalone/" "share/" "sbin/" "local/" "libexec/" "lib/" "include/" "bin/" "../" "./")
 
@@ -106,10 +202,6 @@
 
  ("/Users/adolfobenedetti/.emacs.d/lisp/" (21691 56145 0 0) "srecode-map.elc" "srecode-map.el" "sr-speedbar.el" "elein.elc" "elein.el" "ede-projects.elc" "ede-projects.el" "adben-zsh.elc" "adben-zsh.el" "adben-yasnippet.elc" "adben-yasnippet.el" "adben-window-management.elc" "adben-window-management.el" "adben-web-mode.elc" "adben-web-mode.el" "adben-wanderlust.elc" "adben-wanderlust.el" "adben-w3m.elc" "adben-w3m.el" "adben-visual-nicities.elc" "adben-visual-nicities.el" "adben-velocity.elc" "adben-velocity.el" "adben-vc.elc" "adben-vc.el" "adben-undo.elc" "adben-undo.el" "adben-text-mode.elc" "adben-text-mode.el" "adben-spell.elc" "adben-spell.el" "adben-shortcuts.elc" "adben-shortcuts.el" "adben-shell.elc" "adben-shell.el" "adben-rainbow-delimiters.elc" "adben-rainbow-delimiters.el" "adben-python.elc" "adben-python.el" "adben-pymacs-extensions.elc" "adben-pymacs-extensions.el" "adben-powerline.elc" "adben-powerline.el" "adben-passwords.elc" "adben-passwords.el" "adben-OSX.el" "adben-org.elc" "adben-org.el" "adben-nxml.elc" "adben-nxml.el" "adben-nxhtml.elc" "adben-nxhtml.el" "adben-muse.elc" "adben-muse.el" "adben-modeline.elc" "adben-modeline.el" "adben-misc.elc" "adben-misc.el" "adben-mew.elc" "adben-mew.el" "adben-mako.elc" "adben-mako.el" "adben-mainline.elc" "adben-mainline.el" "adben-magit.elc" "adben-magit.el" "adben-lua-mode.elc" "adben-lua-mode.el" "adben-log4j.elc" "adben-log4j.el" "adben-lisp.elc" "adben-lisp.el" "adben-lisp-helpers.elc" "adben-lisp-helpers.el" "adben-libnotify.elc" "adben-libnotify.el" "adben-jsp.elc" "adben-jsp.el" "adben-jira.elc" "adben-jira.el" "adben-java.elc" "adben-java.el" "adben-iswitchb.elc" "adben-iswitchb.el" "adben-ido.elc" "adben-ido.el" "adben-helm.elc" "adben-helm.el" "adben-groovy.elc" "adben-groovy.el" "adben-gitglutter.elc" "adben-gitglutter.el" "adben-functions.elc" "adben-functions.el" "adben-flyspell.elc" "adben-flyspell.el" "adben-eshell.elc" "adben-eshell.el" "adben-erc.elc" "adben-erc.el" "adben-elpa.elc" "adben-elpa.el" "adben-egg.elc" "adben-egg.el" "adben-easypg.el" "adben-dired.elc" "adben-dired.el" "adben-cua-mode.elc" "adben-cua-mode.el" "adben-csharp.elc" "adben-csharp.el" "adben-confluence.elc" "adben-confluence.el" "adben-color-theme-textmate.elc" "adben-color-theme-textmate.el" "adben-clojure.el" "adben-circe.elc" "adben-circe.el" "adben-cider.elc" "adben-cider.el" "adben-autocomplete.elc" "adben-autocomplete.el" "adben-anything.elc" "adben-anything.el" "adben-ansi-term.elc" "adben-ansi-term.el" "adben-ace-jump.elc" "adben-ace-jump.el" "adben-abbrev.elc" "adben-abbrev.el" ".DS_Store" "../" "./")
 
- ("/Users/adolfobenedetti/.emacs.d/" (21691 56137 0 0) "web-vcs-log.org" "var/" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "lisp/" "init.elc" "init.el" "ido.last" "games/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" "../" "./")
-
- ("/Users/adolfobenedetti/Library/Preferences/IntelliJIdea14/" (21689 8442 0 0) "VSS/" "tools/" "templates/" "tasks/" "remoteTools/" "quicklists/" "qaplug_profiles/" "port" "options/" "keymaps/" "inspection/" "ideTalk/" "idea14.key" "idea.vmoptions~" "idea.vmoptions" "filetypes/" "fileTemplates/" "eval/" "disabled_update.txt" "disabled_plugins.txt" "componentVersions/" "colors/" "codestyles/" "../" "./")
-
  ("/Users/adolfobenedetti/Library/" (21621 32266 0 0) "WebKit/" "Voices/" "SyncedPreferences/" "Spelling/" "Sounds/" "Social/" "Services/" "Screen Savers/" "Saved Application State/" "Safari/" "PubSub/" "Printers/" "Preferences/" "PreferencePanes/" "Messages/" "Mail/" "Logs/" "LaunchAgents/" "LanguageModeling/" "Keychains/" "Keyboard Layouts/" "iTunes/" "Internet Plug-Ins/" "Input Methods/" "iMovie/" "IdentityServices/" "Group Containers/" "Google/" "Fonts/" "FontCollections/" "Favorites/" "Dictionaries/" "Developer/" "Cookies/" "Containers/" "Compositions/" "com.apple.nsurlsessiond/" "Colors/" "ColorPickers/" "Calendars/" "Caches/" "Autosave Information/" "Audio/" "Assistants/" "Application Support/" "Address Book Plug-Ins/" "Accounts/" ".localized" "../" "./")
 
  ("/Users/adolfobenedetti/temp/" (21613 61214 0 0) "zeppelin/" "zensie-dist-bundle.zip" "zensie-dist-bin.zip" "zensie-dist-1.0.0-SNAPSHOT-bundle/" "zensie-application.jar" "zensie-application-1.0.0-SNAPSHOT.jar" "yeo23oct14/" "yeo-react/" "testYeomanNov182014/" "testYeoman14-oct-2014/" "testYeoman13-oct-2014/" "testyeo29-oct/" "testDist/" "test/" "search-samples/" "satellizer/" "PolymerMobileCodelab.zip" "PolymerMobileCodelab/" "package.json" "node_modules/" "lista_plugins_zsh.txt" "JavaScript Testing and Static Type Systems at Scale - @Scale 2014 - Web-M8x0bc81smU.mp4" "its-hackademic/" "Gruntfile.js" "DynamoDos/" "dropwizard-mongo/" "dropwizard-java8/" "dropwizard-elastic/" "dropwizard-dynamodb/" "dropwizard-blog-sample/" "dropwizard/" "config/" "codeOld/" "carlosTest/" "bower_components/" "bower.json" "app/" "angular-google-maps/" "adben-react-demo/" ".travis.yml" ".jshintrc" ".gitignore" ".gitattributes" ".editorconfig" ".DS_Store" ".bowerrc" "../" "./")
@@ -122,13 +214,7 @@
 
  ("/Users/adolfobenedetti/temp/PolymerMobileCodelab/" (21597 64038 0 0) "styles.css" "README.md" "main.js" "index.html" "codelab-app.html" "bower_components/" "bower.json" "../" "./")
 
- ("/Users/adolfobenedetti/p/" (21573 23337 0 0) "scheduler.30mhz.com/" "radar.30mhz.com/" "lidar.30mhz.com/" "CPU-20141020T205737.cpuprofile" ".DS_Store" "../" "./")
-
  ("/Users/adolfobenedetti/temp/dropwizard-java8/dropwizard-java8-example/" (21588 61772 0 0) "src/" "README.md" "pom.xml" "example.yml" "example.keystore" ".DS_Store" "../" "./")
-
- ("/Applications/IntelliJ IDEA 14 EAP.app/Contents/" (21585 19546 0 0) "Resources/" "redist/" "plugins/" "MacOS/" "license/" "lib/" "Info.plist" "help/" "bin/" "_CodeSignature/" "../" "./")
-
- ("/Applications/IntelliJ IDEA 14 EAP.app/" (21582 48894 0 0) "Contents/" "../" "./")
 
  ("/Users/" (21568 62173 0 0) "Shared/" "adolfobenedetti/" ".localized" "../" "./")
 
