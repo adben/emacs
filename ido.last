@@ -2,6 +2,7 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/adolfobenedetti/.oh-my-zsh/" . "custom/")
  ("/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/NetBeans/" . "etc/")
  ("/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/" . "NetBeans/")
  ("/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/" . "Resources/")
@@ -15,7 +16,7 @@
  ("/Users/adolfobenedetti/.m2/" . "repository/")
  ("/Users/adolfobenedetti/p/referee.30mhz.com/" . "project/")
  ("/Users/adolfobenedetti/p/scheduler.30mhz.com/" . "project/")
- ("/Users/adolfobenedetti/p/" . "referee.30mhz.com/")
+ ("/Users/adolfobenedetti/p/" . "lidar.30mhz.com/")
  ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/" . "etc/")
  ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/" . "NetBeans/")
  ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/" . "Resources/")
@@ -28,26 +29,28 @@
  ("/Users/" . "adolfobenedetti/")
  ("/Users/adolfobenedetti/.emacs.d/elpa/" . "purple-haze-theme-20130930.1051/")
  ("/Users/adolfobenedetti/.emacs.d/" . "lisp/")
- ("/Users/adolfobenedetti/" . ".emacs.d/")
+ ("/Users/adolfobenedetti/" . ".oh-my-zsh/")
  ("/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/" . "db/")
  ("/Applications/IntelliJ IDEA 14 EAP.app/" . "Contents/")
  ("/Applications/" . "NetBeans/")
- ("/" . "Applications/")
+ ("/" . "var/")
  ("/Users/adben/Dev/" . "grapes/")
  ("/Users/adben/" . ".emacs.d/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
- "/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/NetBeans/etc/"
+ "/Users/adolfobenedetti/.oh-my-zsh/custom/"
+ "/Users/adolfobenedetti/"
+ "/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-application/"
  "/Users/adolfobenedetti/.emacs.d/"
  "/var/log/zensie/"
+ "/Users/adolfobenedetti/.m2/"
+ "/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/NetBeans/etc/"
  "/Users/adolfobenedetti/config/"
  "/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/Resources/NetBeans/etc/"
  "/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/"
  "/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/etc/"
- "/Users/adolfobenedetti/"
- "/Users/adolfobenedetti/.m2/"
  "/Users/adolfobenedetti/p/lidar.30mhz.com/"
  "/Users/adolfobenedetti/Library/Preferences/IntelliJIdea14/"
  "/Applications/IntelliJ IDEA 14 EAP.app/Contents/"
@@ -56,7 +59,6 @@
  "/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-client/yo/app/views/"
  "/Applications/IntelliJ IDEA 14.app/Contents/"
  "/Users/adolfobenedetti/.emacs.d/lisp/"
- "/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-application/"
  "/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-client/"
  "/Users/adolfobenedetti/Documents/"
  "/Users/adolfobenedetti/.emacs.d/elpa/purple-haze-theme-20130930.1051/"
@@ -74,20 +76,40 @@
 
 ;; ----- ido-work-file-list -----
 (
- "netbeans.conf"
+ "example.zsh"
+ ".zshrc"
+ "dependency-reduced-pom.xml"
  "init.el"
  "zensie.log"
+ "settings-security.xml"
+ "netbeans.conf"
  "Info.plist"
- ".zshrc"
  "settings.xml"
  "pom.xml"
- "idea.vmoptions"
- "plugins.sbt"
- "signup.html"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/adolfobenedetti/.oh-my-zsh/custom/" (21549 49207 0 0) "pure.zsh-theme" "plugins/" "example.zsh" "../" "./")
+
+ ("/Users/adolfobenedetti/.oh-my-zsh/" (21740 42491 0 0) "tools/" "themes/" "templates/" "README.markdown" "plugins/" "oh-my-zsh.sh" "MIT-LICENSE.txt" "log/" "lib/" "custom/" "cache/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/adolfobenedetti/" (21743 489 0 0) "zensie.log" "temp/" "Public/" "profiler1.xml" "Pictures/" "p/" "netbeans_key_55.zip" "netbeans.conf" "Music/" "Movies/" "Library/" "idea.vmoptions" "go/" "g/" "emacs-meta/" "dropbox-30mhz/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "deploy/" "config.json" "config/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s mbp zensi-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.2" ".z.29382" ".z.13846" ".z.12542" ".z" ".viminfo" ".Trash/" ".ssh/" ".sonar/" ".scala_history" ".sbt/" ".private.el~" ".private.el" ".orig-emacs.d/" ".openvpn/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".nbprofiler/" ".mysql_history" ".matplotlib/" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea14/" ".htoprc" ".gradle/" ".gitconfig" ".gem/" ".emacs.d/" ".ec2.zoran" ".ec2.webclusive" ".ec2.wakoopa" ".ec2.videodock" ".ec2.usabilla" ".ec2.truthtrap" ".ec2.self" ".ec2.ranj" ".ec2.qelp" ".ec2.publitas.rebuild" ".ec2.publitas" ".ec2.poikos" ".ec2.olery" ".ec2.millmobile" ".ec2.marvia.staging" ".ec2.marvia" ".ec2.maplin" ".ec2.malmberg" ".ec2.layar.staging" ".ec2.layar" ".ec2.kulitzer" ".ec2.insided" ".ec2.fashiolista" ".ec2.directness" ".ec2.dev.buzzer" ".ec2.buzzer" ".ec2.book" ".ec2.9apps" ".DS_Store" ".dropbox/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_history" ".appcfg_nag" ".android/" ".activator/" ".#zensie.log" ".#testing.txt" ".#test.json" ".#config.json" "../" "./")
+
+ ("/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-application/" (21736 39479 0 0) "zensie.keystore" "zensie.json" "zensie-application.iml" "target/" "src/" "pom.xml" "nbactions.xml" "nb-configuration.xml" "dependency-reduced-pom.xml" ".DS_Store" "../" "./")
+
+ ("/Users/adolfobenedetti/p/lidar.30mhz.com/" (21734 61170 0 0) "zensie.iml" "zensie-model/" "zensie-dw-es/" "zensie-dw-dynamo/" "zensie-dw-cw/" "zensie-client/" "zensie-application/" "target/" "README.md" "protractor-tests/" "pom.xml" ".idea/" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/adolfobenedetti/.emacs.d/lisp/" (21732 43347 0 0) "srecode-map.elc" "srecode-map.el" "sr-speedbar.el" "elein.elc" "elein.el" "ede-projects.elc" "ede-projects.el" "adben-zsh.elc" "adben-zsh.el" "adben-yasnippet.elc" "adben-yasnippet.el" "adben-window-management.elc" "adben-window-management.el" "adben-web-mode.elc" "adben-web-mode.el" "adben-wanderlust.elc" "adben-wanderlust.el" "adben-w3m.elc" "adben-w3m.el" "adben-visual-nicities.elc" "adben-visual-nicities.el" "adben-velocity.elc" "adben-velocity.el" "adben-vc.elc" "adben-vc.el" "adben-undo.elc" "adben-undo.el" "adben-text-mode.elc" "adben-text-mode.el" "adben-spell.elc" "adben-spell.el" "adben-shortcuts.elc" "adben-shortcuts.el" "adben-shell.elc" "adben-shell.el" "adben-rainbow-delimiters.elc" "adben-rainbow-delimiters.el" "adben-python.elc" "adben-python.el" "adben-pymacs-extensions.elc" "adben-pymacs-extensions.el" "adben-powerline.elc" "adben-powerline.el" "adben-passwords.elc" "adben-passwords.el" "adben-OSX.el" "adben-org.elc" "adben-org.el" "adben-nxml.elc" "adben-nxml.el" "adben-nxhtml.elc" "adben-nxhtml.el" "adben-muse.elc" "adben-muse.el" "adben-modeline.elc" "adben-modeline.el" "adben-misc.elc" "adben-misc.el" "adben-mew.elc" "adben-mew.el" "adben-mako.elc" "adben-mako.el" "adben-mainline.elc" "adben-mainline.el" "adben-magit.elc" "adben-magit.el" "adben-lua-mode.elc" "adben-lua-mode.el" "adben-log4j.elc" "adben-log4j.el" "adben-lisp.elc" "adben-lisp.el" "adben-lisp-helpers.elc" "adben-lisp-helpers.el" "adben-libnotify.elc" "adben-libnotify.el" "adben-jsp.elc" "adben-jsp.el" "adben-jira.elc" "adben-jira.el" "adben-java.elc" "adben-java.el" "adben-iswitchb.elc" "adben-iswitchb.el" "adben-ido.elc" "adben-ido.el" "adben-helm.elc" "adben-helm.el" "adben-groovy.elc" "adben-groovy.el" "adben-gitglutter.elc" "adben-gitglutter.el" "adben-functions.elc" "adben-functions.el" "adben-flyspell.elc" "adben-flyspell.el" "adben-eshell.elc" "adben-eshell.el" "adben-erc.elc" "adben-erc.el" "adben-elpa.elc" "adben-elpa.el" "adben-egg.elc" "adben-egg.el" "adben-easypg.el" "adben-dired.elc" "adben-dired.el" "adben-cua-mode.elc" "adben-cua-mode.el" "adben-csharp.elc" "adben-csharp.el" "adben-confluence.elc" "adben-confluence.el" "adben-color-theme-textmate.elc" "adben-color-theme-textmate.el" "adben-clojure.el" "adben-circe.elc" "adben-circe.el" "adben-cider.elc" "adben-cider.el" "adben-autocomplete.elc" "adben-autocomplete.el" "adben-anything.elc" "adben-anything.el" "adben-ansi-term.elc" "adben-ansi-term.el" "adben-ace-jump.elc" "adben-ace-jump.el" "adben-abbrev.elc" "adben-abbrev.el" ".DS_Store" "../" "./")
+
+ ("/Users/adolfobenedetti/.emacs.d/" (21732 43908 0 0) "web-vcs-log.org" "var/" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "lisp/" "init.elc" "init.el" "ido.last" "games/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/var/log/zensie/" (21733 10925 0 0) "zensie.log.old" "zensie.log" "zensie.2015-02-18.log" "zensie.2015-02-17.log" "access.log" "../" "./")
+
+ ("/var/log/" (21733 45542 0 0) "zensie/" "wifi.log" "weekly.out" "watchdogd/" "uucp/" "system.log.7.gz" "system.log.6.gz" "system.log.5.gz" "system.log.4.gz" "system.log.3.gz" "system.log.2.gz" "system.log.1.gz" "system.log.0.gz" "system.log" "shutdown_monitor.log" "secinitd.log.7.gz" "secinitd.log.6.gz" "secinitd.log.5.gz" "secinitd.log.4.gz" "secinitd.log.3.gz" "secinitd.log.2.gz" "secinitd.log.1.gz" "secinitd.log.0.gz" "sa/" "ppp.log" "ppp/" "powermanagement/" "performance/" "opendirectoryd.log.9" "opendirectoryd.log.8" "opendirectoryd.log.7" "opendirectoryd.log.6" "opendirectoryd.log.5" "opendirectoryd.log.4" "opendirectoryd.log.3" "opendirectoryd.log.2" "opendirectoryd.log.1" "opendirectoryd.log.0" "opendirectoryd.log" "notifyd.log" "monthly.out" "module/" "install.log" "hdiejectd.log" "fsck_hfs.log" "fax/" "emond/" "displaypolicyd.stdout.log" "displaypolicyd.log" "DiagnosticMessages/" "daily.out" "cups/" "coreduetd.log" "commerce.log" "com.apple.xpc.launchd/" "com.apple.revisiond/" "com.apple.launchd.peruser.97/" "com.apple.launchd.peruser.92/" "com.apple.launchd.peruser.89/" "com.apple.launchd.peruser.55/" "com.apple.launchd.peruser.501/" "com.apple.launchd.peruser.4294967294/" "com.apple.launchd.peruser.212/" "com.apple.launchd.peruser.205/" "com.apple.launchd.peruser.202/" "com.apple.launchd.peruser.200/" "com.apple.launchd.peruser.0/" "com.apple.clouddocs.asl/" "CDIS.custom" "bookstore.log.1.gz" "bookstore.log.0.gz" "bluetooth.pklg" "authd.log.7.gz" "authd.log.6.gz" "authd.log.5.gz" "authd.log.4.gz" "authd.log.3.gz" "authd.log.2.gz" "authd.log.1.gz" "authd.log.0.gz" "authd.log" "asl/" "appstore.log.7.gz" "appstore.log.6.gz" "appstore.log.5.gz" "appstore.log.4.gz" "appstore.log.3.gz" "appstore.log.2.gz" "appstore.log.1.gz" "appstore.log.0.gz" "appstore.log" "apache2/" "accountpolicy.log.7.gz" "accountpolicy.log.6.gz" "accountpolicy.log.5.gz" "accountpolicy.log.4.gz" "accountpolicy.log.3.gz" "accountpolicy.log.2.gz" "accountpolicy.log.1.gz" "accountpolicy.log.0.gz" "accountpolicy.log" "../" "./")
+
+ ("/Users/adolfobenedetti/.m2/" (21733 57029 0 0) "settings.xml" "settings-security.xml" "repository/" "../" "./")
+
  ("/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/NetBeans/etc/" (21728 3881 0 0) "netbeans.import" "netbeans.conf" "netbeans.clusters" "../" "./")
 
  ("/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/NetBeans/" (21730 19871 0 0) "websvccommon/" "webcommon/" "THIRDPARTYLICENSE.txt" "THIRDPARTYLICENSE-generated.txt" "README.html" "profiler/" "platform/" "php/" "netbeans.css" "nb/" "moduleCluster.properties" "mobility/" "LICENSE.txt" "javafx/" "java/" "ide/" "harness/" "groovy/" "extide/" "etc/" "ergonomics/" "enterprise/" "dlight/" "CREDITS.html" "cnd/" "bin/" "apisupport/" "../" "./")
@@ -101,14 +123,6 @@
  ("/Applications/NetBeans/" (21728 40818 0 0) "NetBeans Dev 201502150001.app/" "NetBeans Dev 201502120001.app/" "NetBeans 8.0.2.app/" "glassfish-4.1/" "../" "./")
 
  ("/Applications/" (21730 6292 0 0) "Xcode.app/" "Xcode-Beta.app/" "Who's On My WiFi.app/" "VLC.app/" "Van Dale Dictionaries.app/" "uTorrent.app/" "Utilities/" "Twitter.app/" "TuneUp.app/" "Transmission.app/" "TorBrowser.app/" "Time Machine.app/" "The Unarchiver.app/" "TextEdit.app/" "System Preferences.app/" "Stickies.app/" "Spotify.app/" "Spectacle.app/" "Slack.app/" "Skype.app/" "SketchBook.app/" "Sim Daltonism.app/" "Shazam.app/" "Safari.app/" "Remote Desktop.app/" "Reminders.app/" "QuickTime Player.app/" "Python Launcher.app/" "Preview.app/" "PopcornTime.app/" "Pixlr.app/" "Photo Booth.app/" "Pages.app/" "Opera.app/" "Numbers.app/" "Notes.app/" "Nike+ Connect.app/" "NetBeans/" "Mission Control.app/" "Messages.app/" "Maps.app/" "Mail.app/" "LightTable.app/" "Launchpad.app/" "Keynote.app/" "iTunes.app/" "iTerm.app/" "IntelliJ IDEA 14.app/" "IntelliJ IDEA 14 EAP.app/" "ImageOptim.app/" "Image Capture.app/" "IDLE.app/" "iBooks.app/" "HTC Sync Manager.app/" "Hex Fiend.app/" "Google Earth Pro.app/" "Google Chrome.app/" "Game Center.app/" "Font Book.app/" "FirefoxDeveloperEdition.app/" "FirefoxAurora.app/" "Firefox.app/" "FaceTime.app/" "Extreme Landings.app/" "Emacs.app/" "DVD Player.app/" "Dropbox.app/" "DrCleaner.app/" "Dictionary.app/" "Dashboard.app/" "Dash.app/" "Cryptocat.app/" "Contacts.app/" "Chess.app/" "Calendar.app/" "Calculator.app/" "Automator.app/" "App Store.app/" "Alfred.app/" "__MACOSX/" ".localized" ".DS_Store" "../" "./")
-
- ("/Users/adolfobenedetti/.emacs.d/" (21730 4797 0 0) "web-vcs-log.org" "var/" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "lisp/" "init.elc" "init.el" "ido.last" "games/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" "../" "./")
-
- ("/Users/adolfobenedetti/" (21730 19910 0 0) "zensie.log" "temp/" "Public/" "profiler1.xml" "Pictures/" "p/" "netbeans_key_55.zip" "Music/" "Movies/" "Library/" "idea.vmoptions" "go/" "g/" "emacs-meta/" "dropbox-30mhz/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "deploy/" "config.json" "config/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s mbp zensi-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.2" ".z.29382" ".z.13846" ".z.12542" ".z" ".viminfo" ".Trash/" ".ssh/" ".sonar/" ".scala_history" ".sbt/" ".private.el~" ".private.el" ".orig-emacs.d/" ".openvpn/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".nbprofiler/" ".mysql_history" ".matplotlib/" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea14/" ".htoprc" ".gradle/" ".gitconfig" ".gem/" ".emacs.d/" ".ec2.zoran" ".ec2.webclusive" ".ec2.wakoopa" ".ec2.videodock" ".ec2.usabilla" ".ec2.truthtrap" ".ec2.self" ".ec2.ranj" ".ec2.qelp" ".ec2.publitas.rebuild" ".ec2.publitas" ".ec2.poikos" ".ec2.olery" ".ec2.millmobile" ".ec2.marvia.staging" ".ec2.marvia" ".ec2.maplin" ".ec2.malmberg" ".ec2.layar.staging" ".ec2.layar" ".ec2.kulitzer" ".ec2.insided" ".ec2.fashiolista" ".ec2.directness" ".ec2.dev.buzzer" ".ec2.buzzer" ".ec2.book" ".ec2.9apps" ".DS_Store" ".dropbox/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_history" ".appcfg_nag" ".android/" ".activator/" ".#zensie.log" ".#testing.txt" ".#test.json" ".#config.json" "../" "./")
-
- ("/var/log/zensie/" (21726 14528 0 0) "zensie.log" "access.log" "../" "./")
-
- ("/var/log/" (21729 43206 0 0) "zensie/" "wifi.log" "weekly.out" "watchdogd/" "uucp/" "system.log.7.gz" "system.log.6.gz" "system.log.5.gz" "system.log.4.gz" "system.log.3.gz" "system.log.2.gz" "system.log.1.gz" "system.log.0.gz" "system.log" "shutdown_monitor.log" "secinitd.log.7.gz" "secinitd.log.6.gz" "secinitd.log.5.gz" "secinitd.log.4.gz" "secinitd.log.3.gz" "secinitd.log.2.gz" "secinitd.log.1.gz" "secinitd.log.0.gz" "secinitd.log" "sa/" "ppp.log" "ppp/" "powermanagement/" "performance/" "opendirectoryd.log.9" "opendirectoryd.log.8" "opendirectoryd.log.7" "opendirectoryd.log.6" "opendirectoryd.log.5" "opendirectoryd.log.4" "opendirectoryd.log.3" "opendirectoryd.log.2" "opendirectoryd.log.1" "opendirectoryd.log.0" "opendirectoryd.log" "notifyd.log" "monthly.out" "module/" "install.log" "hdiejectd.log" "fsck_hfs.log" "fax/" "emond/" "displaypolicyd.stdout.log" "displaypolicyd.log" "DiagnosticMessages/" "daily.out" "cups/" "coreduetd.log" "commerce.log" "com.apple.xpc.launchd/" "com.apple.revisiond/" "com.apple.launchd.peruser.97/" "com.apple.launchd.peruser.92/" "com.apple.launchd.peruser.89/" "com.apple.launchd.peruser.55/" "com.apple.launchd.peruser.501/" "com.apple.launchd.peruser.4294967294/" "com.apple.launchd.peruser.212/" "com.apple.launchd.peruser.205/" "com.apple.launchd.peruser.202/" "com.apple.launchd.peruser.200/" "com.apple.launchd.peruser.0/" "com.apple.clouddocs.asl/" "CDIS.custom" "bookstore.log.1.gz" "bookstore.log.0.gz" "bluetooth.pklg" "authd.log.6.gz" "authd.log.5.gz" "authd.log.4.gz" "authd.log.3.gz" "authd.log.2.gz" "authd.log.1.gz" "authd.log.0.gz" "asl/" "appstore.log.7.gz" "appstore.log.6.gz" "appstore.log.5.gz" "appstore.log.4.gz" "appstore.log.3.gz" "appstore.log.2.gz" "appstore.log.1.gz" "appstore.log.0.gz" "appstore.log" "apache2/" "accountpolicy.log.7.gz" "accountpolicy.log.6.gz" "accountpolicy.log.5.gz" "accountpolicy.log.4.gz" "accountpolicy.log.3.gz" "accountpolicy.log.2.gz" "accountpolicy.log.1.gz" "accountpolicy.log.0.gz" "accountpolicy.log" "../" "./")
 
  ("/var/" (21568 63634 0 0) "yp/" "vm/" "tmp/" "spool/" "rwho/" "run/" "rpc/" "root/" "networkd/" "netboot/" "msgs/" "mail/" "log/" "lib/" "jabberd/" "folders~orig/" "folders/" "empty/" "db/" "backups/" "audit/" "at/" "agentx/" "../" "./")
 
@@ -124,15 +138,11 @@
 
  ("/Applications/NetBeans/NetBeans Dev 201502120001.app/" (21724 33730 0 0) "Contents/" "../" "./")
 
- ("/Users/adolfobenedetti/p/lidar.30mhz.com/" (21724 62984 0 0) "zensie.iml" "zensie-model/" "zensie-dw-es/" "zensie-dw-dynamo/" "zensie-client/" "zensie-application/" "README.md" "protractor-tests/" "pom.xml" ".idea/" ".gitignore" ".git/" ".DS_Store" "../" "./")
-
  ("/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-model/" (21724 57046 0 0) "zensie-model.iml" "target/" "src/" "pom.xml" "../" "./")
 
  ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/" (21724 31501 0 0) "websvccommon/" "webcommon/" "THIRDPARTYLICENSE.txt" "README.html" "profiler/" "platform/" "php/" "netbeans.css" "nbscala/" "nbms/" "nb/" "moduleCluster.properties" "mobility/" "LICENSE.txt" "javatextcopypaste/" "javafx/" "java/" "ide/" "html4j4nb/" "harness/" "groovy/" "extra/" "extide/" "etc/" "ergonomics/" "enterprise/" "dlight/" "CREDITS.html" "cnd/" "bin/" "apisupport/" "../" "./")
 
  ("/Users/adolfobenedetti/.m2/repository/" (21694 24616 0 0) "xpp3/" "xmlunit/" "xmlpull/" "xml-apis/" "xerces/" "xalan/" "velocity/" "stax/" "sslext/" "regexp/" "oro/" "org/" "nl/" "net/" "mysql/" "logkit/" "log4j/" "junit/" "joda-time/" "jdom/" "jaxen/" "javax/" "jakarta-regexp/" "io/" "dom4j/" "de/" "commons-validator/" "commons-logging/" "commons-lang/" "commons-io/" "commons-httpclient/" "commons-digester/" "commons-configuration/" "commons-collections/" "commons-codec/" "commons-cli/" "commons-chain/" "commons-beanutils/" "com/" "classworlds/" "ch/" "cglib/" "br/" "backport-util-concurrent/" "avalon-framework/" "asm/" "aopalliance/" "antlr/" "../" "./")
-
- ("/Users/adolfobenedetti/.m2/" (21722 19591 0 0) "settings.xml" "settings-security.xml" "repository/" "../" "./")
 
  ("/Users/adolfobenedetti/Library/Preferences/IntelliJIdea14/" (21722 30611 0 0) "VSS/" "tasks/" "remoteTools/" "quicklists/" "qaplug_profiles/" "port" "options/" "keymaps/" "inspection/" "ideTalk/" "idea14.key" "idea.vmoptions~" "idea.vmoptions" "fileTemplates/" "eval/" "disabled_update.txt" "disabled_plugins.txt" "componentVersions/" "colors/" "codestyles/" "../" "./")
 
@@ -182,8 +192,6 @@
 
  ("/usr/local/Cellar/sonar/5.0/libexec/conf/" (21695 43890 0 0) "wrapper.conf" "sonar.properties" ".#sonar.properties" "../" "./")
 
- ("/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-application/" (21694 21408 0 0) "zensie.keystore" "zensie.json" "zensie-application.iml" "target/" "src/" "pom.xml" ".DS_Store" "../" "./")
-
  ("/usr/local/Cellar/sonar/4.5.2/libexec/" (21693 25478 0 0) "web/" "temp/" "logs/" "lib/" "extensions/" "data/" "COPYING" "conf/" "bin/" "../" "./")
 
  ("/usr/local/Cellar/sonar/4.5.2/libexec/logs/" (21693 24522 0 0) "sonar.log" "access.log" "../" "./")
@@ -199,8 +207,6 @@
  ("/usr/local/Cellar/sonar/4.5.2/libexec/conf/" (21693 24270 0 0) "wrapper.conf" "sonar.properties" "../" "./")
 
  ("/Users/adolfobenedetti/Documents/" (21688 57677 0 0) "Vuze Downloads/" "Responsive-Dashboard/" "reaflux/" "reactFlux.key" "react_flux.org" "nl.sheerenloo.jip/" "NFA08_MEE-8396-8_X.jpg" "MyPlayground.playground/" "Lynda.com - Java Advanced Training/" "Kilometerdeclaratie_sep.xlsx" "Kilometerdeclaratie.numbers/" "jsViene/" "js_day.org" "Josh Juneau - Java 8 Recipes (The Expert's Voice in Java) - 2014.pdf" "jdk-8u25-docs-all.zip" "jdk-8u20-macosx-x86_64-demos.zip" "jdk-8u20-docs-all.zip" "javafx-8u20-apidocs.zip" "Java 8 Lambdas - Pragmatic Functional Programming.pdf" "Java 8 in Action 2014/" "GDGLondon.key/" "flux/" "ELOQUENT JAVASCRIPT A MODERN INTRODUCTION TO PROGRAMMING.zip" "ELOQUENT JAVASCRIPT A MODERN INTRODUCTION TO PROGRAMMING/" "config/" "Beginning Java 8 Games Development/" "30MHz.pdf" "30MHz-d.pdf" ".localized" ".DS_Store" "../" "./")
-
- ("/Users/adolfobenedetti/.emacs.d/lisp/" (21691 56145 0 0) "srecode-map.elc" "srecode-map.el" "sr-speedbar.el" "elein.elc" "elein.el" "ede-projects.elc" "ede-projects.el" "adben-zsh.elc" "adben-zsh.el" "adben-yasnippet.elc" "adben-yasnippet.el" "adben-window-management.elc" "adben-window-management.el" "adben-web-mode.elc" "adben-web-mode.el" "adben-wanderlust.elc" "adben-wanderlust.el" "adben-w3m.elc" "adben-w3m.el" "adben-visual-nicities.elc" "adben-visual-nicities.el" "adben-velocity.elc" "adben-velocity.el" "adben-vc.elc" "adben-vc.el" "adben-undo.elc" "adben-undo.el" "adben-text-mode.elc" "adben-text-mode.el" "adben-spell.elc" "adben-spell.el" "adben-shortcuts.elc" "adben-shortcuts.el" "adben-shell.elc" "adben-shell.el" "adben-rainbow-delimiters.elc" "adben-rainbow-delimiters.el" "adben-python.elc" "adben-python.el" "adben-pymacs-extensions.elc" "adben-pymacs-extensions.el" "adben-powerline.elc" "adben-powerline.el" "adben-passwords.elc" "adben-passwords.el" "adben-OSX.el" "adben-org.elc" "adben-org.el" "adben-nxml.elc" "adben-nxml.el" "adben-nxhtml.elc" "adben-nxhtml.el" "adben-muse.elc" "adben-muse.el" "adben-modeline.elc" "adben-modeline.el" "adben-misc.elc" "adben-misc.el" "adben-mew.elc" "adben-mew.el" "adben-mako.elc" "adben-mako.el" "adben-mainline.elc" "adben-mainline.el" "adben-magit.elc" "adben-magit.el" "adben-lua-mode.elc" "adben-lua-mode.el" "adben-log4j.elc" "adben-log4j.el" "adben-lisp.elc" "adben-lisp.el" "adben-lisp-helpers.elc" "adben-lisp-helpers.el" "adben-libnotify.elc" "adben-libnotify.el" "adben-jsp.elc" "adben-jsp.el" "adben-jira.elc" "adben-jira.el" "adben-java.elc" "adben-java.el" "adben-iswitchb.elc" "adben-iswitchb.el" "adben-ido.elc" "adben-ido.el" "adben-helm.elc" "adben-helm.el" "adben-groovy.elc" "adben-groovy.el" "adben-gitglutter.elc" "adben-gitglutter.el" "adben-functions.elc" "adben-functions.el" "adben-flyspell.elc" "adben-flyspell.el" "adben-eshell.elc" "adben-eshell.el" "adben-erc.elc" "adben-erc.el" "adben-elpa.elc" "adben-elpa.el" "adben-egg.elc" "adben-egg.el" "adben-easypg.el" "adben-dired.elc" "adben-dired.el" "adben-cua-mode.elc" "adben-cua-mode.el" "adben-csharp.elc" "adben-csharp.el" "adben-confluence.elc" "adben-confluence.el" "adben-color-theme-textmate.elc" "adben-color-theme-textmate.el" "adben-clojure.el" "adben-circe.elc" "adben-circe.el" "adben-cider.elc" "adben-cider.el" "adben-autocomplete.elc" "adben-autocomplete.el" "adben-anything.elc" "adben-anything.el" "adben-ansi-term.elc" "adben-ansi-term.el" "adben-ace-jump.elc" "adben-ace-jump.el" "adben-abbrev.elc" "adben-abbrev.el" ".DS_Store" "../" "./")
 
  ("/Users/adolfobenedetti/Library/" (21621 32266 0 0) "WebKit/" "Voices/" "SyncedPreferences/" "Spelling/" "Sounds/" "Social/" "Services/" "Screen Savers/" "Saved Application State/" "Safari/" "PubSub/" "Printers/" "Preferences/" "PreferencePanes/" "Messages/" "Mail/" "Logs/" "LaunchAgents/" "LanguageModeling/" "Keychains/" "Keyboard Layouts/" "iTunes/" "Internet Plug-Ins/" "Input Methods/" "iMovie/" "IdentityServices/" "Group Containers/" "Google/" "Fonts/" "FontCollections/" "Favorites/" "Dictionaries/" "Developer/" "Cookies/" "Containers/" "Compositions/" "com.apple.nsurlsessiond/" "Colors/" "ColorPickers/" "Calendars/" "Caches/" "Autosave Information/" "Audio/" "Assistants/" "Application Support/" "Address Book Plug-Ins/" "Accounts/" ".localized" "../" "./")
 
