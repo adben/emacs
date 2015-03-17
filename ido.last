@@ -29,7 +29,7 @@
  ("/Users/" . "adolfobenedetti/")
  ("/Users/adolfobenedetti/.emacs.d/elpa/" . "purple-haze-theme-20130930.1051/")
  ("/Users/adolfobenedetti/.emacs.d/" . "lisp/")
- ("/Users/adolfobenedetti/" . ".oh-my-zsh/")
+ ("/Users/adolfobenedetti/" . ".emacs.d/")
  ("/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/" . "db/")
  ("/Applications/IntelliJ IDEA 14 EAP.app/" . "Contents/")
  ("/Applications/" . "NetBeans/")
@@ -40,12 +40,12 @@
 
 ;; ----- ido-work-directory-list -----
 (
- "/Users/adolfobenedetti/.oh-my-zsh/custom/"
- "/Users/adolfobenedetti/"
- "/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-application/"
- "/Users/adolfobenedetti/.emacs.d/"
  "/var/log/zensie/"
+ "/Users/adolfobenedetti/.emacs.d/"
  "/Users/adolfobenedetti/.m2/"
+ "/Users/adolfobenedetti/"
+ "/Users/adolfobenedetti/.oh-my-zsh/custom/"
+ "/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-application/"
  "/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/NetBeans/etc/"
  "/Users/adolfobenedetti/config/"
  "/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/Resources/NetBeans/etc/"
@@ -76,37 +76,39 @@
 
 ;; ----- ido-work-file-list -----
 (
- "example.zsh"
- ".zshrc"
- "dependency-reduced-pom.xml"
- "init.el"
  "zensie.log"
+ "init.el"
+ "settings.xml"
+ ".zshrc"
+ "example.zsh"
+ "dependency-reduced-pom.xml"
  "settings-security.xml"
  "netbeans.conf"
  "Info.plist"
- "settings.xml"
  "pom.xml"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/var/log/zensie/" (21762 62312 0 0) "zensie.log.old" "zensie.log" "zensie.2015-03-12.log" "zensie.2015-03-11.log" "zensie.2015-03-10.log" "zensie.2015-03-09.log" "zensie.2015-03-08.log" "access.log" "access.2015-03-12.log.gz" "access.2015-03-11.log.gz" "access.2015-03-10.log.gz" "access.2015-03-07.log.gz" "access.2015-03-06.log.gz" "access.2015-03-05.log.gz" ".#zensie.log" "../" "./")
+
+ ("/var/log/" (21762 35801 0 0) "zensie/" "wifi.log" "weekly.out" "watchdogd/" "uucp/" "system.log.6.gz" "system.log.5.gz" "system.log.4.gz" "system.log.3.gz" "system.log.2.gz" "system.log.1.gz" "system.log.0.gz" "system.log" "shutdown_monitor.log" "secinitd.log.5.gz" "secinitd.log.4.gz" "secinitd.log.3.gz" "secinitd.log.2.gz" "secinitd.log.1.gz" "secinitd.log.0.gz" "sa/" "ppp.log" "ppp/" "powermanagement/" "performance/" "opendirectoryd.log.9" "opendirectoryd.log.8" "opendirectoryd.log.7" "opendirectoryd.log.6" "opendirectoryd.log.5" "opendirectoryd.log.4" "opendirectoryd.log.3" "opendirectoryd.log.2" "opendirectoryd.log.1" "opendirectoryd.log.0" "opendirectoryd.log" "notifyd.log" "monthly.out" "module/" "install.log" "hdiejectd.log" "fsck_hfs.log" "fax/" "emond/" "displaypolicyd.stdout.log" "displaypolicyd.log" "DiagnosticMessages/" "daily.out" "cups/" "coreduetd.log" "commerce.log" "com.apple.xpc.launchd/" "com.apple.revisiond/" "com.apple.launchd.peruser.97/" "com.apple.launchd.peruser.92/" "com.apple.launchd.peruser.89/" "com.apple.launchd.peruser.55/" "com.apple.launchd.peruser.501/" "com.apple.launchd.peruser.4294967294/" "com.apple.launchd.peruser.212/" "com.apple.launchd.peruser.205/" "com.apple.launchd.peruser.202/" "com.apple.launchd.peruser.200/" "com.apple.launchd.peruser.0/" "com.apple.clouddocs.asl/" "CDIS.custom" "bookstore.log.1.gz" "bookstore.log.0.gz" "bluetooth.pklg" "authd.log.4.gz" "authd.log.3.gz" "authd.log.2.gz" "authd.log.1.gz" "authd.log.0.gz" "asl/" "appstore.log.7.gz" "appstore.log.6.gz" "appstore.log.5.gz" "appstore.log.4.gz" "appstore.log.3.gz" "appstore.log.2.gz" "appstore.log.1.gz" "appstore.log.0.gz" "appstore.log" "apache2/" "accountpolicy.log.6.gz" "accountpolicy.log.5.gz" "accountpolicy.log.4.gz" "accountpolicy.log.3.gz" "accountpolicy.log.2.gz" "accountpolicy.log.1.gz" "accountpolicy.log.0.gz" "accountpolicy.log" "../" "./")
+
+ ("/Users/adolfobenedetti/" (21762 62277 0 0) "zensie.log" "temp/" "Public/" "profiler1.xml" "Pictures/" "p/" "netbeans_key_55.zip" "netbeans.conf" "Music/" "Movies/" "Library/" "idea.vmoptions" "go/" "g/" "emacs-meta/" "dropbox-30mhz/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "deploy/" "config.json" "config/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s mbp zensi-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.2" ".z.29382" ".z.13846" ".z.12542" ".z" ".viminfo" ".Trash/" ".ssh/" ".sonar/" ".scala_history" ".sbt/" ".private.el~" ".private.el" ".orig-emacs.d/" ".openvpn/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".nbprofiler/" ".mysql_history" ".matplotlib/" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea14/" ".htoprc" ".gradle/" ".gitconfig" ".gem/" ".emacs.d/" ".ec2.zoran" ".ec2.webclusive" ".ec2.wakoopa" ".ec2.videodock" ".ec2.usabilla" ".ec2.truthtrap" ".ec2.self" ".ec2.ranj" ".ec2.qelp" ".ec2.publitas.rebuild" ".ec2.publitas" ".ec2.poikos" ".ec2.olery" ".ec2.millmobile" ".ec2.marvia.staging" ".ec2.marvia" ".ec2.maplin" ".ec2.malmberg" ".ec2.layar.staging" ".ec2.layar" ".ec2.kulitzer" ".ec2.insided" ".ec2.fashiolista" ".ec2.directness" ".ec2.dev.buzzer" ".ec2.buzzer" ".ec2.book" ".ec2.9apps" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_history" ".appcfg_nag" ".android/" ".activator/" ".#zensie.log" ".#testing.txt" ".#test.json" ".#config.json" "../" "./")
+
+ ("/Users/adolfobenedetti/.emacs.d/elpa/cider-20150312.1031/" (21762 52030 0 0) "nrepl-client.elc" "nrepl-client.el" "cider.elc" "cider.el" "cider-util.elc" "cider-util.el" "cider-test.elc" "cider-test.el" "cider-stacktrace.elc" "cider-stacktrace.el" "cider-selector.elc" "cider-selector.el" "cider-scratch.elc" "cider-scratch.el" "cider-repl.elc" "cider-repl.el" "cider-pkg.el" "cider-mode.elc" "cider-mode.el" "cider-macroexpansion.elc" "cider-macroexpansion.el" "cider-interaction.elc" "cider-interaction.el" "cider-inspector.elc" "cider-inspector.el" "cider-grimoire.elc" "cider-grimoire.el" "cider-eldoc.elc" "cider-eldoc.el" "cider-doc.elc" "cider-doc.el" "cider-client.elc" "cider-client.el" "cider-classpath.elc" "cider-classpath.el" "cider-browse-ns.elc" "cider-browse-ns.el" "cider-autoloads.el" "cider-apropos.elc" "cider-apropos.el" "../" "./")
+
+ ("/Users/adolfobenedetti/.emacs.d/" (21750 48154 0 0) "web-vcs-log.org" "var/" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "lisp/" "init.elc" "init.el" "ido.last" "games/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
  ("/Users/adolfobenedetti/.oh-my-zsh/custom/" (21549 49207 0 0) "pure.zsh-theme" "plugins/" "example.zsh" "../" "./")
 
  ("/Users/adolfobenedetti/.oh-my-zsh/" (21740 42491 0 0) "tools/" "themes/" "templates/" "README.markdown" "plugins/" "oh-my-zsh.sh" "MIT-LICENSE.txt" "log/" "lib/" "custom/" "cache/" ".gitignore" ".git/" "../" "./")
-
- ("/Users/adolfobenedetti/" (21743 489 0 0) "zensie.log" "temp/" "Public/" "profiler1.xml" "Pictures/" "p/" "netbeans_key_55.zip" "netbeans.conf" "Music/" "Movies/" "Library/" "idea.vmoptions" "go/" "g/" "emacs-meta/" "dropbox-30mhz/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "deploy/" "config.json" "config/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s mbp zensi-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.2" ".z.29382" ".z.13846" ".z.12542" ".z" ".viminfo" ".Trash/" ".ssh/" ".sonar/" ".scala_history" ".sbt/" ".private.el~" ".private.el" ".orig-emacs.d/" ".openvpn/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".nbprofiler/" ".mysql_history" ".matplotlib/" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea14/" ".htoprc" ".gradle/" ".gitconfig" ".gem/" ".emacs.d/" ".ec2.zoran" ".ec2.webclusive" ".ec2.wakoopa" ".ec2.videodock" ".ec2.usabilla" ".ec2.truthtrap" ".ec2.self" ".ec2.ranj" ".ec2.qelp" ".ec2.publitas.rebuild" ".ec2.publitas" ".ec2.poikos" ".ec2.olery" ".ec2.millmobile" ".ec2.marvia.staging" ".ec2.marvia" ".ec2.maplin" ".ec2.malmberg" ".ec2.layar.staging" ".ec2.layar" ".ec2.kulitzer" ".ec2.insided" ".ec2.fashiolista" ".ec2.directness" ".ec2.dev.buzzer" ".ec2.buzzer" ".ec2.book" ".ec2.9apps" ".DS_Store" ".dropbox/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_history" ".appcfg_nag" ".android/" ".activator/" ".#zensie.log" ".#testing.txt" ".#test.json" ".#config.json" "../" "./")
 
  ("/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-application/" (21736 39479 0 0) "zensie.keystore" "zensie.json" "zensie-application.iml" "target/" "src/" "pom.xml" "nbactions.xml" "nb-configuration.xml" "dependency-reduced-pom.xml" ".DS_Store" "../" "./")
 
  ("/Users/adolfobenedetti/p/lidar.30mhz.com/" (21734 61170 0 0) "zensie.iml" "zensie-model/" "zensie-dw-es/" "zensie-dw-dynamo/" "zensie-dw-cw/" "zensie-client/" "zensie-application/" "target/" "README.md" "protractor-tests/" "pom.xml" ".idea/" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
  ("/Users/adolfobenedetti/.emacs.d/lisp/" (21732 43347 0 0) "srecode-map.elc" "srecode-map.el" "sr-speedbar.el" "elein.elc" "elein.el" "ede-projects.elc" "ede-projects.el" "adben-zsh.elc" "adben-zsh.el" "adben-yasnippet.elc" "adben-yasnippet.el" "adben-window-management.elc" "adben-window-management.el" "adben-web-mode.elc" "adben-web-mode.el" "adben-wanderlust.elc" "adben-wanderlust.el" "adben-w3m.elc" "adben-w3m.el" "adben-visual-nicities.elc" "adben-visual-nicities.el" "adben-velocity.elc" "adben-velocity.el" "adben-vc.elc" "adben-vc.el" "adben-undo.elc" "adben-undo.el" "adben-text-mode.elc" "adben-text-mode.el" "adben-spell.elc" "adben-spell.el" "adben-shortcuts.elc" "adben-shortcuts.el" "adben-shell.elc" "adben-shell.el" "adben-rainbow-delimiters.elc" "adben-rainbow-delimiters.el" "adben-python.elc" "adben-python.el" "adben-pymacs-extensions.elc" "adben-pymacs-extensions.el" "adben-powerline.elc" "adben-powerline.el" "adben-passwords.elc" "adben-passwords.el" "adben-OSX.el" "adben-org.elc" "adben-org.el" "adben-nxml.elc" "adben-nxml.el" "adben-nxhtml.elc" "adben-nxhtml.el" "adben-muse.elc" "adben-muse.el" "adben-modeline.elc" "adben-modeline.el" "adben-misc.elc" "adben-misc.el" "adben-mew.elc" "adben-mew.el" "adben-mako.elc" "adben-mako.el" "adben-mainline.elc" "adben-mainline.el" "adben-magit.elc" "adben-magit.el" "adben-lua-mode.elc" "adben-lua-mode.el" "adben-log4j.elc" "adben-log4j.el" "adben-lisp.elc" "adben-lisp.el" "adben-lisp-helpers.elc" "adben-lisp-helpers.el" "adben-libnotify.elc" "adben-libnotify.el" "adben-jsp.elc" "adben-jsp.el" "adben-jira.elc" "adben-jira.el" "adben-java.elc" "adben-java.el" "adben-iswitchb.elc" "adben-iswitchb.el" "adben-ido.elc" "adben-ido.el" "adben-helm.elc" "adben-helm.el" "adben-groovy.elc" "adben-groovy.el" "adben-gitglutter.elc" "adben-gitglutter.el" "adben-functions.elc" "adben-functions.el" "adben-flyspell.elc" "adben-flyspell.el" "adben-eshell.elc" "adben-eshell.el" "adben-erc.elc" "adben-erc.el" "adben-elpa.elc" "adben-elpa.el" "adben-egg.elc" "adben-egg.el" "adben-easypg.el" "adben-dired.elc" "adben-dired.el" "adben-cua-mode.elc" "adben-cua-mode.el" "adben-csharp.elc" "adben-csharp.el" "adben-confluence.elc" "adben-confluence.el" "adben-color-theme-textmate.elc" "adben-color-theme-textmate.el" "adben-clojure.el" "adben-circe.elc" "adben-circe.el" "adben-cider.elc" "adben-cider.el" "adben-autocomplete.elc" "adben-autocomplete.el" "adben-anything.elc" "adben-anything.el" "adben-ansi-term.elc" "adben-ansi-term.el" "adben-ace-jump.elc" "adben-ace-jump.el" "adben-abbrev.elc" "adben-abbrev.el" ".DS_Store" "../" "./")
-
- ("/Users/adolfobenedetti/.emacs.d/" (21732 43908 0 0) "web-vcs-log.org" "var/" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "lisp/" "init.elc" "init.el" "ido.last" "games/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" "../" "./")
-
- ("/var/log/zensie/" (21733 10925 0 0) "zensie.log.old" "zensie.log" "zensie.2015-02-18.log" "zensie.2015-02-17.log" "access.log" "../" "./")
-
- ("/var/log/" (21733 45542 0 0) "zensie/" "wifi.log" "weekly.out" "watchdogd/" "uucp/" "system.log.7.gz" "system.log.6.gz" "system.log.5.gz" "system.log.4.gz" "system.log.3.gz" "system.log.2.gz" "system.log.1.gz" "system.log.0.gz" "system.log" "shutdown_monitor.log" "secinitd.log.7.gz" "secinitd.log.6.gz" "secinitd.log.5.gz" "secinitd.log.4.gz" "secinitd.log.3.gz" "secinitd.log.2.gz" "secinitd.log.1.gz" "secinitd.log.0.gz" "sa/" "ppp.log" "ppp/" "powermanagement/" "performance/" "opendirectoryd.log.9" "opendirectoryd.log.8" "opendirectoryd.log.7" "opendirectoryd.log.6" "opendirectoryd.log.5" "opendirectoryd.log.4" "opendirectoryd.log.3" "opendirectoryd.log.2" "opendirectoryd.log.1" "opendirectoryd.log.0" "opendirectoryd.log" "notifyd.log" "monthly.out" "module/" "install.log" "hdiejectd.log" "fsck_hfs.log" "fax/" "emond/" "displaypolicyd.stdout.log" "displaypolicyd.log" "DiagnosticMessages/" "daily.out" "cups/" "coreduetd.log" "commerce.log" "com.apple.xpc.launchd/" "com.apple.revisiond/" "com.apple.launchd.peruser.97/" "com.apple.launchd.peruser.92/" "com.apple.launchd.peruser.89/" "com.apple.launchd.peruser.55/" "com.apple.launchd.peruser.501/" "com.apple.launchd.peruser.4294967294/" "com.apple.launchd.peruser.212/" "com.apple.launchd.peruser.205/" "com.apple.launchd.peruser.202/" "com.apple.launchd.peruser.200/" "com.apple.launchd.peruser.0/" "com.apple.clouddocs.asl/" "CDIS.custom" "bookstore.log.1.gz" "bookstore.log.0.gz" "bluetooth.pklg" "authd.log.7.gz" "authd.log.6.gz" "authd.log.5.gz" "authd.log.4.gz" "authd.log.3.gz" "authd.log.2.gz" "authd.log.1.gz" "authd.log.0.gz" "authd.log" "asl/" "appstore.log.7.gz" "appstore.log.6.gz" "appstore.log.5.gz" "appstore.log.4.gz" "appstore.log.3.gz" "appstore.log.2.gz" "appstore.log.1.gz" "appstore.log.0.gz" "appstore.log" "apache2/" "accountpolicy.log.7.gz" "accountpolicy.log.6.gz" "accountpolicy.log.5.gz" "accountpolicy.log.4.gz" "accountpolicy.log.3.gz" "accountpolicy.log.2.gz" "accountpolicy.log.1.gz" "accountpolicy.log.0.gz" "accountpolicy.log" "../" "./")
 
  ("/Users/adolfobenedetti/.m2/" (21733 57029 0 0) "settings.xml" "settings-security.xml" "repository/" "../" "./")
 
