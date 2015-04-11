@@ -76,6 +76,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ ".zsh_history"
  ".zshrc"
  "init.el"
  "stagprod.txt"
@@ -85,12 +86,11 @@
  "dependency-reduced-pom.xml"
  "settings-security.xml"
  "netbeans.conf"
- "Info.plist"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/adolfobenedetti/" (21779 52331 0 0) "zensie.log" "temp/" "stagprod.txt" "Public/" "profiler1.xml" "Pictures/" "p/" "og_img.jpg" "netbeans_key_55.zip" "netbeans.conf" "Music/" "Movies/" "Library/" "idea.vmoptions" "google-cloud-platform.png" "go/" "g/" "emacs-meta/" "dropbox-30mhz/" "Dropbox/" "Downloads/" "Documents/" "docker-logo.png" "Desktop/" "deploy/" "config.json" "config/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s mbp zensi-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.2" ".z.29382" ".z.13846" ".z.12542" ".z" ".viminfo" ".Trash/" ".ssh/" ".sonar/" ".scala_history" ".sbt/" ".private.el~" ".private.el" ".orig-emacs.d/" ".openvpn/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".nbprofiler/" ".mysql_history" ".matplotlib/" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea14/" ".htoprc" ".gradle/" ".gitconfig" ".gem/" ".emacs.d/" ".ec2.zoran/" ".ec2.webclusive/" ".ec2.wakoopa/" ".ec2.videodock/" ".ec2.usabilla/" ".ec2.truthtrap/" ".ec2.self/" ".ec2.ranj/" ".ec2.qelp/" ".ec2.publitas.rebuild/" ".ec2.publitas/" ".ec2.poikos/" ".ec2.olery/" ".ec2.millmobile/" ".ec2.marvia.staging/" ".ec2.marvia/" ".ec2.maplin/" ".ec2.malmberg/" ".ec2.layar.staging/" ".ec2.layar/" ".ec2.kulitzer/" ".ec2.insided/" ".ec2.fashiolista/" ".ec2.directness/" ".ec2.dev.buzzer/" ".ec2.buzzer/" ".ec2.book/" ".ec2.9apps/" ".ec2/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_history" ".atlassian/" ".appcfg_nag" ".android/" ".activator/" ".#zensie.log" ".#testing.txt" ".#test.json" ".#config.json" "../" "./")
+ ("/Users/adolfobenedetti/" (21800 19336 0 0) "zensie.log" "temp/" "stagprod.txt" "Snapshots/" "Public/" "profiler1.xml" "Pictures/" "p/" "og_img.jpg" "netbeans_key_55.zip" "netbeans.conf" "Music/" "Movies/" "Low Latency Code in Java 8 by Peter Lawrey-t49bfPLp0B0.mp4" "Library/" "idea.vmoptions" "google-cloud-platform.png" "go/" "g/" "emacs-meta/" "dropbox-30mhz/" "Dropbox/" "Downloads/" "Documents/" "docker-logo.png" "Desktop/" "deploy/" "config.json" "config/" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s mbp zensi-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.2" ".z.29382" ".z.13846" ".z.12542" ".z.11288" ".z" ".yjp/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".sonar/" ".scala_history" ".sbt/" ".private.el~" ".private.el" ".orig-emacs.d/" ".openvpn/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".nbprofiler/" ".mysql_history" ".matplotlib/" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea14/" ".htoprc" ".gradle/" ".gitconfig" ".gem/" ".emacs.d/" ".ec2.zoran/" ".ec2.webclusive/" ".ec2.wakoopa/" ".ec2.videodock/" ".ec2.usabilla/" ".ec2.truthtrap/" ".ec2.self/" ".ec2.ranj/" ".ec2.qelp/" ".ec2.publitas.rebuild/" ".ec2.publitas/" ".ec2.poikos/" ".ec2.olery/" ".ec2.millmobile/" ".ec2.marvia.staging/" ".ec2.marvia/" ".ec2.maplin/" ".ec2.malmberg/" ".ec2.layar.staging/" ".ec2.layar/" ".ec2.kulitzer/" ".ec2.insided/" ".ec2.fashiolista/" ".ec2.directness/" ".ec2.dev.buzzer/" ".ec2.buzzer/" ".ec2.book/" ".ec2.9apps/" ".ec2/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_history" ".atlassian/" ".appcfg_nag" ".android/" ".activator/" ".#zensie.log" ".#testing.txt" ".#test.json" ".#config.json" "../" "./")
 
  ("/Users/adolfobenedetti/.emacs.d/" (21779 49657 0 0) "web-vcs-log.org" "var/" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "lisp/" "init.elc" "init.el" "ido.last" "games/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
