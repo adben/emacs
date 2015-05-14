@@ -29,7 +29,7 @@
  ("/Users/" . "adolfobenedetti/")
  ("/Users/adolfobenedetti/.emacs.d/elpa/" . "purple-haze-theme-20130930.1051/")
  ("/Users/adolfobenedetti/.emacs.d/" . "lisp/")
- ("/Users/adolfobenedetti/" . "p/")
+ ("/Users/adolfobenedetti/" . ".m2/")
  ("/Users/adben/Dev/dropwizard-xml/dropwizard-example-xml/src/main/java/com/yunspace/helloxml/" . "db/")
  ("/Applications/IntelliJ IDEA 14 EAP.app/" . "Contents/")
  ("/Applications/" . "NetBeans/")
@@ -40,12 +40,12 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/adolfobenedetti/.m2/"
  "/Users/adolfobenedetti/"
  "/Users/adolfobenedetti/p/"
  "/Users/adolfobenedetti/Library/Preferences/IntelliJIdea14/"
  "/Users/adolfobenedetti/.emacs.d/"
  "/var/log/zensie/"
- "/Users/adolfobenedetti/.m2/"
  "/Users/adolfobenedetti/.oh-my-zsh/custom/"
  "/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-application/"
  "/Applications/NetBeans/NetBeans Dev 201502150001.app/Contents/Resources/NetBeans/etc/"
@@ -77,6 +77,7 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "settings.xml"
  "testES.txt"
  "elastic_mapping.sh"
  "idea.vmoptions"
@@ -85,15 +86,18 @@
  "init.el"
  "stagprod.txt"
  "zensie.log"
- "settings.xml"
  "example.zsh"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/adolfobenedetti/" (21815 23969 0 0) "zensie.log" "testES.txt" "temp/" "stagprod.txt" "Snapshots/" "Public/" "profiler1.xml" "privateLocationErrors.txt" "privateErrors.txt" "Pictures/" "p/" "og_img.jpg" "netbeans_key_55.zip" "netbeans.conf" "Music/" "Movies/" "Low Latency Code in Java 8 by Peter Lawrey-t49bfPLp0B0.mp4" "Library/" "idea.vmoptions" "google-cloud-platform.png" "go/" "g/" "errors.txt" "emacs-meta/" "dropbox-30mhz/" "Dropbox/" "Downloads/" "Documents/" "docker-logo.png" "Desktop/" "deploy/" "config.json" "config/" "checkErrors.txt" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s mbp zensi-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.2" ".z.29382" ".z.13846" ".z.12542" ".z.11288" ".z" ".yjp/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".sonar/" ".scala_history" ".sbt/" ".private.el~" ".private.el" ".orig-emacs.d/" ".openvpn/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".nbprofiler/" ".mysql_history" ".matplotlib/" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea14/" ".htoprc" ".gradle/" ".gitconfig" ".gem/" ".emacs.d/" ".ec2.zoran/" ".ec2.webclusive/" ".ec2.wakoopa/" ".ec2.videodock/" ".ec2.usabilla/" ".ec2.truthtrap/" ".ec2.self/" ".ec2.ranj/" ".ec2.qelp/" ".ec2.publitas.rebuild/" ".ec2.publitas/" ".ec2.poikos/" ".ec2.olery/" ".ec2.millmobile/" ".ec2.marvia.staging/" ".ec2.marvia/" ".ec2.maplin/" ".ec2.malmberg/" ".ec2.layar.staging/" ".ec2.layar/" ".ec2.kulitzer/" ".ec2.insided/" ".ec2.fashiolista/" ".ec2.directness/" ".ec2.dev.buzzer/" ".ec2.buzzer/" ".ec2.book/" ".ec2.9apps/" ".ec2/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_history" ".atlassian/" ".appcfg_nag" ".android/" ".activator/" ".#zensie.log" ".#testing.txt" ".#test.json" ".#config.json" "../" "./")
+ ("/Users/adolfobenedetti/" (21827 35112 0 0) "testES.txt" "temp/" "stagprod.txt" "Snapshots/" "Public/" "profiler1.xml" "privateLocationErrors.txt" "privateErrors.txt" "Pictures/" "p/" "og_img.jpg" "netbeans_key_55.zip" "netbeans.conf" "Music/" "Movies/" "Low Latency Code in Java 8 by Peter Lawrey-t49bfPLp0B0.mp4" "Library/" "idea.vmoptions" "google-cloud-platform.png" "go/" "g/" "errors.txt" "emacs-meta/" "dropbox-30mhz/" "Dropbox/" "Downloads/" "Documents/" "docker-logo.png" "Desktop/" "deploy/" "config.json" "config/" "checkErrors.txt" "Applications/" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s mbp zensi-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.5" ".zcompdump-Adolfo’s MacBook Pro-5.0.2" ".z.29382" ".z.13846" ".z.12542" ".z.11288" ".z.10696" ".z" ".yjp/" ".viminfo" ".Trash/" ".subversion/" ".ssh/" ".sonar/" ".scala_history" ".sbt/" ".private.el~" ".private.el" ".orig-emacs.d/" ".openvpn/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".nbprofiler/" ".mysql_history" ".matplotlib/" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea14/" ".htoprc" ".gradle/" ".gitconfig" ".gem/" ".emacs.d/" ".ec2.zoran/" ".ec2.webclusive/" ".ec2.wakoopa/" ".ec2.videodock/" ".ec2.usabilla/" ".ec2.truthtrap/" ".ec2.self/" ".ec2.ranj/" ".ec2.qelp/" ".ec2.publitas.rebuild/" ".ec2.publitas/" ".ec2.poikos/" ".ec2.olery/" ".ec2.millmobile/" ".ec2.marvia.staging/" ".ec2.marvia/" ".ec2.maplin/" ".ec2.malmberg/" ".ec2.layar.staging/" ".ec2.layar/" ".ec2.kulitzer/" ".ec2.insided/" ".ec2.fashiolista/" ".ec2.directness/" ".ec2.dev.buzzer/" ".ec2.buzzer/" ".ec2.book/" ".ec2.9apps/" ".ec2/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_history" ".atlassian/" ".appcfg_nag" ".android/" ".activator/" ".#zensie.log" ".#testing.txt" ".#test.json" ".#config.json" "../" "./")
 
- ("/Users/adolfobenedetti/p/" (21811 40135 0 0) "zeppelin/" "test/" "scheduler.30mhz.com/" "referee.30mhz.com/" "radar.30mhz.com/" "maven/" "lidar.30mhz.com/" "intellijLidarSettings.tar.gz" "factory.tools.zensie/" "elastic_mapping.sh" "CPU-20141020T205737.cpuprofile" "apache-maven-3.2.5/" ".DS_Store" "../" "./")
+ ("/Users/adolfobenedetti/p/" (21825 55628 0 0) "zeppelin/" "scheduler.30mhz.com/" "referee.30mhz.com/" "radar.30mhz.com/" "maven/" "lidar.30mhz.com/" "intellijLidarSettings.tar.gz" "factory.tools.zensie/" "elastic_mapping.sh" "CPU-20141020T205737.cpuprofile" "apache-maven-3.2.5/" ".DS_Store" "../" "./")
+
+ ("/Users/adolfobenedetti/p/lidar.30mhz.com/" (21827 34058 0 0) "zensie.iml" "zensie-model/" "zensie-dw-dynamo/" "zensie-dw-cw/" "zensie-client/" "zensie-application/" "README.md" "protractor-tests/" "pom.xml" "newSite2/" ".idea/" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/adolfobenedetti/p/lidar.30mhz.com/newSite2/" (21827 35144 0 0) "test/" "README.md" "package.json" "node_modules/" "Gruntfile.js" "bower_components/" "bower.json" "aws.json" "app/" ".yo-rc.json" ".travis.yml" ".tmp/" ".sass-cache/" ".jshintrc" ".gitignore" ".gitattributes" ".editorconfig" ".bowerrc" "../" "./")
 
  ("/Users/adolfobenedetti/Pictures/" (21799 2900 0 0) "Photos Library.photoslibrary/" "photos/" "HTC_DEVICE_MEDIA/" "HTC/" ".localized" ".DS_Store" "../" "./")
 
@@ -116,8 +120,6 @@
  ("/Users/adolfobenedetti/.oh-my-zsh/" (21740 42491 0 0) "tools/" "themes/" "templates/" "README.markdown" "plugins/" "oh-my-zsh.sh" "MIT-LICENSE.txt" "log/" "lib/" "custom/" "cache/" ".gitignore" ".git/" "../" "./")
 
  ("/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-application/" (21736 39479 0 0) "zensie.keystore" "zensie.json" "zensie-application.iml" "target/" "src/" "pom.xml" "nbactions.xml" "nb-configuration.xml" "dependency-reduced-pom.xml" ".DS_Store" "../" "./")
-
- ("/Users/adolfobenedetti/p/lidar.30mhz.com/" (21734 61170 0 0) "zensie.iml" "zensie-model/" "zensie-dw-es/" "zensie-dw-dynamo/" "zensie-dw-cw/" "zensie-client/" "zensie-application/" "target/" "README.md" "protractor-tests/" "pom.xml" ".idea/" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
  ("/Users/adolfobenedetti/.emacs.d/lisp/" (21732 43347 0 0) "srecode-map.elc" "srecode-map.el" "sr-speedbar.el" "elein.elc" "elein.el" "ede-projects.elc" "ede-projects.el" "adben-zsh.elc" "adben-zsh.el" "adben-yasnippet.elc" "adben-yasnippet.el" "adben-window-management.elc" "adben-window-management.el" "adben-web-mode.elc" "adben-web-mode.el" "adben-wanderlust.elc" "adben-wanderlust.el" "adben-w3m.elc" "adben-w3m.el" "adben-visual-nicities.elc" "adben-visual-nicities.el" "adben-velocity.elc" "adben-velocity.el" "adben-vc.elc" "adben-vc.el" "adben-undo.elc" "adben-undo.el" "adben-text-mode.elc" "adben-text-mode.el" "adben-spell.elc" "adben-spell.el" "adben-shortcuts.elc" "adben-shortcuts.el" "adben-shell.elc" "adben-shell.el" "adben-rainbow-delimiters.elc" "adben-rainbow-delimiters.el" "adben-python.elc" "adben-python.el" "adben-pymacs-extensions.elc" "adben-pymacs-extensions.el" "adben-powerline.elc" "adben-powerline.el" "adben-passwords.elc" "adben-passwords.el" "adben-OSX.el" "adben-org.elc" "adben-org.el" "adben-nxml.elc" "adben-nxml.el" "adben-nxhtml.elc" "adben-nxhtml.el" "adben-muse.elc" "adben-muse.el" "adben-modeline.elc" "adben-modeline.el" "adben-misc.elc" "adben-misc.el" "adben-mew.elc" "adben-mew.el" "adben-mako.elc" "adben-mako.el" "adben-mainline.elc" "adben-mainline.el" "adben-magit.elc" "adben-magit.el" "adben-lua-mode.elc" "adben-lua-mode.el" "adben-log4j.elc" "adben-log4j.el" "adben-lisp.elc" "adben-lisp.el" "adben-lisp-helpers.elc" "adben-lisp-helpers.el" "adben-libnotify.elc" "adben-libnotify.el" "adben-jsp.elc" "adben-jsp.el" "adben-jira.elc" "adben-jira.el" "adben-java.elc" "adben-java.el" "adben-iswitchb.elc" "adben-iswitchb.el" "adben-ido.elc" "adben-ido.el" "adben-helm.elc" "adben-helm.el" "adben-groovy.elc" "adben-groovy.el" "adben-gitglutter.elc" "adben-gitglutter.el" "adben-functions.elc" "adben-functions.el" "adben-flyspell.elc" "adben-flyspell.el" "adben-eshell.elc" "adben-eshell.el" "adben-erc.elc" "adben-erc.el" "adben-elpa.elc" "adben-elpa.el" "adben-egg.elc" "adben-egg.el" "adben-easypg.el" "adben-dired.elc" "adben-dired.el" "adben-cua-mode.elc" "adben-cua-mode.el" "adben-csharp.elc" "adben-csharp.el" "adben-confluence.elc" "adben-confluence.el" "adben-color-theme-textmate.elc" "adben-color-theme-textmate.el" "adben-clojure.el" "adben-circe.elc" "adben-circe.el" "adben-cider.elc" "adben-cider.el" "adben-autocomplete.elc" "adben-autocomplete.el" "adben-anything.elc" "adben-anything.el" "adben-ansi-term.elc" "adben-ansi-term.el" "adben-ace-jump.elc" "adben-ace-jump.el" "adben-abbrev.elc" "adben-abbrev.el" ".DS_Store" "../" "./")
 
@@ -288,8 +290,6 @@
  ("/Users/adben/.m2/" (21392 35351 0 0) "settings.xml" "settings-security.xml" "repository/" "../" "./")
 
  ("/Users/adben/Dev/grapes/" (21409 38171 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "doc/" ".lein-repl-history" ".gitignore" "../" "./")
-
- ("/Users/adben/Dev/" (21409 35948 0 0) "testyeoman/" "scheduler.30mhz.com/" "radar.30mhz.com/" "protractor/" "grapes/" "git/" "css-day-usb/" "advancedsass-cssday/" "admin.30mhz.com/" "30mhz.com/" "30mhz/" ".DS_Store" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----
