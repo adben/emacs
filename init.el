@@ -373,7 +373,10 @@
  '(ansi-color-names-vector
    ["#110F13" "#b13120" "#719f34" "#ceae3e" "#7c9fc9" "#7868b5" "#009090" "#F4EAD5"])
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (leuven)))
+ '(custom-enabled-themes (quote (darktooth)))
+ '(custom-safe-themes
+   (quote
+    ("4c42b4a782b9568dbb7011bb5919e1e74754a0a13b2f9ba1dc017f9b50ef4dfe" "a655f17225ad0a7190c79602593563191b7640ddebbb8c8fbd80c9d82faff1c6" "6a9606327ecca6e772fba6ef46137d129e6d1888dcfc65d0b9b27a7a00a4af20" "f5bd8485ec9ba65551bf9b9fcaa6af6bcbaebaa4591c0f30d3e512b1d77b3481" "61b188036ad811b11387fc1ef944441826c19ab6dcee5c67c7664a0bbd67a5b5" default)))
  '(fci-rule-character-color "#202020")
  '(fci-rule-color "#383838")
  '(frame-brackground-mode (quote dark))
@@ -384,7 +387,7 @@
  '(main-line-separator-style (quote chamfer))
  '(package-selected-packages
    (quote
-    (zenburn-theme yalinum wtf wrap-region worklog web-mode web-beautify undo-tree thread-dump textmate texdrive tex-math-preview test-case-mode tagedit swank-clojure swank-cdt soothe-theme smart-tab shellfm shell-current-directory scpaste scala-mode sass-mode rw-language-and-country-codes rw-ispell rw-hunspell redo+ rainbow-delimiters purple-haze-theme puppet-mode project-local-variables powerline perspective pastie pabbrev org-table-comment org-plus-contrib mv-shell multi-web-mode multi-project mode-compile mediawiki main-line magit lusty-explorer lua-mode lorem-ipsum log4j-mode linum-off less-css-mode less lein kill-ring-search keywiz karma jump jtags js3-mode js2-mode jira javascript javadoc-help idle-highlight-mode icomplete+ http-post-simple htmlize html-script-src highlight-parentheses helm-ls-git helm-gtags helm-git-grep helm-git helm-dired-recent-dirs haskell-mode guess-style gruber-darker-theme google-c-style go-snippets go-play go-mode gitconfig git-gutter-fringe+ git-gutter gist ghc flymake-shell flymake-sass flymake-csslint flymake-css flymake-coffee evil-nerd-commenter ess elisp-cache elein el-swank-fuzzy durendal drag-stuff dired+ diff-git dictionary datomic-snippets dash-at-point dart-mode css-mode confluence-edit confluence columnify column-marker coffee-mode closure-template-html-mode closure-lint-mode clojurescript-mode clojure-test-mode clojure-snippets clojure-project-mode clojure-cheatsheet cljdoc circe chess buffer-move blank-mode auto-indent-mode auto-dictionary auto-complete applescript-mode angular-snippets ace-jump-buffer 4clojure)))
+    (darktooth-theme zenburn-theme yalinum wtf wrap-region worklog web-mode web-beautify undo-tree thread-dump textmate texdrive tex-math-preview test-case-mode tagedit swank-clojure swank-cdt soothe-theme smart-tab shellfm shell-current-directory scpaste scala-mode sass-mode rw-language-and-country-codes rw-ispell rw-hunspell redo+ rainbow-delimiters purple-haze-theme puppet-mode project-local-variables powerline perspective pastie pabbrev org-table-comment org-plus-contrib mv-shell multi-web-mode multi-project mode-compile mediawiki main-line magit lusty-explorer lua-mode lorem-ipsum log4j-mode linum-off less-css-mode less lein kill-ring-search keywiz karma jump jtags js3-mode js2-mode jira javascript javadoc-help idle-highlight-mode icomplete+ http-post-simple htmlize html-script-src highlight-parentheses helm-ls-git helm-gtags helm-git-grep helm-git helm-dired-recent-dirs haskell-mode guess-style gruber-darker-theme google-c-style go-snippets go-play go-mode gitconfig git-gutter-fringe+ git-gutter gist ghc flymake-shell flymake-sass flymake-csslint flymake-css flymake-coffee evil-nerd-commenter ess elisp-cache elein el-swank-fuzzy durendal drag-stuff dired+ diff-git dictionary datomic-snippets dash-at-point dart-mode css-mode confluence-edit confluence columnify column-marker coffee-mode closure-template-html-mode closure-lint-mode clojurescript-mode clojure-test-mode clojure-snippets clojure-project-mode clojure-cheatsheet cljdoc circe chess buffer-move blank-mode auto-indent-mode auto-dictionary auto-complete applescript-mode angular-snippets ace-jump-buffer 4clojure)))
  '(powerline-color1 "#191919")
  '(powerline-color2 "#111111")
  '(show-paren-mode t)
