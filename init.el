@@ -73,7 +73,14 @@
 (add-to-list 'exec-path "~/bin")
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'exec-path "/usr/texbin")
+
 (add-to-list 'exec-path "/opt/local/bin")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Turns off the scrollbar and toolbar when in a graphical display.
+;; (if (display-graphic-p)
+;;     (progn
+;;       (tool-bar-mode -1)
+;;       (scroll-bar-mode -1)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;ELPA package manager
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -304,7 +311,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Evil nerd comment keys
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(evilnc-default-hotkeys)
+;;(evilnc-default-hotkeys)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Debug
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -380,7 +387,7 @@
  '(ansi-color-names-vector
    ["#110F13" "#b13120" "#719f34" "#ceae3e" "#7c9fc9" "#7868b5" "#009090" "#F4EAD5"])
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (darktooth)))
+ '(custom-enabled-themes (quote (purple-haze)))
  '(custom-safe-themes
    (quote
     ("13590cc9554286c8e893463fd8e0dad7134d6b7db10060afbb6850db3e395f17" "4d8a17c8614aad8625b206341213ec1dbefa9b3eb35efb68b3ea286aa33e7bbb" "61cc9ec2d6c56192facc5d2136ec2a11e841abf621a47be316e6541d787f317e" "4c42b4a782b9568dbb7011bb5919e1e74754a0a13b2f9ba1dc017f9b50ef4dfe" "a655f17225ad0a7190c79602593563191b7640ddebbb8c8fbd80c9d82faff1c6" "6a9606327ecca6e772fba6ef46137d129e6d1888dcfc65d0b9b27a7a00a4af20" "f5bd8485ec9ba65551bf9b9fcaa6af6bcbaebaa4591c0f30d3e512b1d77b3481" "61b188036ad811b11387fc1ef944441826c19ab6dcee5c67c7664a0bbd67a5b5" default)))
@@ -394,7 +401,7 @@
  '(main-line-separator-style (quote chamfer))
  '(package-selected-packages
    (quote
-    (yalinum wtf wrap-region worklog web-beautify undo-tree thread-dump textmate texdrive tex-math-preview test-case-mode tagedit swank-clojure swank-cdt soothe-theme smart-tab shellfm shell-current-directory scpaste scala-mode rw-language-and-country-codes rw-ispell rw-hunspell redo+ rainbow-delimiters purple-haze-theme puppet-mode project-local-variables pastie pabbrev org-table-comment mv-shell multi-web-mode multi-project mode-compile mediawiki main-line magit lua-mode lorem-ipsum log4j-mode linum-off less-css-mode less lein kill-ring-search keywiz karma jump jtags js3-mode jira javascript javadoc-help idle-highlight-mode icomplete+ http-post-simple htmlize html-script-src helm-git-grep helm-git helm-dired-recent-dirs guess-style gruber-darker-theme google-c-style go-snippets go-play go-mode gitconfig git-gutter-fringe+ git-gutter gist flymake-shell flymake-sass flymake-csslint flymake-css flymake-coffee elisp-cache elein el-swank-fuzzy durendal drag-stuff diff-git dictionary datomic-snippets dash-at-point css-mode confluence-edit confluence columnify column-marker closure-template-html-mode closure-lint-mode clojurescript-mode clojure-test-mode clojure-snippets clojure-project-mode clojure-cheatsheet cljdoc chess blank-mode auto-indent-mode auto-dictionary auto-complete applescript-mode angular-snippets ace-jump-buffer 4clojure)))
+    (yalinum wtf wrap-region worklog web-beautify undo-tree thread-dump textmate texdrive tex-math-preview tagedit swank-clojure swank-cdt soothe-theme shellfm shell-current-directory scpaste scala-mode rw-language-and-country-codes rw-ispell rw-hunspell redo+ rainbow-delimiters purple-haze-theme puppet-mode project-local-variables pastie pabbrev org-table-comment mv-shell multi-web-mode multi-project mode-compile mediawiki main-line magit lua-mode lorem-ipsum log4j-mode linum-off less-css-mode less lein kill-ring-search keywiz karma jump jtags js3-mode jira javascript javadoc-help idle-highlight-mode http-post-simple htmlize html-script-src helm-git-grep helm-git helm-dired-recent-dirs guess-style gruber-darker-theme google-c-style go-snippets go-play gitconfig git-gutter-fringe+ git-gutter gist flymake-shell flymake-sass flymake-csslint flymake-css flymake-coffee elisp-cache elein el-swank-fuzzy durendal drag-stuff diff-git dictionary datomic-snippets dash-at-point css-mode confluence-edit confluence columnify column-marker closure-template-html-mode closure-lint-mode clojurescript-mode clojure-test-mode clojure-snippets clojure-project-mode clojure-cheatsheet cljdoc chess blank-mode auto-indent-mode auto-dictionary applescript-mode angular-snippets ace-jump-buffer 4clojure)))
  '(powerline-color1 "#191919")
  '(powerline-color2 "#111111")
  '(show-paren-mode t)
@@ -421,7 +428,8 @@
      (340 . "#94BFF3")
      (360 . "#DC8CC3"))))
  '(vc-annotate-very-old-color "#DC8CC3"))
-(set-frame-font "-apple-input mono-light-r-normal--12-120-72-72-m-130-iso10646-1")
+;;(set-frame-font "-apple-input mono-light-r-normal--12-120-72-72-m-130-iso10646-1")
+(set-frame-font "Source Code Pro-16" nil t)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
