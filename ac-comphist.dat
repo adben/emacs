@@ -1,4 +1,6 @@
-((("rollover" .
+((("freenode-user" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("rollover" .
    [1 0 0 0 0 0 0 0])
   ("block" .
    [2 0 0 0 0])
