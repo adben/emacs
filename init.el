@@ -126,7 +126,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;adben's yasnippet
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(load-library "adben-yasnippet")
+(load-library "adben-yasnippet") ;; This must be loaded before ac
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Shortcuts
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -216,6 +216,10 @@
 ;;NXHTML mode - HTML, PHP etc
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;(load-library "adben-nxhtml")
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;JS
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(load-library "adben-js2")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;Ansi-term stuff
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -401,7 +405,7 @@
  '(main-line-separator-style (quote chamfer))
  '(package-selected-packages
    (quote
-    (scala-mode2 scala-outline-popup yalinum wtf wrap-region worklog web-beautify undo-tree thread-dump textmate texdrive tex-math-preview tagedit swank-clojure swank-cdt soothe-theme shellfm shell-current-directory scpaste scala-mode rw-language-and-country-codes rw-ispell rw-hunspell redo+ rainbow-delimiters purple-haze-theme puppet-mode project-local-variables pastie pabbrev org-table-comment mv-shell multi-web-mode multi-project mode-compile mediawiki main-line magit lua-mode lorem-ipsum log4j-mode linum-off less-css-mode less lein kill-ring-search keywiz karma jump jtags js3-mode jira javascript javadoc-help idle-highlight-mode http-post-simple htmlize html-script-src helm-git-grep helm-git helm-dired-recent-dirs guess-style gruber-darker-theme google-c-style go-snippets go-play gitconfig git-gutter-fringe+ git-gutter gist flymake-shell flymake-sass flymake-csslint flymake-css flymake-coffee elisp-cache elein el-swank-fuzzy durendal drag-stuff diff-git dictionary datomic-snippets dash-at-point css-mode confluence-edit confluence columnify column-marker closure-template-html-mode closure-lint-mode clojurescript-mode clojure-test-mode clojure-snippets clojure-project-mode clojure-cheatsheet cljdoc chess blank-mode auto-indent-mode auto-dictionary applescript-mode angular-snippets ace-jump-buffer 4clojure)))
+    (auto-complete circe ac-js2 js2-mode js2-refactor scala-mode2 scala-outline-popup yalinum wtf wrap-region worklog web-beautify undo-tree thread-dump textmate texdrive tex-math-preview tagedit swank-clojure swank-cdt soothe-theme shellfm shell-current-directory scpaste scala-mode rw-language-and-country-codes rw-ispell rw-hunspell redo+ rainbow-delimiters purple-haze-theme puppet-mode project-local-variables pastie pabbrev org-table-comment mv-shell multi-web-mode multi-project mode-compile mediawiki main-line magit lua-mode lorem-ipsum log4j-mode linum-off less-css-mode less lein kill-ring-search keywiz karma jump jtags js3-mode jira javascript javadoc-help idle-highlight-mode http-post-simple htmlize html-script-src helm-git-grep helm-git helm-dired-recent-dirs guess-style gruber-darker-theme google-c-style go-snippets go-play gitconfig git-gutter-fringe+ git-gutter gist flymake-shell flymake-sass flymake-csslint flymake-css flymake-coffee elisp-cache elein el-swank-fuzzy durendal drag-stuff diff-git dictionary datomic-snippets dash-at-point css-mode confluence-edit confluence columnify column-marker closure-template-html-mode closure-lint-mode clojurescript-mode clojure-test-mode clojure-snippets clojure-project-mode clojure-cheatsheet cljdoc chess blank-mode auto-indent-mode auto-dictionary applescript-mode angular-snippets ace-jump-buffer 4clojure)))
  '(powerline-color1 "#191919")
  '(powerline-color2 "#111111")
  '(show-paren-mode t)
