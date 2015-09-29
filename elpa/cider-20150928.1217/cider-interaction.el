@@ -718,7 +718,7 @@ They exist for compatibility with `next-error'."
                             (cider-find-property 'cider-note-p t))))
                  (when p
                    (goto-char p)
-                   (message (get-char-property p 'cider-note))))))
+                   (message "%s" (get-char-property p 'cider-note))))))
     ;; if we're already on a compilation error, first jump to the end of
     ;; it, so that we find the next error.
     (when (get-char-property (point) 'cider-note-p)
@@ -932,14 +932,10 @@ evaluation command. Honor `cider-auto-jump-to-error'."
 ;;; Evaluation
 
 (defvar cider-to-nrepl-filename-function
-  (if (eq system-type 'cygwin)
-      (lambda (filename)
-        (->> (expand-file-name filename)
-             (format "cygpath.exe --windows '%s'")
-             (shell-command-to-string)
-             (replace-regexp-in-string "\n" "")
-             (replace-regexp-in-string "\\\\" "/")))
-    #'identity)
+  (with-no-warnings
+    (if (eq system-type 'cygwin)
+        #'cygwin-convert-file-name-to-windows
+      #'identity))
   "Function to translate Emacs filenames to nREPL namestrings.")
 
 (defvar-local cider--ns-form-cache (make-hash-table :test 'equal)
