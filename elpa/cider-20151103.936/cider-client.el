@@ -34,6 +34,19 @@
 
 ;;; Connection Buffer Management
 
+(defcustom cider-request-dispatch 'dynamic
+  "Controls the request dispatch mechanism when several connections are present.
+Dynamic dispatch tries to infer the connection based on the current project
+& currently visited file, while static dispatch simply uses the default
+connection.
+
+Project metadata is attached to connections when they are created with commands
+like `cider-jack-in' and `cider-connect'."
+  :type '(choice (const :tag "dynamic" dynamic)
+                 (const :tag "static" static))
+  :group 'cider
+  :package-version '(cider . "0.10.0"))
+
 (defvar cider-connections nil
   "A list of connections.")
 
@@ -154,7 +167,7 @@ such a link cannot be established automatically."
   (interactive)
   (cider-ensure-connected)
   (let ((conn-buf (or connection (cider-read-connection "Connection: ")))
-        (project-dir (or project (read-directory-name "Project directory: " nil (clojure-project-dir) nil (clojure-project-dir)))))
+        (project-dir (or project (read-directory-name "Project directory: " (clojure-project-dir)))))
     (when conn-buf
       (with-current-buffer conn-buf
         (setq nrepl-project-dir project-dir)))))
@@ -185,24 +198,27 @@ type (Clojure or ClojureScript).  If TYPE is nil, it is derived from the
 file extension."
   ;; Cleanup the connections list.
   (cider-connections)
-  (cond
-   ((cider--in-connection-buffer-p) (current-buffer))
-   ((= 1 (length cider-connections)) (car cider-connections))
-   (t (let* ((project-directory (clojure-project-dir (cider-current-dir)))
-             (repls (and project-directory
-                         (cider-find-connection-buffer-for-project-directory project-directory 'all))))
-        (if (= 1 (length repls))
-            ;; Only one match, just return it.
-            (car repls)
-          ;; OW, find one matching the extension of current file.
-          (let ((type (or type (file-name-extension (or (buffer-file-name) "")))))
-            (or (seq-find (lambda (conn)
-                            (equal (with-current-buffer conn
-                                     (or cider-repl-type "clj"))
-                                   type))
-                          (append repls cider-connections))
+  (if (eq cider-request-dispatch 'dynamic)
+      (cond
+       ((cider--in-connection-buffer-p) (current-buffer))
+       ((= 1 (length cider-connections)) (car cider-connections))
+       (t (let* ((project-directory (clojure-project-dir (cider-current-dir)))
+                 (repls (and project-directory
+                             (cider-find-connection-buffer-for-project-directory project-directory 'all))))
+            (if (= 1 (length repls))
+                ;; Only one match, just return it.
                 (car repls)
-                (car cider-connections))))))))
+              ;; OW, find one matching the extension of current file.
+              (let ((type (or type (file-name-extension (or (buffer-file-name) "")))))
+                (or (seq-find (lambda (conn)
+                                (equal (with-current-buffer conn
+                                         (or cider-repl-type "clj"))
+                                       type))
+                              (append repls cider-connections))
+                    (car repls)
+                    (car cider-connections)))))))
+    ;; TODO: Add logic to dispatch to a matching Clojure/ClojureScript REPL based on file type
+    (car cider-connections)))
 
 
 ;;; Connection Browser
@@ -539,7 +555,7 @@ Display the results in a different window."
 
 Prompt according to prefix ARG and `cider-prompt-for-symbol'.
 A single or double prefix argument inverts the meaning of
-`cider-prompt-for-symbol'. A prefix of `-` or a double prefix argument causes
+`cider-prompt-for-symbol'.  A prefix of `-` or a double prefix argument causes
 the results to be displayed in a different window.  The default value is
 thing at point."
   (interactive "P")
@@ -679,7 +695,7 @@ loaded. If CALLBACK is nil, use `cider-load-file-handler'."
 (defcustom cider-eval-spinner-type 'progress-bar
   "Appearance of the evaluation spinner.
 
-Value is a symbol. The possible values are the symbols in the
+Value is a symbol.  The possible values are the symbols in the
 `spinner-types' variable."
   :type 'symbol
   :group 'cider
