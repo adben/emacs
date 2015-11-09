@@ -58,16 +58,16 @@
  ("/Applications/" . "NetBeans/")
  ("/" . "Users/")
  ("/Users/adben/Dev/" . "grapes/")
- ("/Users/adben/" . "Downloads/")
+ ("/Users/adben/" . ".emacs.d/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/adben/.emacs.d/"
  "/Users/adben/Downloads/htcm8/"
  "/Users/adben/Downloads/"
  "/Users/adben/p/server/"
  "/Users/adben/"
- "/Users/adben/.emacs.d/"
  "/Users/adben/p/server/zensie-application/src/main/java/com/_30mhz/api/"
  "/Users/adben/p/client/zensie-client/yo/app/scripts/controllers/"
  "/Users/adben/.emacs.d/lisp/"
@@ -112,10 +112,10 @@
 
 ;; ----- ido-work-file-list -----
 (
+ "init.el"
  "hosts"
  "mvn.log"
  ".zshrc"
- "init.el"
  "ZensieApplication.java"
  "ZensieConfiguration.java"
  "genericcustomdashdetail.js"
@@ -126,11 +126,11 @@
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/Users/adben/.emacs.d/" (22080 24158 0 0) "web-vcs-log.org" "var/" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "network-security.data" "lisp/" "init.elc" "init.el" "ido.last" "games/" "eshell/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/Users/adben/" (22079 51756 0 0) "theEmails3.txt" "theEmails2.txt" "temp/" "System/" "Snapshots/" "recovery.img" "Public/" "Pictures/" "p/" "Music/" "Movies/" "MEGAsync/" "Library/" "intellj.info" "go/" "emacs-meta/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "day.json" "cleanEmails3.txt" "cleanEmails2.txt" "Applications/" ".zshrc~" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s MacBook Pro-5.1.1" ".zcompdump-Adolfo’s MacBook Pro-5.0.8" ".zcompdump" ".yjp/" ".v8flags.4.6.85.28.adben.json" ".v8flags.4.5.103.35.adben.json" ".v8flags.4.5.103.33.adben.json" ".tsd-cache/" ".Trash/" ".subversion/" ".ssh/" ".scala_history" ".sbt/" ".rbenv/" ".private.el" ".oracle_jre_usage/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".mysql_history" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea15/" ".IntelliJIdea14/" ".ideaLibSources/" ".idea-build/" ".htoprc" ".gnupg/" ".gitconfig" ".gem/" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_sessions/" ".bash_history" ".aws/" ".atom/" ".android/" "../" "./")
+
  ("/Users/adben/Downloads/htcm8/" (22078 8321 0 0) "Unlock_code.bin" "twrp-2.8.7.0-m8.img" "hosts" "fastboot-mac" "../" "./")
-
- ("/Users/adben/" (22078 8321 0 0) "theEmails3.txt" "theEmails2.txt" "temp/" "System/" "Snapshots/" "recovery.img" "Public/" "Pictures/" "p/" "Music/" "Movies/" "MEGAsync/" "Library/" "intellj.info" "go/" "emacs-meta/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "day.json" "cleanEmails3.txt" "cleanEmails2.txt" "Applications/" ".zshrc~" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s MacBook Pro-5.1.1" ".zcompdump-Adolfo’s MacBook Pro-5.0.8" ".zcompdump" ".yjp/" ".v8flags.4.6.85.28.adben.json" ".v8flags.4.5.103.35.adben.json" ".v8flags.4.5.103.33.adben.json" ".tsd-cache/" ".Trash/" ".subversion/" ".ssh/" ".scala_history" ".sbt/" ".rbenv/" ".private.el" ".oracle_jre_usage/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".mysql_history" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea15/" ".IntelliJIdea14/" ".ideaLibSources/" ".idea-build/" ".htoprc" ".gnupg/" ".gitconfig" ".gem/" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_sessions/" ".bash_history" ".aws/" ".atom/" ".android/" "../" "./")
-
- ("/Users/adben/.emacs.d/" (22077 44492 0 0) "web-vcs-log.org" "var/" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "network-security.data" "lisp/" "init.elc" "init.el" "ido.last" "games/" "eshell/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
  ("/Users/adben/p/server/" (22077 8183 0 0) "zensie.iml" "zensie-model/" "zensie-dw-dynamo/" "zensie-dw-cw/" "zensie-application/" "README.md" "pom.xml" ".idea/" ".gitignore" ".git/" "../" "./")
 

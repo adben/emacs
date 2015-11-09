@@ -8,9 +8,9 @@
 ;;       Phil Hagelberg <technomancy@gmail.com>
 ;;       Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://github.com/clojure-emacs/clojure-mode
-;; Package-Version: 20151108.929
+;; Package-Version: 20151108.1316
 ;; Keywords: languages clojure clojurescript lisp
-;; Version: 5.0.0
+;; Version: 5.0.1-cvs
 ;; Package-Requires: ((emacs "24.3"))
 
 ;; This file is not part of GNU Emacs.
@@ -78,7 +78,7 @@
   :link '(url-link :tag "Github" "https://github.com/clojure-emacs/clojure-mode")
   :link '(emacs-commentary-link :tag "Commentary" "clojure-mode"))
 
-(defconst clojure-mode-version "5.0.0"
+(defconst clojure-mode-version "5.0.1-snapshot"
   "The current version of `clojure-mode'.")
 
 (defface clojure-keyword-face
@@ -146,11 +146,11 @@ For example, \[ is allowed in :db/id[:db.part/user]."
                (cl-every 'characterp value))))
 
 (defcustom clojure-build-tool-files '("project.clj" "build.boot" "build.gradle")
-  "A list of files, which are looked for in order to identify the
-project's root. Out-of-the box clojure-mode understands lein,
-boot and gradle."
+  "A list of files, which identify a Clojure project's root.
+Out-of-the box clojure-mode understands lein, boot and gradle."
   :type '(repeat string)
   :group 'clojure
+  :package-version '(clojure-mode . "5.0.0")
   :safe (lambda (value)
           (and (listp value)
                (cl-every 'stringp value))))

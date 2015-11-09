@@ -433,10 +433,11 @@
      (360 . "#DC8CC3"))))
  '(vc-annotate-very-old-color "#DC8CC3"))
 ;;(set-frame-font "-apple-input mono-light-r-normal--12-120-72-72-m-130-iso10646-1")
-(set-frame-font "Source Code Pro-15" nil t)
+;;(set-frame-font "Source Code Pro-15" nil t)
+;;(set-frame-font "InputMonoCondensed ExLight-16" nil t)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "Input Mono Condensed" :foundry "nil" :slant normal :weight normal :height 160 :width condensed)))))
