@@ -2,8 +2,10 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/Users/adben/Documents/" . "config/")
+ ("/Users/adben/Library/Preferences/" . "IntelliJIdea15/")
  ("/Users/adben/Downloads/" . "htcm8/")
- ("/Users/adben/Library/" . "PreferencePanes/")
+ ("/Users/adben/Library/" . "Preferences/")
  ("/Users/adben/p/server/zensie-application/src/main/java/com/_30mhz/" . "api/")
  ("/Users/adben/p/server/zensie-application/src/main/java/com/" . "_30mhz/")
  ("/Users/adben/p/server/zensie-application/src/main/java/" . "com/")
@@ -58,16 +60,19 @@
  ("/Applications/" . "NetBeans/")
  ("/" . "Users/")
  ("/Users/adben/Dev/" . "grapes/")
- ("/Users/adben/" . ".emacs.d/")
+ ("/Users/adben/" . "Documents/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/Users/adben/Documents/config/"
+ "/Users/adben/.m2/"
+ "/Users/adben/Library/Preferences/IntelliJIdea15/"
  "/Users/adben/.emacs.d/"
+ "/Users/adben/"
  "/Users/adben/Downloads/htcm8/"
  "/Users/adben/Downloads/"
  "/Users/adben/p/server/"
- "/Users/adben/"
  "/Users/adben/p/server/zensie-application/src/main/java/com/_30mhz/api/"
  "/Users/adben/p/client/zensie-client/yo/app/scripts/controllers/"
  "/Users/adben/.emacs.d/lisp/"
@@ -107,28 +112,39 @@
  "/Users/adben/Documents/iprofs/shl/migratie/"
  "/Users/adben/Documents/"
  "/Users/adben/Dev/grapes/"
- "/Users/adben/.m2/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "sonar.properties"
+ "settings.xml"
+ "idea.vmoptions"
  "init.el"
+ ".zshrc"
  "hosts"
  "mvn.log"
- ".zshrc"
  "ZensieApplication.java"
  "ZensieConfiguration.java"
  "genericcustomdashdetail.js"
- "adben-web-mode.el"
- "adben-js2.el"
- "adben-yasnippet.el"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/adben/.emacs.d/" (22080 24158 0 0) "web-vcs-log.org" "var/" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "network-security.data" "lisp/" "init.elc" "init.el" "ido.last" "games/" "eshell/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" "../" "./")
+ ("/usr/local/Cellar/sonar/5.2/libexec/logs/" (22085 43272 0 0) "sonar.log" "access.log" "access.2015-11-07.log" "access.2015-11-06.log" "../" "./")
 
- ("/Users/adben/" (22079 51756 0 0) "theEmails3.txt" "theEmails2.txt" "temp/" "System/" "Snapshots/" "recovery.img" "Public/" "Pictures/" "p/" "Music/" "Movies/" "MEGAsync/" "Library/" "intellj.info" "go/" "emacs-meta/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "day.json" "cleanEmails3.txt" "cleanEmails2.txt" "Applications/" ".zshrc~" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s MacBook Pro-5.1.1" ".zcompdump-Adolfo’s MacBook Pro-5.0.8" ".zcompdump" ".yjp/" ".v8flags.4.6.85.28.adben.json" ".v8flags.4.5.103.35.adben.json" ".v8flags.4.5.103.33.adben.json" ".tsd-cache/" ".Trash/" ".subversion/" ".ssh/" ".scala_history" ".sbt/" ".rbenv/" ".private.el" ".oracle_jre_usage/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".mysql_history" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea15/" ".IntelliJIdea14/" ".ideaLibSources/" ".idea-build/" ".htoprc" ".gnupg/" ".gitconfig" ".gem/" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_sessions/" ".bash_history" ".aws/" ".atom/" ".android/" "../" "./")
+ ("/Users/adben/Documents/config/" (22080 39288 0 0) "VPN-Unified-Cloud-Formation.json" "userChrome.css" "sonar.properties" "README.md" "powerline.zsh-theme" "netbeans.conf" "idea.vmoptions" "hosts" "daily_stuff.sh" "Custom_flymake.css" "Custom.css" "adben.zsh-theme" "adben-new.zsh-theme" ".zshrc" ".gitignore" ".gitconfig" ".git/" ".bashrc" "../" "./")
+
+ ("/Users/adben/Documents/" (22085 40812 0 0) "test.sjon" "test.json" "Sociedad/" "PragmataPro/" "jdk-8u60-docs-all.zip" "jdk-8u51-macosx-x86_64-demos.zip" "jdk-8u51-docs-all.zip" "javafx-8u51-apidocs.zip" "j8-streams/" "DZone_Checklist_WebApplicationUsability.pdf" "DZ_Checklist_WebApplicationSecurity.pdf" "config/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/adben/.m2/" (22085 44395 0 0) "settings.xml" "settings-security.xml" "repository/" ".#settings.xml" "../" "./")
+
+ ("/Users/adben/" (22085 44361 0 0) "theEmails3.txt" "theEmails2.txt" "temp/" "System/" "Snapshots/" "recovery.img" "Public/" "Pictures/" "p/" "Music/" "Movies/" "MEGAsync/" "Library/" "intellj.info" "go/" "emacs-meta/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "day.json" "cleanEmails3.txt" "cleanEmails2.txt" "Applications/" ".zshrc~" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s MacBook Pro-5.1.1" ".zcompdump-Adolfo’s MacBook Pro-5.0.8" ".zcompdump" ".yjp/" ".v8flags.4.6.85.28.adben.json" ".v8flags.4.5.103.35.adben.json" ".v8flags.4.5.103.33.adben.json" ".tsd-cache/" ".Trash/" ".subversion/" ".ssh/" ".scala_history" ".sbt/" ".rbenv/" ".private.el" ".oracle_jre_usage/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".mysql_history" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea15/" ".IntelliJIdea14/" ".ideaLibSources/" ".idea-build/" ".htoprc" ".gnupg/" ".gitconfig" ".gem/" ".emacs.d/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_sessions/" ".bash_history" ".aws/" ".atom/" ".android/" "../" "./")
+
+ ("/Users/adben/Library/Preferences/IntelliJIdea15/" (22084 36272 0 0) "tasks/" "scratches/" "port.lock" "port" "options/" "oldidea.vmoptions" "inspection/" "idea.vmoptions" "eval/" "disabled_update.txt" "disabled_plugins.txt" "colors/" "codestyles/" "Bloemenveld 10" "../" "./")
+
+ ("/Users/adben/Library/Preferences/" (22084 43960 0 0) "QuickTime Preferences" "org.videolan.vlc.plist" "org.videolan.vlc/" "org.netbeans.modules.plist" "org.mozilla.firefoxdeveloperedition.plist" "org.m0k.transmission.plist" "org.gnu.Emacs.plist" "org.cups.PrintingPrefs.plist" "net.java.openjdk.cmd.plist" "mega.mac.plist" "Macromedia/" "loginwindow.plist" "io.nwjs.nw.plist" "io.nwjs.nw.helper.plist" "IntelliJIdea15/" "IntelliJIdea14/" "duetagent.plist" "CommCenter.plist" "com.spotify.client.plist" "com.spotify.client.helper.plist" "com.skype.skype.plist" "com.ridiculousfish.HexFiend.plist" "com.qtproject.plist" "com.oracle.java.JavaAppletPlugin.plist" "com.omnigroup.OmniSoftwareUpdate.plist" "com.omnigroup.OmniDiskSweeper.plist" "com.nero.HSMMonitor.plist" "com.mediaatelier.CheatSheet.plist" "com.kapeli.dashdoc.plist" "com.jetbrains.intellij.plist" "com.jetbrains.intellij-EAP.plist" "com.htc.HTC-Sync-Manager.plist" "com.googlecode.iterm2.plist" "com.google.Keystone.Agent.plist" "com.google.Chrome.plist" "com.google.Chrome.canary.plist" "com.github.GitHub.plist" "com.github.atom.plist" "com.epson.scanner.ica.plist" "com.divisiblebyzero.Spectacle.plist" "com.apple.xpc.activity2.plist" "com.apple.wifi.keychain-format.plist" "com.apple.WebKit.Plugin.64.plist" "com.apple.UserAccountUpdater.plist" "com.apple.universalaccessAuthWarning.plist" "com.apple.universalaccess.plist" "com.apple.twitterd.plist" "com.apple.Terminal.plist" "com.apple.TelephonyUtilities.plist" "com.apple.systemuiserver.plist" "com.apple.systemsound.plist" "com.apple.SystemProfiler.plist" "com.apple.systempreferences.plist" "com.apple.syncserver.plist" "com.apple.symbolichotkeys.plist" "com.apple.suggestions.plist" "com.apple.Spotlight.plist" "com.apple.spaces.plist" "com.apple.sidebarlists.plist" "com.apple.sharingd.plist" "com.apple.sharekit.recents.plist" "com.apple.SetupAssistant.plist" "com.apple.ServicesMenu.Services.plist" "com.apple.security.KCN.plist" "com.apple.security.cloudkeychainproxy3.keysToRegister.plist" "com.apple.screensaver.plist" "com.apple.scheduler.plist" "com.apple.Safari.plist" "com.apple.Safari.Extensions.plist" "com.apple.rtcreporting.plist" "com.apple.registration.plist" "com.apple.QuickLookDaemon.plist" "com.apple.PubSubAgent.plist" "com.apple.PTPCamera.plist" "com.apple.ProblemReporter.plist" "com.apple.print.PrinterProxy.plist" "com.apple.print.makequeuesagent.plist" "com.apple.print.custompresets.forprinter.EPSON_Stylus_SX400.plist" "com.apple.print.add.plist" "com.apple.preferences.extensions.ShareMenu.plist" "com.apple.preferences.extensions.SharedLinks.plist" "com.apple.preferences.extensions.ServicesWithUI.plist" "com.apple.preferences.extensions.PhotoEditing.plist" "com.apple.preferences.extensions.FinderSync.plist" "com.apple.preference.general.plist" "com.apple.notificationcenterui.plist" "com.apple.NetworkUtility.plist" "com.apple.networkConnect.plist" "com.apple.MobileDeviceCrashCopy.plist" "com.apple.metadata.SpotlightNetHelper.plist" "com.apple.menuextra.battery.plist" "com.apple.Maps.plist" "com.apple.mail-shared.plist" "com.apple.lookup.plist" "com.apple.loginwindow.plist" "com.apple.loginitems.plist" "com.apple.linkedin.xpc.plist" "com.apple.LaunchServices.QuarantineEventsV2" "com.apple.LaunchServices/" "com.apple.keychainaccess.plist" "com.apple.java.util.prefs.plist" "com.apple.iTunesHelper.plist" "com.apple.iTunes.plist" "com.apple.iTunes.eq.plist" "com.apple.ist.ds.appleconnect.external.plist" "com.apple.ipTelephony.plist" "com.apple.iPod.plist" "com.apple.iphonesimulator.plist" "com.apple.internetconnect.plist" "com.apple.internetconfigpriv.plist" "com.apple.imservice.ids.iMessage.plist" "com.apple.imservice.ids.FaceTime.plist" "com.apple.imessage.bag.plist" "com.apple.imagent.plist" "com.apple.ids.service.com.apple.private.alloy.thumper.keys.plist" "com.apple.ids.service.com.apple.private.alloy.sms.plist" "com.apple.ids.service.com.apple.private.alloy.screensharing.plist" "com.apple.ids.service.com.apple.private.alloy.phonecontinuity.plist" "com.apple.ids.service.com.apple.private.alloy.phone.auth.plist" "com.apple.ids.service.com.apple.private.alloy.multiplex1.plist" "com.apple.ids.service.com.apple.private.alloy.maps.plist" "com.apple.ids.service.com.apple.private.alloy.keychainsync.plist" "com.apple.ids.service.com.apple.private.alloy.icloudpairing.plist" "com.apple.ids.service.com.apple.private.alloy.fmf.plist" "com.apple.ids.service.com.apple.private.alloy.continuity.tethering.plist" "com.apple.ids.service.com.apple.private.alloy.continuity.encryption.plist" "com.apple.ids.service.com.apple.private.alloy.continuity.activity.plist" "com.apple.ids.service.com.apple.private.ac.plist" "com.apple.ids.service.com.apple.madrid.plist" "com.apple.ids.service.com.apple.ess.plist" "com.apple.identityservicesd.plist" "com.apple.icloud.fmfd.plist" "com.apple.iChat.Yahoo.plist" "com.apple.iChat.StatusMessages.plist" "com.apple.iChat.plist" "com.apple.iChat.Jabber.plist" "com.apple.iChat.AIM.plist" "com.apple.iCal.plist" "com.apple.ibtool.plist" "com.apple.ibooks.plist" "com.apple.iApps.plist" "com.apple.HIToolbox.plist" "com.apple.helpviewer.plist" "com.apple.helpd.plist" "com.apple.help.plist" "com.apple.GEO.plist" "com.apple.gamed.plist" "com.apple.frameworks.diskimages.diuiagent.plist" "com.apple.FontRegistry.user.plist" "com.apple.FontBook.plist" "com.apple.FolderActionsDispatcher.plist" "com.apple.finder.plist" "com.apple.FileStatsAgent.plist" "com.apple.FaceTime.plist" "com.apple.facetime.bag.plist" "com.apple.dt.xcodebuild.plist" "com.apple.dt.Xcode.plist" "com.apple.driver.AppleHIDMouse.plist" "com.apple.driver.AppleBluetoothMultitouch.trackpad.plist" "com.apple.driver.AppleBluetoothMultitouch.mouse.plist" "com.apple.dock.plist" "com.apple.diskimages.fsck" "com.apple.Disk-Utility.plist" "com.apple.dashboard.plist" "com.apple.coreservices.useractivityd.dynamicuseractivites.plist" "com.apple.coreservices.uiagent.plist" "com.apple.CoreGraphics.plist" "com.apple.Console.plist" "com.apple.commerce.spotlight.plist" "com.apple.commerce.safari.plist" "com.apple.commerce.plist" "com.apple.commerce.knownclients.plist" "com.apple.commcenter.device_specific_nobackup.plist" "com.apple.CommCenter.counts.plist" "com.apple.commcenter.carrier_bundle.plist" "com.apple.cloudpaird.plist" "com.apple.CharacterPicker.plist" "com.apple.CaptiveNetworkAssistant.plist" "com.apple.calculateframework.plist" "com.apple.bookstoreagent.plist" "com.apple.BluetoothExplorer.plist" "com.apple.BezelServices.plist" "com.apple.avfoundation.frecents.plist" "com.apple.ATS.plist" "com.apple.archiveutility.plist" "com.apple.appstore.plist" "com.apple.appleseed.FeedbackAssistant.plist" "com.apple.AppleMultitouchTrackpad.plist" "com.apple.AppleMultitouchMouse.plist" "com.apple.airplay.plist" "com.apple.AddressBook.plist" "com.apple.ActivityMonitor.plist" "com.apple.accountsd.plist" "com.apple.accounts.plist" "ByHost/" ".GlobalPreferences.plist" "../" "./")
+
+ ("/Users/adben/.emacs.d/" (22083 19724 0 0) "web-vcs-log.org" "var/" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "network-security.data" "lisp/" "init.elc" "init.el" "ido.last" "games/" "eshell/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" "../" "./")
 
  ("/Users/adben/Downloads/htcm8/" (22078 8321 0 0) "Unlock_code.bin" "twrp-2.8.7.0-m8.img" "hosts" "fastboot-mac" "../" "./")
 
@@ -141,8 +157,6 @@
  ("/Users/adben/Library/" (22017 1843 0 0) "WebKit/" "Voices/" "SyncedPreferences/" "Suggestions/" "Spelling/" "Sounds/" "Social/" "Services/" "Screen Savers/" "Saved Application State/" "Safari/" "Receipts/" "PubSub/" "Printers/" "Preferences/" "PreferencePanes/" "MobileDevice/" "Metadata/" "Messages/" "Mail/" "Logs/" "LaunchAgents/" "LanguageModeling/" "Keychains/" "Keyboard Layouts/" "iTunes/" "Internet Plug-Ins/" "Input Methods/" "iMovie/" "IdentityServices/" "Group Containers/" "Google/" "GameKit/" "Fonts/" "FontCollections/" "Favorites/" "Dictionaries/" "Developer/" "CoreData/" "Cookies/" "Containers/" "Compositions/" "com.apple.nsurlsessiond/" "Colors/" "ColorPickers/" "Calendars/" "Caches/" "Autosave Information/" "Audio/" "Assistants/" "Application Support/" "Application Scripts/" "Address Book Plug-Ins/" "Accounts/" ".localized" "../" "./")
 
  ("/Users/" (22028 47212 0 0) "Shared/" "adben/" ".localized" "../" "./")
-
- ("/Users/adben/Documents/" (22075 35988 0 0) "test.sjon" "test.json" "Sociedad/" "jdk-8u60-docs-all.zip" "jdk-8u51-macosx-x86_64-demos.zip" "jdk-8u51-docs-all.zip" "javafx-8u51-apidocs.zip" "j8-streams/" "DZone_Checklist_WebApplicationUsability.pdf" "DZ_Checklist_WebApplicationSecurity.pdf" "config/" ".localized" ".DS_Store" "../" "./")
 
  ("/Applications/IntelliJ IDEA 14.app/Contents/" (22034 41529 0 0) "Resources/" "redist/" "plugins/" "MacOS/" "license/" "lib/" "Info.plist" "help/" "bin/" "_CodeSignature/" "../" "./")
 
@@ -171,8 +185,6 @@
  ("/Users/adben/p/server/zensie-application/src/main/" (21960 41370 0 0) "resources/" "java/" "../" "./")
 
  ("/Users/adben/p/server/zensie-application/src/" (21960 41370 0 0) "test/" "main/" "../" "./")
-
- ("/Users/adben/.m2/" (21960 41128 0 0) "settings.xml" "settings-security.xml" "repository/" "../" "./")
 
  ("/Users/adben/p/client/zensie-client/yo/app/" (21965 60893 0 0) "views/" "styles/" "scripts/" "robots.txt" "mstile-70x70.png" "mstile-310x310.png" "mstile-310x150.png" "mstile-150x150.png" "mstile-144x144.png" "languages/" "index.html" "images/" "fonts/" "favicon.ico" "favicon-96x96.png" "favicon-32x32.png" "favicon-196x196.png" "favicon-16x16.png" "favicon-160x160.png" "desktop.ini" "browserconfig.xml" "apple-touch-icon.png" "apple-touch-icon-precomposed.png" "apple-touch-icon-76x76.png" "apple-touch-icon-72x72.png" "apple-touch-icon-60x60.png" "apple-touch-icon-57x57.png" "apple-touch-icon-152x152.png" "apple-touch-icon-144x144.png" "apple-touch-icon-120x120.png" "apple-touch-icon-114x114.png" "404.html" ".htaccess" ".buildignore" "../" "./")
 
@@ -317,14 +329,6 @@
  ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/" (21724 31501 0 0) "websvccommon/" "webcommon/" "THIRDPARTYLICENSE.txt" "README.html" "profiler/" "platform/" "php/" "netbeans.css" "nbscala/" "nbms/" "nb/" "moduleCluster.properties" "mobility/" "LICENSE.txt" "javatextcopypaste/" "javafx/" "java/" "ide/" "html4j4nb/" "harness/" "groovy/" "extra/" "extide/" "etc/" "ergonomics/" "enterprise/" "dlight/" "CREDITS.html" "cnd/" "bin/" "apisupport/" "../" "./")
 
  ("/Users/adolfobenedetti/.m2/repository/" (21694 24616 0 0) "xpp3/" "xmlunit/" "xmlpull/" "xml-apis/" "xerces/" "xalan/" "velocity/" "stax/" "sslext/" "regexp/" "oro/" "org/" "nl/" "net/" "mysql/" "logkit/" "log4j/" "junit/" "joda-time/" "jdom/" "jaxen/" "javax/" "jakarta-regexp/" "io/" "dom4j/" "de/" "commons-validator/" "commons-logging/" "commons-lang/" "commons-io/" "commons-httpclient/" "commons-digester/" "commons-configuration/" "commons-collections/" "commons-codec/" "commons-cli/" "commons-chain/" "commons-beanutils/" "com/" "classworlds/" "ch/" "cglib/" "br/" "backport-util-concurrent/" "avalon-framework/" "asm/" "aopalliance/" "antlr/" "../" "./")
-
- ("/Applications/IntelliJ IDEA 14 EAP.app/" (21721 530 0 0) "Contents/" "../" "./")
-
- ("/Users/adolfobenedetti/p/referee.30mhz.com/" (21722 16499 0 0) "version.sbt" "target/" "src/" "README.md" "project/" "lib/" "build.sbt" "assembly.sbt" ".gitignore" ".git/" "../" "./")
-
- ("/Users/adolfobenedetti/p/scheduler.30mhz.com/" (21722 16132 0 0) "version.sbt" "target/" "src/" "README.md" "projectFilesBackup/" "project/" "build.sbt" "assembly.sbt" ".idea/" ".gitignore" ".git/" ".DS_Store" "../" "./")
-
- ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/etc/" (21722 15292 0 0) "netbeans.import" "netbeans.conf" "netbeans.clusters" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----
