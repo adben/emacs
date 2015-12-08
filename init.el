@@ -440,4 +440,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Input Mono Condensed" :foundry "nil" :slant normal :weight normal :height 160 :width condensed)))))
+ '(default ((t (:family "Input Mono Condensed" :foundry "nil" :slant normal :weight normal :height 140 :width condensed)))))
