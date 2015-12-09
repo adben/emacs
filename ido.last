@@ -2,6 +2,12 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/usr/local/Cellar/sonar/5.2/libexec/" . "logs/")
+ ("/usr/local/Cellar/sonar/5.2/" . "libexec/")
+ ("/usr/local/Cellar/sonar/" . "5.2/")
+ ("/usr/local/Cellar/" . "sonar/")
+ ("/usr/local/" . "Cellar/")
+ ("/usr/" . "local/")
  ("/Users/adben/Documents/" . "config/")
  ("/Users/adben/Library/Preferences/" . "IntelliJIdea15/")
  ("/Users/adben/Downloads/" . "htcm8/")
@@ -60,13 +66,16 @@
  ("/Applications/" . "NetBeans/")
  ("/" . "Users/")
  ("/Users/adben/Dev/" . "grapes/")
- ("/Users/adben/" . ".emacs.d/")
+ ("/Users/adben/" . ".oh-my-zsh/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
  "/Users/adben/"
+ "/Users/adben/.oh-my-zsh/"
  "/Users/adben/.m2/"
+ "/usr/local/Cellar/sonar/5.2/libexec/logs/"
+ "/usr/local/Cellar/sonar/5.2/libexec/conf/"
  "/Users/adben/.emacs.d/"
  "/Users/adben/Documents/config/"
  "/Users/adben/Library/Preferences/IntelliJIdea15/"
@@ -117,26 +126,46 @@
 ;; ----- ido-work-file-list -----
 (
  ".zshrc"
+ "oh-my-zsh.sh"
+ "settings.xml"
+ "sonar.log"
+ "sonar.properties"
+ "init.el"
  ".zshrc-e"
  ".gitconfig"
- "settings.xml"
- "init.el"
- "sonar.properties"
  "idea.vmoptions"
  "hosts"
- "mvn.log"
- "ZensieApplication.java"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
- ("/Users/adben/" (22111 4128 0 0) "theEmails3.txt" "theEmails2.txt" "temp/" "System/" "Snapshots/" "recovery.img" "Public/" "Pictures/" "p/" "Music/" "Movies/" "MEGAsync/" "Library/" "intellj.info" "idea.vmoptions" "go/" "emacs-meta/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "day.json" "cleanEmails3.txt" "cleanEmails2.txt" "b230.org" "Applications/" ".zshrc~" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s MacBook Pro-5.1.1" ".zcompdump-Adolfo’s MacBook Pro-5.0.8" ".zcompdump" ".yjp/" ".v8flags.4.6.85.31.adben.json" ".v8flags.4.6.85.28.adben.json" ".v8flags.4.5.103.35.adben.json" ".v8flags.4.5.103.33.adben.json" ".tsd-cache/" ".Trash/" ".subversion/" ".ssh/" ".sonar/" ".scala_history" ".sbt/" ".rbenv/" ".private.el" ".oracle_jre_usage/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".mysql_history" ".m2/" ".local/" ".lesshst" ".ivy2/" ".IntelliJIdea15/" ".IntelliJIdea14/" ".ideaLibSources/" ".idea-build/" ".htoprc" ".gnupg/" ".gitconfig" ".gem/" ".emacs.d/" ".electron/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_sessions/" ".bash_history" ".aws/" ".atom/" ".android/" "../" "./")
+ ("/Users/adben/.oh-my-zsh/" (22116 29873 0 0) "tools/" "themes/" "templates/" "README.markdown" "plugins/" "oh-my-zsh.sh" "MIT-LICENSE.txt" "log/" "lib/" "custom/" "cache/" ".gitignore" ".git/" ".#oh-my-zsh.sh" "../" "./")
 
- ("/Users/adben/.emacs.d/" (22099 10061 0 0) "web-vcs-log.org" "var/" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "network-security.data" "lisp/" "init.elc" "init.el" "ido.last" "games/" "eshell/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" "../" "./")
+ ("/Users/adben/" (22116 29367 0 0) "theEmails3.txt" "theEmails2.txt" "temp/" "System/" "Snapshots/" "recovery.img" "Public/" "Pictures/" "p/" "Music/" "Movies/" "MEGAsync/" "Library/" "intellj.info" "idea.vmoptions" "go/" "emacs-meta/" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "day.json" "cleanEmails3.txt" "cleanEmails2.txt" "b230.org" "Applications/" ".zshrc~" ".zshrc-e" ".zshrc" ".zsh_history" ".zsh-update" ".zdirs" ".zcompdump-Adolfo’s MacBook Pro-5.1.1" ".zcompdump-Adolfo’s MacBook Pro-5.0.8" ".zcompdump" ".yjp/" ".v8flags.4.6.85.31.adben.json" ".v8flags.4.6.85.28.adben.json" ".v8flags.4.5.103.35.adben.json" ".v8flags.4.5.103.33.adben.json" ".tsd-cache/" ".Trash/" ".subversion/" ".ssh/" ".sonar/" ".scala_history" ".sbt/" ".rbenv/" ".private.el" ".oracle_jre_usage/" ".oh-my-zsh/" ".npm/" ".node-gyp/" ".netbeans-derby/" ".mysql_history" ".m2/" ".local/" ".lldb/" ".lesshst" ".ivy2/" ".IntelliJIdea15/" ".IntelliJIdea14/" ".ideaLibSources/" ".idea-build/" ".htoprc" ".gnupg/" ".gitconfig" ".gem/" ".emacs.d/" ".electron/" ".DS_Store" ".dropbox/" ".cups/" ".config/" ".CFUserTextEncoding" ".cache/" ".bash_sessions/" ".bash_history" ".aws/" ".atom/" ".android/" "../" "./")
+
+ ("/Users/adben/.emacs.d/elpa/" (22116 19579 0 0) "zencoding-mode-readme.txt" "yasnippet-20151126.518/" "yalinum-20130217.1711/" "xml-rpc-20150902.1827/" "wtf-2.0/" "wrap-region-readme.txt" "wrap-region-20140116.2320/" "worklog-2.4.2/" "with-editor-20151126.323/" "web-mode-20150701.2324/" "web-beautify-20131118.1926/" "w3-4.0.49/" "undo-tree-20140509.522/" "ukrainian-holidays-readme.txt" "thread-dump-20130323.2125/" "textmate-20110816.1446/" "texdrive-0.3.1/" "tex-math-preview-8/" "tagedit-20150727.224/" "swank-clojure-1.1.0/" "swank-cdt-1.0.1/" "svg-mode-line-themes-readme.txt" "spinner-1.4/" "soothe-theme-20141027.741/" "slime-repl-20100404/" "slime-20151206.200/" "skewer-mode-20150914.1304/" "simple-httpd-20150430.1755/" "shellfm-0.1/" "shell-current-directory-20140101.1554/" "seq-20151121.1017/" "scratch-ext-readme.txt" "scpaste-20151204.632/" "scala-outline-popup-20150702.937/" "scala-mode2-20150617.2350/" "scala-mode-20141205.1251/" "Save-visited-files-readme.txt" "s-20150924.406/" "rw-language-and-country-codes-0.1/" "rw-ispell-0.1/" "rw-hunspell-0.2/" "request-20140316.417/" "redo+-20131117.1151/" "rainbow-delimiters-20150320.17/" "queue-0.1.1/" "purple-haze-theme-20141014.1929/" "puppet-mode-20150730.1208/" "project-mode-1.0/" "project-local-variables-20080502.1652/" "powerline-readme.txt" "popup-20151125.542/" "pkg-info-20150517.443/" "pcache-20151109.639/" "pastie-20091230/" "paredit-20150217.713/" "pabbrev-20150806.445/" "org-table-comment-20120209.1051/" "omn-mode-readme.txt" "oauth2-readme.txt" "nterm-readme.txt" "nrepl-20131012.2/" "mv-shell-readme.txt" "mv-shell-1.2/" "multiple-cursors-20151205.1225/" "multi-web-mode-readme.txt" "multi-web-mode-20130824.54/" "multi-project-20150314.744/" "mode-compile-2.29/" "mediawiki-20150711.1734/" "main-line-20151120.1806/" "magit-90141025/" "lua-mode-20151025.530/" "lorem-ipsum-20140911.1408/" "logito-20120225.2155/" "log4j-mode-20101016.1722/" "linum-off-20130419.2054/" "link-20140717.2029/" "levenshtein-20051013.1756/" "less-css-mode-20150511.319/" "less-0.2/" "lein-20130406.1312/" "kill-ring-search-20140422.855/" "keywiz-1.4/" "karma-20150120.2158/" "jump-20151009.129/" "jtags-20111208.1922/" "js3-mode-20150902.949/" "js2-refactor-20151029.507/" "js2-mode-readme.txt" "js2-mode-20151130.405/" "jira-20131210.1822/" "javascript-2.2.1/" "javadoc-help-1.0/" "inflections-20121016.957/" "idle-highlight-mode-20120920.1848/" "http-post-simple-readme.txt" "http-post-simple-20131011.358/" "htmlize-20130207.2102/" "html-script-src-20121008.1907/" "helm-git-grep-20140222.1822/" "helm-git-20120630.1403/" "helm-dired-recent-dirs-20131228.614/" "helm-core-20151204.2316/" "helm-20151202.2119/" "guess-style-0.1/" "gruber-darker-theme-20151018.2310/" "google-c-style-20140929.1118/" "go-snippets-20151121.2257/" "go-play-20120914.2148/" "gnupg/" "gitconfig-20130718.1135/" "git-rebase-mode-20150122.1114/" "git-gutter-fringe-readme.txt" "git-gutter-fringe+-20140729.403/" "git-gutter-20151122.1739/" "git-gutter+-20151204.923/" "git-commit-mode-20150330.1048/" "git-commit-20151111.418/" "gist-20150906.954/" "gh-20150906.848/" "fringe-helper-20140620.1409/" "flymake-shell-20121104.1900/" "flymake-sass-20140308.325/" "flymake-easy-20140818.55/" "flymake-csslint-1.1.0/" "flymake-css-20121104.1904/" "flymake-coffee-20140809.324/" "flymake-0.4.16/" "flx-ido-20151030.1112/" "flx-20151030.1112/" "findr-20130824.1207/" "ez-query-replace-readme.txt" "evil-nerd-commenter-readme.txt" "epl-20150517.433/" "elisp-cache-1.15/" "elein-20120120.316/" "el-swank-fuzzy-20130824.1157/" "edbi-minor-mode-readme.txt" "e2wm-R-readme.txt" "durendal-0.2/" "drag-stuff-20150717.532/" "diff-git-0.1.1/" "dictionary-readme.txt" "dictionary-20140717.2029/" "datomic-snippets-20130707.2215/" "dash-at-point-20140626.35/" "dash-20151021.113/" "css-mode-1.0/" "connection-20140717.2029/" "confluence-readme.txt" "confluence-edit-20130809.1927/" "confluence-20140410.1723/" "columnify-1.0/" "column-marker-20121128.843/" "color-theme-approximate-readme.txt" "closure-template-html-mode-0.1/" "closure-lint-mode-20101118.2224/" "clojurescript-mode-20121229.2155/" "clojure-test-mode-20140617.304/" "clojure-snippets-20150504.144/" "clojure-project-mode-1.0/" "clojure-mode-20151201.515/" "clojure-cheatsheet-20151112.517/" "cljdoc-0.1.0/" "circe-20151129.1153/" "cider-browse-ns-readme.txt" "cider-20151204.303/" "chess-2.0.4/" "builtin-packages" "browse-at-remote-readme.txt" "blank-mode-20130824.1159/" "bash-completion-readme.txt" "badger-theme-readme.txt" "avy-readme.txt" "auto-indent-mode-20140505.655/" "auto-dictionary-readme.txt" "auto-dictionary-20150410.910/" "auto-complete-readme.txt" "auto-complete-20151112.2030/" "async-20151123.256/" "ascii-readme.txt" "archives/" "archive-contents" "applescript-mode-20120205.307/" "ansi-readme.txt" "angular-snippets-20140513.2223/" "actionscript-mode-readme.txt" "ace-jump-mode-20140616.115/" "ace-jump-buffer-20150214.2234/" "ac-js2-20140906.442/" "ac-helm-readme.txt" "ac-c-headers-readme.txt" "abl-mode-readme.txt" "4clojure-20131014.1707/" "0blayout-readme.txt" "../" "./")
+
+ ("/Users/adben/.emacs.d/elpa/cider-20151204.303/" (22116 19578 0 0) "nrepl-client.elc" "nrepl-client.el" "cider.elc" "cider.el" "cider-util.elc" "cider-util.el" "cider-test.elc" "cider-test.el" "cider-stacktrace.elc" "cider-stacktrace.el" "cider-selector.elc" "cider-selector.el" "cider-scratch.elc" "cider-scratch.el" "cider-resolve.elc" "cider-resolve.el" "cider-repl.elc" "cider-repl.el" "cider-popup.elc" "cider-popup.el" "cider-pkg.el" "cider-overlays.elc" "cider-overlays.el" "cider-mode.elc" "cider-mode.el" "cider-macroexpansion.elc" "cider-macroexpansion.el" "cider-interaction.elc" "cider-interaction.el" "cider-inspector.elc" "cider-inspector.el" "cider-grimoire.elc" "cider-grimoire.el" "cider-eldoc.elc" "cider-eldoc.el" "cider-doc.elc" "cider-doc.el" "cider-debug.elc" "cider-debug.el" "cider-compat.elc" "cider-compat.el" "cider-common.elc" "cider-common.el" "cider-client.elc" "cider-client.el" "cider-classpath.elc" "cider-classpath.el" "cider-browse-ns.elc" "cider-browse-ns.el" "cider-autoloads.el" "cider-apropos.elc" "cider-apropos.el" "../" "./")
+
+ ("/usr/local/Cellar/" (22112 15408 0 0) "zsh/" "youtube-dl/" "yasm/" "xz/" "xvid/" "x264/" "wireshark/" "wget/" "typesafe-activator/" "tree/" "texi2html/" "speedtest_cli/" "sonar-runner/" "sonar/" "scala/" "sbt/" "ruby-build/" "rtmpdump/" "rbenv/" "pkg-config/" "pcre/" "openssl/" "node/" "nettle/" "mysql/" "maven/" "makedepend/" "libvo-aacenc/" "libtool/" "libtiff/" "libtasn1/" "libpng/" "libgpg-error/" "libgcrypt/" "libffi/" "libav/" "lame/" "jpeg/" "imagemagick/" "htop-osx/" "gperftools/" "go/" "gnutls/" "gnupg/" "gmp/" "glib/" "git/" "gettext/" "geoip/" "generate-json-schema/" "gdbm/" "freetype/" "fop/" "flow/" "ffmpeg/" "faac/" "emacs/" "docbook/" "d-bus/" "curl/" "cmake/" "cloc/" "c-ares/" "boost/" "awscli/" "aws-cloudsearch/" "automake/" "autoconf/" "asciidoc/" "aria2/" "android-sdk/" "../" "./")
+
+ ("/usr/local/Cellar/sonar/5.2/libexec/" (22112 17476 0 0) "web/" "temp/" "logs/" "lib/" "extensions/" "data/" "conf/" "bin/" "../" "./")
+
+ ("/usr/local/Cellar/sonar/5.2/libexec/conf/" (22112 13190 0 0) "wrapper.conf" "sonar.properties" "../" "./")
+
+ ("/usr/local/Cellar/sonar/5.2/libexec/logs/" (22095 2690 0 0) "sonar.log" "sonar.2015-11-13.log" "access.log" "access.2015-11-13.log" ".#sonar.log" "../" "./")
+
+ ("/usr/local/Cellar/sonar/5.2/" (22074 8304 0 0) "libexec/" "INSTALL_RECEIPT.json" "homebrew.mxcl.sonar.plist" "COPYING" "bin/" "../" "./")
+
+ ("/usr/local/Cellar/sonar/" (22074 8305 0 0) "5.2/" "../" "./")
+
+ ("/usr/local/" (22108 6120 0 0) "var/" "SUPPORTERS.md" "share/" "README.md" "opt/" "LICENSE.txt" "Library/" "lib/" "include/" "etc/" "CONTRIBUTING.md" "CODEOFCONDUCT.md" "Cellar/" "bin/" ".yardopts" ".travis.yml" ".gitignore" ".git/" ".DS_Store" "../" "./")
+
+ ("/usr/" (22111 1171 0 0) "standalone/" "share/" "sbin/" "local/" "libexec/" "lib/" "include/" "bin/" "adic/" "../" "./")
+
+ ("/Users/adben/.emacs.d/" (22111 63105 0 0) "web-vcs-log.org" "var/" "url/" "tramp" "swank/" "sounds/" "snippets/" "signatures.txt" "recentf" "README.rst" "README" "project-euler/" "places" "network-security.data" "lisp/" "init.elc" "init.el" "ido.last" "games/" "eshell/" "emms/" "emacs_branch_merge.sh" "elpa/" "ede-projects.elc" "ede-projects.el" "CheatSheets/" "auto-save-list/" "adben-wanderlust-folders.txt" "adben-pymacs-extensions/" "ac-comphist.dat" "abbrev_defs" ".gitignore" ".git/" ".DS_Store" ".#recentf" "../" "./")
 
  ("/Users/adben/.m2/" (22095 2621 0 0) "settings.xml" "settings-security.xml" "repository/" "../" "./")
-
- ("/usr/local/Cellar/sonar/5.2/libexec/logs/" (22085 43272 0 0) "sonar.log" "access.log" "access.2015-11-07.log" "access.2015-11-06.log" "../" "./")
 
  ("/Users/adben/Documents/config/" (22080 39288 0 0) "VPN-Unified-Cloud-Formation.json" "userChrome.css" "sonar.properties" "README.md" "powerline.zsh-theme" "netbeans.conf" "idea.vmoptions" "hosts" "daily_stuff.sh" "Custom_flymake.css" "Custom.css" "adben.zsh-theme" "adben-new.zsh-theme" ".zshrc" ".gitignore" ".gitconfig" ".git/" ".bashrc" "../" "./")
 
@@ -252,14 +281,6 @@
 
  ("/Users/adolfobenedetti/p/" (21906 38364 0 0) "zeppelin/" "site/" "server/" "scheduler.30mhz.com/" "referee.30mhz.com/" "radar.30mhz.com/" "maven/" "lidar.30mhz.com/" "intellijLidarSettings.tar.gz" "factory.tools.zensie/" "elastic_mapping.sh" "CPU-20141020T205737.cpuprofile" "client/" "apache-maven-3.2.5/" ".DS_Store" "../" "./")
 
- ("/usr/" (21855 3671 0 0) "X11R6/" "X11/" "standalone/" "share/" "sbin/" "local/" "libexec/" "lib/" "include/" "bin/" "../" "./")
-
- ("/usr/local/" (21881 21149 0 0) "var/" "SUPPORTERS.md" "share/" "sbin/" "README.md" "opt/" "LICENSE.txt" "Library/" "lib/" "include/" "hw_mp_userdata/" "Frameworks/" "etc/" "DatacardService/" "CONTRIBUTING.md" "CODEOFCONDUCT.md" "Cellar/" "bin/" ".yardopts" ".gitignore" ".git/" "../" "./")
-
- ("/usr/local/Cellar/" (21881 65214 0 0) "zsh/" "z/" "youtube-dl/" "yasm/" "xz/" "xvid/" "x264/" "wireshark/" "wget/" "typesafe-activator/" "tree/" "texi2html/" "sqlite/" "sonar-runner/" "sonar/" "scons/" "scala/" "sbt/" "readline/" "qt5/" "python/" "pure/" "pkg-config/" "pixman/" "phantomjs/" "pcre/" "pango/" "openssl/" "node/" "ngrok/" "nettle/" "mysql/" "mpfr/" "mongodb/" "mercurial/" "maven/" "mailutils/" "llvm/" "libvo-aacenc/" "libtool/" "libtiff/" "libtasn1/" "librsvg/" "libpng/" "libgpg-error/" "libgcrypt/" "libffi/" "libcroco/" "lame/" "jpeg/" "imagemagick/" "icu4c/" "httpie/" "htop-osx/" "harfbuzz/" "gtk+/" "gsasl/" "gradle/" "google-app-engine/" "gobject-introspection/" "go/" "gnutls/" "gmp/" "glib/" "git-extras/" "git/" "gettext/" "geoip/" "gdk-pixbuf/" "gdbm/" "freetype/" "fontconfig/" "flow/" "ffmpeg/" "faac/" "emacs/" "ec2-api-tools/" "d-bus/" "cairo/" "c-ares/" "brew-cask/" "awscli/" "aws-sns-cli/" "aws-elasticbeanstalk/" "aws-elasticache/" "aws-cloudsearch/" "aws-cfn-tools/" "automake/" "autoconf/" "atk/" "aria2/" "../" "./")
-
- ("/usr/local/Cellar/sonar/" (21880 30861 0 0) "5.1.1/" "../" "./")
-
  ("/usr/local/Cellar/sonar/5.1.1/" (21880 30859 0 0) "libexec/" "INSTALL_RECEIPT.json" "homebrew.mxcl.sonar.plist" "COPYING" "bin/" "../" "./")
 
  ("/usr/local/Cellar/sonar/5.1.1/libexec/" (21877 61359 0 0) "web/" "temp/" "logs/" "lib/" "extensions/" "data/" "conf/" "bin/" "../" "./")
@@ -317,18 +338,6 @@
  ("/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/Resources/NetBeans/etc/" (21725 7417 0 0) "netbeans.import" "netbeans.conf" "netbeans.clusters" "../" "./")
 
  ("/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/Resources/NetBeans/" (21724 57181 0 0) "websvccommon/" "webcommon/" "THIRDPARTYLICENSE.txt" "THIRDPARTYLICENSE-generated.txt" "README.html" "profiler/" "platform/" "php/" "netbeans.css" "nb/" "moduleCluster.properties" "mobility/" "LICENSE.txt" "javafx/" "java/" "ide/" "harness/" "groovy/" "extide/" "etc/" "ergonomics/" "enterprise/" "dlight/" "CREDITS.html" "cnd/" "bin/" "apisupport/" "../" "./")
-
- ("/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/Resources/" (21724 8605 0 0) "netbeans.icns" "NetBeans/" "../" "./")
-
- ("/Applications/NetBeans/NetBeans Dev 201502120001.app/Contents/" (21724 8605 0 0) "Resources/" "MacOS/" "Info.plist" "../" "./")
-
- ("/Applications/NetBeans/NetBeans Dev 201502120001.app/" (21724 33730 0 0) "Contents/" "../" "./")
-
- ("/Users/adolfobenedetti/p/lidar.30mhz.com/zensie-model/" (21724 57046 0 0) "zensie-model.iml" "target/" "src/" "pom.xml" "../" "./")
-
- ("/Applications/NetBeans/NetBeans 8.0.2.app/Contents/Resources/NetBeans/" (21724 31501 0 0) "websvccommon/" "webcommon/" "THIRDPARTYLICENSE.txt" "README.html" "profiler/" "platform/" "php/" "netbeans.css" "nbscala/" "nbms/" "nb/" "moduleCluster.properties" "mobility/" "LICENSE.txt" "javatextcopypaste/" "javafx/" "java/" "ide/" "html4j4nb/" "harness/" "groovy/" "extra/" "extide/" "etc/" "ergonomics/" "enterprise/" "dlight/" "CREDITS.html" "cnd/" "bin/" "apisupport/" "../" "./")
-
- ("/Users/adolfobenedetti/.m2/repository/" (21694 24616 0 0) "xpp3/" "xmlunit/" "xmlpull/" "xml-apis/" "xerces/" "xalan/" "velocity/" "stax/" "sslext/" "regexp/" "oro/" "org/" "nl/" "net/" "mysql/" "logkit/" "log4j/" "junit/" "joda-time/" "jdom/" "jaxen/" "javax/" "jakarta-regexp/" "io/" "dom4j/" "de/" "commons-validator/" "commons-logging/" "commons-lang/" "commons-io/" "commons-httpclient/" "commons-digester/" "commons-configuration/" "commons-collections/" "commons-codec/" "commons-cli/" "commons-chain/" "commons-beanutils/" "com/" "classworlds/" "ch/" "cglib/" "br/" "backport-util-concurrent/" "avalon-framework/" "asm/" "aopalliance/" "antlr/" "../" "./")
 )
 
 ;; ----- ido-unc-hosts-cache -----
